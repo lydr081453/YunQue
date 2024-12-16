@@ -1,0 +1,28 @@
+#header { background-image:url("../images/navigation/background-nav.gif"); }
+#subnav { background-image:url("../images/navigation/background-subnav.gif"); }
+#content-container { background-image:url("../images/background-content.gif");margin-top:5px; }
+
+/* Integration Menu */
+.item-integration-top { background-image:url("../images/demos/menu-item-integration-top.gif"); }
+.item-integration-bottom { background-image:url("../images/demos/menu-item-integration-bottom.gif"); }
+.item-integration,.item-integration-hover,.item-integration-divider { background-image:url("../images/demos/menu-item-integration.gif"); }
+
+/* Ajax Techniques Menu */
+.item-ajax-top { background-image:url("../images/demos/menu-item-ajax-top.gif"); }
+.item-ajax-bottom { background-image:url("../images/demos/menu-item-ajax-bottom.gif"); }
+.item-ajax,.item-ajax-hover,.item-ajax-divider { background-image:url("../images/demos/menu-item-ajax.gif"); }
+
+/* Technology Showcase Menu */
+.item-showcase-top { background-image:url("../images/demos/menu-item-showcase-top.gif"); }
+.item-showcase-bottom { background-image:url("../images/demos/menu-item-showcase-bottom.gif"); }
+.item-showcase,.item-showcase-hover,.item-showcase-title,.item-showcase-spacer { background-image:url("../images/demos/menu-item-showcase.gif"); }
+
+/* Controls-Specific Menu */
+.item-controls-top { background-image:url("../images/demos/menu-item-controls-top.gif"); }
+.item-controls-bottom { background-image:url("../images/demos/menu-item-controls-bottom.gif"); }
+.item-controls,.item-controls-hover,.item-controls-title,.item-controls-spacer { background-image:url("../images/demos/menu-item-controls.gif"); }
+
+/* Platform-Specific Menu */
+.item-platforms-top { background-image:url("../images/demos/menu-item-platforms-top.gif"); }
+.item-platforms-bottom { background-image:url("../images/demos/menu-item-platforms-bottom.gif"); }
+.item-platforms,.item-platforms-hover,.item-platforms-title,.item-platforms-spacer { background-image:url("../images/demos/menu-item-platforms.gif"); }

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{349669EE-DCBC-487F-9CCF-BFF18235155D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExternalLibs</RootNamespace>
+    <AssemblyName>ExternalLibs</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ABCpdf.dll" />
+    <Content Include="AjaxControlToolkit.dll" />
+    <Content Include="AjaxPro.2.dll" />
+    <Content Include="CKEditor.NET.dll" />
+    <Content Include="CKFinder.dll" />
+    <Content Include="ComponentArt.Web.UI.dll" />
+    <Content Include="DataLib.BLL.dll" />
+    <Content Include="DataLib.DAL.dll" />
+    <Content Include="DataLib.DBUtility.dll" />
+    <Content Include="ESP.Core.dll" />
+    <Content Include="ESP.Core.xml" />
+    <Content Include="ESP.Workflow.dll" />
+    <Content Include="ExtExtenders.dll" />
+    <Content Include="FredCK.FCKeditorV2.dll" />
+    <Content Include="IWorkFlowDAO.dll" />
+    <Content Include="Liger.Common.dll" />
+    <Content Include="Liger.Data.dll" />
+    <Content Include="LigerRM.Common.dll" />
+    <Content Include="LigerRM.Common.pdb" />
+    <Content Include="LitJSON.dll" />
+    <Content Include="LTP.Common.dll" />
+    <Content Include="MattBerseth.WebControls.AJAX.dll" />
+    <Content Include="Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll" />
+    <Content Include="Microsoft.Practices.EnterpriseLibrary.Logging.dll" />
+    <Content Include="Microsoft.Practices.ObjectBuilder2.dll" />
+    <Content Include="Model.dll" />
+    <Content Include="ModelTemplate.BLL.dll" />
+    <Content Include="ModelTemplate.DB.dll" />
+    <Content Include="ModelTemplate.dll" />
+    <Content Include="ModelTemplate.IDAL.dll" />
+    <Content Include="MSNPSharp.dll" />
+    <Content Include="MSNPSharp.XmlSerializers.dll" />
+    <Content Include="MyControls.dll" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <Content Include="Newtonsoft.Json.Net20.dll" />
+    <Content Include="Raccoom.Xml.dll" />
+    <Content Include="WComm_UDP.dll" />
+    <Content Include="Winista.HtmlParser.dll" />
+    <Content Include="WorkFlowDAO.dll" />
+    <Content Include="WorkFlowImpl.dll" />
+    <Content Include="WorkFlowLibary.dll" />
+    <Content Include="WorkFlowModel.dll" />
+    <Content Include="YYControls.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

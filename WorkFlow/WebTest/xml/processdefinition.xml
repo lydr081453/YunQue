@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<process-definition name="InsuranceRuleFlow"  displayname="dadsd" id="1" version="1.0" author="david">
+   <node id="1" name="start" type="7" displayname="dadsd" deadlinequantity="0" opentype="" rolename="" formdata="SerialHandler" autoexeactionname="">
+      <transition name="" to="underwriting validation" scriptname="" ></transition>
+   </node>
+   <node id="2" name="underwriting validation" type="7" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="SerialHandler" autoexeactionname="">
+      <transition name="to decline decision" to="decline" scriptname="" ></transition>
+   </node>
+   <node id="3" name="decline" type="7" displayname="dadsd" deadlinequantity="" opentype="0" rolename="" formdata="" autoexeactionname="">
+      <transition name="no" to="base ratting"  scriptname="" />
+   </node>
+   <node id="4" name="base ratting" type="7" displayname="dadsd" deadlinequantity="" opentype="0" rolename="" formdata="" autoexeactionname="">
+      <transition name="to ratting" to="ratting" scriptname="" ></transition> 
+   </node>   
+   <node id="5" name="ratting" type="7" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+      <transition name="to mosaic modifiers" to="mosaic modifiers" scriptname="" ></transition>
+   </node>
+   <node id="6" name="mosaic modifiers" type="7" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+      <transition name="to additional modifiers" to="additional modifiers" scriptname="" ></transition>
+   </node>
+   <node id="7" name="additional modifiers" type="7" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+      <transition name="to end" to="end" scriptname="" ></transition>
+   </node>
+
+</process-definition>
+
+<process-definition name="SyncFlow"  displayname="dadsd" id="2" version="1.0" author="david">
+  <node id="1" name="start" type="7" displayname="dadsd" deadlinequantity="0" opentype="" rolename="" formdata="" autoexeactionname="">
+    <transition name="underwriting validation" to="underwriting validation" scriptname="" ></transition>
+    <transition name="decline" to="decline" scriptname="" ></transition>
+  </node>
+  <node id="2" name="underwriting validation" type="6" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+    <transition name="to ratting" to="ratting" scriptname="" ></transition>
+  </node>0
+  <node id="3" name="decline" type="6" displayname="dadsd" deadlinequantity="" opentype="0" rolename="" formdata="" autoexeactionname="">
+    <transition name="to ratting" to="ratting"  scriptname="" />
+
+  </node>
+  <node id="5" name="ratting" type="7" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+    <transition name="to mosaic modifiers" to="mosaic modifiers" scriptname="" ></transition>
+  </node>
+  <node id="6" name="mosaic modifiers" type="7" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+    <transition name="to additional modifiers" to="additional modifiers" scriptname="" ></transition>
+  </node>
+  <node id="7" name="additional modifiers" type="7" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+    <transition name="to end" to="end" scriptname="" ></transition>
+  </node>
+  
+</process-definition>
+
+  <process-definition name="XORFlow"  displayname="dadsd" id="3" version="1.0" author="david">
+    <node id="1" name="start" type="7" displayname="dadsd" deadlinequantity="0" opentype="" rolename="" formdata="" autoexeactionname="">
+      <transition name="underwriting validation" to="underwriting validation" scriptname="" ></transition>
+      <transition name="decline" to="decline" scriptname="" ></transition>
+      <transition name="mosaic modifiers" to="mosaic modifiers" scriptname="" ></transition>
+    </node>
+    <node id="2" name="underwriting validation" type="8" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+      <transition name="to ratting" to="ratting" scriptname="" ></transition>
+    </node>
+    <node id="3" name="decline" type="8" displayname="dadsd" deadlinequantity="" opentype="0" rolename="" formdata="" autoexeactionname="">
+      <transition name="to ratting" to="ratting"  scriptname="" />
+    </node>
+    <node id="4" name="mosaic modifiers" type="8" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+        <transition name="to ratting" to="ratting" scriptname="" ></transition>
+    </node>
+    <node id="5" name="ratting" type="7" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+      <transition name="to additional modifiers" to="additional modifiers" scriptname="" ></transition>
+    </node>
+    <node id="6" name="additional modifiers" type="7" displayname="dadsd" deadlinequantity="0" opentype="0" rolename="" formdata="" autoexeactionname="">
+      <transition name="to end" to="end" scriptname="" ></transition>
+    </node>
+
+  </process-definition>
+
+</root>

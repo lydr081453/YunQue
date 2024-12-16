@@ -1,0 +1,160 @@
+<public:component tagname=split literalcontent=true>
+<PROPERTY NAME="direction"  />
+    
+<ATTACH   EVENT="onmouseup"       HANDLER="DoMouseUp"   />
+<ATTACH   EVENT="onmousedown"     HANDLER="DoMouseDown" />
+<ATTACH   EVENT="ondocumentready" HANDLER="cReady" />
+</public:component>
+
+<SCRIPT LANGUAGE="jscript">
+
+var _iMinAbideWidth = 6;
+var iOffsetX;
+var iOffsetY;
+var normZindex = style.zIndex;
+
+var _parentTable;
+
+function cReady()
+{
+    	//  Required CSS properties
+    	style.left = parentElement.offsetLeft + parentElement.offsetWidth - 1;
+    	style.top = parentElement.offsetParent.offsetTop;
+    	style.height = parentElement.offsetHeight - 1;
+    	style.position = "absolute";
+    	style.display = "block";
+
+	parentElement.attachEvent("onresize",cResize);
+	
+	_parentTable = getParentTable(element);
+	if(_parentTable != null)
+	{
+		_parentTable.attachEvent("onreadystatechange",cStateChange);
+	}
+}
+
+function cStateChange()
+{
+	if(_parentTable.readyState!='complete') return;
+	
+	style.left = parentElement.offsetLeft + parentElement.offsetWidth - 1;
+}
+
+function cResize()
+{
+	style.left = parentElement.offsetLeft + parentElement.offsetWidth - 1;
+}
+
+function DoMouseDown()
+{
+        
+       //  Capture the mouse
+       setCapture();
+    
+       //  Set the zIndex to 1000 to put it over other elements while it's moved
+	style.zIndex = 1000;
+
+       //
+       //  Determine the difference between the mouse click on the element and
+       //  the top left corner	
+       //
+	iOffsetX = window.event.x - element.style.pixelLeft;
+	iOffsetY = window.event.y - element.style.pixelTop;
+
+       style.height = offsetParent.offsetHeight;
+
+       //  Start tracking the mousemove
+	attachEvent ("onmousemove", DoMouseMove);
+
+}	
+
+function DoMouseMove()
+{
+	if (direction == "horizontal") 
+	{
+ 	       //  Set position based on mouse movement
+		var iNewX = window.event.x - iOffsetX;
+		
+		var tempWidth = iNewX - parentElement.offsetLeft
+		
+		
+		if (tempWidth > _iMinAbideWidth) {
+	          //  Place element
+		   style.left = iNewX;
+		}
+		else
+		{
+			style.left = parentElement.offsetLeft + _iMinAbideWidth;
+		}
+		
+		
+	}
+
+	//AdjustPosition();
+
+}
+
+function DoMouseUp()
+{
+       	//  Return the zIndex to its previous value
+	style.zIndex = normZindex;
+
+       	//  Stop tracking the onmousemove event
+	detachEvent ("onmousemove", DoMouseMove);
+	
+	//  Release the mouse
+	releaseCapture();
+
+	AdjustPosition();
+         	style.height = parentElement.offsetHeight - 1;
+    	style.left = parentElement.offsetLeft + parentElement.offsetWidth - 1;
+
+}
+
+function AdjustPosition()
+{
+	try{
+	var tempWidth
+	
+	tempWidth = offsetLeft - parentElement.offsetLeft + 1;
+
+	if (tempWidth > 18) {
+		parentElement.width = tempWidth;
+	}
+	
+	var _maxCol = parentElement.offsetParent.cells.length / parentElement.offsetParent.rows.length;
+	var _cellIndex = parentElement.cellIndex;
+	for (var i=0; i<_maxCol; i++)
+	{
+		var obj = parentElement.offsetParent.cells(i).children[0];
+		if (i != _cellIndex && typeof(obj) == 'object')
+		{
+			obj.style.height = String(obj.parentElement.offsetHeight - 1);
+			obj.style.left = obj.parentElement.offsetLeft + obj.parentElement.offsetWidth - 1;
+		}
+	}
+	}catch(e)
+	{
+		alert(e.description);
+	}
+}
+
+function getParentTable(obj)
+{
+	//Get the obj's parent table object
+	
+	while(obj.tagName.toUpperCase()!='TABLE') {obj=obj.parentElement;}
+	
+	if(obj.tagName.toUpperCase()=='TABLE')
+	{
+		return obj
+	}
+	else
+	{
+		return null;
+	}
+	
+}
+
+
+</SCRIPT>

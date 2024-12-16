@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title="Work Flow Mgt"  description="">
+      <siteMapNode url="" title="Process List"  description="">
+        <siteMapNode url="~/ProcessMain.aspx?type=1" title="Sequence Process"  description="" />
+        <siteMapNode url="~/ProcessMain.aspx?type=2" title="Sync Process"  description="" />
+        <siteMapNode url="~/ProcessMain.aspx?type=3" title="XOR Process"  description="" />
+      </siteMapNode>
+
+      <siteMapNode url="" title="Demo infomation"  description="">
+        <siteMapNode url="~/OrderDemo.aspx" title="Orders"  description="" />
+
+      </siteMapNode>
+      
+    </siteMapNode>
+</siteMap>

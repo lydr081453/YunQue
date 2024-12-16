@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ValidateMaster.master.cs" MasterPageFile="~/MasterPage.master" Inherits="SEPAdmin.HR.Validate.ValidateMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <style type="text/css">
+
+        .modalBackground
+        {
+            background-color: Gray;
+            filter: alpha(opacity=70);
+            opacity: 0.7;
+        }
+        .modalPopup
+        {
+            background-color: #ffffdd;
+            border-width: 3px;
+            border-style: solid;
+            border-color: Gray;
+            padding: 3px;
+            width: 250px;
+        }
+        .modalHeader
+        {
+            background-color: Maroon;
+            height: 30px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+    <asp:UpdatePanel runat="server" ID="up">
+        <ContentTemplate>
+            <asp:HiddenField runat="server" ID="btnShowLoginFrom" />
+            <asp:Panel runat="server" Style="display: none" ID="LoginForm" CssClass="modalPopup">
+                <asp:Panel runat="server" ID="LoginFormHeader" CssClass="modalHeader">
+                    <asp:Label runat="server" ID="LoginFormCaptain" Text="用户验证" />
+                </asp:Panel>
+                <div style="padding: 10px 10px 10px 10px">
+                    <div>密码：<asp:TextBox runat="server" ID="txtPassword" TextMode="Password" /></div>
+                </div>
+                <div style="text-align:center"><asp:Label runat="server" ID="lblMsg" ForeColor="Red" /></div>
+                <asp:Button runat="server" ID="btnLogin" Text="确    定" OnClick="btnLogin_Click" />
+                <asp:Button runat="server" ID="btnReCreatePwd" Text="忘记密码" OnClick="btnReCreatePwd_Click" />
+            </asp:Panel>
+            <act:ModalPopupExtender runat="server" ID="extLoginForm" PopupControlID="LoginForm"
+                X="400" Y="200" TargetControlID="btnShowLoginFrom" BackgroundCssClass="modalBackground"
+                DropShadow="true" RepositionMode="RepositionOnWindowResizeAndScroll" PopupDragHandleControlID="LoginFormHeader" />
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>

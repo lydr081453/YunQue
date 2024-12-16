@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5AF18840-638B-4AF2-90C2-C66625CC88E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESP</RootNamespace>
+    <AssemblyName>ESP.Core</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\ESP.Core.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\ESP.Core.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\SEPProjects\ExternalLibs\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\SEPProjects\ExternalLibs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\Utility.cs" />
+    <Compile Include="Data.Linq\DelayedQuery.cs" />
+    <Compile Include="Data.Linq\ObjectQueryDescriptor.cs" />
+    <Compile Include="DataAccessAuthorization\BusinessLogic\DataAccessAction.cs" />
+    <Compile Include="DataAccessAuthorization\BusinessLogic\DataAccessMember.cs" />
+    <Compile Include="DataAccessAuthorization\BusinessLogic\DataAccessAuthorization.cs" />
+    <Compile Include="DataAccessAuthorization\BusinessLogic\WebPageDataAccess.cs" />
+    <Compile Include="DataAccessAuthorization\DataAccess\IDataAccessAction.cs" />
+    <Compile Include="DataAccessAuthorization\DataAccess\IDataAccessMember.cs" />
+    <Compile Include="DataAccessAuthorization\DataAccess\IWebPageDataAccess.cs" />
+    <Compile Include="DataAccessAuthorization\Entity\DataAccessAction.cs" />
+    <Compile Include="DataAccessAuthorization\Entity\DataAccessMember.cs" />
+    <Compile Include="DataAccessAuthorization\Entity\WebPageDataAccess.cs" />
+    <Compile Include="DataAccessAuthorization\SqlDataAccess\DataAccessAction.cs" />
+    <Compile Include="DataAccessAuthorization\SqlDataAccess\DataAccessMember.cs" />
+    <Compile Include="DataAccessAuthorization\SqlDataAccess\WebPageDataAccess.cs" />
+    <Compile Include="DataForm\IMainDataFormEntity.cs" />
+    <Compile Include="Data\DbConnectionHolder.cs" />
+    <Compile Include="Data\ObjectContextExtensions.cs" />
+    <Compile Include="Data\QueryableExtensions.cs" />
+    <Compile Include="Framework\BusinessLogic\AuditBackUpManager.cs" />
+    <Compile Include="Framework\BusinessLogic\AuditorManager.cs" />
+    <Compile Include="Framework\BusinessLogic\EmployeeManager.cs" />
+    <Compile Include="Framework\BusinessLogic\ModuleManager.cs" />
+    <Compile Include="Framework\BusinessLogic\OperationAuditorManager.cs" />
+    <Compile Include="Framework\BusinessLogic\SettingManager.cs" />
+    <Compile Include="Framework\BusinessLogic\TaskItemManager.cs" />
+    <Compile Include="Framework\BusinessLogic\UnknownSqlException.cs" />
+    <Compile Include="Framework\BusinessLogic\UnmatchedRowVersionException.cs" />
+    <Compile Include="Compatible\Compatible.cs" />
+    <Compile Include="Compatible\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuration\ESPConfigurationSection.cs" />
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Configuration\ConfigurationSectionHandler.cs" />
+    <Compile Include="Configuration\ProviderHelper.cs" />
+    <Compile Include="Framework\DataAccess.Utilities\SqlUtil.cs" />
+    <Compile Include="Framework\DataAccess\IAuditorDataProvider.cs" />
+    <Compile Include="Framework\Entity\AuditorInfo.cs" />
+    <Compile Include="Framework\Entity\MemberInfo.cs" />
+    <Compile Include="Framework\Entity\OperationAuditorInfo.cs" />
+    <Compile Include="Framework\SqlDataAccess\AuditBackUpDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\AuditorDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\DepartmentDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\DepartmentPositionDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\DepartmentTypeDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IOperationAuditorDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\ModuleDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\OperationAuditorDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\SettingsDataProvider.cs" />
+    <Compile Include="Framework\DataAccess.Utilities\CBO.cs" />
+    <Compile Include="Framework\DataAccess.Utilities\CBOUtil.cs" />
+    <Compile Include="Framework\DataAccess.Utilities\DbDataParameter.cs" />
+    <Compile Include="Framework\DataAccess.Utilities\ORMapperGenerator.cs" />
+    <Compile Include="Framework\DataAccess\IAuditBackUpDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IModuleDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\ISettingsDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\ITaskItemDataProvider.cs" />
+    <Compile Include="Framework\Entity\AuditBackUpInfo.cs" />
+    <Compile Include="Framework\Entity\EmployeePositionInfo.cs" />
+    <Compile Include="Framework\SqlDataAccess\PermissionDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\RoleDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\RoleGroupDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\TaskScheduleDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\UserDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\WebPageDataProvider.cs" />
+    <Compile Include="Framework\SqlDataAccess\WebSiteDataProvider.cs" />
+    <Compile Include="Framework\BusinessLogic\DepartmentManager.cs" />
+    <Compile Include="Framework\BusinessLogic\DepartmentPositionManager.cs" />
+    <Compile Include="Framework\BusinessLogic\DepartmentTypeManager.cs" />
+    <Compile Include="Framework\SqlDataAccess\EmployeeDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IDepartmentDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IDepartmentPositionDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IDepartmentTypeDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IPermissionDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IRoleDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IRoleGroupDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\ITaskScheduleDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IUserDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IWebPageDataProvider.cs" />
+    <Compile Include="Framework\DataAccess\IWebSiteDataProvider.cs" />
+    <Compile Include="Framework\BusinessLogic\PermissionManager.cs" />
+    <Compile Include="Framework\BusinessLogic\RoleManager.cs" />
+    <Compile Include="Framework\BusinessLogic\RoleGroupManager.cs" />
+    <Compile Include="Framework\BusinessLogic\UserManager.cs" />
+    <Compile Include="Framework\BusinessLogic\WebPageManager.cs" />
+    <Compile Include="Framework\BusinessLogic\WebSiteManager.cs" />
+    <Compile Include="Framework\DataAccess\IEmployeeDataProvider.cs" />
+    <Compile Include="Framework\Entity\DepartmentInfo.cs" />
+    <Compile Include="Framework\Entity\DepartmentPositionInfo.cs" />
+    <Compile Include="Framework\Entity\DepartmentTypeInfo.cs" />
+    <Compile Include="Framework\Entity\EmployeeInfo.cs" />
+    <Compile Include="Framework\Entity\ModuleInfo.cs" />
+    <Compile Include="Framework\Entity\PermissionDefinitionInfo.cs" />
+    <Compile Include="Framework\Entity\PermissionInfo.cs" />
+    <Compile Include="Framework\Entity\RoleGroupInfo.cs" />
+    <Compile Include="Framework\Entity\RoleInfo.cs" />
+    <Compile Include="Framework\Entity\SettingInfo.cs" />
+    <Compile Include="Framework\Entity\SettingsInfo.cs" />
+    <Compile Include="Framework\Entity\TaskItemInfo.cs" />
+    <Compile Include="Framework\Entity\TaskScheduleInfo.cs" />
+    <Compile Include="Framework\Entity\UserInfo.cs" />
+    <Compile Include="Framework\Entity\WebPageInfo.cs" />
+    <Compile Include="Framework\Entity\WebSiteInfo.cs" />
+    <Compile Include="Logging\Linq2EntitiesLogProvider.cs" />
+    <Compile Include="Logging\Logging.cs" />
+    <Compile Include="Mail\AspxMail.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mail\MailException.cs" />
+    <Compile Include="Quaternary.cs" />
+    <Compile Include="Transactions\TransactionScopeAttribute.cs" />
+    <Compile Include="Transaction\TransactionScopeAttribute.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="Triplet.cs" />
+    <Compile Include="Logging\ILogProvider.cs" />
+    <Compile Include="Logging\LogEntry.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\SqlLogProvider.cs" />
+    <Compile Include="Mail\MailManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\PassportAuthentication.cs" />
+    <Compile Include="Security\PassportAuthenticationModule.cs" />
+    <Compile Include="Security\PassportAuthenticationTicket.cs" />
+    <Compile Include="Security\UrlAuthorization.cs" />
+    <Compile Include="Security\DefaultUrlAuthorizationProvider.cs" />
+    <Compile Include="Security\UrlAuthorizationModule.cs" />
+    <Compile Include="Security\IUrlAuthorizationProvider.cs" />
+    <Compile Include="UserPoint\BusinessLogic\GiftManager.cs" />
+    <Compile Include="UserPoint\BusinessLogic\UserPointFacade.cs" />
+    <Compile Include="UserPoint\BusinessLogic\UserPointManager.cs" />
+    <Compile Include="UserPoint\BusinessLogic\UserPointRecordManager.cs" />
+    <Compile Include="UserPoint\BusinessLogic\UserPointRuleManager.cs" />
+    <Compile Include="UserPoint\DataAccess.Utilities\CBO.cs" />
+    <Compile Include="UserPoint\DataAccess.Utilities\CBOUtil.cs" />
+    <Compile Include="UserPoint\DataAccess.Utilities\ORMapperGenerator.cs" />
+    <Compile Include="UserPoint\DataAccess.Utilities\SqlUtil.cs" />
+    <Compile Include="UserPoint\DataAccess\IGiftDataProvider.cs" />
+    <Compile Include="UserPoint\DataAccess\IUserPointDataProvider.cs" />
+    <Compile Include="UserPoint\DataAccess\IUserPointRecordDataProvider.cs" />
+    <Compile Include="UserPoint\DataAccess\IUserPointRuleDataProvider.cs" />
+    <Compile Include="UserPoint\SqlDataAccess\GiftDataProvider.cs" />
+    <Compile Include="UserPoint\SqlDataAccess\UserPointDataProvider.cs" />
+    <Compile Include="UserPoint\Entity\GiftInfo.cs" />
+    <Compile Include="UserPoint\Entity\UserPointInfo.cs" />
+    <Compile Include="UserPoint\Entity\UserPointRecordInfo.cs" />
+    <Compile Include="UserPoint\Entity\UserPointRuleInfo.cs" />
+    <Compile Include="UserPoint\SqlDataAccess\UserPointRecordDataProvider.cs" />
+    <Compile Include="UserPoint\SqlDataAccess\UserPointRuleDataProvider.cs" />
+    <Compile Include="Utilities\CryptoUtility.cs" />
+    <Compile Include="Utilities\JavascriptUtility.cs" />
+    <Compile Include="Utilities\UrlUtility.cs" />
+    <Compile Include="Web.UI\CaptchaExtender.cs" />
+    <Compile Include="Web.UI\CaptchaImageHandler.cs" />
+    <Compile Include="Web.UI\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web.UI\UserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web.UI\CaptchaImage.cs" />
+    <Compile Include="Web.UI\CaptchaManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataAccessAuthorization\Config\DataAccessSettings.config" />
+    <EmbeddedResource Include="Edm\Logging.csdl" />
+    <EmbeddedResource Include="Edm\Logging.msl" />
+    <EmbeddedResource Include="Edm\Logging.ssdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Web\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MediaEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="MediaEntitiesStoreContainer">
+          <EntitySet Name="Media_Agency" EntityType="MediaEntities.Store.Media_Agency" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Media_Branch" EntityType="MediaEntities.Store.Media_Branch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_Capital" EntityType="MediaEntities.Store.media_Capital" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_City" EntityType="MediaEntities.Store.media_City" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_Counter" EntityType="MediaEntities.Store.media_Counter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_Country" EntityType="MediaEntities.Store.media_Country" store:Type="Tables" store:Schema="dbo" store:Name="media_Country">
+            <DefiningQuery>SELECT 
+      [media_Country].[CountryID] AS [CountryID], 
+      [media_Country].[CountryNum] AS [CountryNum], 
+      [media_Country].[CountryName] AS [CountryName], 
+      [media_Country].[RegionAttributeID] AS [RegionAttributeID]
+      FROM [dbo].[media_Country] AS [media_Country]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Media_FaceToFace" EntityType="MediaEntities.Store.Media_FaceToFace" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_Industries" EntityType="MediaEntities.Store.media_Industries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_IntegralRule" EntityType="MediaEntities.Store.media_IntegralRule" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_MediaAttachments" EntityType="MediaEntities.Store.media_MediaAttachments" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Media_mediaIndustryRelation" EntityType="MediaEntities.Store.Media_mediaIndustryRelation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_MediaItems" EntityType="MediaEntities.Store.media_MediaItems" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_MediaItemsHist" EntityType="MediaEntities.Store.media_MediaItemsHist" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_MediaReporterRelation" EntityType="MediaEntities.Store.media_MediaReporterRelation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_mediaType" EntityType="MediaEntities.Store.media_mediaType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Media_Meetings" EntityType="MediaEntities.Store.Media_Meetings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_OperateLog" EntityType="MediaEntities.Store.media_OperateLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_OperateType" EntityType="MediaEntities.Store.media_OperateType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Media_PrivateInfo" EntityType="MediaEntities.Store.Media_PrivateInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_Province" EntityType="MediaEntities.Store.media_Province" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_Reporters" EntityType="MediaEntities.Store.media_Reporters" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_reportersHist" EntityType="MediaEntities.Store.media_reportersHist" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="media_Tables" EntityType="MediaEntities.Store.media_Tables" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Media_Agency">
+          <Key>
+            <PropertyRef Name="AgencyID" />
+          </Key>
+          <Property Name="AgencyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AgencyCName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="AgencyEName" Type="nvarchar" MaxLength="256" />
+          <Property Name="CShortName" Type="nvarchar" MaxLength="256" />
+          <Property Name="EShortName" Type="nvarchar" MaxLength="256" />
+          <Property Name="AgencyType" Type="smallint" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="int" />
+          <Property Name="LastModifiedDate" Type="datetime" />
+          <Property Name="MediumSort" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReaderSort" Type="nvarchar(max)" />
+          <Property Name="GoverningBody" Type="nvarchar" MaxLength="50" />
+          <Property Name="FrontFor" Type="nvarchar" MaxLength="1000" />
+          <Property Name="ResponsiblePerson" Type="nvarchar" MaxLength="50" />
+          <Property Name="Contacter" Type="nvarchar" MaxLength="50" />
+          <Property Name="TelephoneExchange" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressOne" Type="nvarchar" MaxLength="500" />
+          <Property Name="AddressTwo" Type="nvarchar" MaxLength="500" />
+          <Property Name="WebAddress" Type="nvarchar" MaxLength="256" />
+          <Property Name="Cooperate" Type="nvarchar(max)" />
+          <Property Name="PhoneOne" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneTwo" Type="nvarchar" MaxLength="50" />
+          <Property Name="AgencyLogo" Type="nvarchar" MaxLength="500" />
+          <Property Name="AgencyIntro" Type="nvarchar(max)" />
+          <Property Name="EngIntro" Type="nvarchar(max)" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="TopicName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopicProperty" Type="int" />
+          <Property Name="OverrideRange" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChannelWebAddress" Type="nvarchar" MaxLength="256" />
+          <Property Name="countryid" Type="int" />
+          <Property Name="provinceid" Type="int" />
+          <Property Name="cityid" Type="int" />
+          <Property Name="del" Type="smallint" />
+          <Property Name="MediaType" Type="nvarchar" MaxLength="50" />
+          <Property Name="addr1_provinceid" Type="int" />
+          <Property Name="Agency" Type="int" />
+          <Property Name="addr1_countryid" Type="int" />
+          <Property Name="addr2_provinceid" Type="int" />
+          <Property Name="addr2_cityid" Type="int" />
+          <Property Name="addr2_countryid" Type="int" />
+          <Property Name="PostCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="MediaID" Type="int" />
+          <Property Name="RegionAttribute" Type="int" />
+        </EntityType>
+        <EntityType Name="Media_Branch">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mediaitemid" Type="int" />
+          <Property Name="cityid" Type="int" />
+          <Property Name="cityname" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="media_Capital">
+          <Key>
+            <PropertyRef Name="cityID" />
+          </Key>
+          <Property Name="cityID" Type="int" Nullable="false" />
+          <Property Name="cityname" Type="nvarchar" MaxLength="10" />
+          <Property Name="Province" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="media_City">
+          <Key>
+            <PropertyRef Name="City_ID" />
+          </Key>
+          <Property Name="City_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="City_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="City_Level" Type="nvarchar" MaxLength="50" />
+          <Property Name="Province_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="media_Counter">
+          <Key>
+            <PropertyRef Name="IntegralID" />
+          </Key>
+          <Property Name="IntegralID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="UserCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="counts" Type="int" Nullable="false" />
+          <Property Name="operateDate" Type="datetime" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“Media2.dbo.media_Country”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="media_Country">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="CountryNum" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegionAttributeID" Type="int" />
+        </EntityType>
+        <EntityType Name="Media_FaceToFace">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="createuserid" Type="int" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="path" Type="nvarchar" MaxLength="200" />
+          <Property Name="subject" Type="nvarchar" MaxLength="200" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="media_Industries">
+          <Key>
+            <PropertyRef Name="IndustryID" />
+          </Key>
+          <Property Name="IndustryID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IndustryName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="del" Type="smallint" />
+        </EntityType>
+        <EntityType Name="media_IntegralRule">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OperateID" Type="int" />
+          <Property Name="TableID" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="altname" Type="nvarchar" MaxLength="50" />
+          <Property Name="Integral" Type="int" />
+          <Property Name="del" Type="smallint" />
+        </EntityType>
+        <EntityType Name="media_MediaAttachments">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MediaItemID" Type="int" Nullable="false" />
+          <Property Name="Version" Type="int" Nullable="false" />
+          <Property Name="AttachmentID" Type="int" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="int" Nullable="false" />
+          <Property Name="Createdip" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="AttachmentPath" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="del" Type="smallint" />
+        </EntityType>
+        <EntityType Name="Media_mediaIndustryRelation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="mediaitemid" Type="int" />
+          <Property Name="industryid" Type="int" />
+          <Property Name="del" Type="smallint" />
+        </EntityType>
+        <EntityType Name="media_MediaItems">
+          <Key>
+            <PropertyRef Name="MediaitemID" />
+          </Key>
+          <Property Name="MediaitemID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MediaCName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="MediaEName" Type="nvarchar" MaxLength="256" />
+          <Property Name="CShortName" Type="nvarchar" MaxLength="256" />
+          <Property Name="EShortName" Type="nvarchar" MaxLength="256" />
+          <Property Name="MediaItemType" Type="smallint" Nullable="false" />
+          <Property Name="CurrentVersion" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="int" Nullable="false" />
+          <Property Name="CreatedIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="int" />
+          <Property Name="LastModifiedDate" Type="datetime" />
+          <Property Name="LastModifiedIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="MediumSort" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReaderSort" Type="nvarchar(max)" />
+          <Property Name="GoverningBody" Type="nvarchar" MaxLength="50" />
+          <Property Name="FrontFor" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Proprieter" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubProprieter" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChiefEditor" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdminEditor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subeditor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Manager" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zhuren" Type="nvarchar" MaxLength="50" />
+          <Property Name="Producer" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartPublication" Type="datetime" />
+          <Property Name="PublishDate" Type="nvarchar" MaxLength="100" />
+          <Property Name="TelephoneExchange" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressOne" Type="nvarchar" MaxLength="500" />
+          <Property Name="AddressTwo" Type="nvarchar" MaxLength="500" />
+          <Property Name="WebAddress" Type="nvarchar" MaxLength="256" />
+          <Property Name="ISSN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cooperate" Type="nvarchar(max)" />
+          <Property Name="Circulation" Type="int" />
+          <Property Name="PublishChannels" Type="nvarchar" MaxLength="256" />
+          <Property Name="PhoneOne" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneTwo" Type="nvarchar" MaxLength="50" />
+          <Property Name="EndPublication" Type="nvarchar" MaxLength="100" />
+          <Property Name="AdsPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdsPrice" Type="int" />
+          <Property Name="MediaLogo" Type="nvarchar" MaxLength="500" />
+          <Property Name="Briefing" Type="int" />
+          <Property Name="MediaIntro" Type="nvarchar(max)" />
+          <Property Name="EngIntro" Type="nvarchar(max)" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="ChannelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DABFM" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopicName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopicProperty" Type="int" />
+          <Property Name="OverrideRange" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rating" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopicTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChannelWebAddress" Type="nvarchar" MaxLength="256" />
+          <Property Name="countryid" Type="int" />
+          <Property Name="provinceid" Type="int" />
+          <Property Name="cityid" Type="int" />
+          <Property Name="del" Type="smallint" />
+          <Property Name="MediaType" Type="nvarchar" MaxLength="50" />
+          <Property Name="addr1_provinceid" Type="int" />
+          <Property Name="addr1_cityid" Type="int" />
+          <Property Name="addr1_countryid" Type="int" />
+          <Property Name="addr2_provinceid" Type="int" />
+          <Property Name="addr2_cityid" Type="int" />
+          <Property Name="addr2_countryid" Type="int" />
+          <Property Name="PostCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegionAttribute" Type="int" />
+          <Property Name="Override_Countryid" Type="int" />
+          <Property Name="Override_Provinceid" Type="int" />
+          <Property Name="Override_Cityid" Type="int" />
+          <Property Name="Override_describe" Type="nvarchar" MaxLength="100" />
+          <Property Name="IndustryID" Type="int" />
+          <Property Name="IssueRegion" Type="nvarchar" MaxLength="500" />
+          <Property Name="PublishPeriods" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="media_MediaItemsHist">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="MediaitemID" Type="int" Nullable="false" />
+          <Property Name="MediaCName" Type="nvarchar" Nullable="false" MaxLength="256" />
+          <Property Name="MediaEName" Type="nvarchar" MaxLength="256" />
+          <Property Name="CShortName" Type="nvarchar" MaxLength="256" />
+          <Property Name="EShortName" Type="nvarchar" MaxLength="256" />
+          <Property Name="MediaItemType" Type="smallint" Nullable="false" />
+          <Property Name="CurrentVersion" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="int" Nullable="false" />
+          <Property Name="CreatedIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="int" />
+          <Property Name="LastModifiedDate" Type="datetime" />
+          <Property Name="LastModifiedIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="MediumSort" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReaderSort" Type="nvarchar(max)" />
+          <Property Name="GoverningBody" Type="nvarchar" MaxLength="50" />
+          <Property Name="FrontFor" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Proprieter" Type="nvarchar" MaxLength="50" />
+          <Property Name="SubProprieter" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChiefEditor" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdminEditor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subeditor" Type="nvarchar" MaxLength="50" />
+          <Property Name="Manager" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zhuren" Type="nvarchar" MaxLength="50" />
+          <Property Name="Producer" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartPublication" Type="datetime" />
+          <Property Name="PublishDate" Type="nvarchar" MaxLength="100" />
+          <Property Name="TelephoneExchange" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddressOne" Type="nvarchar" MaxLength="500" />
+          <Property Name="AddressTwo" Type="nvarchar" MaxLength="500" />
+          <Property Name="WebAddress" Type="nvarchar" MaxLength="256" />
+          <Property Name="ISSN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cooperate" Type="nvarchar(max)" />
+          <Property Name="Circulation" Type="int" />
+          <Property Name="PublishChannels" Type="nvarchar" MaxLength="256" />
+          <Property Name="PhoneOne" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneTwo" Type="nvarchar" MaxLength="50" />
+          <Property Name="EndPublication" Type="nvarchar" MaxLength="100" />
+          <Property Name="AdsPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="AdsPrice" Type="int" />
+          <Property Name="MediaLogo" Type="nvarchar" MaxLength="500" />
+          <Property Name="Briefing" Type="int" />
+          <Property Name="MediaIntro" Type="nvarchar(max)" />
+          <Property Name="EngIntro" Type="nvarchar(max)" />
+          <Property Name="Remarks" Type="nvarchar(max)" />
+          <Property Name="ChannelName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DABFM" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopicName" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopicProperty" Type="int" />
+          <Property Name="OverrideRange" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rating" Type="nvarchar" MaxLength="50" />
+          <Property Name="TopicTime" Type="nvarchar" MaxLength="50" />
+          <Property Name="ChannelWebAddress" Type="nvarchar" MaxLength="256" />
+          <Property Name="countryid" Type="int" />
+          <Property Name="provinceid" Type="int" />
+          <Property Name="cityid" Type="int" />
+          <Property Name="del" Type="smallint" />
+          <Property Name="MediaType" Type="nvarchar" MaxLength="50" />
+          <Property Name="addr1_provinceid" Type="int" />
+          <Property Name="addr1_cityid" Type="int" />
+          <Property Name="addr1_countryid" Type="int" />
+          <Property Name="addr2_provinceid" Type="int" />
+          <Property Name="addr2_cityid" Type="int" />
+          <Property Name="addr2_countryid" Type="int" />
+          <Property Name="PostCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="RegionAttribute" Type="int" />
+          <Property Name="Override_Countryid" Type="int" />
+          <Property Name="Override_Provinceid" Type="int" />
+          <Property Name="Override_Cityid" Type="int" />
+          <Property Name="Override_describe" Type="nvarchar" MaxLength="100" />
+          <Property Name="IndustryID" Type="int" />
+          <Property Name="IssueRegion" Type="nvarchar" MaxLength="500" />
+          <Property Name="branchs" Type="nvarchar(max)" />
+          <Property Name="PublishPeriods" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="media_MediaReporterRelation">
+          <Key>
+            <PropertyRef Name="RelationID" />
+          </Key>
+          <Property Name="RelationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MediaItemID" Type="int" Nullable="false" />
+          <Property Name="ReporterID" Type="int" Nullable="false" />
+          <Property Name="RelationType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="media_mediaType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="des" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Media_Meetings">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cycle" Type="int" />
+          <Property Name="createuserid" Type="int" />
+          <Property Name="createdate" Type="datetime" />
+          <Property Name="path" Type="nvarchar" MaxLength="200" />
+          <Property Name="subject" Type="nvarchar" MaxLength="200" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="media_OperateLog">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="OperateTypeID" Type="int" />
+          <Property Name="OperateTableID" Type="int" />
+          <Property Name="OperateTime" Type="smalldatetime" />
+          <Property Name="OperateDes" Type="nvarchar" MaxLength="500" />
+          <Property Name="IntegralID" Type="int" />
+          <Property Name="Integral" Type="int" />
+          <Property Name="Del" Type="smallint" />
+        </EntityType>
+        <EntityType Name="media_OperateType">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="AltName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Media_PrivateInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ReporterID" Type="int" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="500" />
+          <Property Name="Del" Type="smallint" />
+          <Property Name="PayType" Type="int" />
+          <Property Name="bankname" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankcardcode" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankcardname" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankacountname" Type="nvarchar" MaxLength="50" />
+          <Property Name="writingfee" Type="float" />
+          <Property Name="referral" Type="nvarchar" MaxLength="50" />
+          <Property Name="haveInvoice" Type="int" />
+          <Property Name="paystatus" Type="int" />
+          <Property Name="uploadstarttime" Type="datetime" />
+          <Property Name="uploadendtime" Type="datetime" />
+          <Property Name="paymentmode" Type="int" />
+          <Property Name="PrivateRemark" Type="nvarchar" MaxLength="500" />
+          <Property Name="cooperatecircs" Type="nvarchar" MaxLength="500" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="IDCardNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="media_Province">
+          <Key>
+            <PropertyRef Name="Province_ID" />
+          </Key>
+          <Property Name="Province_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Province_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="media_Reporters">
+          <Key>
+            <PropertyRef Name="ReporterID" />
+          </Key>
+          <Property Name="ReporterID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CurrentVersion" Type="int" Nullable="false" />
+          <Property Name="SN" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="int" Nullable="false" />
+          <Property Name="CreatedIP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="int" />
+          <Property Name="LastModifiedIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastModifiedDate" Type="datetime" />
+          <Property Name="ReporterName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PenName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sex" Type="smallint" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Media_ID" Type="int" />
+          <Property Name="Attention" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReporterLevel" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReporterPosition" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tel_O" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tel_H" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address_H" Type="nvarchar" MaxLength="500" />
+          <Property Name="Postcode_H" Type="nvarchar" MaxLength="50" />
+          <Property Name="Character" Type="nvarchar(max)" />
+          <Property Name="Hobby" Type="nvarchar(max)" />
+          <Property Name="Marriage" Type="smallint" />
+          <Property Name="Writing" Type="nvarchar(max)" />
+          <Property Name="Family" Type="nvarchar(max)" />
+          <Property Name="UsualMobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="BackupMobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="QQ" Type="nvarchar" MaxLength="50" />
+          <Property Name="MSN" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailOne" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailTwo" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailThree" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnitType" Type="smallint" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="500" />
+          <Property Name="Experience" Type="nvarchar(max)" />
+          <Property Name="Education" Type="nvarchar(max)" />
+          <Property Name="del" Type="smallint" />
+          <Property Name="cityid" Type="int" />
+          <Property Name="cityname" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankname" Type="nvarchar" MaxLength="500" />
+          <Property Name="ResponsibleDomain" Type="nvarchar" MaxLength="100" />
+          <Property Name="PayType" Type="int" />
+          <Property Name="bankcardcode" Type="nvarchar" MaxLength="1000" />
+          <Property Name="bankcardname" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankacountname" Type="nvarchar" MaxLength="50" />
+          <Property Name="writingfee" Type="float" />
+          <Property Name="referral" Type="nvarchar" MaxLength="50" />
+          <Property Name="haveInvoice" Type="int" />
+          <Property Name="paystatus" Type="int" />
+          <Property Name="uploadstarttime" Type="datetime" />
+          <Property Name="uploadendtime" Type="datetime" />
+          <Property Name="paymentmode" Type="int" />
+          <Property Name="PrivateRemark" Type="nvarchar" MaxLength="500" />
+          <Property Name="cooperatecircs" Type="nvarchar" MaxLength="500" />
+          <Property Name="hometown" Type="nvarchar" MaxLength="50" />
+          <Property Name="OtherMessageSoftware" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+          <Property Name="OfficeAddress" Type="nvarchar" MaxLength="500" />
+          <Property Name="OfficePostID" Type="nchar" MaxLength="10" />
+          <Property Name="AgencyID" Type="int" />
+          <Property Name="Dependent" Type="int" />
+        </EntityType>
+        <EntityType Name="media_reportersHist">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="ReporterID" Type="int" Nullable="false" />
+          <Property Name="CurrentVersion" Type="int" Nullable="false" />
+          <Property Name="SN" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="int" Nullable="false" />
+          <Property Name="CreatedIP" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="int" />
+          <Property Name="LastModifiedIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastModifiedDate" Type="datetime" />
+          <Property Name="ReporterName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PenName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sex" Type="smallint" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="CardNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Media_ID" Type="int" />
+          <Property Name="Attention" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReporterLevel" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReporterPosition" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tel_O" Type="nvarchar" MaxLength="100" />
+          <Property Name="Tel_H" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address_H" Type="nvarchar" MaxLength="500" />
+          <Property Name="Postcode_H" Type="nvarchar" MaxLength="50" />
+          <Property Name="Character" Type="nvarchar(max)" />
+          <Property Name="Hobby" Type="nvarchar(max)" />
+          <Property Name="Marriage" Type="smallint" />
+          <Property Name="Writing" Type="nvarchar(max)" />
+          <Property Name="Family" Type="nvarchar(max)" />
+          <Property Name="UsualMobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="BackupMobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="QQ" Type="nvarchar" MaxLength="50" />
+          <Property Name="MSN" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailOne" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailTwo" Type="nvarchar" MaxLength="100" />
+          <Property Name="EmailThree" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnitType" Type="smallint" />
+          <Property Name="UnitName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="500" />
+          <Property Name="Experience" Type="nvarchar(max)" />
+          <Property Name="Education" Type="nvarchar(max)" />
+          <Property Name="del" Type="smallint" />
+          <Property Name="cityid" Type="int" />
+          <Property Name="cityname" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankname" Type="nvarchar" MaxLength="500" />
+          <Property Name="ResponsibleDomain" Type="nvarchar" MaxLength="100" />
+          <Property Name="PayType" Type="int" />
+          <Property Name="bankcardcode" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankcardname" Type="nvarchar" MaxLength="50" />
+          <Property Name="bankacountname" Type="nvarchar" MaxLength="50" />
+          <Property Name="writingfee" Type="float" />
+          <Property Name="referral" Type="nvarchar" MaxLength="50" />
+          <Property Name="haveInvoice" Type="int" />
+          <Property Name="paystatus" Type="int" />
+          <Property Name="uploadstarttime" Type="datetime" />
+          <Property Name="uploadendtime" Type="datetime" />
+          <Property Name="paymentmode" Type="int" />
+          <Property Name="PrivateRemark" Type="nvarchar" MaxLength="500" />
+          <Property Name="cooperatecircs" Type="nvarchar" MaxLength="500" />
+          <Property Name="hometown" Type="nvarchar" MaxLength="50" />
+          <Property Name="OtherMessageSoftware" Type="nvarchar" MaxLength="50" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="1000" />
+          <Property Name="AgencyID" Type="int" />
+          <Property Name="Dependent" Type="int" />
+        </EntityType>
+        <EntityType Name="media_Tables">
+          <Key>
+            <PropertyRef Name="TableID" />
+          </Key>
+          <Property Name="TableID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TableName" Type="nvarchar" MaxLength="50" />
+          <Property Name="AltTableName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MediaEntities" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="Media2Entities">
+          <EntitySet Name="media_CityInfo" EntityType="MediaEntities.media_CityInfo" />
+          <EntitySet Name="media_CountryInfo" EntityType="MediaEntities.media_CountryInfo" />
+          <EntitySet Name="media_MediaItemsInfo" EntityType="MediaEntities.media_MediaItemsInfo" />
+          <EntitySet Name="media_MediaReporterRelationInfo" EntityType="MediaEntities.media_MediaReporterRelationInfo" />
+          <EntitySet Name="media_mediaTypeInfo" EntityType="MediaEntities.media_mediaTypeInfo" />
+          <EntitySet Name="media_ProvinceInfo" EntityType="MediaEntities.media_ProvinceInfo" />
+          <EntitySet Name="media_ReportersInfo" EntityType="MediaEntities.media_ReportersInfo" />
+          <EntitySet Name="media_AgencyInfo" EntityType="MediaEntities.media_AgencyInfo" />
+          <EntitySet Name="media_MediaAttachmentsInfo" EntityType="MediaEntities.media_MediaAttachmentsInfo" />
+          <EntitySet Name="media_BranchInfo" EntityType="MediaEntities.media_BranchInfo" />
+          <EntitySet Name="media_IndustriesInfo" EntityType="MediaEntities.media_IndustriesInfo" />
+          <EntitySet Name="media_mediaIndustryRelationInfo" EntityType="MediaEntities.media_mediaIndustryRelationInfo" />
+          <EntitySet Name="media_CapitalInfo" EntityType="MediaEntities.media_CapitalInfo" />
+          <EntitySet Name="media_MediaItemsHistInfo" EntityType="MediaEntities.media_MediaItemsHistInfo" />
+          <EntitySet Name="media_OperateLogInfo" EntityType="MediaEntities.media_OperateLogInfo" />
+          <EntitySet Name="media_PrivateInfo" EntityType="MediaEntities.media_PrivateInfo" />
+          <EntitySet Name="media_reportersHistInfo" EntityType="MediaEntities.media_reportersHistInfo" />
+          <EntitySet Name="media_IntegralRule" EntityType="MediaEntities.media_IntegralRule" />
+          <EntitySet Name="media_OperateType" EntityType="MediaEntities.media_OperateType" />
+          <EntitySet Name="media_Tables" EntityType="MediaEntities.media_Tables" />
+          <EntitySet Name="media_Counter" EntityType="MediaEntities.media_Counter" />
+          <EntitySet Name="Media_FaceToFace" EntityType="MediaEntities.Media_FaceToFace" />
+          <EntitySet Name="Media_Meetings" EntityType="MediaEntities.Media_Meetings" /></EntityContainer>
+        <EntityType Name="media_CityInfo">
+          <Key>
+            <PropertyRef Name="City_ID" />
+          </Key>
+          <Property Name="City_ID" Type="Int32" Nullable="false" />
+          <Property Name="City_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="City_Level" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Province_ID" Type="Int32" />
+          </EntityType>
+        <EntityType Name="media_CountryInfo">
+          <Key>
+            <PropertyRef Name="CountryID" />
+          </Key>
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="CountryNum" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CountryName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RegionAttributeID" Type="Int32" />
+          </EntityType>
+        <EntityType Name="media_MediaItemsInfo">
+          <Key>
+            <PropertyRef Name="MediaitemID" />
+          </Key>
+          <Property Name="MediaitemID" Type="Int32" Nullable="false" />
+          <Property Name="MediaCName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="MediaEName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="CShortName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="EShortName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="MediaItemType" Type="Int16" Nullable="false" />
+          <Property Name="CurrentVersion" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedIP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="Int32" />
+          <Property Name="LastModifiedDate" Type="DateTime" />
+          <Property Name="LastModifiedIP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MediumSort" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReaderSort" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="GoverningBody" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FrontFor" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="Proprieter" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SubProprieter" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ChiefEditor" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AdminEditor" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Subeditor" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Manager" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Zhuren" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Producer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StartPublication" Type="DateTime" />
+          <Property Name="PublishDate" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="TelephoneExchange" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AddressOne" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="AddressTwo" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="WebAddress" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="ISSN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Cooperate" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Circulation" Type="Int32" />
+          <Property Name="PublishChannels" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="PhoneOne" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PhoneTwo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EndPublication" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="AdsPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AdsPrice" Type="Int32" />
+          <Property Name="MediaLogo" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Briefing" Type="Int32" />
+          <Property Name="MediaIntro" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="EngIntro" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Remarks" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ChannelName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DABFM" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TopicName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TopicProperty" Type="Int32" />
+          <Property Name="OverrideRange" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Rating" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TopicTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ChannelWebAddress" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+          <Property Name="countryid" Type="Int32" />
+          <Property Name="provinceid" Type="Int32" />
+          <Property Name="cityid" Type="Int32" />
+          <Property Name="del" Type="Int16" />
+          <Property Name="MediaType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="addr1_provinceid" Type="Int32" />
+          <Property Name="addr1_cityid" Type="Int32" />
+          <Property Name="addr1_countryid" Type="Int32" />
+          <Property Name="addr2_provinceid" Type="Int32" />
+          <Property Name="addr2_cityid" Type="Int32" />
+          <Property Name="addr2_countryid" Type="Int32" />
+          <Property Name="PostCode" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RegionAttribute" Type="Int32" />
+          <Property Name="Override_Countryid" Type="Int32" />
+          <Property Name="Override_Provinceid" Type="Int32" />
+          <Property Name="Override_Cityid" Type="Int32" />
+          <Property Name="Override_describe" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IndustryID" Type="Int32" />
+          <Property Name="IssueRegion" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="PublishPeriods" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          </EntityType>
+        <EntityType Name="media_MediaReporterRelationInfo">
+          <Key>
+            <PropertyRef Name="RelationID" />
+          </Key>
+          <Property Name="RelationID" Type="Int32" Nullable="false" />
+          <Property Name="MediaItemID" Type="Int32" Nullable="false" />
+          <Property Name="ReporterID" Type="Int32" Nullable="false" />
+          <Property Name="RelationType" Type="Int32" Nullable="false" />
+          </EntityType>
+        <EntityType Name="media_mediaTypeInfo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="des" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          </EntityType>
+        <EntityType Name="media_ProvinceInfo">
+          <Key>
+            <PropertyRef Name="Province_ID" />
+          </Key>
+          <Property Name="Province_ID" Type="Int32" Nullable="false" />
+          <Property Name="Province_Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Country_ID" Type="Int32" />
+          </EntityType>
+        <EntityType Name="media_ReportersInfo">
+          <Key>
+            <PropertyRef Name="ReporterID" />
+          </Key>
+          <Property Name="ReporterID" Type="Int32" Nullable="false" />
+          <Property Name="CurrentVersion" Type="Int32" Nullable="false" />
+          <Property Name="SN" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedIP" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="Int32" />
+          <Property Name="LastModifiedIP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastModifiedDate" Type="DateTime" />
+          <Property Name="ReporterName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PenName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sex" Type="Int16" />
+          <Property Name="Birthday" Type="DateTime" />
+          <Property Name="CardNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Media_ID" Type="Int32" />
+          <Property Name="Attention" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReporterLevel" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReporterPosition" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Tel_O" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Tel_H" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Address_H" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Postcode_H" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Character" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Hobby" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Marriage" Type="Int16" />
+          <Property Name="Writing" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Family" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="UsualMobile" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BackupMobile" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Fax" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="QQ" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MSN" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="EmailOne" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="EmailTwo" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="EmailThree" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="UnitType" Type="Int16" />
+          <Property Name="UnitName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Photo" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Experience" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Education" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="del" Type="Int16" />
+          <Property Name="cityid" Type="Int32" />
+          <Property Name="cityname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="bankname" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="ResponsibleDomain" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="PayType" Type="Int32" />
+          <Property Name="bankcardcode" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="bankcardname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="bankacountname" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="writingfee" Type="Double" />
+          <Property Name="referral" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="haveInvoice" Type="Int32" />
+          <Property Name="paystatus" Type="Int32" />
+          <Property Name="uploadstarttime" Type="DateTime" />
+          <Property Name="uploadendtime" Type="DateTime" />
+          <Property Name="paymentmode" Type="Int32" />
+          <Property Name="PrivateRemark" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="cooperatecircs" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="hometown" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OtherMessageSoftware" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="OfficeAddress" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="OfficePostID" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="AgencyID" Type="Int32" Nullable="true" />
+          <Property Name="Dependent" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="media_AgencyInfo">
+          <Key>
+            <PropertyRef Name="AgencyID" /></Key>
+          <Property Name="AgencyID" Type="Int32" Nullable="false" />
+          <Property Name="AgencyCName" Type="String" Nullable="false" />
+          <Property Name="AgencyEName" Type="String" Nullable="true" />
+          <Property Name="CShortName" Type="String" Nullable="true" />
+          <Property Name="EShortName" Type="String" Nullable="true" />
+          <Property Name="AgencyType" Type="Int16" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="Int32" Nullable="true" />
+          <Property Name="LastModifiedDate" Type="DateTime" Nullable="true" />
+          <Property Name="MediumSort" Type="String" Nullable="true" />
+          <Property Name="ReaderSort" Type="String" Nullable="true" />
+          <Property Name="GoverningBody" Type="String" Nullable="true" />
+          <Property Name="FrontFor" Type="String" Nullable="true" />
+          <Property Name="ResponsiblePerson" Type="String" Nullable="true" />
+          <Property Name="Contacter" Type="String" Nullable="true" />
+          <Property Name="TelephoneExchange" Type="String" Nullable="true" />
+          <Property Name="Fax" Type="String" Nullable="true" />
+          <Property Name="AddressOne" Type="String" Nullable="true" />
+          <Property Name="AddressTwo" Type="String" Nullable="true" />
+          <Property Name="WebAddress" Type="String" Nullable="true" />
+          <Property Name="Cooperate" Type="String" Nullable="true" />
+          <Property Name="PhoneOne" Type="String" Nullable="true" />
+          <Property Name="PhoneTwo" Type="String" Nullable="true" />
+          <Property Name="AgencyLogo" Type="String" Nullable="true" />
+          <Property Name="AgencyIntro" Type="String" Nullable="true" />
+          <Property Name="EngIntro" Type="String" Nullable="true" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <Property Name="TopicName" Type="String" Nullable="true" />
+          <Property Name="TopicProperty" Type="Int32" Nullable="true" />
+          <Property Name="OverrideRange" Type="String" Nullable="true" />
+          <Property Name="ChannelWebAddress" Type="String" Nullable="true" />
+          <Property Name="countryid" Type="Int32" Nullable="true" />
+          <Property Name="provinceid" Type="Int32" Nullable="true" />
+          <Property Name="cityid" Type="Int32" Nullable="true" />
+          <Property Name="del" Type="Int16" Nullable="true" />
+          <Property Name="MediaType" Type="String" Nullable="true" />
+          <Property Name="addr1_provinceid" Type="Int32" Nullable="true" />
+          <Property Name="Agency" Type="Int32" Nullable="true" />
+          <Property Name="addr1_countryid" Type="Int32" Nullable="true" />
+          <Property Name="addr2_provinceid" Type="Int32" Nullable="true" />
+          <Property Name="addr2_cityid" Type="Int32" Nullable="true" />
+          <Property Name="addr2_countryid" Type="Int32" Nullable="true" />
+          <Property Name="PostCode" Type="String" Nullable="true" />
+          <Property Name="MediaID" Type="Int32" Nullable="true" />
+          <Property Name="RegionAttribute" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="media_MediaAttachmentsInfo">
+          <Key>
+            <PropertyRef Name="id" /></Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="MediaItemID" Type="Int32" Nullable="false" />
+          <Property Name="Version" Type="Int32" Nullable="false" />
+          <Property Name="AttachmentID" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="Int32" Nullable="false" />
+          <Property Name="Createdip" Type="String" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="AttachmentPath" Type="String" Nullable="false" />
+          <Property Name="del" Type="Int16" Nullable="true" /></EntityType>
+        <EntityType Name="media_BranchInfo">
+          <Key>
+            <PropertyRef Name="id" /></Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="mediaitemid" Type="Int32" Nullable="true" />
+          <Property Name="cityid" Type="Int32" Nullable="true" />
+          <Property Name="cityname" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="media_IndustriesInfo">
+          <Key>
+            <PropertyRef Name="IndustryID" /></Key>
+          <Property Name="IndustryID" Type="Int32" Nullable="false" />
+          <Property Name="IndustryName" Type="String" Nullable="false" />
+          <Property Name="del" Type="Int16" Nullable="true" /></EntityType>
+        <EntityType Name="media_mediaIndustryRelationInfo">
+          <Key>
+            <PropertyRef Name="id" /></Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="mediaitemid" Type="Int32" Nullable="true" />
+          <Property Name="industryid" Type="Int32" Nullable="true" />
+          <Property Name="del" Type="Int16" Nullable="true" /></EntityType>
+        <EntityType Name="media_CapitalInfo">
+          <Key>
+            <PropertyRef Name="cityID" /></Key>
+          <Property Name="cityID" Type="Int32" Nullable="false" />
+          <Property Name="cityname" Type="String" Nullable="true" />
+          <Property Name="Province" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="media_MediaItemsHistInfo">
+          <Key>
+            <PropertyRef Name="id" /></Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="version" Type="Int32" Nullable="true" />
+          <Property Name="MediaitemID" Type="Int32" Nullable="false" />
+          <Property Name="MediaCName" Type="String" Nullable="false" />
+          <Property Name="MediaEName" Type="String" Nullable="true" />
+          <Property Name="CShortName" Type="String" Nullable="true" />
+          <Property Name="EShortName" Type="String" Nullable="true" />
+          <Property Name="MediaItemType" Type="Int16" Nullable="false" />
+          <Property Name="CurrentVersion" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedIP" Type="String" Nullable="true" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="Int32" Nullable="true" />
+          <Property Name="LastModifiedDate" Type="DateTime" Nullable="true" />
+          <Property Name="LastModifiedIP" Type="String" Nullable="true" />
+          <Property Name="MediumSort" Type="String" Nullable="true" />
+          <Property Name="ReaderSort" Type="String" Nullable="true" />
+          <Property Name="GoverningBody" Type="String" Nullable="true" />
+          <Property Name="FrontFor" Type="String" Nullable="true" />
+          <Property Name="Proprieter" Type="String" Nullable="true" />
+          <Property Name="SubProprieter" Type="String" Nullable="true" />
+          <Property Name="ChiefEditor" Type="String" Nullable="true" />
+          <Property Name="AdminEditor" Type="String" Nullable="true" />
+          <Property Name="Subeditor" Type="String" Nullable="true" />
+          <Property Name="Manager" Type="String" Nullable="true" />
+          <Property Name="Zhuren" Type="String" Nullable="true" />
+          <Property Name="Producer" Type="String" Nullable="true" />
+          <Property Name="StartPublication" Type="DateTime" Nullable="true" />
+          <Property Name="PublishDate" Type="String" Nullable="true" />
+          <Property Name="TelephoneExchange" Type="String" Nullable="true" />
+          <Property Name="Fax" Type="String" Nullable="true" />
+          <Property Name="AddressOne" Type="String" Nullable="true" />
+          <Property Name="AddressTwo" Type="String" Nullable="true" />
+          <Property Name="WebAddress" Type="String" Nullable="true" />
+          <Property Name="ISSN" Type="String" Nullable="true" />
+          <Property Name="Cooperate" Type="String" Nullable="true" />
+          <Property Name="Circulation" Type="Int32" Nullable="true" />
+          <Property Name="PublishChannels" Type="String" Nullable="true" />
+          <Property Name="PhoneOne" Type="String" Nullable="true" />
+          <Property Name="PhoneTwo" Type="String" Nullable="true" />
+          <Property Name="EndPublication" Type="String" Nullable="true" />
+          <Property Name="AdsPhone" Type="String" Nullable="true" />
+          <Property Name="AdsPrice" Type="Int32" Nullable="true" />
+          <Property Name="MediaLogo" Type="String" Nullable="true" />
+          <Property Name="Briefing" Type="Int32" Nullable="true" />
+          <Property Name="MediaIntro" Type="String" Nullable="true" />
+          <Property Name="EngIntro" Type="String" Nullable="true" />
+          <Property Name="Remarks" Type="String" Nullable="true" />
+          <Property Name="ChannelName" Type="String" Nullable="true" />
+          <Property Name="DABFM" Type="String" Nullable="true" />
+          <Property Name="TopicName" Type="String" Nullable="true" />
+          <Property Name="TopicProperty" Type="Int32" Nullable="true" />
+          <Property Name="OverrideRange" Type="String" Nullable="true" />
+          <Property Name="Rating" Type="String" Nullable="true" />
+          <Property Name="TopicTime" Type="String" Nullable="true" />
+          <Property Name="ChannelWebAddress" Type="String" Nullable="true" />
+          <Property Name="countryid" Type="Int32" Nullable="true" />
+          <Property Name="provinceid" Type="Int32" Nullable="true" />
+          <Property Name="cityid" Type="Int32" Nullable="true" />
+          <Property Name="del" Type="Int16" Nullable="true" />
+          <Property Name="MediaType" Type="String" Nullable="true" />
+          <Property Name="addr1_provinceid" Type="Int32" Nullable="true" />
+          <Property Name="addr1_cityid" Type="Int32" Nullable="true" />
+          <Property Name="addr1_countryid" Type="Int32" Nullable="true" />
+          <Property Name="addr2_provinceid" Type="Int32" Nullable="true" />
+          <Property Name="addr2_cityid" Type="Int32" Nullable="true" />
+          <Property Name="addr2_countryid" Type="Int32" Nullable="true" />
+          <Property Name="PostCode" Type="String" Nullable="true" />
+          <Property Name="RegionAttribute" Type="Int32" Nullable="true" />
+          <Property Name="Override_Countryid" Type="Int32" Nullable="true" />
+          <Property Name="Override_Provinceid" Type="Int32" Nullable="true" />
+          <Property Name="Override_Cityid" Type="Int32" Nullable="true" />
+          <Property Name="Override_describe" Type="String" Nullable="true" />
+          <Property Name="IndustryID" Type="Int32" Nullable="true" />
+          <Property Name="IssueRegion" Type="String" Nullable="true" />
+          <Property Name="branchs" Type="String" Nullable="true" />
+          <Property Name="PublishPeriods" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="media_OperateLogInfo">
+          <Key>
+            <PropertyRef Name="ID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="true" />
+          <Property Name="OperateTypeID" Type="Int32" Nullable="true" />
+          <Property Name="OperateTableID" Type="Int32" Nullable="true" />
+          <Property Name="OperateTime" Type="DateTime" Nullable="true" />
+          <Property Name="OperateDes" Type="String" Nullable="true" />
+          <Property Name="IntegralID" Type="Int32" Nullable="true" />
+          <Property Name="Integral" Type="Int32" Nullable="true" />
+          <Property Name="Del" Type="Int16" Nullable="true" /></EntityType>
+        <EntityType Name="media_PrivateInfo">
+          <Key>
+            <PropertyRef Name="id" /></Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ReporterID" Type="Int32" Nullable="true" />
+          <Property Name="Remark" Type="String" Nullable="true" />
+          <Property Name="Del" Type="Int16" Nullable="true" />
+          <Property Name="PayType" Type="Int32" Nullable="true" />
+          <Property Name="bankname" Type="String" Nullable="true" />
+          <Property Name="bankcardcode" Type="String" Nullable="true" />
+          <Property Name="bankcardname" Type="String" Nullable="true" />
+          <Property Name="bankacountname" Type="String" Nullable="true" />
+          <Property Name="writingfee" Type="Double" Nullable="true" />
+          <Property Name="referral" Type="String" Nullable="true" />
+          <Property Name="haveInvoice" Type="Int32" Nullable="true" />
+          <Property Name="paystatus" Type="Int32" Nullable="true" />
+          <Property Name="uploadstarttime" Type="DateTime" Nullable="true" />
+          <Property Name="uploadendtime" Type="DateTime" Nullable="true" />
+          <Property Name="paymentmode" Type="Int32" Nullable="true" />
+          <Property Name="PrivateRemark" Type="String" Nullable="true" />
+          <Property Name="cooperatecircs" Type="String" Nullable="true" />
+          <Property Name="Tel" Type="String" Nullable="true" />
+          <Property Name="Mobile" Type="String" Nullable="true" />
+          <Property Name="IDCardNumber" Type="String" Nullable="true" />
+          <Property Name="City" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="media_reportersHistInfo">
+          <Key>
+            <PropertyRef Name="id" /></Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="version" Type="Int32" Nullable="true" />
+          <Property Name="ReporterID" Type="Int32" Nullable="false" />
+          <Property Name="CurrentVersion" Type="Int32" Nullable="false" />
+          <Property Name="SN" Type="String" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatedByUserID" Type="Int32" Nullable="false" />
+          <Property Name="CreatedIP" Type="String" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastModifiedByUserID" Type="Int32" Nullable="true" />
+          <Property Name="LastModifiedIP" Type="String" Nullable="true" />
+          <Property Name="LastModifiedDate" Type="DateTime" Nullable="true" />
+          <Property Name="ReporterName" Type="String" Nullable="false" />
+          <Property Name="PenName" Type="String" Nullable="true" />
+          <Property Name="Sex" Type="Int16" Nullable="true" />
+          <Property Name="Birthday" Type="DateTime" Nullable="true" />
+          <Property Name="CardNumber" Type="String" Nullable="true" />
+          <Property Name="Media_ID" Type="Int32" Nullable="true" />
+          <Property Name="Attention" Type="String" Nullable="true" />
+          <Property Name="ReporterLevel" Type="String" Nullable="true" />
+          <Property Name="ReporterPosition" Type="String" Nullable="true" />
+          <Property Name="Tel_O" Type="String" Nullable="true" />
+          <Property Name="Tel_H" Type="String" Nullable="true" />
+          <Property Name="Address_H" Type="String" Nullable="true" />
+          <Property Name="Postcode_H" Type="String" Nullable="true" />
+          <Property Name="Character" Type="String" Nullable="true" />
+          <Property Name="Hobby" Type="String" Nullable="true" />
+          <Property Name="Marriage" Type="Int16" Nullable="true" />
+          <Property Name="Writing" Type="String" Nullable="true" />
+          <Property Name="Family" Type="String" Nullable="true" />
+          <Property Name="UsualMobile" Type="String" Nullable="true" />
+          <Property Name="BackupMobile" Type="String" Nullable="true" />
+          <Property Name="Fax" Type="String" Nullable="true" />
+          <Property Name="QQ" Type="String" Nullable="true" />
+          <Property Name="MSN" Type="String" Nullable="true" />
+          <Property Name="EmailOne" Type="String" Nullable="true" />
+          <Property Name="EmailTwo" Type="String" Nullable="true" />
+          <Property Name="EmailThree" Type="String" Nullable="true" />
+          <Property Name="UnitType" Type="Int16" Nullable="true" />
+          <Property Name="UnitName" Type="String" Nullable="true" />
+          <Property Name="Photo" Type="String" Nullable="true" />
+          <Property Name="Experience" Type="String" Nullable="true" />
+          <Property Name="Education" Type="String" Nullable="true" />
+          <Property Name="del" Type="Int16" Nullable="true" />
+          <Property Name="cityid" Type="Int32" Nullable="true" />
+          <Property Name="cityname" Type="String" Nullable="true" />
+          <Property Name="bankname" Type="String" Nullable="true" />
+          <Property Name="ResponsibleDomain" Type="String" Nullable="true" />
+          <Property Name="PayType" Type="Int32" Nullable="true" />
+          <Property Name="bankcardcode" Type="String" Nullable="true" />
+          <Property Name="bankcardname" Type="String" Nullable="true" />
+          <Property Name="bankacountname" Type="String" Nullable="true" />
+          <Property Name="writingfee" Type="Double" Nullable="true" />
+          <Property Name="referral" Type="String" Nullable="true" />
+          <Property Name="haveInvoice" Type="Int32" Nullable="true" />
+          <Property Name="paystatus" Type="Int32" Nullable="true" />
+          <Property Name="uploadstarttime" Type="DateTime" Nullable="true" />
+          <Property Name="uploadendtime" Type="DateTime" Nullable="true" />
+          <Property Name="paymentmode" Type="Int32" Nullable="true" />
+          <Property Name="PrivateRemark" Type="String" Nullable="true" />
+          <Property Name="cooperatecircs" Type="String" Nullable="true" />
+          <Property Name="hometown" Type="String" Nullable="true" />
+          <Property Name="OtherMessageSoftware" Type="String" Nullable="true" />
+          <Property Name="Remark" Type="String" Nullable="true" />
+          <Property Name="AgencyID" Type="Int32" Nullable="true" />
+          <Property Name="Dependent" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="media_IntegralRule">
+          <Key>
+            <PropertyRef Name="id" /></Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="OperateID" Type="Int32" Nullable="true" />
+          <Property Name="TableID" Type="Int32" Nullable="true" />
+          <Property Name="name" Type="String" Nullable="true" />
+          <Property Name="altname" Type="String" Nullable="true" />
+          <Property Name="Integral" Type="Int32" Nullable="true" />
+          <Property Name="del" Type="Int16" Nullable="true" /></EntityType>
+        <EntityType Name="media_OperateType">
+          <Key>
+            <PropertyRef Name="ID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="true" />
+          <Property Name="AltName" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="media_Tables">
+          <Key>
+            <PropertyRef Name="TableID" /></Key>
+          <Property Name="TableID" Type="Int32" Nullable="false" />
+          <Property Name="TableName" Type="String" Nullable="true" />
+          <Property Name="AltTableName" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="media_Counter">
+          <Key>
+            <PropertyRef Name="IntegralID" /></Key>
+          <Property Name="IntegralID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="UserCode" Type="String" Nullable="true" />
+          <Property Name="UserName" Type="String" Nullable="false" />
+          <Property Name="counts" Type="Int32" Nullable="false" />
+          <Property Name="operateDate" Type="DateTime" Nullable="true" /></EntityType>
+        <EntityType Name="Media_FaceToFace">
+          <Key>
+            <PropertyRef Name="id" /></Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="cycle" Type="Int32" Nullable="true" />
+          <Property Name="createuserid" Type="Int32" Nullable="true" />
+          <Property Name="createdate" Type="DateTime" Nullable="true" />
+          <Property Name="path" Type="String" Nullable="true" />
+          <Property Name="subject" Type="String" Nullable="true" />
+          <Property Name="Remark" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="Media_Meetings">
+          <Key>
+            <PropertyRef Name="id" /></Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="cycle" Type="Int32" Nullable="true" />
+          <Property Name="createuserid" Type="Int32" Nullable="true" />
+          <Property Name="createdate" Type="DateTime" Nullable="true" />
+          <Property Name="path" Type="String" Nullable="true" />
+          <Property Name="subject" Type="String" Nullable="true" />
+          <Property Name="Remark" Type="String" Nullable="true" /></EntityType></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="MediaEntitiesStoreContainer" CdmEntityContainer="Media2Entities">
+          <EntitySetMapping Name="media_CityInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_CityInfo)">
+              <MappingFragment StoreEntitySet="media_City">
+                <ScalarProperty Name="City_ID" ColumnName="City_ID" />
+                <ScalarProperty Name="City_Name" ColumnName="City_Name" />
+                <ScalarProperty Name="City_Level" ColumnName="City_Level" />
+                <ScalarProperty Name="Province_ID" ColumnName="Province_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="media_CountryInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_CountryInfo)">
+              <MappingFragment StoreEntitySet="media_Country">
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="CountryNum" ColumnName="CountryNum" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="RegionAttributeID" ColumnName="RegionAttributeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="media_MediaItemsInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_MediaItemsInfo)">
+              <MappingFragment StoreEntitySet="media_MediaItems">
+                <ScalarProperty Name="MediaitemID" ColumnName="MediaitemID" />
+                <ScalarProperty Name="MediaCName" ColumnName="MediaCName" />
+                <ScalarProperty Name="MediaEName" ColumnName="MediaEName" />
+                <ScalarProperty Name="CShortName" ColumnName="CShortName" />
+                <ScalarProperty Name="EShortName" ColumnName="EShortName" />
+                <ScalarProperty Name="MediaItemType" ColumnName="MediaItemType" />
+                <ScalarProperty Name="CurrentVersion" ColumnName="CurrentVersion" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+                <ScalarProperty Name="CreatedIP" ColumnName="CreatedIP" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+                <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+                <ScalarProperty Name="LastModifiedIP" ColumnName="LastModifiedIP" />
+                <ScalarProperty Name="MediumSort" ColumnName="MediumSort" />
+                <ScalarProperty Name="ReaderSort" ColumnName="ReaderSort" />
+                <ScalarProperty Name="GoverningBody" ColumnName="GoverningBody" />
+                <ScalarProperty Name="FrontFor" ColumnName="FrontFor" />
+                <ScalarProperty Name="Proprieter" ColumnName="Proprieter" />
+                <ScalarProperty Name="SubProprieter" ColumnName="SubProprieter" />
+                <ScalarProperty Name="ChiefEditor" ColumnName="ChiefEditor" />
+                <ScalarProperty Name="AdminEditor" ColumnName="AdminEditor" />
+                <ScalarProperty Name="Subeditor" ColumnName="Subeditor" />
+                <ScalarProperty Name="Manager" ColumnName="Manager" />
+                <ScalarProperty Name="Zhuren" ColumnName="Zhuren" />
+                <ScalarProperty Name="Producer" ColumnName="Producer" />
+                <ScalarProperty Name="StartPublication" ColumnName="StartPublication" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="TelephoneExchange" ColumnName="TelephoneExchange" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="AddressOne" ColumnName="AddressOne" />
+                <ScalarProperty Name="AddressTwo" ColumnName="AddressTwo" />
+                <ScalarProperty Name="WebAddress" ColumnName="WebAddress" />
+                <ScalarProperty Name="ISSN" ColumnName="ISSN" />
+                <ScalarProperty Name="Cooperate" ColumnName="Cooperate" />
+                <ScalarProperty Name="Circulation" ColumnName="Circulation" />
+                <ScalarProperty Name="PublishChannels" ColumnName="PublishChannels" />
+                <ScalarProperty Name="PhoneOne" ColumnName="PhoneOne" />
+                <ScalarProperty Name="PhoneTwo" ColumnName="PhoneTwo" />
+                <ScalarProperty Name="EndPublication" ColumnName="EndPublication" />
+                <ScalarProperty Name="AdsPhone" ColumnName="AdsPhone" />
+                <ScalarProperty Name="AdsPrice" ColumnName="AdsPrice" />
+                <ScalarProperty Name="MediaLogo" ColumnName="MediaLogo" />
+                <ScalarProperty Name="Briefing" ColumnName="Briefing" />
+                <ScalarProperty Name="MediaIntro" ColumnName="MediaIntro" />
+                <ScalarProperty Name="EngIntro" ColumnName="EngIntro" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+                <ScalarProperty Name="DABFM" ColumnName="DABFM" />
+                <ScalarProperty Name="TopicName" ColumnName="TopicName" />
+                <ScalarProperty Name="TopicProperty" ColumnName="TopicProperty" />
+                <ScalarProperty Name="OverrideRange" ColumnName="OverrideRange" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="TopicTime" ColumnName="TopicTime" />
+                <ScalarProperty Name="ChannelWebAddress" ColumnName="ChannelWebAddress" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+                <ScalarProperty Name="provinceid" ColumnName="provinceid" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="MediaType" ColumnName="MediaType" />
+                <ScalarProperty Name="addr1_provinceid" ColumnName="addr1_provinceid" />
+                <ScalarProperty Name="addr1_cityid" ColumnName="addr1_cityid" />
+                <ScalarProperty Name="addr1_countryid" ColumnName="addr1_countryid" />
+                <ScalarProperty Name="addr2_provinceid" ColumnName="addr2_provinceid" />
+                <ScalarProperty Name="addr2_cityid" ColumnName="addr2_cityid" />
+                <ScalarProperty Name="addr2_countryid" ColumnName="addr2_countryid" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="RegionAttribute" ColumnName="RegionAttribute" />
+                <ScalarProperty Name="Override_Countryid" ColumnName="Override_Countryid" />
+                <ScalarProperty Name="Override_Provinceid" ColumnName="Override_Provinceid" />
+                <ScalarProperty Name="Override_Cityid" ColumnName="Override_Cityid" />
+                <ScalarProperty Name="Override_describe" ColumnName="Override_describe" />
+                <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+                <ScalarProperty Name="IssueRegion" ColumnName="IssueRegion" />
+                <ScalarProperty Name="PublishPeriods" ColumnName="PublishPeriods" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="media_MediaReporterRelationInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_MediaReporterRelationInfo)">
+              <MappingFragment StoreEntitySet="media_MediaReporterRelation">
+                <ScalarProperty Name="RelationID" ColumnName="RelationID" />
+                <ScalarProperty Name="MediaItemID" ColumnName="MediaItemID" />
+                <ScalarProperty Name="ReporterID" ColumnName="ReporterID" />
+                <ScalarProperty Name="RelationType" ColumnName="RelationType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="media_mediaTypeInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_mediaTypeInfo)">
+              <MappingFragment StoreEntitySet="media_mediaType">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="des" ColumnName="des" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="media_ProvinceInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_ProvinceInfo)">
+              <MappingFragment StoreEntitySet="media_Province">
+                <ScalarProperty Name="Province_ID" ColumnName="Province_ID" />
+                <ScalarProperty Name="Province_Name" ColumnName="Province_Name" />
+                <ScalarProperty Name="Country_ID" ColumnName="Country_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="media_ReportersInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_ReportersInfo)">
+              <MappingFragment StoreEntitySet="media_Reporters">
+                <ScalarProperty Name="Dependent" ColumnName="Dependent" />
+                <ScalarProperty Name="AgencyID" ColumnName="AgencyID" />
+                <ScalarProperty Name="ReporterID" ColumnName="ReporterID" />
+                <ScalarProperty Name="CurrentVersion" ColumnName="CurrentVersion" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+                <ScalarProperty Name="CreatedIP" ColumnName="CreatedIP" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+                <ScalarProperty Name="LastModifiedIP" ColumnName="LastModifiedIP" />
+                <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+                <ScalarProperty Name="ReporterName" ColumnName="ReporterName" />
+                <ScalarProperty Name="PenName" ColumnName="PenName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Media_ID" ColumnName="Media_ID" />
+                <ScalarProperty Name="Attention" ColumnName="Attention" />
+                <ScalarProperty Name="ReporterLevel" ColumnName="ReporterLevel" />
+                <ScalarProperty Name="ReporterPosition" ColumnName="ReporterPosition" />
+                <ScalarProperty Name="Tel_O" ColumnName="Tel_O" />
+                <ScalarProperty Name="Tel_H" ColumnName="Tel_H" />
+                <ScalarProperty Name="Address_H" ColumnName="Address_H" />
+                <ScalarProperty Name="Postcode_H" ColumnName="Postcode_H" />
+                <ScalarProperty Name="Character" ColumnName="Character" />
+                <ScalarProperty Name="Hobby" ColumnName="Hobby" />
+                <ScalarProperty Name="Marriage" ColumnName="Marriage" />
+                <ScalarProperty Name="Writing" ColumnName="Writing" />
+                <ScalarProperty Name="Family" ColumnName="Family" />
+                <ScalarProperty Name="UsualMobile" ColumnName="UsualMobile" />
+                <ScalarProperty Name="BackupMobile" ColumnName="BackupMobile" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="QQ" ColumnName="QQ" />
+                <ScalarProperty Name="MSN" ColumnName="MSN" />
+                <ScalarProperty Name="EmailOne" ColumnName="EmailOne" />
+                <ScalarProperty Name="EmailTwo" ColumnName="EmailTwo" />
+                <ScalarProperty Name="EmailThree" ColumnName="EmailThree" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+                <ScalarProperty Name="cityname" ColumnName="cityname" />
+                <ScalarProperty Name="bankname" ColumnName="bankname" />
+                <ScalarProperty Name="ResponsibleDomain" ColumnName="ResponsibleDomain" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+                <ScalarProperty Name="bankcardcode" ColumnName="bankcardcode" />
+                <ScalarProperty Name="bankcardname" ColumnName="bankcardname" />
+                <ScalarProperty Name="bankacountname" ColumnName="bankacountname" />
+                <ScalarProperty Name="writingfee" ColumnName="writingfee" />
+                <ScalarProperty Name="referral" ColumnName="referral" />
+                <ScalarProperty Name="haveInvoice" ColumnName="haveInvoice" />
+                <ScalarProperty Name="paystatus" ColumnName="paystatus" />
+                <ScalarProperty Name="uploadstarttime" ColumnName="uploadstarttime" />
+                <ScalarProperty Name="uploadendtime" ColumnName="uploadendtime" />
+                <ScalarProperty Name="paymentmode" ColumnName="paymentmode" />
+                <ScalarProperty Name="PrivateRemark" ColumnName="PrivateRemark" />
+                <ScalarProperty Name="cooperatecircs" ColumnName="cooperatecircs" />
+                <ScalarProperty Name="hometown" ColumnName="hometown" />
+                <ScalarProperty Name="OtherMessageSoftware" ColumnName="OtherMessageSoftware" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="OfficeAddress" ColumnName="OfficeAddress" />
+                <ScalarProperty Name="OfficePostID" ColumnName="OfficePostID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="media_AgencyInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_AgencyInfo)">
+              <MappingFragment StoreEntitySet="Media_Agency">
+                <ScalarProperty Name="RegionAttribute" ColumnName="RegionAttribute" />
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="addr2_countryid" ColumnName="addr2_countryid" />
+                <ScalarProperty Name="addr2_cityid" ColumnName="addr2_cityid" />
+                <ScalarProperty Name="addr2_provinceid" ColumnName="addr2_provinceid" />
+                <ScalarProperty Name="addr1_countryid" ColumnName="addr1_countryid" />
+                <ScalarProperty Name="Agency" ColumnName="Agency" />
+                <ScalarProperty Name="addr1_provinceid" ColumnName="addr1_provinceid" />
+                <ScalarProperty Name="MediaType" ColumnName="MediaType" />
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+                <ScalarProperty Name="provinceid" ColumnName="provinceid" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+                <ScalarProperty Name="ChannelWebAddress" ColumnName="ChannelWebAddress" />
+                <ScalarProperty Name="OverrideRange" ColumnName="OverrideRange" />
+                <ScalarProperty Name="TopicProperty" ColumnName="TopicProperty" />
+                <ScalarProperty Name="TopicName" ColumnName="TopicName" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="EngIntro" ColumnName="EngIntro" />
+                <ScalarProperty Name="AgencyIntro" ColumnName="AgencyIntro" />
+                <ScalarProperty Name="AgencyLogo" ColumnName="AgencyLogo" />
+                <ScalarProperty Name="PhoneTwo" ColumnName="PhoneTwo" />
+                <ScalarProperty Name="PhoneOne" ColumnName="PhoneOne" />
+                <ScalarProperty Name="Cooperate" ColumnName="Cooperate" />
+                <ScalarProperty Name="WebAddress" ColumnName="WebAddress" />
+                <ScalarProperty Name="AddressTwo" ColumnName="AddressTwo" />
+                <ScalarProperty Name="AddressOne" ColumnName="AddressOne" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="TelephoneExchange" ColumnName="TelephoneExchange" />
+                <ScalarProperty Name="Contacter" ColumnName="Contacter" />
+                <ScalarProperty Name="ResponsiblePerson" ColumnName="ResponsiblePerson" />
+                <ScalarProperty Name="FrontFor" ColumnName="FrontFor" />
+                <ScalarProperty Name="GoverningBody" ColumnName="GoverningBody" />
+                <ScalarProperty Name="ReaderSort" ColumnName="ReaderSort" />
+                <ScalarProperty Name="MediumSort" ColumnName="MediumSort" />
+                <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+                <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="AgencyType" ColumnName="AgencyType" />
+                <ScalarProperty Name="EShortName" ColumnName="EShortName" />
+                <ScalarProperty Name="CShortName" ColumnName="CShortName" />
+                <ScalarProperty Name="AgencyEName" ColumnName="AgencyEName" />
+                <ScalarProperty Name="AgencyCName" ColumnName="AgencyCName" />
+                <ScalarProperty Name="AgencyID" ColumnName="AgencyID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_MediaAttachmentsInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_MediaAttachmentsInfo)">
+              <MappingFragment StoreEntitySet="media_MediaAttachments">
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="AttachmentPath" ColumnName="AttachmentPath" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Createdip" ColumnName="Createdip" />
+                <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="AttachmentID" ColumnName="AttachmentID" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="MediaItemID" ColumnName="MediaItemID" />
+                <ScalarProperty Name="id" ColumnName="id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_BranchInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_BranchInfo)">
+              <MappingFragment StoreEntitySet="Media_Branch">
+                <ScalarProperty Name="cityname" ColumnName="cityname" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+                <ScalarProperty Name="mediaitemid" ColumnName="mediaitemid" />
+                <ScalarProperty Name="id" ColumnName="id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_IndustriesInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_IndustriesInfo)">
+              <MappingFragment StoreEntitySet="media_Industries">
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="IndustryName" ColumnName="IndustryName" />
+                <ScalarProperty Name="IndustryID" ColumnName="IndustryID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_mediaIndustryRelationInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_mediaIndustryRelationInfo)">
+              <MappingFragment StoreEntitySet="Media_mediaIndustryRelation">
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="industryid" ColumnName="industryid" />
+                <ScalarProperty Name="mediaitemid" ColumnName="mediaitemid" />
+                <ScalarProperty Name="id" ColumnName="id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_CapitalInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_CapitalInfo)">
+              <MappingFragment StoreEntitySet="media_Capital">
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="cityname" ColumnName="cityname" />
+                <ScalarProperty Name="cityID" ColumnName="cityID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_MediaItemsHistInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_MediaItemsHistInfo)">
+              <MappingFragment StoreEntitySet="media_MediaItemsHist">
+                <ScalarProperty Name="PublishPeriods" ColumnName="PublishPeriods" />
+                <ScalarProperty Name="branchs" ColumnName="branchs" />
+                <ScalarProperty Name="IssueRegion" ColumnName="IssueRegion" />
+                <ScalarProperty Name="IndustryID" ColumnName="IndustryID" />
+                <ScalarProperty Name="Override_describe" ColumnName="Override_describe" />
+                <ScalarProperty Name="Override_Cityid" ColumnName="Override_Cityid" />
+                <ScalarProperty Name="Override_Provinceid" ColumnName="Override_Provinceid" />
+                <ScalarProperty Name="Override_Countryid" ColumnName="Override_Countryid" />
+                <ScalarProperty Name="RegionAttribute" ColumnName="RegionAttribute" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="addr2_countryid" ColumnName="addr2_countryid" />
+                <ScalarProperty Name="addr2_cityid" ColumnName="addr2_cityid" />
+                <ScalarProperty Name="addr2_provinceid" ColumnName="addr2_provinceid" />
+                <ScalarProperty Name="addr1_countryid" ColumnName="addr1_countryid" />
+                <ScalarProperty Name="addr1_cityid" ColumnName="addr1_cityid" />
+                <ScalarProperty Name="addr1_provinceid" ColumnName="addr1_provinceid" />
+                <ScalarProperty Name="MediaType" ColumnName="MediaType" />
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+                <ScalarProperty Name="provinceid" ColumnName="provinceid" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+                <ScalarProperty Name="ChannelWebAddress" ColumnName="ChannelWebAddress" />
+                <ScalarProperty Name="TopicTime" ColumnName="TopicTime" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="OverrideRange" ColumnName="OverrideRange" />
+                <ScalarProperty Name="TopicProperty" ColumnName="TopicProperty" />
+                <ScalarProperty Name="TopicName" ColumnName="TopicName" />
+                <ScalarProperty Name="DABFM" ColumnName="DABFM" />
+                <ScalarProperty Name="ChannelName" ColumnName="ChannelName" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="EngIntro" ColumnName="EngIntro" />
+                <ScalarProperty Name="MediaIntro" ColumnName="MediaIntro" />
+                <ScalarProperty Name="Briefing" ColumnName="Briefing" />
+                <ScalarProperty Name="MediaLogo" ColumnName="MediaLogo" />
+                <ScalarProperty Name="AdsPrice" ColumnName="AdsPrice" />
+                <ScalarProperty Name="AdsPhone" ColumnName="AdsPhone" />
+                <ScalarProperty Name="EndPublication" ColumnName="EndPublication" />
+                <ScalarProperty Name="PhoneTwo" ColumnName="PhoneTwo" />
+                <ScalarProperty Name="PhoneOne" ColumnName="PhoneOne" />
+                <ScalarProperty Name="PublishChannels" ColumnName="PublishChannels" />
+                <ScalarProperty Name="Circulation" ColumnName="Circulation" />
+                <ScalarProperty Name="Cooperate" ColumnName="Cooperate" />
+                <ScalarProperty Name="ISSN" ColumnName="ISSN" />
+                <ScalarProperty Name="WebAddress" ColumnName="WebAddress" />
+                <ScalarProperty Name="AddressTwo" ColumnName="AddressTwo" />
+                <ScalarProperty Name="AddressOne" ColumnName="AddressOne" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="TelephoneExchange" ColumnName="TelephoneExchange" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="StartPublication" ColumnName="StartPublication" />
+                <ScalarProperty Name="Producer" ColumnName="Producer" />
+                <ScalarProperty Name="Zhuren" ColumnName="Zhuren" />
+                <ScalarProperty Name="Manager" ColumnName="Manager" />
+                <ScalarProperty Name="Subeditor" ColumnName="Subeditor" />
+                <ScalarProperty Name="AdminEditor" ColumnName="AdminEditor" />
+                <ScalarProperty Name="ChiefEditor" ColumnName="ChiefEditor" />
+                <ScalarProperty Name="SubProprieter" ColumnName="SubProprieter" />
+                <ScalarProperty Name="Proprieter" ColumnName="Proprieter" />
+                <ScalarProperty Name="FrontFor" ColumnName="FrontFor" />
+                <ScalarProperty Name="GoverningBody" ColumnName="GoverningBody" />
+                <ScalarProperty Name="ReaderSort" ColumnName="ReaderSort" />
+                <ScalarProperty Name="MediumSort" ColumnName="MediumSort" />
+                <ScalarProperty Name="LastModifiedIP" ColumnName="LastModifiedIP" />
+                <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+                <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedIP" ColumnName="CreatedIP" />
+                <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CurrentVersion" ColumnName="CurrentVersion" />
+                <ScalarProperty Name="MediaItemType" ColumnName="MediaItemType" />
+                <ScalarProperty Name="EShortName" ColumnName="EShortName" />
+                <ScalarProperty Name="CShortName" ColumnName="CShortName" />
+                <ScalarProperty Name="MediaEName" ColumnName="MediaEName" />
+                <ScalarProperty Name="MediaCName" ColumnName="MediaCName" />
+                <ScalarProperty Name="MediaitemID" ColumnName="MediaitemID" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="id" ColumnName="id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_OperateLogInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_OperateLogInfo)">
+              <MappingFragment StoreEntitySet="media_OperateLog">
+                <ScalarProperty Name="Del" ColumnName="Del" />
+                <ScalarProperty Name="Integral" ColumnName="Integral" />
+                <ScalarProperty Name="IntegralID" ColumnName="IntegralID" />
+                <ScalarProperty Name="OperateDes" ColumnName="OperateDes" />
+                <ScalarProperty Name="OperateTime" ColumnName="OperateTime" />
+                <ScalarProperty Name="OperateTableID" ColumnName="OperateTableID" />
+                <ScalarProperty Name="OperateTypeID" ColumnName="OperateTypeID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_PrivateInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_PrivateInfo)">
+              <MappingFragment StoreEntitySet="Media_PrivateInfo">
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="IDCardNumber" ColumnName="IDCardNumber" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="cooperatecircs" ColumnName="cooperatecircs" />
+                <ScalarProperty Name="PrivateRemark" ColumnName="PrivateRemark" />
+                <ScalarProperty Name="paymentmode" ColumnName="paymentmode" />
+                <ScalarProperty Name="uploadendtime" ColumnName="uploadendtime" />
+                <ScalarProperty Name="uploadstarttime" ColumnName="uploadstarttime" />
+                <ScalarProperty Name="paystatus" ColumnName="paystatus" />
+                <ScalarProperty Name="haveInvoice" ColumnName="haveInvoice" />
+                <ScalarProperty Name="referral" ColumnName="referral" />
+                <ScalarProperty Name="writingfee" ColumnName="writingfee" />
+                <ScalarProperty Name="bankacountname" ColumnName="bankacountname" />
+                <ScalarProperty Name="bankcardname" ColumnName="bankcardname" />
+                <ScalarProperty Name="bankcardcode" ColumnName="bankcardcode" />
+                <ScalarProperty Name="bankname" ColumnName="bankname" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+                <ScalarProperty Name="Del" ColumnName="Del" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ReporterID" ColumnName="ReporterID" />
+                <ScalarProperty Name="id" ColumnName="id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_reportersHistInfo">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_reportersHistInfo)">
+              <MappingFragment StoreEntitySet="media_reportersHist">
+                <ScalarProperty Name="Dependent" ColumnName="Dependent" />
+                <ScalarProperty Name="AgencyID" ColumnName="AgencyID" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="OtherMessageSoftware" ColumnName="OtherMessageSoftware" />
+                <ScalarProperty Name="hometown" ColumnName="hometown" />
+                <ScalarProperty Name="cooperatecircs" ColumnName="cooperatecircs" />
+                <ScalarProperty Name="PrivateRemark" ColumnName="PrivateRemark" />
+                <ScalarProperty Name="paymentmode" ColumnName="paymentmode" />
+                <ScalarProperty Name="uploadendtime" ColumnName="uploadendtime" />
+                <ScalarProperty Name="uploadstarttime" ColumnName="uploadstarttime" />
+                <ScalarProperty Name="paystatus" ColumnName="paystatus" />
+                <ScalarProperty Name="haveInvoice" ColumnName="haveInvoice" />
+                <ScalarProperty Name="referral" ColumnName="referral" />
+                <ScalarProperty Name="writingfee" ColumnName="writingfee" />
+                <ScalarProperty Name="bankacountname" ColumnName="bankacountname" />
+                <ScalarProperty Name="bankcardname" ColumnName="bankcardname" />
+                <ScalarProperty Name="bankcardcode" ColumnName="bankcardcode" />
+                <ScalarProperty Name="PayType" ColumnName="PayType" />
+                <ScalarProperty Name="ResponsibleDomain" ColumnName="ResponsibleDomain" />
+                <ScalarProperty Name="bankname" ColumnName="bankname" />
+                <ScalarProperty Name="cityname" ColumnName="cityname" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="UnitName" ColumnName="UnitName" />
+                <ScalarProperty Name="UnitType" ColumnName="UnitType" />
+                <ScalarProperty Name="EmailThree" ColumnName="EmailThree" />
+                <ScalarProperty Name="EmailTwo" ColumnName="EmailTwo" />
+                <ScalarProperty Name="EmailOne" ColumnName="EmailOne" />
+                <ScalarProperty Name="MSN" ColumnName="MSN" />
+                <ScalarProperty Name="QQ" ColumnName="QQ" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="BackupMobile" ColumnName="BackupMobile" />
+                <ScalarProperty Name="UsualMobile" ColumnName="UsualMobile" />
+                <ScalarProperty Name="Family" ColumnName="Family" />
+                <ScalarProperty Name="Writing" ColumnName="Writing" />
+                <ScalarProperty Name="Marriage" ColumnName="Marriage" />
+                <ScalarProperty Name="Hobby" ColumnName="Hobby" />
+                <ScalarProperty Name="Character" ColumnName="Character" />
+                <ScalarProperty Name="Postcode_H" ColumnName="Postcode_H" />
+                <ScalarProperty Name="Address_H" ColumnName="Address_H" />
+                <ScalarProperty Name="Tel_H" ColumnName="Tel_H" />
+                <ScalarProperty Name="Tel_O" ColumnName="Tel_O" />
+                <ScalarProperty Name="ReporterPosition" ColumnName="ReporterPosition" />
+                <ScalarProperty Name="ReporterLevel" ColumnName="ReporterLevel" />
+                <ScalarProperty Name="Attention" ColumnName="Attention" />
+                <ScalarProperty Name="Media_ID" ColumnName="Media_ID" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="PenName" ColumnName="PenName" />
+                <ScalarProperty Name="ReporterName" ColumnName="ReporterName" />
+                <ScalarProperty Name="LastModifiedDate" ColumnName="LastModifiedDate" />
+                <ScalarProperty Name="LastModifiedIP" ColumnName="LastModifiedIP" />
+                <ScalarProperty Name="LastModifiedByUserID" ColumnName="LastModifiedByUserID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CreatedIP" ColumnName="CreatedIP" />
+                <ScalarProperty Name="CreatedByUserID" ColumnName="CreatedByUserID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SN" ColumnName="SN" />
+                <ScalarProperty Name="CurrentVersion" ColumnName="CurrentVersion" />
+                <ScalarProperty Name="ReporterID" ColumnName="ReporterID" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="id" ColumnName="id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_IntegralRule">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_IntegralRule)">
+              <MappingFragment StoreEntitySet="media_IntegralRule">
+                <ScalarProperty Name="del" ColumnName="del" />
+                <ScalarProperty Name="Integral" ColumnName="Integral" />
+                <ScalarProperty Name="altname" ColumnName="altname" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="TableID" ColumnName="TableID" />
+                <ScalarProperty Name="OperateID" ColumnName="OperateID" />
+                <ScalarProperty Name="id" ColumnName="id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_OperateType">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_OperateType)">
+              <MappingFragment StoreEntitySet="media_OperateType">
+                <ScalarProperty Name="AltName" ColumnName="AltName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_Tables">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_Tables)">
+              <MappingFragment StoreEntitySet="media_Tables">
+                <ScalarProperty Name="AltTableName" ColumnName="AltTableName" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="TableID" ColumnName="TableID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="media_Counter">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.media_Counter)">
+              <MappingFragment StoreEntitySet="media_Counter">
+                <ScalarProperty Name="operateDate" ColumnName="operateDate" />
+                <ScalarProperty Name="counts" ColumnName="counts" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="IntegralID" ColumnName="IntegralID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Media_FaceToFace">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.Media_FaceToFace)">
+              <MappingFragment StoreEntitySet="Media_FaceToFace">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="createuserid" ColumnName="createuserid" />
+                <ScalarProperty Name="cycle" ColumnName="cycle" />
+                <ScalarProperty Name="id" ColumnName="id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Media_Meetings">
+            <EntityTypeMapping TypeName="IsTypeOf(MediaEntities.Media_Meetings)">
+              <MappingFragment StoreEntitySet="Media_Meetings">
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="path" ColumnName="path" />
+                <ScalarProperty Name="createdate" ColumnName="createdate" />
+                <ScalarProperty Name="createuserid" ColumnName="createuserid" />
+                <ScalarProperty Name="cycle" ColumnName="cycle" />
+                <ScalarProperty Name="id" ColumnName="id" /></MappingFragment></EntityTypeMapping></EntitySetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="MediaInfos">
+        <EntityTypeShape EntityType="MediaEntities.media_CityInfo" Width="2.625" PointX="0.5" PointY="5.25" Height="1.7790128580729165" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaEntities.media_CountryInfo" Width="2.625" PointX="0.5" PointY="0.5" Height="1.779012858072917" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaEntities.media_MediaItemsInfo" Width="3" PointX="2.625" PointY="2.75" Height="15.341411132812503" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaEntities.media_MediaReporterRelationInfo" Width="3.5" PointX="5.625" PointY="0.5" Height="1.7790128580729174" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaEntities.media_mediaTypeInfo" Width="3" PointX="2.625" PointY="0.5" Height="1.5879931640624998" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaEntities.media_ProvinceInfo" Width="2.625" PointX="0.5" PointY="2.875" Height="1.5879931640624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaEntities.media_ReportersInfo" Width="3.125" PointX="5.75" PointY="3.125" Height="13.240194498697917" IsExpanded="true" />
+        <EntityTypeShape EntityType="MediaEntities.media_AgencyInfo" Width="2.5" PointX="10.25" PointY="3" Height="9.9928597005208317" />
+        <EntityTypeShape EntityType="MediaEntities.media_MediaAttachmentsInfo" Width="3.25" PointX="13.125" PointY="0.5" Height="2.9251310221354165" />
+        <EntityTypeShape EntityType="MediaEntities.media_BranchInfo" Width="1.5" PointX="10.375" PointY="0.5" Height="1.7790128580729172" />
+        <EntityTypeShape EntityType="MediaEntities.media_IndustriesInfo" Width="3" PointX="13.375" PointY="3.75" Height="1.5879931640624996" />
+        <EntityTypeShape EntityType="MediaEntities.media_mediaIndustryRelationInfo" Width="3.5" PointX="13.125" PointY="6.125" Height="1.7790128580729174" />
+        <EntityTypeShape EntityType="MediaEntities.media_CapitalInfo" Width="1.5" PointX="13.375" PointY="8.75" Height="1.5879931640624996" />
+        <EntityTypeShape EntityType="MediaEntities.media_MediaItemsHistInfo" Width="1.5" PointX="9.375" PointY="13.75" Height="15.914470214843753" />
+        <EntityTypeShape EntityType="MediaEntities.media_OperateLogInfo" Width="2.75" PointX="13.375" PointY="11.75" Height="2.7341113281249996" />
+        <EntityTypeShape EntityType="MediaEntities.media_PrivateInfo" Width="1.5" PointX="11.375" PointY="15.75" Height="4.4532885742187478" />
+        <EntityTypeShape EntityType="MediaEntities.media_reportersHistInfo" Width="3.5" PointX="13.375" PointY="15.75" Height="13.240194498697917" />
+        <EntityTypeShape EntityType="MediaEntities.media_IntegralRule" Width="1.5" PointX="17.375" PointY="0.75" Height="2.3520719401041665" />
+        <EntityTypeShape EntityType="MediaEntities.media_OperateType" Width="1.5" PointX="15.375" PointY="8.75" Height="1.5879931640624996" />
+        <EntityTypeShape EntityType="MediaEntities.media_Tables" Width="1.5" PointX="17.375" PointY="4.75" Height="1.5879931640624996" />
+        <EntityTypeShape EntityType="MediaEntities.media_Counter" Width="1.5" PointX="6.375" PointY="17.75" Height="2.1610522460937531" />
+        <EntityTypeShape EntityType="MediaEntities.Media_FaceToFace" Width="1.5" PointX="17.375" PointY="7.75" Height="2.3520719401041674" />
+        <EntityTypeShape EntityType="MediaEntities.Media_Meetings" Width="1.5" PointX="17.375" PointY="11.75" Height="2.3520719401041674" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

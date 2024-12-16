@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Purchase/Default.aspx" title="采购部系统" description="采购部系统">
+    <siteMapNode url="Purchase/Requisition/BackUpUser.aspx" title="备用初审人设置" description="备用初审人设置" />
+    <siteMapNode url="Purchase/Requisition/UpLoadRequisition.aspx" title="导入申请单" description="导入申请单" />
+    <siteMapNode url="Purchase/Requisition/RequisitionSaveList.aspx" title="编辑采购申请"  description="编辑采购申请">
+      <siteMapNode url="Purchase/Requisition/EditRequisition.aspx" title="编辑申请单"  description="编辑申请单">
+        <siteMapNode url="Purchase/Requisition/EditProducts.aspx?pageUrl=EditRequisition.aspx" title="添加采购物品"  description="添加采购物品"/>
+        <siteMapNode url="Purchase/Requisition/ModifyProducts.aspx?pageUrl=ModifyRequisition.aspx" title="修改采购物品"  description="修改采购物品"/>
+      </siteMapNode>
+      <siteMapNode url="Purchase/Requisition/ShowRequisitionDetail.aspx" title="申请信息查看"  description="申请信息查看"/>
+      <siteMapNode url="Purchase/Requisition/AddRequisitionStep2.aspx" title="一般信息"  description="一般信息" />
+      <siteMapNode url="Purchase/Requisition/AddRequisitionStep3.aspx" title="项目号申请单信息"  description="项目号申请单信息" />
+      <siteMapNode url="Purchase/Requisition/AddRequisitionStep6.aspx" title="采购物品信息" description="采购物品信息" />
+      <siteMapNode url="Purchase/Requisition/AddRequisitionStep4.aspx" title="供应商信息"  description="供应商信息" />
+      <siteMapNode url="Purchase/Requisition/AddRequisitionStep5.aspx" title="工作需求描述"  description="工作需求描述"/>
+      <siteMapNode url="Purchase/Requisition/AddRequisitionStep7.aspx" title="付款条件信息" description="付款条件信息" />
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/OrderCommitList.aspx" title="已审核申请" description="已审核申请">
+      <siteMapNode url="Purchase/Requisition/OrderDetail.aspx?backUrl=OrderCommitList.aspx" title="申请信息查看"  description="申请信息查看"/>
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/RequistionCommitList.aspx" title="已提交申请"  description="已提交申请">
+      <siteMapNode url="Purchase/Requisition/ShowRequisitionDetail.aspx?pageUrl=RequistionCommitList.aspx" title="申请信息查看"  description="申请信息查看"/>
+    </siteMapNode>
+
+    <siteMapNode url="Purchase/Requisition/OrderList.aspx" title="集团物料审核"  description="集团物料审核">
+      <siteMapNode url="Purchase/Requisition/ChangeAuditUser.aspx" title="变更初审人" description="变更初审人" />
+      <siteMapNode url="Purchase/Requisition/EditOrder.aspx" title="申请信息审核">
+        <siteMapNode url="Purchase/Requisition/EditProducts.aspx?pageUrl=EditOrder.aspx" title="添加采购物品"  description="添加采购物品"/>
+        <siteMapNode url="Purchase/Requisition/ModifyProducts.aspx?pageUrl=EditOrder.aspx" title="修改采购物品"  description="修改采购物品"/>
+      </siteMapNode>
+      <siteMapNode url="Purchase/Requisition/OrderDetail.aspx" title="申请信息查看"/>
+    </siteMapNode>
+
+    <siteMapNode url="Purchase/Requisition/AuditRequistion.aspx" title="集团采购审批"  description=" 集团采购审批">
+      <siteMapNode url="Purchase/Requisition/OrderDetail.aspx?backUrl=AuditRequistion.aspx" title="申请信息审批"  description="申请信息审批"/>
+    </siteMapNode>
+
+    <siteMapNode url="Purchase/Requisition/AuditOrderPassList.aspx" title="已审批申请"  description="已审批申请">
+      <siteMapNode url="Purchase/Requisition/OrderDetail.aspx?backUrl=AuditOrderPassList.aspx" title="申请信息查看"  description="申请信息查看"/>
+    </siteMapNode>
+    <siteMapNode url="System/CompanyList.aspx" title="公司列表" description="公司列表">
+      <siteMapNode url="System/CompanyContrastNew.aspx" title="公司对比" description="公司对比" />
+      <siteMapNode url="System/AddCompanyInfo.aspx" title="添加新公司" description="添加新公司" />
+      <siteMapNode url="System/EditCompanyInfo.aspx" title="编辑公司信息" description="编辑公司信息" />
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/ProductList.aspx" title="物品列表">
+      <siteMapNode url="Purchase/Requisition/ProductEdit.aspx" title="物品编辑"/>
+      <siteMapNode url="Purchase/Requisition/ProductView.aspx" title="物品查看" />
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/SupplierInfoList.aspx" title="供应商列表">
+      <siteMapNode url="Purchase/Requisition/SupplierInfoEdit.aspx" title="供应商编辑"/>
+      <siteMapNode url="Purchase/Requisition/SupplierInfoView.aspx" title="供应商查看" />
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/SupplierInfoListD.aspx" title="供应商列表">
+      <!--<siteMapNode url="Purchase/Requisition/SupplierInfoViewD.aspx" title="供应商查看" />-->
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/RequisitionSubmitList.aspx" title="申请单审批">
+      <siteMapNode url="Purchase/Requisition/OrderDetail.aspx?backUrl=RequisitionSubmitList.aspx" title="申请单审批"/>
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/RequisitionNotAuditList.aspx" title="已审核申请">
+      <siteMapNode url="Purchase/Requisition/OrderDetail.aspx?backUrl=RequisitionNotAuditList.aspx" title="申请信息查看"/>
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/RequisitionAuditList.aspx" title="已审批申请单">
+      <siteMapNode url="Purchase/Requisition/OrderDetail.aspx?backUrl=RequisitionAuditList.aspx" title="申请信息查看"/>
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/RecipientList.aspx" title="收货确认列表">
+      <siteMapNode url="Purchase/Requisition/RecipientDetail.aspx" title="收货确认"/>
+    </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/FilialeCommitList.aspx" title="分公司已审核">
+      <siteMapNode url="Purchase/Requisition/OrderDetail.aspx?backUrl=FilialeCommitList.aspx" title="申请信息查看"/>
+    </siteMapNode>
+
+	  <siteMapNode url="Purchase/Requisition/BreakupList.aspx" title="已完成收货">
+		  <siteMapNode url="Purchase/Requisition/BreakupDetail.aspx" title="申请信息查看"/>
+	  </siteMapNode>
+    <siteMapNode url="Purchase/Requisition/SearchPaymentApply.aspx" title="付款申请"/>
+    <siteMapNode url="Purchase/Requisition/FilialeAuditList.aspx" title="分公司审核">	
+    <siteMapNode url="Purchase/Requisition/Filiale_RequisitionEdit.aspx" title="审核申请" />
+    </siteMapNode>
+    <siteMapNode url="Purchase/PolicyFlow/PolicyFlowEditList.aspx" title="政策流程列表">
+      <siteMapNode url="Purchase/PolicyFlow/PolicyFlowEdit.aspx" title="编辑政策流程" />
+      <siteMapNode url="Purchase/PolicyFlow/PolicyFlowDisplay.aspx" title="查看政策流程" />
+    </siteMapNode>
+	<siteMapNode url="Purchase/Requisition/LogList.aspx" title="操作日志"/>
+  </siteMapNode>  
+</siteMap>

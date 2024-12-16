@@ -1,0 +1,26 @@
+
+UL{  display:block; margin-left:20px; margin-bottom:0px;	margin-top: 0px;}
+LI.clsHdn UL {  margin-left:16px;	margin-top: 0px;}
+LI.clsKid UL { display:none; margin-left:16px;	margin-top: 0px;}
+LI { list-style-image:url(../../images/blank.gif); cursor:default;margin-top: 0px;}
+LI.clsHdn 
+{
+	list-style-image:url(../../images/plus.gif);
+	cursor:default;
+	margin-top: 0px;
+}
+LI.clsKid 
+{
+	list-style-image:url(../../images/minus.gif);
+	cursor:default;
+	margin-top: 0px;
+}
+
+A:link, A:visited,A:active  { font-weight:normal; color:navy; text-decoration:none; }
+A:hover { text-decoration:underline; }
+A.curNode SPAN {color:White; background-color:#336699;padding-top:2px;padding-left:2px;padding-right:2px;}
+
+IMG {  border:0px; margin:0 0 0 0; cursor:hand;}
+
+
+

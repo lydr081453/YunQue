@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getIp">
+        <s:complexType />
+      </s:element>
+      <s:element name="getIpResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getIpResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardNo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validatePara" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardNoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCardNoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getIpSoapIn">
+    <wsdl:part name="parameters" element="tns:getIp" />
+  </wsdl:message>
+  <wsdl:message name="getIpSoapOut">
+    <wsdl:part name="parameters" element="tns:getIpResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCardNoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCardNo" />
+  </wsdl:message>
+  <wsdl:message name="GetCardNoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCardNoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GetCardNoServiceSoap">
+    <wsdl:operation name="getIp">
+      <wsdl:input message="tns:getIpSoapIn" />
+      <wsdl:output message="tns:getIpSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardNo">
+      <wsdl:input message="tns:GetCardNoSoapIn" />
+      <wsdl:output message="tns:GetCardNoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetCardNoServiceSoap" type="tns:GetCardNoServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getIp">
+      <soap:operation soapAction="http://tempuri.org/getIp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardNo">
+      <soap:operation soapAction="http://tempuri.org/GetCardNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GetCardNoServiceSoap12" type="tns:GetCardNoServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getIp">
+      <soap12:operation soapAction="http://tempuri.org/getIp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardNo">
+      <soap12:operation soapAction="http://tempuri.org/GetCardNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetCardNoService">
+    <wsdl:port name="GetCardNoServiceSoap" binding="tns:GetCardNoServiceSoap">
+      <soap:address location="http://172.16.11.174:1010/CardocardWeb/GetCardNoService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GetCardNoServiceSoap12" binding="tns:GetCardNoServiceSoap12">
+      <soap12:address location="http://172.16.11.174:1010/CardocardWeb/GetCardNoService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

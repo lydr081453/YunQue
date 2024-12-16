@@ -1,0 +1,116 @@
+.calendar
+{
+    border: none;
+}
+.day
+{
+    width: 90px;
+    height: 70px;
+    vertical-align: top;
+    font-family: Arial;
+    font-size: 11px;
+    font-weight:500;
+    color: Black;
+    background-color: #FFFFFF;
+    border: solid 1px #C6C1AC;
+    cursor: pointer;
+    cursor: hand;
+}
+.holidayday
+{
+    width: 90px;
+    height: 70px;
+    vertical-align: top;
+    font-family: Arial;
+    font-size: 11px;
+    color: Black;
+    background-color: #eeeee9;
+    border: solid 1px #C6C1AC;
+    font-weight: bold;
+    cursor: pointer;
+    cursor: hand;
+}
+.othermonthday
+{
+    width: 90px;
+    height: 70px;
+    vertical-align: top;
+    font-family: Arial;
+    font-size: 11px;
+    color: Black;
+    background-color: #F5F3E5;
+    border: solid 1px #C6C1AC;
+    cursor: pointer;
+    cursor: hand;
+    text-align:right;
+}
+.selectedday
+{
+    width: 90px;
+    height: 70px;
+    vertical-align: top;
+    font-family: Arial;
+    font-size: 11px;
+    color: Black;
+    background-color: #FBE694;
+    border: solid 1px #C6C1AC;
+    font-weight: bold;
+    cursor: default;
+}
+
+
+.month
+{
+    border-collapse: collapse;
+    border: solid 1px black;
+}
+.dayheader
+{
+    background-color: #E3E0CD;
+    background-image: url(../images/calendar/header_bg.gif);
+    color: #504C39;
+    font-family: Verdana;
+    font-size: 11px;
+    text-align: center;
+    border-top: solid 1px #FFFFFF;
+    border-left: solid 1px #FFFFFF;
+    border-bottom: solid 1px #ACA899;
+    border-right: solid 1px #C6C1AC;
+    padding: 4px;
+}
+.CalendarTitle
+{
+    background-color: #7D9459;
+    background-image: url(images/calendar/title_bg.gif);
+    border: 1px solid black;
+    border-bottom-width: 0px;
+}
+.title TD
+{
+    font-family: verdana;
+    font-size: 11px;
+    font-weight: bold;
+    color: White;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.nextprev
+{
+    cursor: pointer;
+}
+.image_align
+{
+    position: relative;
+    top:40px;
+}
+.timespan_align
+{
+    width: 90px;
+    height: 30px;
+}
+.spanimage_align
+{
+    position: relative;
+    left: 1px;
+    float: left;
+}

@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainPage.master.cs" Inherits="SupplierWeb.MainPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>欢迎使用供应链平台</title>
+    <script type="text/javascript" src="/public/js/highslide/highslide.js"></script>
+    <script type="text/javascript" src="/public/js/dialog.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="70">&nbsp;</td>
+          </tr>
+        </table>
+        <table width="960" border="0" align="center" cellpadding="0" cellspacing="0"  runat="server">
+          <tr>
+            <td width="5"><img src="~/Images/s3_03.jpg" width="5" height="36" runat="server" /></td>
+            <td valign="top" class="menubar" runat="server">
+            <table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="20" height="40">&nbsp;</td>
+                <td class="menuClickover">首页</td>
+                <td class="menu"><asp:HyperLink ID="hlMyInfo" runat="server" NavigateUrl="~/UserInfo/UserInfo.aspx">我的信息</asp:HyperLink></td>
+                <td width="2"><img src="~/Images/s3_05-07.jpg" width="2" height="37" runat="server" /></td>
+                <td class="menu"><asp:HyperLink ID="hlMyProfile" runat="server" NavigateUrl="~/UserProfile/UserProfile.aspx">我的资料</asp:HyperLink></td>
+                <td width="2"><img src="~/Images/s3_05-07.jpg" width="2" height="37" runat="server" /></td>
+                <td class="menu" runat="server">我的订单</td>
+                <td width="2"><img src="~/Images/s3_05-07.jpg" width="2" height="37"  runat="server"/></td>
+                <td class="menu">论坛</td>
+                <td width="2"><img src="~/Images/s3_05-07.jpg" width="2" height="37"  runat="server"/></td>
+                <td class="menu"><asp:LinkButton ID="lnkLogOut" runat="server" Text="退出" 
+                        onclick="lnkLogOut_Click"></asp:LinkButton></td>
+                <td width="2"><img id="Img1" src="~/Images/s3_05-07.jpg" width="2" height="37"  runat="server"/></td>
+                <td>&nbsp;</td>
+                <td width="140"><input name="textfield" type="text" class="input2" id="textfield" /></td>
+                <td width="20"><img src="~/Images/s3_03-09.jpg" width="35" height="36" runat="server" /></td>
+                <td width="20">&nbsp;</td>
+              </tr>
+            </table></td>
+            <td width="5"><img src="~/Images/s3_03-12.jpg" width="5" height="44" /></td>
+          </tr>
+        </table>
+        <table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="10"></td>
+          </tr>
+        </table>
+        <table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="230" valign="top"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="box_grey">
+              <tr>
+                <td class="title"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px;">
+                    <tr>
+                      <td><img src="~/Images/s2_26.jpg" width="3" height="17" / style="margin:0 5px -4px 5px;" />我的等级 </td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="5">
+                  <tr>
+                    <td bgcolor="#FFFFFF">等级：协议服务商<br />
+                      好评：216<br />
+                      差评：3</td>
+                  </tr>
+                  <tr>
+                    <td>网络传媒有限公司由浙江第一平面媒体都市快报投资创办... </td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table>
+              <table width="100%" border="0" cellpadding="5" cellspacing="0" class="box_Purple">
+                <tr>
+                  <td class="title"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:3px;">
+                      <tr>
+                        <td><img src="~/Images/s3.jpg" width="3" height="17" / style="margin:0 5px -4px 5px;" />客户等级 </td>
+                      </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" style="border-bottom:1px solid #a79fb5;">
+                    <tr>
+                      <td width="30%" align="center"><strong>客户</strong></td>
+                      <td width="1" align="center"><img src="~/Images/s4_35.jpg" width="1" height="31" class="STYLE1" /></td>
+                      <td width="39%" align="center"><strong>等级</strong></td>
+                      <td width="1" align="center"><img src="~/Images/s4_35.jpg" width="1" height="31" /></td>
+                      <td align="center"><strong>服务评分</strong></td>
+                    </tr>
+                  </table>
+                    <table width="100%" border="0" cellpadding="5" cellspacing="0" class="navBg">
+                    <tr>
+                      <td width="30%" align="center">宣亚<br />
+                        兰标<br />
+                        宣亚<br />
+                        兰标<br />
+                        宣亚</td>
+                      <td width="40%" align="center">协议服务商<br />
+                        协议服务商<br />
+                        协议服务商<br />
+                        协议服务商<br />
+                        协议服务商</td>
+                      <td align="center">3<br />
+                        6<br />
+                        3<br />
+                        6<br />
+                        3</td>
+                    </tr>
+                  </table></td>
+                </tr>
+              </table></td>
+            <td width="10"></td>
+            <td valign="top">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+                </asp:ContentPlaceHolder>
+                </td>
+          </tr>
+        </table>
+        <table width="950" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="20"></td>
+          </tr>
+        </table>
+        <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" class="foot">
+          <tr>
+            <td height="10">合作企业： 中国网站排名 | 电子商务世界 | 搜空·差旅通 | 黄页频道 | 《诚信通会员新编》 | 杰胜信用频道<br />
+            关于我们 | 联系方式<br />
+            Copyright notes @ 1999-2009 shunyagroup.com</td>
+          </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

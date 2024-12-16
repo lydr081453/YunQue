@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs"
+    Inherits="SEPAdmin.MainMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="/public/css/dialog.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body  style=" height:100%;">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="Server" EnablePartialRendering="true"
+        EnablePageMethods="true" EnableScriptLocalization="True" EnableScriptGlobalization="True" />
+    <%--<div style="float: left; width: 200px">
+        <asp:TreeView runat="server" ID="treeNav" ImageSet="XPFileExplorer" NodeIndent="15">
+            <ParentNodeStyle Font-Bold="False" />
+            <HoverNodeStyle Font-Underline="True" ForeColor="#6666AA" />
+            <SelectedNodeStyle BackColor="#B5B5B5" Font-Underline="False" HorizontalPadding="0px"
+                VerticalPadding="0px" />
+            <NodeStyle Font-Names="Tahoma" Font-Size="8pt" ForeColor="Black" HorizontalPadding="2px"
+                NodeSpacing="0px" VerticalPadding="2px" />
+        </asp:TreeView>
+    </div>  --%>  
+    <div style="float: left;width:100%;">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div style="clear: both">
+    </div>
+    </form>
+</body>
+</html>

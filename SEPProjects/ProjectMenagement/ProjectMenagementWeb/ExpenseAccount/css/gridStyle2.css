@@ -1,0 +1,211 @@
+﻿.Grid
+{
+    border: 1px solid #9495A2;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.GridHeader
+{
+    background-image: url(../images/gridview2/grid_headerBg.gif);
+    background-color: #8988A5;
+    border-bottom: 1px solid #57566F;
+    height: 30px;
+    padding-left: 3px;
+    cursor: default;
+    color: #FFFFFF;
+    font-family: verdana;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align:middle;
+}
+
+.GridHeader2
+{
+    background-image: url(../images/gridview2/grid_headerBg.gif);
+    background-color: #8988A5;
+    background-repeat:repeat-x;
+    border-bottom: 1px solid #57566F;
+    height: 30px;
+    padding-left: 3px;
+    cursor: default;
+    color: #FFFFFF;
+    font-family: verdana;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align:middle;
+}
+
+.GridData
+{
+    height: 390px;
+}
+
+.GridHeaderText
+{
+    color: #FFFFFF;
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.HeadingRow
+{
+    background-color: #e5e5e5;
+}
+
+.HeadingCell
+{
+    background-image: url(../images/gridview2/header_bg.gif);
+    background-color: #D6D7E1;
+    border: 1px solid gray;
+    border-top-color: #E6E6E6;
+    border-left-color: #E6E6E6;
+    padding: 5px;
+}
+
+.HeadingCellText
+{
+    font-family: verdana;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+}
+
+.Row
+{
+    background-color: #FFFFFF;
+    cursor: default;
+    height: 30px;
+}
+
+.Row td.DataCell
+{
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    font-family: verdana;
+    font-size: 9pt;
+    cursor: default;
+    height: 30px;
+}
+
+.AlternatingRow
+{
+    cursor: default;
+    height: 30px;
+}
+
+.AlternatingRow td.DataCell
+{
+    background-color: #F6F6F8;
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    font-family: verdana;
+    font-size: 9pt;
+    cursor: default;
+    height: 30px;
+}
+
+.GridFooter
+{
+    cursor: default;
+    padding: 5px;
+    vertical-align: bottom;
+}
+
+.GridFooterText
+{
+    color: #000000;
+    font-family: verdana;
+    font-size: 11px;
+}
+
+.CellText
+{
+    font-family: verdana;
+    font-size: 9pt;
+    height: 30px;
+}
+
+
+.GroupHeading
+{
+    color: #706F91;
+    background-color: #FFFFFF;
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 9pt;
+    border-bottom: 2px solid #A5A4BD;
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+
+.GroupByCell
+{
+    cursor: pointer;
+}
+
+.GroupByText
+{
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    padding-right: 9pt;
+}
+
+
+.SliderPopup
+{
+    background-color: #FFF4D7;
+    border: 1px solid #4B4B6F;
+    border-top-color: #9495A2;
+    border-left-color: #9495A2;
+    width: 288px;
+    height: 68px;
+}
+.SearchText
+{
+    font-size: 9pt;
+}
+.ScrollBar
+{
+    background-image: url(../images/scroller/scroller_bg.gif);
+}
+
+.ScrollGrip
+{
+    background-image: url(../images/scroller/scroll_gripBg.gif);
+}
+.SortedDataCell
+{
+    font-family: verdana;
+    font-size: 12px;
+    height: 30px;
+}
+.SelectorCell 
+{ 
+  background-color: #E2E2E2; 
+  border: 1px solid #FFFFFF; 
+  border-right-color: #B5B5B5; 
+  border-bottom-color: #B5B5B5; 
+}
+
+.SelectedRow 
+{ 
+  background-color: #FFEEC2; 
+}
+
+.SelectedRow td.DataCell 
+{ 
+  cursor: default; 
+  padding: 2px; 
+  padding-left: 3px; 
+  padding-bottom: 3px; 
+  font-family: verdana; 
+  font-size: 12px; 
+  border-bottom: 1px solid #4B4B6F; 
+  border-top: 1px solid #4B4B6F; 
+  border-right: 0px; 
+  height: 30px;
+}

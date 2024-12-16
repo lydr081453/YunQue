@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="false" CodeBehind="Default.master.cs" Inherits="AdministrativeWeb.Default" %>
+
+<%@ Register Assembly="ComponentArt.Web.UI" Namespace="ComponentArt.Web.UI" TagPrefix="ComponentArt" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>行政管理系统</title>
+    <link href="css/syshomepage.css" rel="stylesheet" type="text/css" />
+    <link href="css/siteMapStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/newstyle.css" rel="stylesheet" type="text/css" />
+    <link href="/css/tsStyle.css" type="text/css" rel="stylesheet" />
+    <script language="javascript" type="text/javascript" src="/js/jquery.js"></script>
+
+        <style>
+        #pageloading
+        {
+             position: fixed !important;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background: white url('/images/loading.gif') no-repeat center;
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+            opacity:0.4;
+        }
+    </style>
+    <script>
+        function showLoading() {
+            $('#pageloading').show();
+        }
+        function hideLoading() {
+            $('#pageloading').hide();
+        }
+    </script>
+</head>
+<body style=" height:100%;">
+        <div id="pageloading" style="display:none;"></div>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="scriptManager" runat="server">
+    </asp:ScriptManager>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

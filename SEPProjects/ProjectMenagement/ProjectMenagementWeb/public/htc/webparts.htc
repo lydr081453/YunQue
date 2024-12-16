@@ -1,0 +1,467 @@
+<PUBLIC:COMPONENT>
+    <PUBLIC:ATTACH EVENT="oncontentready"   ONEVENT="fnInit()"   />
+    <PUBLIC:ATTACH EVENT="onmousedown"      ONEVENT="fnGrab()"   />
+    <PUBLIC:ATTACH EVENT="ondragstart"      ONEVENT="fnCancel()" />
+
+    
+    <SCRIPT LANGUAGE="JScript">
+    
+    window.onerror = function fnNoOp() {return true; };
+        
+	// globals
+	var m_iSpacingTop   = 10;
+	var m_iSpaceBetween = 5;
+	var m_iTop          = 15;
+	var bUserData = false;
+	var bVisited  = false;
+	
+	//---- Setting the id for user data store ---------
+
+	if ("undefined" == typeof(sContentID) || sContentID == "" ) 
+	{
+		sContentID = fnFormatFileName(window.location.href) ;
+	}
+	else
+	{
+		sContentID = sContentID;
+	}
+        
+    
+    //////////////////////////////////////////////////////////////////////////////
+    ////// Initializing the top and height values for the parts //////////////////
+    function fnInit()
+    {
+		var oStateArray = fnGetUserDataList();
+		element.parts = fnGetPartArray();
+		var oDragWindow = window.document.createElement( "SPAN" );
+		oDragWindow.className = "clsDragWindow";
+		element.dragwindow = oDragWindow;
+		element.rows(0).cells(0).insertAdjacentElement( "beforeEnd" , oDragWindow );
+		fnReOrder( oStateArray );
+
+    }
+    
+    
+    function fnReOrder( oStateArray )
+    {
+		if( null == oStateArray ) return;
+		var bDirty = false;
+		var oLastPart = null;
+		for( var i = 0; i < oStateArray.length; i++ )
+		{
+			if( bDirty || element.parts[i].id != oStateArray[i][0] )
+			{
+				bDirty = true;
+				var oPart = fnGetPartById( oStateArray[i][0] );
+				if( i != 0 ) oLastPart = element.parts[i-1];
+				if( null != oLastPart )
+				{
+					oLastPart.insertAdjacentElement( "afterEnd" , oPart );
+				}
+				else
+				{
+					element.rows(0).cells(0).insertAdjacentElement( "afterBegin" , oPart );
+				}
+				oLastPart = oPart;
+			}
+			if( !bDirty )
+			{
+				try{bClosed = ( oStateArray[i][1] == "close" );}
+				catch(e){bClosed = false;}
+				element.parts[i].state = bClosed ? "close" : "open";
+				if( bClosed ) fnShowHideContent( element.parts[i] , !bClosed );
+			}
+		}
+		if( bDirty )
+		{
+			element.parts = fnGetPartArray();
+			for( var i = 0; i < element.parts.length; i++ )
+			{
+				try{bClosed = oStateArray[i][1] == "close"}
+				catch(e){bClosed = false;}
+				element.parts[i].state = bClosed ? "close" : "open";
+				if( bClosed ) fnShowHideContent( element.parts[i] , !bClosed );
+			}
+		}
+    }
+    
+    function fnGetPartById( sId )
+    {
+		return element.all( sId );
+    }
+    
+    function fnGetPartArray()
+    {
+    	var oParts = element.all.tags( "TABLE" );
+		var oReturn = new Array();
+		for( var i = 0; i < oParts.length; i++ )
+		{
+			if( oParts[i].className == "clsPart" )
+			{
+				oReturn[oReturn.length] = oParts[i];
+			}
+		}
+		return oReturn;
+	}
+    
+    function fnGetMinMaxImg( oPart )
+    {
+		var oImgs = oPart.all.tags( "img" );
+		for( var i = 0; i < oImgs.length; i++ )
+		{
+			if( oImgs[i].className == "clsMinimize" ) return oImgs[i];
+		} 
+    }
+     
+    /////////////////////////////////////////////////////////////////////////////////////
+    /////// On mouse down grab the element and capture its ondrag event /////////////////
+    
+    function fnGrab()
+    {
+        var oEl = event.srcElement;
+        var bCollapsed
+        
+        if( oEl.className.indexOf( "clsPartRight" ) != -1 )
+        {
+            var oTableRow2  = oEl.parentElement.parentElement.parentElement.rows[1];
+            var bCollapsed = ( (oTableRow2.style.display == "none") ? true : false);
+            fnShowHideContent(oEl,bCollapsed);         
+        }
+        else if( oEl.className == "clsPartHead")
+        {
+        
+            if("img" == oEl.tagName.toLowerCase())
+            {
+                oEl.onDragStart = fnCancel;
+                oEl = oEl.parentElement;
+            }
+          
+            m_iTop = event.clientY;
+			oEl = fnGetPart( oEl );
+			element.offsetY = event.offsetY + element.offsetTop;
+			element.offsetX = event.offsetX + element.offsetLeft + 15;
+            element.current = oEl;
+            fnShowDragWindow( oEl );
+            
+            window.document.attachEvent( "onmousemove"  , fnMove );
+            window.document.attachEvent( "onscroll"  , fnMove );
+            window.document.attachEvent( "onmousemove" , fnCheckState );
+            window.document.attachEvent( "onmouseup"    , fnRelease );
+            window.document.attachEvent( "onselectstart", fnSelect );
+        }
+        
+    }
+    
+	function fnShowDragWindow( oEl )
+	{
+		element.dragwindow.style.height = oEl.offsetHeight - 3;
+		element.dragwindow.style.top = oEl.offsetTop + 3;
+		element.dragwindow.style.left = oEl.offsetLeft;
+		element.dragwindow.style.width = oEl.offsetWidth;
+		element.dragwindow.zIndex = 100;
+		element.dragwindow.style.display = "block";
+	}
+
+	function fnHideDragWindow()
+	{
+		element.dragwindow.style.display = "none";
+		element.dragwindow.style.height = "";
+		element.dragwindow.style.top = "";
+		element.dragwindow.style.left = "";
+		element.dragwindow.style.width = "";
+		element.dragwindow.zIndex = "";
+	}
+
+    function fnGetPart( oEl )
+    {
+		while( null != oEl && oEl.className != "clsPart" )
+		{
+			oEl = oEl.parentElement;
+		}
+		return oEl;
+    }
+    
+    ////////////////////////////////////////////////////////////////////////////////
+    ///////// function to set the top style for the object /////////////////////////
+    function fnMove()
+    {
+		if (event.button != 1)
+		{
+			fnRelease();
+			return;
+		}
+
+		element.dragwindow.style.top = event.clientY - element.offsetY + window.document.body.scrollTop;  
+		element.dragwindow.style.left = event.clientX - element.offsetX + window.document.body.scrollLeft;
+		if (event.clientY > window.document.body.clientHeight - 10 )
+		{
+			window.scrollBy(0, 10);
+		}
+		else if (event.clientY < 10)
+		{
+			window.scrollBy(event.clientX, -10);
+		}
+		
+    }
+    
+    //////////////////////////////////////////////////////////////////////////////////////
+    ////// on mouse up, detach the events and reposition the webparts ////////////////////
+    
+    function fnRelease()
+    {
+       
+        var oEl = event.srcElement;
+        
+        //fnSaveState();
+
+        window.document.detachEvent( "onmousemove" , fnMove );
+        window.document.detachEvent( "onscroll" , fnMove );
+        window.document.detachEvent( "onmousemove" , fnCheckState );
+        window.document.detachEvent( "onmouseup" , fnRelease );
+        window.document.detachEvent( "onselectstart", fnSelect );
+        
+                            
+        if( "object" == typeof(element.current) );
+        {
+         
+			if (null != element.current )
+            {
+			    fnSetPosition( element.dragwindow );
+				//element.current.style.position = "relative";
+				//element.current.style.top = "";
+				//element.current.style.zIndex = -1;
+				element.current = null;
+				fnHideDragWindow();
+            }
+            else
+            {
+                  return false;
+            }
+            
+        }
+               
+    }
+	
+	////////////////////////////////////////////////////////////////////////////////////////
+    /////// function to reorder the webparts after dragging ////////////////////////////////
+    function fnSetPosition( oEl )
+    {
+		var oPrevEl = fnGetPrevEl( oEl );
+		if( null != oPrevEl )
+		{
+			oPrevEl.insertAdjacentElement( "afterEnd" , element.current );
+		}
+		else
+		{
+			element.rows(0).cells(0).insertAdjacentElement( "afterBegin" , element.current );
+		}
+		element.parts = fnGetPartArray();
+		fnSaveState();
+    }
+    
+	function fnGetPrevEl( oEl )
+	{
+		var oReturn = null;
+		for( var i = 0; i < element.parts.length; i++ )
+		{
+			if( element.parts[i].offsetTop < oEl.offsetTop ) oReturn = element.parts[i];
+		}
+		return oReturn;
+	}
+	
+	//////////////////////////////////////////////////////////////////////////////
+    //////// function to strip out non-alpha numeric chars from input string /////
+    
+    function fnFormatFileName(sFileName)
+    {
+        if( "string" == typeof( sFileName ) )
+        {
+            sFileName = sFileName.replace( /[\W]/gi , "" );
+            return sFileName;
+        }
+    }
+          
+    //////////////////////////////////////////////////////////////////////////////
+    //////// This is a innerloop for function fnCheckWebPartIDs //////////////////
+    
+	function fnInternalLoop(i,strElements)
+	{
+		for(j=0;j<strElements.length;j++)
+		{
+			if ( parentElement.children[i].id == strElements[j].split("=")[0] )
+			{
+				bUserData = true;
+				return;
+			}
+			else
+			{
+				bUserData = false;
+			}
+		}
+	}
+                
+    
+    //////////////////////////////////////////////////////////////////////////////
+    ////// function to get user data content /////////////////////////////////////
+    function fnGetUserDataList()
+    {
+
+        var oUserData = window.document.all("oLayout");
+        var oReturn = null;
+        try
+        {
+			oUserData.load(sContentID);      
+		}
+		catch(e)
+		{
+			oUserData = null;
+		}
+        
+        if (null != oUserData && oUserData != "" &&  "undefined" != oUserData )
+        {
+          var sUserData = oUserData.getAttribute( "userdata" );
+          if( null != sUserData )
+          {
+	          oReturn = fnParseUserData( oUserData.getAttribute( "userdata" ) );
+	      }
+        }
+        return oReturn;
+           
+    }
+    
+    function fnParseUserData( sUserData )
+    {
+		var oTmpArray = sUserData.split( ";" );
+		var oReturnArray = new Array( oTmpArray.length - 1 );
+		for( var i = 0; i < oTmpArray.length -1; i++ )
+		{
+			oReturnArray[i] = oTmpArray[i].split( "=" );
+		}
+		return oReturnArray;
+    }
+   
+
+    
+  
+    
+
+    
+   /////////////////////////////////////////////////////////////////////////////////////
+   ////// To expand and collapse the web part //////////////////////////////////////////
+        
+    function fnShowHideContent(oEl,bCollapsed)
+    {
+            var oPart = fnGetPart( oEl );
+			var oTopBar = oPart.rows[0];
+            var oContent  = oPart.rows[1];
+            
+            var idName      = oEl.parentElement.parentElement.parentElement.tagName;
+
+            var oTab1       = oPart.cells[0];
+            var oTab2       = oPart.cells[1];
+            var oTab3       = oPart.cells[2];
+            var oSwapImg    = oTab1.children[0];
+
+            if ( bCollapsed )
+            {
+
+                // -- if the table row is already collapsed, expand it & swap the images --
+                    oContent.style.display = "inline";
+                    //oEl.src = "/library/shared/webparts/images/chevronUp.gif";
+
+                    oTab1.style.backgroundColor="#6699cc";
+                    oTab1.style.borderBottom='1px solid #6699cc';
+                    oTab2.style.backgroundColor="#6699cc";
+                    oTab2.style.borderTop='1px solid #6699cc';
+                    oTab2.style.borderBottom='1px solid #6699cc';
+                    oTab2.parentElement.cells[1].children[0].style.backgroundColor= "#6699cc";
+                    oTab2.parentElement.cells[1].children[0].style.color = "#ffffff"
+                    oTab3.style.backgroundColor="#6699cc";
+                    oTab3.style.borderBottom='1px solid #6699cc';
+                    oTab3.className = "clsPartRight";
+                    oSwapImg.src = "/library/shared/webparts/images/gripBlue.gif";
+                   //----- writing back the state info to the array -------
+                    var id = oEl.parentElement.parentElement.parentElement.parentElement.id;
+					oPart.state = "open";
+             }
+             else
+             {
+                // expand the table row & swapping the images
+					oContent.style.display = "none";
+					//oEl.src = "/library/shared/webparts/images/chevronDown.gif";
+
+                    oTab1.style.backgroundColor="#cccccc";
+                    oTab1.style.borderBottom='1px solid #aaaaaa';
+
+                    oTab2.style.backgroundColor="#cccccc";
+                    oTab2.style.borderTop='1px solid #aaaaaa';
+                    oTab2.style.borderBottom='1px solid #aaaaaa';
+                    oTab2.parentElement.cells[1].children[0].style.backgroundColor= "#cccccc";
+                    oTab2.parentElement.cells[1].children[0].style.color = "#003399"
+
+                    oTab3.style.backgroundColor="#cccccc";
+                    oTab3.style.borderBottom='1px solid #aaaaaa';
+					oTab3.className = "clsPartRightHidden";
+                    
+
+                    oSwapImg.src = "/library/shared/webparts/images/gripGray.gif";
+					oPart.state = "close";
+
+             }
+
+             fnSaveState();
+                      
+    }
+    
+    ///////////////////////////////////////////////////////////////////////////////////
+    //////// function to cancel the dragstart event ///////////////////////////////////
+    function fnCancel()
+    {
+        if(  event.srcElement.className == "clsPartHead" )
+        {
+            window.event.returnValue = false;
+        }
+    }
+    
+
+    
+    //////////////////////////////////////////////////////////////////////////////////////
+    //////// To save the order and state of web parts ////////////////////////////////////
+    function fnSaveState()
+    {
+        var oUserData = window.document.all["oLayout"];
+        var sUserData = "";
+        var sState = "";
+        
+        for (i=0;i<element.parts.length;i++)
+        {	
+			sState = "undefined" == String( element.parts[i].state ) ? "open" : element.parts[i].state;
+			sUserData += (element.parts[i].id + "=" + sState + ";");
+        }
+        
+        oUserData.setAttribute("userdata",sUserData);
+        oUserData.save(sContentID);
+   }
+    
+   
+    
+       
+    ////////////////////////////////////////////////////////////////////////////////////////
+    ///////// function to check the state and release the element           ////////////////
+    ///////// if a mouse button is not depressed                            ////////////////
+    
+    function fnCheckState()
+    {
+        if( event.button != 1 ) fnRelease();
+    }
+
+    ///////////////////////////////////////////////////////////////////////////////
+    ///////// function to return false ////////////////////////////////////////////
+    function fnSelect()
+    {
+        return false;
+    }
+    
+    
+    </SCRIPT>
+</PUBLIC:COMPONENT>

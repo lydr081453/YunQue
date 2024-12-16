@@ -1,0 +1,1460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E22D2E32-D629-4385-8B37-BB2DF843C978}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdministrativeWeb</RootNamespace>
+    <AssemblyName>AdministrativeWeb</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxPro.2, Version=7.7.31.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Web.UI, Version=2008.2.1267.35, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\ComponentArt.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\ShunyaInside_XJ_2012VS\SEPProjects\ExternalLibs\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\default.css" />
+    <Content Include="Attendance\AnnualLeaveAdd.aspx" />
+    <Content Include="Attendance\AttendanceSelect.aspx" />
+    <Content Include="Attendance\CardNoVindicate.aspx" />
+    <Content Include="App_Themes\Default\Skin1.skin" />
+    <None Include="css\syshomepage.css" />
+    <None Include="css\calendar.css" />
+    <None Include="css\calendarStyle.css" />
+    <None Include="css\gridStyle.css" />
+    <None Include="css\style.css" />
+    <None Include="css\treeStyle.css" />
+    <Content Include="Default.aspx" />
+    <None Include="images\calendar\btn_calendar.gif" />
+    <None Include="images\calendar\chidao.jpg" />
+    <None Include="images\calendar\chucha.jpg" />
+    <None Include="images\calendar\footergb.jpg" />
+    <None Include="images\calendar\header_bg.gif" />
+    <None Include="images\calendar\jiaban.jpg" />
+    <None Include="images\calendar\kuanggong.jpg" />
+    <None Include="images\calendar\next_wht.gif" />
+    <None Include="images\calendar\nianxiujia.jpg" />
+    <None Include="images\calendar\prev_wht.gif" />
+    <None Include="images\calendar\qingjia.jpg" />
+    <None Include="images\calendar\qita.jpg" />
+    <None Include="images\calendar\title_bg.gif" />
+    <None Include="images\input\spinner_down.png" />
+    <None Include="images\input\spinner_up.png" />
+    <None Include="images\calendar\waichu.jpg" />
+    <None Include="images\calendar\zaotui.jpg" />
+    <None Include="images\calendar\cal_nextMonth.gif" />
+    <None Include="images\calendar\cal_prevMonth.gif" />
+    <None Include="images\syshomepage\090407_01.jpg" />
+    <None Include="images\syshomepage\090407_04.jpg" />
+    <None Include="images\syshomepage\090407_07.jpg" />
+    <None Include="images\syshomepage\090407_08.jpg" />
+    <None Include="images\syshomepage\090407_11-13.jpg" />
+    <None Include="images\syshomepage\090407_11.jpg" />
+    <None Include="images\syshomepage\090407_12-19.jpg" />
+    <None Include="images\syshomepage\090407_12-22.jpg" />
+    <None Include="images\syshomepage\090407_12-23.jpg" />
+    <None Include="images\syshomepage\090407_12-33.jpg" />
+    <None Include="images\syshomepage\090407_12-35.jpg" />
+    <None Include="images\syshomepage\090407_25.jpg" />
+    <None Include="images\syshomepage\090407_43.jpg" />
+    <None Include="images\syshomepage\090407_48.jpg" />
+    <None Include="images\syshomepage\bg2.jpg" />
+    <None Include="images\syshomepage\border_1.jpg" />
+    <None Include="images\syshomepage\headerbg_left.jpg" />
+    <None Include="images\syshomepage\headerbg_right.jpg" />
+    <None Include="images\syshomepage\listbg.jpg" />
+    <None Include="images\syshomepage\mainbg.jpg" />
+    <None Include="images\syshomepage\midline.jpg" />
+    <None Include="images\syshomepage\treebg.jpg" />
+    <None Include="images\syshomepage\treebg2.gif" />
+    <None Include="images\syshomepage\treebg2.jpg" />
+    <None Include="images\syshomepage\open.jpg" />
+    <None Include="images\treeview\corp.gif" />
+    <None Include="images\treeview\dept.gif" />
+    <None Include="images\lines\dash.gif" />
+    <None Include="images\lines\dashminus.gif" />
+    <None Include="images\lines\dashplus.gif" />
+    <None Include="images\lines\i.gif" />
+    <None Include="images\lines\l.gif" />
+    <None Include="images\lines\lminus.gif" />
+    <None Include="images\lines\lplus.gif" />
+    <None Include="images\lines\minus.gif" />
+    <None Include="images\lines\noexpand.gif" />
+    <None Include="images\lines\plus.gif" />
+    <None Include="images\lines\r.gif" />
+    <None Include="images\lines\rminus.gif" />
+    <None Include="images\lines\rplus.gif" />
+    <None Include="images\lines\t.gif" />
+    <None Include="images\lines\tminus.gif" />
+    <None Include="images\lines\tplus.gif" />
+    <None Include="images\treeview\root.gif" />
+    <None Include="images\syshomepage\root1.jpg" />
+    <None Include="images\syshomepage\close.jpg" />
+    <None Include="images\treeview\user.gif" />
+    <Content Include="images\AuditStatus.gif" />
+    <Content Include="images\loading.gif" />
+    <Content Include="include\page\defaultworkspace.aspx" />
+    <Content Include="include\page\header.aspx" />
+    <Content Include="include\page\ModelTree.aspx" />
+    <Content Include="include\page\ToHome.aspx" />
+    <None Include="js\formatter.js" />
+    <None Include="js\syscomm.js" />
+    <Content Include="PSWChange\PSWChange.aspx" />
+    <None Include="public\css\css.css" />
+    <None Include="public\css\dialog.css" />
+    <None Include="public\css\images\ui-icons_444444_256x240.png" />
+    <None Include="public\css\images\ui-icons_555555_256x240.png" />
+    <None Include="public\css\images\ui-icons_777620_256x240.png" />
+    <None Include="public\css\images\ui-icons_777777_256x240.png" />
+    <None Include="public\css\images\ui-icons_cc0000_256x240.png" />
+    <None Include="public\css\images\ui-icons_ffffff_256x240.png" />
+    <None Include="public\css\jquery-ui-new.css" />
+    <None Include="public\css\jquery-ui.min.css" />
+    <None Include="public\css\jquery-ui.structure.css" />
+    <None Include="public\css\jquery-ui.structure.min.css" />
+    <None Include="public\css\jquery-ui.theme.css" />
+    <None Include="public\css\jquery-ui.theme.min.css" />
+    <None Include="public\css\jquery.tabs-ie.css" />
+    <None Include="public\css\jquery.tabs.css" />
+    <None Include="public\css\loading.gif" />
+    <None Include="public\css\tab.png" />
+    <None Include="public\CutImage\css\main.css" />
+    <None Include="public\CutImage\image\bg_120.gif" />
+    <None Include="public\CutImage\image\blank.jpg" />
+    <None Include="public\CutImage\image\c.gif" />
+    <None Include="public\CutImage\image\grip.gif" />
+    <None Include="public\CutImage\image\h.gif" />
+    <None Include="public\CutImage\image\man.GIF" />
+    <None Include="public\CutImage\image\track.gif" />
+    <None Include="public\CutImage\image\_c.gif" />
+    <None Include="public\CutImage\image\_h.gif" />
+    <None Include="public\CutImage\js\CutPic.js" />
+    <None Include="public\CutImage\js\jquery1.2.6.pack.js" />
+    <None Include="public\CutImage\js\JSintellisense\jquery-1.2.6-intellisense.js" />
+    <None Include="public\CutImage\js\ui.core.packed.js" />
+    <None Include="public\CutImage\js\ui.draggable.packed.js" />
+    <None Include="public\highslide\highslide-with-html.js" />
+    <None Include="public\js\DatePicker.js" />
+    <None Include="public\js\DatePicker1.js" />
+    <None Include="public\js\dialog.js" />
+    <None Include="public\js\jquery-ui-new.js" />
+    <None Include="public\js\jquery-ui.js" />
+    <None Include="public\js\jquery-ui.min.js" />
+    <None Include="public\js\jquery.history_remote.pack.js" />
+    <None Include="public\js\jquery.js" />
+    <None Include="public\js\jquery.tabs.pack.js" />
+    <None Include="public\js\jquery.treeview.js" />
+    <None Include="public\js\jquery.ui.datepicker.cn.js" />
+    <None Include="public\js\jquery1.12.js" />
+    <None Include="public\js\syscomm.js" />
+    <None Include="public\js\tree.js" />
+    <None Include="public\js\valid.js" />
+    <Content Include="RequestForSeal\Ctl_AuditLog.ascx" />
+    <Content Include="RequestForSeal\Ctl_View.ascx" />
+    <Content Include="RequestForSeal\RequestForSealEdit.aspx" />
+    <Content Include="RequestForSeal\RequestForSealList.aspx" />
+    <Content Include="RequestForSeal\RequestForSealAuditList.aspx" />
+    <Content Include="RequestForSeal\RequestForSealView.aspx" />
+    <Content Include="RequestForSeal\RequestForSealAudit.aspx" />
+    <Content Include="RequestForSeal\RequestForSealSearch.aspx" />
+    <Content Include="SignOut.aspx" />
+    <Content Include="RequestForSeal\UploadHandler.ashx" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attendance\AnnualLeaveAdd.aspx.cs">
+      <DependentUpon>AnnualLeaveAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\AnnualLeaveAdd.aspx.designer.cs">
+      <DependentUpon>AnnualLeaveAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\AnnualLeaveList.aspx.cs">
+      <DependentUpon>AnnualLeaveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\AnnualLeaveList.aspx.designer.cs">
+      <DependentUpon>AnnualLeaveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\AddedClockInEdit.aspx.cs">
+      <DependentUpon>AddedClockInEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\AddedClockInEdit.aspx.designer.cs">
+      <DependentUpon>AddedClockInEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\AddedClockInList.aspx.cs">
+      <DependentUpon>AddedClockInList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\AddedClockInList.aspx.designer.cs">
+      <DependentUpon>AddedClockInList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\ApprovedInfoList.aspx.cs">
+      <DependentUpon>ApprovedInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\ApprovedInfoList.aspx.designer.cs">
+      <DependentUpon>ApprovedInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\AttendanceSelect.aspx.cs">
+      <DependentUpon>AttendanceSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\AttendanceSelect.aspx.designer.cs">
+      <DependentUpon>AttendanceSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\AttGracePeriodEdit.aspx.cs">
+      <DependentUpon>AttGracePeriodEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\AttGracePeriodEdit.aspx.designer.cs">
+      <DependentUpon>AttGracePeriodEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\AttGracePeriodList.aspx.cs">
+      <DependentUpon>AttGracePeriodList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\AttGracePeriodList.aspx.designer.cs">
+      <DependentUpon>AttGracePeriodList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\AuditEdit.aspx.cs">
+      <DependentUpon>AuditEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\AuditEdit.aspx.designer.cs">
+      <DependentUpon>AuditEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\AuditList.aspx.cs">
+      <DependentUpon>AuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\AuditList.aspx.designer.cs">
+      <DependentUpon>AuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\CalculateAnnualLeave.aspx.cs">
+      <DependentUpon>CalculateAnnualLeave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\CalculateAnnualLeave.aspx.designer.cs">
+      <DependentUpon>CalculateAnnualLeave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\CardNoEdit.aspx.cs">
+      <DependentUpon>CardNoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\CardNoEdit.aspx.designer.cs">
+      <DependentUpon>CardNoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\CardNoList.aspx.cs">
+      <DependentUpon>CardNoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\CardNoList.aspx.designer.cs">
+      <DependentUpon>CardNoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\CardNoVindicate.aspx.cs">
+      <DependentUpon>CardNoVindicate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\CardNoVindicate.aspx.designer.cs">
+      <DependentUpon>CardNoVindicate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\CommuteTimeEdit.aspx.cs">
+      <DependentUpon>CommuteTimeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\CommuteTimeEdit.aspx.designer.cs">
+      <DependentUpon>CommuteTimeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\HolidayMaintain.aspx.cs">
+      <DependentUpon>HolidayMaintain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\HolidayMaintain.aspx.designer.cs">
+      <DependentUpon>HolidayMaintain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\ImportLeaveInfo.aspx.cs">
+      <DependentUpon>ImportLeaveInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\ImportLeaveInfo.aspx.designer.cs">
+      <DependentUpon>ImportLeaveInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\IntegratedQueryList.aspx.cs">
+      <DependentUpon>IntegratedQueryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\IntegratedQueryList.aspx.designer.cs">
+      <DependentUpon>IntegratedQueryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\IntegratedQueryView.aspx.cs">
+      <DependentUpon>IntegratedQueryView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\IntegratedQueryView.aspx.designer.cs">
+      <DependentUpon>IntegratedQueryView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\OperationManageEdit.aspx.cs">
+      <DependentUpon>OperationManageEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\OperationManageEdit.aspx.designer.cs">
+      <DependentUpon>OperationManageEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\OverTimeEndTime.aspx.cs">
+      <DependentUpon>OverTimeEndTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\OverTimeEndTime.aspx.designer.cs">
+      <DependentUpon>OverTimeEndTime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\RewardLeaveList.aspx.cs">
+      <DependentUpon>RewardLeaveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\RewardLeaveList.aspx.designer.cs">
+      <DependentUpon>RewardLeaveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\SingleOvertimeDetails.aspx.cs">
+      <DependentUpon>SingleOvertimeDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\SingleOvertimeDetails.aspx.designer.cs">
+      <DependentUpon>SingleOvertimeDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\SingleOvertimesList.aspx.cs">
+      <DependentUpon>SingleOvertimesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\SingleOvertimesList.aspx.designer.cs">
+      <DependentUpon>SingleOvertimesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\UpgradeAuditList.aspx.cs">
+      <DependentUpon>UpgradeAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\UpgradeAuditList.aspx.designer.cs">
+      <DependentUpon>UpgradeAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\Export.aspx.cs">
+      <DependentUpon>Export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\Export.aspx.designer.cs">
+      <DependentUpon>Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\newMonthStatAuditList.aspx.cs">
+      <DependentUpon>newMonthStatAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\newMonthStatAuditList.aspx.designer.cs">
+      <DependentUpon>newMonthStatAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailTemplate\MattersMail.aspx.cs">
+      <DependentUpon>MattersMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailTemplate\MattersMail.aspx.designer.cs">
+      <DependentUpon>MattersMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailTemplate\RemindMail.aspx.cs">
+      <DependentUpon>RemindMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailTemplate\RemindMail.aspx.designer.cs">
+      <DependentUpon>RemindMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailTemplate\RemindMail2.aspx.cs">
+      <DependentUpon>RemindMail2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailTemplate\RemindMail2.aspx.designer.cs">
+      <DependentUpon>RemindMail2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailTemplate\UserCardMail.aspx.cs">
+      <DependentUpon>UserCardMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailTemplate\UserCardMail.aspx.designer.cs">
+      <DependentUpon>UserCardMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForSeal\Ctl_AuditLog.ascx.cs">
+      <DependentUpon>Ctl_AuditLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestForSeal\Ctl_AuditLog.ascx.designer.cs">
+      <DependentUpon>Ctl_AuditLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForSeal\Ctl_View.ascx.cs">
+      <DependentUpon>Ctl_View.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestForSeal\Ctl_View.ascx.designer.cs">
+      <DependentUpon>Ctl_View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealEdit.aspx.cs">
+      <DependentUpon>RequestForSealEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealEdit.aspx.designer.cs">
+      <DependentUpon>RequestForSealEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealList.aspx.cs">
+      <DependentUpon>RequestForSealList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealList.aspx.designer.cs">
+      <DependentUpon>RequestForSealList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealView.aspx.cs">
+      <DependentUpon>RequestForSealView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealView.aspx.designer.cs">
+      <DependentUpon>RequestForSealView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForSeal\UploadHandler.ashx.cs">
+      <DependentUpon>UploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealAuditList.aspx.cs">
+      <DependentUpon>RequestForSealAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealAuditList.aspx.designer.cs">
+      <DependentUpon>RequestForSealAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealAudit.aspx.cs">
+      <DependentUpon>RequestForSealAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealAudit.aspx.designer.cs">
+      <DependentUpon>RequestForSealAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealSearch.aspx.cs">
+      <DependentUpon>RequestForSealSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RequestForSeal\RequestForSealSearch.aspx.designer.cs">
+      <DependentUpon>RequestForSealSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Statistic\LateInfoSearch.aspx.cs">
+      <DependentUpon>LateInfoSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statistic\LateInfoSearch.aspx.designer.cs">
+      <DependentUpon>LateInfoSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\MattersEdit.aspx.cs">
+      <DependentUpon>MattersEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\MattersEdit.aspx.designer.cs">
+      <DependentUpon>MattersEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\MattersList.aspx.cs">
+      <DependentUpon>MattersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\MattersList.aspx.designer.cs">
+      <DependentUpon>MattersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\MattersView.aspx.cs">
+      <DependentUpon>MattersView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\MattersView.aspx.designer.cs">
+      <DependentUpon>MattersView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\OverTimeSelectProjectList.aspx.cs">
+      <DependentUpon>OverTimeSelectProjectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\OverTimeSelectProjectList.aspx.designer.cs">
+      <DependentUpon>OverTimeSelectProjectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance\TravelSelectProjectList.aspx.cs">
+      <DependentUpon>TravelSelectProjectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Attendance\TravelSelectProjectList.aspx.designer.cs">
+      <DependentUpon>TravelSelectProjectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\ADAdminAuditJump.aspx.cs">
+      <DependentUpon>ADAdminAuditJump.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\ADAdminAuditJump.aspx.designer.cs">
+      <DependentUpon>ADAdminAuditJump.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\DirectorAuditJump.aspx.cs">
+      <DependentUpon>DirectorAuditJump.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\DirectorAuditJump.aspx.designer.cs">
+      <DependentUpon>DirectorAuditJump.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\DirectorAuditList.aspx.cs">
+      <DependentUpon>DirectorAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\DirectorAuditList.aspx.designer.cs">
+      <DependentUpon>DirectorAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\HRAdminAuditJump.aspx.cs">
+      <DependentUpon>HRAdminAuditJump.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\HRAdminAuditJump.aspx.designer.cs">
+      <DependentUpon>HRAdminAuditJump.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\ManagerAuditJump.aspx.cs">
+      <DependentUpon>ManagerAuditJump.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\ManagerAuditJump.aspx.designer.cs">
+      <DependentUpon>ManagerAuditJump.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\MonthStatAuditEdit.aspx.cs">
+      <DependentUpon>MonthStatAuditEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\MonthStatAuditEdit.aspx.designer.cs">
+      <DependentUpon>MonthStatAuditEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\MonthStatAuditList.aspx.cs">
+      <DependentUpon>MonthStatAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\MonthStatAuditList.aspx.designer.cs">
+      <DependentUpon>MonthStatAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\OutAuditList.aspx.cs">
+      <DependentUpon>OutAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\OutAuditList.aspx.designer.cs">
+      <DependentUpon>OutAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\OutMatterEdit.aspx.cs">
+      <DependentUpon>OutMatterEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\OutMatterEdit.aspx.designer.cs">
+      <DependentUpon>OutMatterEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Audit\StatistictiansAuditJump.aspx.cs">
+      <DependentUpon>StatistictiansAuditJump.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Audit\StatistictiansAuditJump.aspx.designer.cs">
+      <DependentUpon>StatistictiansAuditJump.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ExportExcel\ExportAttendanceExl.aspx.cs">
+      <DependentUpon>ExportAttendanceExl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportExcel\ExportAttendanceExl.aspx.designer.cs">
+      <DependentUpon>ExportAttendanceExl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportExcel\ExportExcel.aspx.cs">
+      <DependentUpon>ExportExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportExcel\ExportExcel.aspx.designer.cs">
+      <DependentUpon>ExportExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="include\page\DefaultWorkSpace.aspx.cs">
+      <DependentUpon>defaultworkspace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\page\DefaultWorkSpace.aspx.designer.cs">
+      <DependentUpon>defaultworkspace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="include\page\Header.aspx.cs">
+      <DependentUpon>header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\page\Header.aspx.designer.cs">
+      <DependentUpon>header.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="include\page\ModelTree.aspx.cs">
+      <DependentUpon>ModelTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\page\ModelTree.aspx.designer.cs">
+      <DependentUpon>ModelTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="include\page\ToHome.aspx.cs">
+      <DependentUpon>ToHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\page\ToHome.aspx.designer.cs">
+      <DependentUpon>ToHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSWChange\PSWChange.aspx.cs">
+      <DependentUpon>PSWChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PSWChange\PSWChange.aspx.designer.cs">
+      <DependentUpon>PSWChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOut.aspx.designer.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Statistic\OverTimeSearch.aspx.cs">
+      <DependentUpon>OverTimeSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statistic\OverTimeSearch.aspx.designer.cs">
+      <DependentUpon>OverTimeSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TimeSheet\TSReport.aspx.cs">
+      <DependentUpon>TSReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimeSheet\TSReport.aspx.designer.cs">
+      <DependentUpon>TSReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ddlDepartments.ascx.cs">
+      <DependentUpon>ddlDepartments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ddlDepartments.ascx.designer.cs">
+      <DependentUpon>ddlDepartments.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\IntegratedQuery\LateSearch.ascx.cs">
+      <DependentUpon>LateSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\IntegratedQuery\LateSearch.ascx.designer.cs">
+      <DependentUpon>LateSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\LeaveAudit.ascx.cs">
+      <DependentUpon>LeaveAudit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\LeaveAudit.ascx.designer.cs">
+      <DependentUpon>LeaveAudit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\OffTuneAudit.ascx.cs">
+      <DependentUpon>OffTuneAudit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\OffTuneAudit.ascx.designer.cs">
+      <DependentUpon>OffTuneAudit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\OTLateEdit.ascx.cs">
+      <DependentUpon>OTLateEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\OTLateEdit.ascx.designer.cs">
+      <DependentUpon>OTLateEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\OutAudit.ascx.cs">
+      <DependentUpon>OutAudit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\OutAudit.ascx.designer.cs">
+      <DependentUpon>OutAudit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\OverTimeAudit.ascx.cs">
+      <DependentUpon>OverTimeAudit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\OverTimeAudit.ascx.designer.cs">
+      <DependentUpon>OverTimeAudit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\TravelAudit.ascx.cs">
+      <DependentUpon>TravelAudit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterAudit\TravelAudit.ascx.designer.cs">
+      <DependentUpon>TravelAudit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterView\LeaveView.ascx.cs">
+      <DependentUpon>LeaveView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterView\LeaveView.ascx.designer.cs">
+      <DependentUpon>LeaveView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterView\OffTuneView.ascx.cs">
+      <DependentUpon>OffTuneView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterView\OffTuneView.ascx.designer.cs">
+      <DependentUpon>OffTuneView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterView\OtherView.ascx.cs">
+      <DependentUpon>OtherView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterView\OtherView.ascx.designer.cs">
+      <DependentUpon>OtherView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterView\OutView.ascx.cs">
+      <DependentUpon>OutView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterView\OutView.ascx.designer.cs">
+      <DependentUpon>OutView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterView\OverTimeView.ascx.cs">
+      <DependentUpon>OverTimeView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterView\OverTimeView.ascx.designer.cs">
+      <DependentUpon>OverTimeView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatterView\TravelView.ascx.cs">
+      <DependentUpon>TravelView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatterView\TravelView.ascx.designer.cs">
+      <DependentUpon>TravelView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Matter\LeaveEdit.ascx.cs">
+      <DependentUpon>LeaveEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Matter\LeaveEdit.ascx.designer.cs">
+      <DependentUpon>LeaveEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Matter\MatterUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Matter\OffTuneEdit.ascx.cs">
+      <DependentUpon>OffTuneEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Matter\OffTuneEdit.ascx.designer.cs">
+      <DependentUpon>OffTuneEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Matter\OtherEdit.ascx.cs">
+      <DependentUpon>OtherEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Matter\OtherEdit.ascx.designer.cs">
+      <DependentUpon>OtherEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Matter\OTLateEdit.ascx.cs">
+      <DependentUpon>OTLateEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Matter\OTLateEdit.ascx.designer.cs">
+      <DependentUpon>OTLateEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Matter\OutEdit.ascx.cs">
+      <DependentUpon>OutEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Matter\OutEdit.ascx.designer.cs">
+      <DependentUpon>OutEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Matter\OverTimeEdit.ascx.cs">
+      <DependentUpon>OverTimeEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Matter\OverTimeEdit.ascx.designer.cs">
+      <DependentUpon>OverTimeEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Matter\TravelEdit.ascx.cs">
+      <DependentUpon>TravelEdit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Matter\TravelEdit.ascx.designer.cs">
+      <DependentUpon>TravelEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ESP.Core\ESP.Core\ESP.Core.csproj">
+      <Project>{5AF18840-638B-4AF2-90C2-C66625CC88E4}</Project>
+      <Name>ESP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ESP\ESP.csproj">
+      <Project>{bd68aa8d-b4b1-4957-81c2-152398ac68af}</Project>
+      <Name>ESP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Attendance\AnnualLeaveList.aspx" />
+    <Content Include="Attendance\AddedClockInEdit.aspx" />
+    <Content Include="Attendance\AddedClockInList.aspx" />
+    <Content Include="Attendance\AttGracePeriodEdit.aspx" />
+    <Content Include="Attendance\AttGracePeriodList.aspx" />
+    <Content Include="Attendance\CalculateAnnualLeave.aspx" />
+    <Content Include="Attendance\CardNoEdit.aspx" />
+    <Content Include="Attendance\CardNoList.aspx" />
+    <Content Include="Attendance\CommuteTimeEdit.aspx" />
+    <Content Include="Attendance\EmployeeList.aspx" />
+    <Content Include="Attendance\ImportLeaveInfo.aspx" />
+    <Content Include="Attendance\IntegratedQueryList.aspx" />
+    <Content Include="Attendance\OperationManageEdit.aspx" />
+    <Content Include="Attendance\OverTimeEndTime.aspx" />
+    <Content Include="Attendance\RewardLeaveList.aspx" />
+    <Content Include="Attendance\SingleOvertimeDetails.aspx" />
+    <Content Include="Attendance\SingleOvertimesList.aspx" />
+    <Content Include="Attendance\UpgradeAuditList.aspx" />
+    <Content Include="Audit\Export.aspx" />
+    <Content Include="Audit\newMonthStatAuditList.aspx" />
+    <None Include="css\combobox.css" />
+    <None Include="css\gird.css" />
+    <None Include="css\newstyle.css" />
+    <None Include="css\tsStyle.css" />
+    <None Include="images\a2.jpg" />
+    <None Include="images\blankout.jpg" />
+    <None Include="images\bookbg.jpg" />
+    <None Include="images\combobox\comboItemBg.gif" />
+    <None Include="images\combobox\drop.gif" />
+    <None Include="images\combobox\drop_hover.gif" />
+    <None Include="images\ex.jpg" />
+    <None Include="images\Icon_Sendmail.gif" />
+    <None Include="images\mail_03.jpg" />
+    <None Include="images\sendmail.jpg" />
+    <None Include="images\sjbg.jpg" />
+    <None Include="images\sjleft.jpg" />
+    <None Include="images\sjright.jpg" />
+    <None Include="images\spinner.gif" />
+    <None Include="js\jquery-1.4.min.js" />
+    <None Include="js\jquery.blockUI.js" />
+    <None Include="js\jquery.js" />
+    <Content Include="MailTemplate\MattersMail.aspx" />
+    <Content Include="MailTemplate\RemindMail.aspx" />
+    <Content Include="MailTemplate\RemindMail2.aspx" />
+    <Content Include="MailTemplate\UserCardMail.aspx" />
+    <None Include="new_images\0110_03.jpg" />
+    <None Include="new_images\0110_05.jpg" />
+    <None Include="new_images\1230-1.jpg" />
+    <None Include="new_images\adm-tit.jpg" />
+    <None Include="new_images\bookbg.jpg" />
+    <None Include="new_images\btn-back.jpg" />
+    <None Include="new_images\btn-close.jpg" />
+    <None Include="new_images\btn-grey.gif" />
+    <None Include="new_images\btn-org.gif" />
+    <None Include="new_images\btn-s1-1.jpg" />
+    <None Include="new_images\btn-s1-2.jpg" />
+    <None Include="new_images\btn-s2-1.jpg" />
+    <None Include="new_images\btn-s2-2.jpg" />
+    <None Include="new_images\btn_bg-ora.jpg" />
+    <None Include="new_images\chidao.jpg" />
+    <None Include="new_images\chucha.jpg" />
+    <None Include="new_images\flew-bg.jpg" />
+    <None Include="new_images\head-Arrow.jpg" />
+    <None Include="new_images\hr-ico.jpg" />
+    <None Include="new_images\hr-tit.jpg" />
+    <None Include="new_images\ico-close.jpg" />
+    <None Include="new_images\ico-download.jpg" />
+    <None Include="new_images\ico-star.jpg" />
+    <None Include="new_images\icon-add.gif" />
+    <None Include="new_images\icon-add.jpg" />
+    <None Include="new_images\icon-att-2.gif" />
+    <None Include="new_images\icon-att.jpg" />
+    <None Include="new_images\icon-change.gif" />
+    <None Include="new_images\icon-close.gif" />
+    <None Include="new_images\icon-cor.jpg" />
+    <None Include="new_images\icon-cor2.gif" />
+    <None Include="new_images\icon-del.jpg" />
+    <None Include="new_images\icon-edit.gif" />
+    <None Include="new_images\icon-home.gif" />
+    <None Include="new_images\icon-key.gif" />
+    <None Include="new_images\icon-logout.gif" />
+    <None Include="new_images\icon-month.jpg" />
+    <None Include="new_images\icon_s-search.gif" />
+    <None Include="new_images\icon_title-timesheet.jpg" />
+    <None Include="new_images\input_bg.jpg" />
+    <None Include="new_images\jiaban.jpg" />
+    <None Include="new_images\kuanggong.jpg" />
+    <None Include="new_images\lab_bg-grey.jpg" />
+    <None Include="new_images\lab_bg-ora.jpg" />
+    <None Include="new_images\menu-grey.jpg" />
+    <None Include="new_images\menu-orag.jpg" />
+    <None Include="new_images\menu-orag_2.jpg" />
+    <None Include="new_images\menu_l-l.jpg" />
+    <None Include="new_images\menu_l.jpg" />
+    <None Include="new_images\menu_r-l.jpg" />
+    <None Include="new_images\menu_r.jpg" />
+    <None Include="new_images\nianxiujia.jpg" />
+    <None Include="new_images\no-1.jpg" />
+    <None Include="new_images\page-next.gif" />
+    <None Include="new_images\page-nextSt.gif" />
+    <None Include="new_images\page-pre.gif" />
+    <None Include="new_images\page-preSt.gif" />
+    <None Include="new_images\page_bg-grey.jpg" />
+    <None Include="new_images\page_bg-ora.jpg" />
+    <None Include="new_images\qingjia.jpg" />
+    <None Include="new_images\sjbg.jpg" />
+    <None Include="new_images\sjleft.jpg" />
+    <None Include="new_images\sjright.jpg" />
+    <None Include="new_images\staff-center-03.jpg" />
+    <None Include="new_images\staff-center-04.jpg" />
+    <None Include="new_images\staff-center-04_01.jpg" />
+    <None Include="new_images\staff-center-04_02.jpg" />
+    <None Include="new_images\staff-center-04_03.jpg" />
+    <None Include="new_images\staff-center-05.jpg" />
+    <None Include="new_images\staff-center-06.jpg" />
+    <None Include="new_images\staff-center-07_01.jpg" />
+    <None Include="new_images\staff-center-07_02.jpg" />
+    <None Include="new_images\staff-center-08.jpg" />
+    <None Include="new_images\staff-center-09.jpg" />
+    <None Include="new_images\staff-center-10.jpg" />
+    <None Include="new_images\staff-center-11.jpg" />
+    <None Include="new_images\staff-center-12.jpg" />
+    <None Include="new_images\staff-center-13.jpg" />
+    <None Include="new_images\staff-center-14.jpg" />
+    <None Include="new_images\staff-center-15.jpg" />
+    <None Include="new_images\staff-center-16.jpg" />
+    <None Include="new_images\staff-center-17.jpg" />
+    <None Include="new_images\staff-center-18.jpg" />
+    <None Include="new_images\staff-center-19.jpg" />
+    <None Include="new_images\staff-center-22.jpg" />
+    <None Include="new_images\staff-center-23.jpg" />
+    <None Include="new_images\staff-center-24.jpg" />
+    <None Include="new_images\staff-center-25.jpg" />
+    <None Include="new_images\staff-center-26.jpg" />
+    <None Include="new_images\staff-center-27.jpg" />
+    <None Include="new_images\staff-center-28.jpg" />
+    <None Include="new_images\staff-center-29.jpg" />
+    <None Include="new_images\staff-center-30.jpg" />
+    <None Include="new_images\staff-center-31.jpg" />
+    <None Include="new_images\staff-center-32.jpg" />
+    <None Include="new_images\staff-center-33.jpg" />
+    <None Include="new_images\staff-center-34.jpg" />
+    <None Include="new_images\staff-center-35.jpg" />
+    <None Include="new_images\staff-center-36.jpg" />
+    <None Include="new_images\tips-bg.jpg" />
+    <None Include="new_images\ts-mouth-t-bg-today.jpg" />
+    <None Include="new_images\ts-mouth-t-bg.jpg" />
+    <None Include="new_images\ts-notthis-w.jpg" />
+    <None Include="new_images\ts-other.jpg" />
+    <None Include="new_images\ts-t.jpg" />
+    <None Include="new_images\ts-wknd.jpg" />
+    <None Include="new_images\ts_01.jpg" />
+    <None Include="new_images\ts_02.jpg" />
+    <None Include="new_images\ts_03.jpg" />
+    <None Include="new_images\ts_04.jpg" />
+    <None Include="new_images\ts_05.jpg" />
+    <None Include="new_images\ts_06.jpg" />
+    <None Include="new_images\ts_07.jpg" />
+    <None Include="new_images\ts_08.jpg" />
+    <None Include="new_images\ts_09.jpg" />
+    <None Include="new_images\ts_10.jpg" />
+    <None Include="new_images\ts_11.jpg" />
+    <None Include="new_images\ts_12.jpg" />
+    <None Include="new_images\ts_13-2.jpg" />
+    <None Include="new_images\ts_13.jpg" />
+    <None Include="new_images\ts_15-2.jpg" />
+    <None Include="new_images\ts_15.jpg" />
+    <None Include="new_images\ts_16.jpg" />
+    <None Include="new_images\ts_17.jpg" />
+    <None Include="new_images\ts_18.jpg" />
+    <None Include="new_images\ts_19.jpg" />
+    <None Include="new_images\ts_20.jpg" />
+    <None Include="new_images\ts_21.jpg" />
+    <None Include="new_images\ts_35-2.jpg" />
+    <None Include="new_images\ts_35.jpg" />
+    <None Include="new_images\underline.jpg" />
+    <None Include="new_images\waichu.jpg" />
+    <None Include="new_images\zaotui.jpg" />
+    <Content Include="Statistic\LateInfoSearch.aspx" />
+    <Content Include="Audit\ADAdminAuditJump.aspx" />
+    <Content Include="Audit\DirectorAuditJump.aspx" />
+    <Content Include="Audit\DirectorAuditList.aspx" />
+    <Content Include="Audit\HRAdminAuditJump.aspx" />
+    <Content Include="Audit\ManagerAuditJump.aspx" />
+    <Content Include="Audit\MonthStatAuditEdit.aspx" />
+    <Content Include="Audit\MonthStatAuditList.aspx" />
+    <Content Include="Audit\OutAuditList.aspx" />
+    <Content Include="Audit\OutMatterEdit.aspx" />
+    <Content Include="Audit\StatistictiansAuditJump.aspx" />
+    <Content Include="Config.xml" />
+    <Content Include="Attendance\ApprovedInfoList.aspx" />
+    <Content Include="Attendance\AuditEdit.aspx" />
+    <Content Include="Attendance\AuditList.aspx" />
+    <Content Include="Attendance\HolidayMaintain.aspx" />
+    <Content Include="Attendance\IntegratedQueryView.aspx" />
+    <Content Include="Attendance\MattersEdit.aspx" />
+    <Content Include="Attendance\MattersList.aspx" />
+    <Content Include="Attendance\MattersView.aspx" />
+    <Content Include="Attendance\OverTimeSelectProjectList.aspx" />
+    <Content Include="Attendance\TravelSelectProjectList.aspx" />
+    <None Include="css\a.css" />
+    <None Include="css\calendarStyleSelect.css" />
+    <None Include="css\calendarYear.css" />
+    <None Include="css\comboboxStyle.css" />
+    <None Include="css\gridStyle2.css" />
+    <None Include="css\gridViewStyle.css" />
+    <None Include="css\inputstyle.css" />
+    <None Include="css\navBarstyle.css" />
+    <None Include="css\siteMapStyle.css" />
+    <None Include="css\tabStyle.css" />
+    <Content Include="Default.Master" />
+    <Content Include="ExportExcel\ExportAttendanceExl.aspx" />
+    <Content Include="ExportExcel\ExportExcel.aspx" />
+    <Content Include="Global.asax" />
+    <None Include="images\090407_01.jpg" />
+    <None Include="images\090407_04.jpg" />
+    <None Include="images\090407_07.jpg" />
+    <None Include="images\090407_08.jpg" />
+    <None Include="images\090407_11-13.jpg" />
+    <None Include="images\090407_11.jpg" />
+    <None Include="images\090407_12-19.jpg" />
+    <None Include="images\090407_12-22.jpg" />
+    <None Include="images\090407_12-23.jpg" />
+    <None Include="images\090407_12-33.jpg" />
+    <None Include="images\090407_12-35.jpg" />
+    <None Include="images\090407_25.jpg" />
+    <None Include="images\090407_43.jpg" />
+    <None Include="images\090407_48.jpg" />
+    <None Include="images\addmatters.jpg" />
+    <None Include="images\appOverrule.jpg" />
+    <None Include="images\apppass.jpg" />
+    <None Include="images\Audit.gif" />
+    <None Include="images\bg2.jpg" />
+    <None Include="images\big_chidao.jpg" />
+    <None Include="images\big_chuchai.jpg" />
+    <None Include="images\big_jiaban.jpg" />
+    <None Include="images\big_kuanggong.jpg" />
+    <None Include="images\big_nianjia.jpg" />
+    <None Include="images\big_qingjia.jpg" />
+    <None Include="images\big_qita.jpg" />
+    <None Include="images\big_waichu.jpg" />
+    <None Include="images\big_xiaoxiu.jpg" />
+    <None Include="images\big_zaotui.jpg" />
+    <None Include="images\border_1.jpg" />
+    <None Include="images\calendar\1chidao.jpg" />
+    <None Include="images\calendar\1chuchai.jpg" />
+    <None Include="images\calendar\1jiaban.jpg" />
+    <None Include="images\calendar\1kuanggong.jpg" />
+    <None Include="images\calendar\1nianjia.jpg" />
+    <None Include="images\calendar\1qingjia.jpg" />
+    <None Include="images\calendar\1qita.jpg" />
+    <None Include="images\calendar\1tiaoxiu.jpg" />
+    <None Include="images\calendar\1waichu.jpg" />
+    <None Include="images\calendar\1zaotui.jpg" />
+    <None Include="images\calendar\2chidao.jpg" />
+    <None Include="images\calendar\2chuchai.jpg" />
+    <None Include="images\calendar\2jiaban.jpg" />
+    <None Include="images\calendar\2kuanggong.jpg" />
+    <None Include="images\calendar\2nianjia.jpg" />
+    <None Include="images\calendar\2qingjia.jpg" />
+    <None Include="images\calendar\2qita.jpg" />
+    <None Include="images\calendar\2tiaoxiu.jpg" />
+    <None Include="images\calendar\2waichu.jpg" />
+    <None Include="images\calendar\2zaotui.jpg" />
+    <None Include="images\calendar\3chidao.jpg" />
+    <None Include="images\calendar\3chuchai.jpg" />
+    <None Include="images\calendar\3jiaban.jpg" />
+    <None Include="images\calendar\3kuanggong.jpg" />
+    <None Include="images\calendar\3nianjia.jpg" />
+    <None Include="images\calendar\3qingjia.jpg" />
+    <None Include="images\calendar\3qita.jpg" />
+    <None Include="images\calendar\3tiaoxiu.jpg" />
+    <None Include="images\calendar\3waichu.jpg" />
+    <None Include="images\calendar\3zaotui.jpg" />
+    <None Include="images\calendar\dayheader_bg.gif" />
+    <None Include="images\calendar\horizontal.png" />
+    <None Include="images\calendar\kq_50.jpg" />
+    <None Include="images\calendar\next.gif" />
+    <None Include="images\calendar\OffTune.jpg" />
+    <None Include="images\calendar\prev.gif" />
+    <None Include="images\calendar\static.png" />
+    <None Include="images\calendar\static_01.jpg" />
+    <None Include="images\calendar\static_02.jpg" />
+    <None Include="images\calendar\static_03.jpg" />
+    <None Include="images\calendar\static_04.jpg" />
+    <None Include="images\calendar\static_05.jpg" />
+    <None Include="images\calendar\static_06.jpg" />
+    <None Include="images\calendar\static_07.jpg" />
+    <None Include="images\calendar\static_08.jpg" />
+    <None Include="images\calendar\title_bgsel.gif" />
+    <None Include="images\cardmanage.jpg" />
+    <None Include="images\combobox\ddn-hover.png" />
+    <None Include="images\combobox\ddn.png" />
+    <None Include="images\combobox\font.png" />
+    <None Include="images\combobox\static.png" />
+    <None Include="images\combobox\vertical.png" />
+    <None Include="images\dc.gif" />
+    <None Include="images\disable.gif" />
+    <None Include="images\dynCalendar.gif" />
+    <None Include="images\edit.gif" />
+    <None Include="images\enable.jpg" />
+    <None Include="images\exchange.jpg" />
+    <None Include="images\export.jpg" />
+    <None Include="images\getnewcard.jpg" />
+    <None Include="images\gridview2\asc.gif" />
+    <None Include="images\gridview2\desc.gif" />
+    <None Include="images\gridview2\flag_red.gif" />
+    <None Include="images\gridview2\grid_headerBg.gif" />
+    <None Include="images\gridview2\group_asc.gif" />
+    <None Include="images\gridview2\group_desc.gif" />
+    <None Include="images\gridview2\header_activeBg.gif" />
+    <None Include="images\gridview2\header_bg.gif" />
+    <None Include="images\gridview2\header_bga.gif" />
+    <None Include="images\gridview2\header_hoverBg.gif" />
+    <None Include="images\gridview2\header_rowBg.gif" />
+    <None Include="images\gridview2\lines\dashminus.gif" />
+    <None Include="images\gridview2\lines\dashplus.gif" />
+    <None Include="images\gridview2\lines\i.gif" />
+    <None Include="images\gridview2\lines\lminus.gif" />
+    <None Include="images\gridview2\lines\lplus.gif" />
+    <None Include="images\gridview2\lines\rminus.gif" />
+    <None Include="images\gridview2\lines\rplus.gif" />
+    <None Include="images\gridview2\lines\tminus.gif" />
+    <None Include="images\gridview2\lines\tplus.gif" />
+    <None Include="images\gridview2\pager\first.gif" />
+    <None Include="images\gridview2\pager\last.gif" />
+    <None Include="images\gridview2\pager\next.gif" />
+    <None Include="images\gridview2\pager\prev.gif" />
+    <None Include="images\gridview2\pager\slider_bg.gif" />
+    <None Include="images\gridview2\pager\slider_grip.gif" />
+    <None Include="images\gridview2\thread_important_new.gif" />
+    <None Include="images\gridview2\thread_locked_new.gif" />
+    <None Include="images\gridview2\thread_new.gif" />
+    <None Include="images\gridview2\thread_pinned_new.gif" />
+    <None Include="images\gridview2\thread_pinned_read.gif" />
+    <None Include="images\gridview2\thread_popular_new.gif" />
+    <None Include="images\gridview2\thread_popular_read.gif" />
+    <None Include="images\gridview2\thread_read.gif" />
+    <None Include="images\gridview\asc.gif" />
+    <None Include="images\gridview\attachment.gif" />
+    <None Include="images\gridview\desc.gif" />
+    <None Include="images\gridview\flag_blue.gif" />
+    <None Include="images\gridview\flag_green.gif" />
+    <None Include="images\gridview\flag_none.gif" />
+    <None Include="images\gridview\flag_red.gif" />
+    <None Include="images\gridview\grid_footer_bg.gif" />
+    <None Include="images\gridview\grid_headerBg.gif" />
+    <None Include="images\gridview\grid_header_bg.gif" />
+    <None Include="images\gridview\grid_popup_bg.gif" />
+    <None Include="images\gridview\grid_popup_footer_bg.gif" />
+    <None Include="images\gridview\grid_postfooter.gif" />
+    <None Include="images\gridview\grid_postfooter_02.jpg" />
+    <None Include="images\gridview\grid_postfooter_01.jpg" />
+    <None Include="images\gridview\grid_postfooter_03.jpg" />
+    <None Include="images\gridview\grid_preheader.gif" />
+    <None Include="images\gridview\grid_preheader_01.jpg" />
+    <None Include="images\gridview\grid_preheader_02.jpg" />
+    <None Include="images\gridview\grid_preheader_03.jpg" />
+    <None Include="images\gridview\grid_selected_item_bg.gif" />
+    <None Include="images\gridview\group_asc.gif" />
+    <None Include="images\gridview\group_desc.gif" />
+    <None Include="images\gridview\header1stCell_bg.gif" />
+    <None Include="images\gridview\header_activeBg.gif" />
+    <None Include="images\gridview\header_bg.gif" />
+    <None Include="images\gridview\header_hoverBg.gif" />
+    <None Include="images\gridview\header_rowBg.gif" />
+    <None Include="images\gridview\icon_attachment.gif" />
+    <None Include="images\gridview\icon_flag.gif" />
+    <None Include="images\gridview\icon_icon.gif" />
+    <None Include="images\gridview\icon_priority.gif" />
+    <None Include="images\gridview\msg_forwarded.gif" />
+    <None Include="images\gridview\msg_read.gif" />
+    <None Include="images\gridview\msg_replied.gif" />
+    <None Include="images\gridview\msg_unread.gif" />
+    <None Include="images\gridview\pager\first.gif" />
+    <None Include="images\gridview\pager\first_hover.gif" />
+    <None Include="images\gridview\pager\last.gif" />
+    <None Include="images\gridview\pager\last_hover.gif" />
+    <None Include="images\gridview\pager\next.gif" />
+    <None Include="images\gridview\pager\next_hover.gif" />
+    <None Include="images\gridview\pager\prev.gif" />
+    <None Include="images\gridview\pager\prev_hover.gif" />
+    <None Include="images\gridview\pager\slider_bg.gif" />
+    <None Include="images\gridview\pager\slider_grip.gif" />
+    <None Include="images\gridview\pager\slider_grip_hover.gif" />
+    <None Include="images\gridview\pager\slider_loaded_bg.gif" />
+    <None Include="images\gridview\priority_high.gif" />
+    <None Include="images\gridview\priority_low.gif" />
+    <None Include="images\gridview\reorder.gif" />
+    <None Include="images\gridview\spacer.gif" />
+    <None Include="images\gridview\spinner.gif" />
+    <None Include="images\gridview\topItem_col.gif" />
+    <None Include="images\gridview\topItem_exp.gif" />
+    <None Include="images\grid\asc.gif" />
+    <None Include="images\grid\desc.gif" />
+    <None Include="images\grid\horizontal.png" />
+    <None Include="images\grid\lines\i.gif" />
+    <None Include="images\grid\lines\lminus.gif" />
+    <None Include="images\grid\lines\lplus.gif" />
+    <None Include="images\grid\lines\rminus.gif" />
+    <None Include="images\grid\lines\rplus.gif" />
+    <None Include="images\grid\lines\tminus.gif" />
+    <None Include="images\grid\lines\tplus.gif" />
+    <None Include="images\grid\selector.gif" />
+    <None Include="images\grid\static.png" />
+    <None Include="images\headerbg_left.jpg" />
+    <None Include="images\headerbg_right.jpg" />
+    <None Include="images\Icon_Cancel.gif" />
+    <None Include="images\kaoqin_03.jpg" />
+    <None Include="images\kaoqin_06.jpg" />
+    <None Include="images\kaoqin_08.jpg" />
+    <None Include="images\kaoqin_10.jpg" />
+    <None Include="images\kaoqin_12.jpg" />
+    <None Include="images\kaoqin_15.jpg" />
+    <None Include="images\kaoqin_16.jpg" />
+    <None Include="images\kaoqin_18.jpg" />
+    <None Include="images\kaoqin_23.jpg" />
+    <None Include="images\kaoqin_24.jpg" />
+    <None Include="images\kaoqin_27.jpg" />
+    <None Include="images\kaoqin_36.jpg" />
+    <None Include="images\kaoqin_37.jpg" />
+    <None Include="images\kaoqin_39.jpg" />
+    <None Include="images\kaoqin_42.jpg" />
+    <None Include="images\kaoqin_OffTune.jpg" />
+    <None Include="images\kaoqin_save.jpg" />
+    <None Include="images\kaoqin_submit.jpg" />
+    <None Include="images\k_51.jpg" />
+    <None Include="images\k_54.jpg" />
+    <None Include="images\k_57.jpg" />
+    <None Include="images\k_62.jpg" />
+    <None Include="images\k_64.jpg" />
+    <None Include="images\k_67.jpg" />
+    <None Include="images\k_73.jpg" />
+    <None Include="images\k_75.jpg" />
+    <None Include="images\k_77.jpg" />
+    <None Include="images\k_79.jpg" />
+    <None Include="images\k_87.jpg" />
+    <None Include="images\listbg.jpg" />
+    <None Include="images\m1_03.jpg" />
+    <None Include="images\m1_05.jpg" />
+    <None Include="images\mainbg.jpg" />
+    <None Include="images\midline.jpg" />
+    <None Include="images\n1_03.jpg" />
+    <None Include="images\n1_06.jpg" />
+    <None Include="images\navbar\icons.gif" />
+    <None Include="images\navbar\icons.png" />
+    <None Include="images\navbar\static.png" />
+    <None Include="images\navbar\vertical.png" />
+    <None Include="images\renli_24.gif" />
+    <None Include="images\scroller\bottom.gif" />
+    <None Include="images\scroller\down.gif" />
+    <None Include="images\scroller\down_disabled.gif" />
+    <None Include="images\scroller\scroller_bg.gif" />
+    <None Include="images\scroller\scroll_gripBg.gif" />
+    <None Include="images\scroller\top.gif" />
+    <None Include="images\scroller\up.gif" />
+    <None Include="images\scroller\up_disabled.gif" />
+    <None Include="images\siteMap\bullet.gif" />
+    <None Include="images\t1_28.jpg" />
+    <None Include="images\t1_29.jpg" />
+    <None Include="images\t1_32.jpg" />
+    <None Include="images\t1_36.jpg" />
+    <None Include="images\t2_03-07.jpg" />
+    <None Include="images\t2_03-09.jpg" />
+    <None Include="images\t2_03-14.jpg" />
+    <None Include="images\t2_03-18.jpg" />
+    <None Include="images\t2_03-20.jpg" />
+    <None Include="images\t2_03-22.jpg" />
+    <None Include="images\t2_03.jpg" />
+    <None Include="images\t2_18.jpg" />
+    <None Include="images\t2_19.jpg" />
+    <None Include="images\t2_21.jpg" />
+    <None Include="images\t2_37-43.jpg" />
+    <None Include="images\t2_37.jpg" />
+    <None Include="images\tabStrip\horizontal.png" />
+    <None Include="images\tabStrip\static.png" />
+    <None Include="images\tabStrip\static_02.png" />
+    <None Include="images\tabStrip\static_03.png" />
+    <None Include="images\tabStrip\static_04.png" />
+    <None Include="images\tabStrip\static_05.png" />
+    <None Include="images\tabStrip\vertical.gif" />
+    <None Include="images\tabStrip\vertical.png" />
+    <None Include="images\treebg.jpg" />
+    <None Include="images\treebg2.gif" />
+    <None Include="images\treebg2.jpg" />
+    <None Include="images\unenable.jpg" />
+    <None Include="js\DatePicker.js" />
+    <None Include="js\DatePickerChange.js" />
+    <Content Include="SiteMap.xml" />
+    <Content Include="Statistic\OverTimeSearch.aspx" />
+    <Content Include="TimeSheet\TSReport.aspx" />
+    <Content Include="UserControls\ddlDepartments.ascx" />
+    <Content Include="UserControls\IntegratedQuery\LateSearch.ascx" />
+    <Content Include="UserControls\MatterAudit\LeaveAudit.ascx" />
+    <Content Include="UserControls\MatterAudit\OffTuneAudit.ascx" />
+    <Content Include="UserControls\MatterAudit\OTLateEdit.ascx" />
+    <Content Include="UserControls\MatterAudit\OutAudit.ascx" />
+    <Content Include="UserControls\MatterAudit\OverTimeAudit.ascx" />
+    <Content Include="UserControls\MatterAudit\TravelAudit.ascx" />
+    <Content Include="UserControls\MatterView\LeaveView.ascx" />
+    <Content Include="UserControls\MatterView\OffTuneView.ascx" />
+    <Content Include="UserControls\MatterView\OtherView.ascx" />
+    <Content Include="UserControls\MatterView\OutView.ascx" />
+    <Content Include="UserControls\MatterView\OverTimeView.ascx" />
+    <Content Include="UserControls\MatterView\TravelView.ascx" />
+    <Content Include="UserControls\Matter\LeaveEdit.ascx" />
+    <Content Include="UserControls\Matter\OffTuneEdit.ascx" />
+    <Content Include="UserControls\Matter\OtherEdit.ascx" />
+    <Content Include="UserControls\Matter\OTLateEdit.ascx" />
+    <Content Include="UserControls\Matter\OutEdit.ascx" />
+    <Content Include="UserControls\Matter\OverTimeEdit.ascx" />
+    <Content Include="UserControls\Matter\TravelEdit.ascx" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appSettings.config" />
+    <None Include="connectionStrings.config" />
+    <None Include="Document\内网考勤系统填报须.doc" />
+    <None Include="ExcelTemplate\AnnualLeaveState.xls" />
+    <None Include="ExcelTemplate\AnnualLeaveTemplate.xls" />
+    <None Include="ExcelTemplate\AttendanceStat.xls" />
+    <None Include="ExcelTemplate\MonthStat.xls" />
+    <None Include="ExcelTemplate\UserCardNoInfo.xls" />
+    <None Include="ExcelTemplate\UserMonthStat.xls" />
+    <None Include="new_images\Thumbs.db" />
+    <None Include="Properties\PublishProfiles\administrative.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="public\UserImage\UploadPhotoTemp\" />
+    <Folder Include="public\UserImage\UserHeadImage\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>11006</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

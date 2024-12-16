@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Portal.Data.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="PortalDataStoreContainer">
+          <EntitySet Name="PT_Attention" EntityType="Portal.Data.Store.PT_Attention" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_Bulletin" EntityType="Portal.Data.Store.PT_Bulletin" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_Claw" EntityType="Portal.Data.Store.PT_Claw" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_Collection" EntityType="Portal.Data.Store.PT_Collection" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_Messenger" EntityType="Portal.Data.Store.PT_Messenger" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_Module" EntityType="Portal.Data.Store.PT_Module" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_Poll" EntityType="Portal.Data.Store.PT_Poll" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_RssTask" EntityType="Portal.Data.Store.PT_RssTask" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_RssTaskCategory" EntityType="Portal.Data.Store.PT_RssTaskCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_ShareFile" EntityType="Portal.Data.Store.PT_ShareFile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_TwitterMessage" EntityType="Portal.Data.Store.PT_TwitterMessage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_TwitterMessageForDJ" EntityType="Portal.Data.Store.PT_TwitterMessageForDJ" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_TwitterMessageRank" EntityType="Portal.Data.Store.PT_TwitterMessageRank" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PT_UserSettings" EntityType="Portal.Data.Store.PT_UserSettings" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_PT_RssTask_PT_RssTaskCategory" Association="Portal.Data.Store.FK_PT_RssTask_PT_RssTaskCategory">
+            <End Role="PT_RssTaskCategory" EntitySet="PT_RssTaskCategory" />
+            <End Role="PT_RssTask" EntitySet="PT_RssTask" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="PT_Attention">
+          <Key>
+            <PropertyRef Name="userid" />
+            <PropertyRef Name="attentionto" />
+          </Key>
+          <Property Name="userid" Type="int" Nullable="false" />
+          <Property Name="attentionto" Type="int" Nullable="false" />
+          <Property Name="attentiontime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Bulletin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="nchar" Nullable="false" MaxLength="5" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="ContentHTML" Type="text" Nullable="false" />
+          <Property Name="PollXML" Type="nvarchar" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="TillDays" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Claw">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fromusername" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="touserid" Type="int" Nullable="false" />
+          <Property Name="clawtype" Type="int" Nullable="false" />
+          <Property Name="ispublic" Type="bit" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Collection">
+          <Key>
+            <PropertyRef Name="userid" />
+            <PropertyRef Name="messageid" />
+          </Key>
+          <Property Name="userid" Type="int" Nullable="false" />
+          <Property Name="messageid" Type="int" Nullable="false" />
+          <Property Name="collectiontime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Messenger">
+          <Key>
+            <PropertyRef Name="Messenger" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Messenger" Type="nvarchar" Nullable="false" MaxLength="400" />
+          <Property Name="ContactList" Type="ntext" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" Nullable="false" />
+          <Property Name="UserValidation" Type="bit" Nullable="false" />
+          <Property Name="DJValidation" Type="bit" Nullable="false" />
+          <Property Name="Remind" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Module">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ModuleID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" />
+          <Property Name="DefaultCol" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ViewType" Type="int" Nullable="false" />
+          <Property Name="ImageItemName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TitleItemName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="AltItemName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ContentItemName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LinkItemName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsFocusItem" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DataURL" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="Parameter" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="RefreshFunction" Type="text" Nullable="false" />
+          <Property Name="IsRSS" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RSSURL" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="IsTabs" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CSS" Type="nvarchar" Nullable="false" />
+          <Property Name="IsExpand" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ExpandFunction" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Poll">
+          <Key>
+            <PropertyRef Name="userid" />
+            <PropertyRef Name="bulletin_id" />
+          </Key>
+          <Property Name="userid" Type="nchar" Nullable="false" MaxLength="5" />
+          <Property Name="bulletin_id" Type="int" Nullable="false" />
+          <Property Name="PollResultXML" Type="nvarchar" Nullable="false" />
+          <Property Name="createtime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_RssTask">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RssName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Url" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="RssCategory" Type="int" Nullable="false" />
+          <Property Name="Data" Type="ntext" Nullable="false" />
+          <Property Name="ReadTime" Type="datetime" Nullable="false" />
+          <Property Name="Creator" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="CreatorIp" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="PT_RssTaskCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PT_ShareFile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="link" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="description" Type="nvarchar" Nullable="false" />
+          <Property Name="img" Type="nvarchar" Nullable="false" MaxLength="300" />
+          <Property Name="userid" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="categoryname" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="PT_TwitterMessage">
+          <Key>
+            <PropertyRef Name="TwitterMessageID" />
+          </Key>
+          <Property Name="TwitterMessageID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FromUserID" Type="int" Nullable="false" />
+          <Property Name="FromUserName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ToUserID" Type="int" Nullable="false" />
+          <Property Name="ToUserName" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Message" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="Creator" Type="int" Nullable="false" />
+          <Property Name="MessageType" Type="int" Nullable="false" />
+          <Property Name="MessageSource" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ReplyID" Type="int" Nullable="false" />
+          <Property Name="RootID" Type="int" Nullable="false" />
+          <Property Name="ImagePath" Type="nvarchar" Nullable="false" MaxLength="400" />
+          <Property Name="Tags" Type="nvarchar" Nullable="false" />
+          <Property Name="TreePath" Type="nvarchar" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="IPAddress" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Best" Type="int" Nullable="false" />
+          <Property Name="Score" Type="int" Nullable="false" />
+          <Property Name="Rank" Type="float" Nullable="false" />
+          <Property Name="Pinned" Type="bit" Nullable="false" />
+          <Property Name="LastUpdatedTime" Type="datetime" Nullable="false" />
+          <Property Name="Operator" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_TwitterMessageForDJ">
+          <Key>
+            <PropertyRef Name="messageid" />
+          </Key>
+          <Property Name="messageid" Type="int" Nullable="false" />
+          <Property Name="tousers" Type="ntext" Nullable="false" />
+          <Property Name="tolist" Type="int" Nullable="false" />
+          <Property Name="djmessagetype" Type="int" Nullable="false" />
+          <Property Name="threadid" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_TwitterMessageRank">
+          <Key>
+            <PropertyRef Name="userid" />
+            <PropertyRef Name="messageid" />
+          </Key>
+          <Property Name="userid" Type="int" Nullable="false" />
+          <Property Name="messageid" Type="int" Nullable="false" />
+          <Property Name="rank" Type="int" Nullable="false" />
+          <Property Name="ranktime" Type="datetime" Nullable="false" />
+          <Property Name="ipaddress" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PT_UserSettings">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="varchar" Nullable="false" MaxLength="16" />
+          <Property Name="modulesettings" Type="nvarchar" Nullable="false" />
+          <Property Name="firstlogin" Type="bit" Nullable="false" />
+          <Property Name="lastonline" Type="datetime" />
+          <Property Name="lastoffline" Type="datetime" />
+          <Property Name="isonline" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_PT_RssTask_PT_RssTaskCategory">
+          <End Role="PT_RssTaskCategory" Type="Portal.Data.Store.PT_RssTaskCategory" Multiplicity="1" />
+          <End Role="PT_RssTask" Type="Portal.Data.Store.PT_RssTask" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PT_RssTaskCategory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PT_RssTask">
+              <PropertyRef Name="RssCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Portal.Data" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="PortalEntities">
+          <EntitySet Name="PT_Attention" EntityType="Portal.Data.PT_Attention" />
+          <EntitySet Name="PT_Bulletin" EntityType="Portal.Data.PT_Bulletin" />
+          <EntitySet Name="PT_Claw" EntityType="Portal.Data.PT_Claw" />
+          <EntitySet Name="PT_Collection" EntityType="Portal.Data.PT_Collection" />
+          <EntitySet Name="PT_Messenger" EntityType="Portal.Data.PT_Messenger" />
+          <EntitySet Name="PT_Module" EntityType="Portal.Data.PT_Module" />
+          <EntitySet Name="PT_Poll" EntityType="Portal.Data.PT_Poll" />
+          <EntitySet Name="PT_RssTask" EntityType="Portal.Data.PT_RssTask" />
+          <EntitySet Name="PT_RssTaskCategory" EntityType="Portal.Data.PT_RssTaskCategory" />
+          <EntitySet Name="PT_ShareFile" EntityType="Portal.Data.PT_ShareFile" />
+          <EntitySet Name="PT_TwitterMessage" EntityType="Portal.Data.PT_TwitterMessage" />
+          <EntitySet Name="PT_TwitterMessageForDJ" EntityType="Portal.Data.PT_TwitterMessageForDJ" />
+          <EntitySet Name="PT_TwitterMessageRank" EntityType="Portal.Data.PT_TwitterMessageRank" />
+          <EntitySet Name="PT_UserSettings" EntityType="Portal.Data.PT_UserSettings" />
+          <AssociationSet Name="FK_PT_RssTask_PT_RssTaskCategory" Association="Portal.Data.FK_PT_RssTask_PT_RssTaskCategory">
+            <End Role="PT_RssTaskCategory" EntitySet="PT_RssTaskCategory" />
+            <End Role="PT_RssTask" EntitySet="PT_RssTask" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="PT_Attention">
+          <Key>
+            <PropertyRef Name="userid" />
+            <PropertyRef Name="attentionto" />
+          </Key>
+          <Property Name="userid" Type="Int32" Nullable="false" />
+          <Property Name="attentionto" Type="Int32" Nullable="false" />
+          <Property Name="attentiontime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Bulletin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="ContentHTML" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="PollXML" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="TillDays" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Claw">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="fromusername" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="touserid" Type="Int32" Nullable="false" />
+          <Property Name="clawtype" Type="Int32" Nullable="false" />
+          <Property Name="ispublic" Type="Boolean" Nullable="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Collection">
+          <Key>
+            <PropertyRef Name="userid" />
+            <PropertyRef Name="messageid" />
+          </Key>
+          <Property Name="userid" Type="Int32" Nullable="false" />
+          <Property Name="messageid" Type="Int32" Nullable="false" />
+          <Property Name="collectiontime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Messenger">
+          <Key>
+            <PropertyRef Name="Messenger" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Messenger" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="ContactList" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="UpdateTime" Type="DateTime" Nullable="false" />
+          <Property Name="UserValidation" Type="Boolean" Nullable="false" />
+          <Property Name="DJValidation" Type="Boolean" Nullable="false" />
+          <Property Name="Remind" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_Module">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="ModuleID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="DefaultCol" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ViewType" Type="Int32" Nullable="false" />
+          <Property Name="ImageItemName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TitleItemName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AltItemName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ContentItemName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LinkItemName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="IsFocusItem" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DataURL" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Parameter" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="RefreshFunction" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="IsRSS" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RSSURL" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="IsTabs" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CSS" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="IsExpand" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ExpandFunction" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PT_Poll">
+          <Key>
+            <PropertyRef Name="userid" />
+            <PropertyRef Name="bulletin_id" />
+          </Key>
+          <Property Name="userid" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="bulletin_id" Type="Int32" Nullable="false" />
+          <Property Name="PollResultXML" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="createtime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_RssTask">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="RssName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Url" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Data" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ReadTime" Type="DateTime" Nullable="false" />
+          <Property Name="Creator" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="CreatorIp" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PT_RssTaskCategory" Relationship="Portal.Data.FK_PT_RssTask_PT_RssTaskCategory" FromRole="PT_RssTask" ToRole="PT_RssTaskCategory" />
+        </EntityType>
+        <EntityType Name="PT_RssTaskCategory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PT_RssTask" Relationship="Portal.Data.FK_PT_RssTask_PT_RssTaskCategory" FromRole="PT_RssTaskCategory" ToRole="PT_RssTask" />
+        </EntityType>
+        <EntityType Name="PT_ShareFile">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="link" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="description" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="img" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <Property Name="userid" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="categoryname" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PT_TwitterMessage">
+          <Key>
+            <PropertyRef Name="TwitterMessageID" />
+          </Key>
+          <Property Name="TwitterMessageID" Type="Int32" Nullable="false" />
+          <Property Name="FromUserID" Type="Int32" Nullable="false" />
+          <Property Name="FromUserName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="ToUserID" Type="Int32" Nullable="false" />
+          <Property Name="ToUserName" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="Creator" Type="Int32" Nullable="false" />
+          <Property Name="MessageType" Type="Int32" Nullable="false" />
+          <Property Name="MessageSource" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ReplyID" Type="Int32" Nullable="false" />
+          <Property Name="RootID" Type="Int32" Nullable="false" />
+          <Property Name="ImagePath" Type="String" Nullable="false" MaxLength="400" Unicode="true" FixedLength="false" />
+          <Property Name="Tags" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="TreePath" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="IPAddress" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Best" Type="Int32" Nullable="false" />
+          <Property Name="Score" Type="Int32" Nullable="false" />
+          <Property Name="Rank" Type="Double" Nullable="false" />
+          <Property Name="Pinned" Type="Boolean" Nullable="false" />
+          <Property Name="LastUpdatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="Operator" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_TwitterMessageForDJ">
+          <Key>
+            <PropertyRef Name="messageid" />
+          </Key>
+          <Property Name="messageid" Type="Int32" Nullable="false" />
+          <Property Name="tousers" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="tolist" Type="Int32" Nullable="false" />
+          <Property Name="djmessagetype" Type="Int32" Nullable="false" />
+          <Property Name="threadid" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PT_TwitterMessageRank">
+          <Key>
+            <PropertyRef Name="userid" />
+            <PropertyRef Name="messageid" />
+          </Key>
+          <Property Name="userid" Type="Int32" Nullable="false" />
+          <Property Name="messageid" Type="Int32" Nullable="false" />
+          <Property Name="rank" Type="Int32" Nullable="false" />
+          <Property Name="ranktime" Type="DateTime" Nullable="false" />
+          <Property Name="ipaddress" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="PT_UserSettings">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="String" Nullable="false" MaxLength="16" Unicode="false" FixedLength="false" />
+          <Property Name="modulesettings" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="firstlogin" Type="Boolean" Nullable="false" />
+          <Property Name="lastonline" Type="DateTime" />
+          <Property Name="lastoffline" Type="DateTime" />
+          <Property Name="isonline" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_PT_RssTask_PT_RssTaskCategory">
+          <End Role="PT_RssTaskCategory" Type="Portal.Data.PT_RssTaskCategory" Multiplicity="1" />
+          <End Role="PT_RssTask" Type="Portal.Data.PT_RssTask" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="PortalDataStoreContainer" CdmEntityContainer="PortalEntities">
+          <EntitySetMapping Name="PT_Attention">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_Attention)">
+              <MappingFragment StoreEntitySet="PT_Attention">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="attentionto" ColumnName="attentionto" />
+                <ScalarProperty Name="attentiontime" ColumnName="attentiontime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_Bulletin">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_Bulletin)">
+              <MappingFragment StoreEntitySet="PT_Bulletin">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ContentHTML" ColumnName="ContentHTML" />
+                <ScalarProperty Name="PollXML" ColumnName="PollXML" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="TillDays" ColumnName="TillDays" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_Claw">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_Claw)">
+              <MappingFragment StoreEntitySet="PT_Claw">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fromusername" ColumnName="fromusername" />
+                <ScalarProperty Name="touserid" ColumnName="touserid" />
+                <ScalarProperty Name="clawtype" ColumnName="clawtype" />
+                <ScalarProperty Name="ispublic" ColumnName="ispublic" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_Collection">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_Collection)">
+              <MappingFragment StoreEntitySet="PT_Collection">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="messageid" ColumnName="messageid" />
+                <ScalarProperty Name="collectiontime" ColumnName="collectiontime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_Messenger">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_Messenger)">
+              <MappingFragment StoreEntitySet="PT_Messenger">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Messenger" ColumnName="Messenger" />
+                <ScalarProperty Name="ContactList" ColumnName="ContactList" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UserValidation" ColumnName="UserValidation" />
+                <ScalarProperty Name="DJValidation" ColumnName="DJValidation" />
+                <ScalarProperty Name="Remind" ColumnName="Remind" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_Module">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_Module)">
+              <MappingFragment StoreEntitySet="PT_Module">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ModuleID" ColumnName="ModuleID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DefaultCol" ColumnName="DefaultCol" />
+                <ScalarProperty Name="ViewType" ColumnName="ViewType" />
+                <ScalarProperty Name="ImageItemName" ColumnName="ImageItemName" />
+                <ScalarProperty Name="TitleItemName" ColumnName="TitleItemName" />
+                <ScalarProperty Name="AltItemName" ColumnName="AltItemName" />
+                <ScalarProperty Name="ContentItemName" ColumnName="ContentItemName" />
+                <ScalarProperty Name="LinkItemName" ColumnName="LinkItemName" />
+                <ScalarProperty Name="IsFocusItem" ColumnName="IsFocusItem" />
+                <ScalarProperty Name="DataURL" ColumnName="DataURL" />
+                <ScalarProperty Name="Parameter" ColumnName="Parameter" />
+                <ScalarProperty Name="RefreshFunction" ColumnName="RefreshFunction" />
+                <ScalarProperty Name="IsRSS" ColumnName="IsRSS" />
+                <ScalarProperty Name="RSSURL" ColumnName="RSSURL" />
+                <ScalarProperty Name="IsTabs" ColumnName="IsTabs" />
+                <ScalarProperty Name="CSS" ColumnName="CSS" />
+                <ScalarProperty Name="IsExpand" ColumnName="IsExpand" />
+                <ScalarProperty Name="ExpandFunction" ColumnName="ExpandFunction" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_Poll">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_Poll)">
+              <MappingFragment StoreEntitySet="PT_Poll">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="bulletin_id" ColumnName="bulletin_id" />
+                <ScalarProperty Name="PollResultXML" ColumnName="PollResultXML" />
+                <ScalarProperty Name="createtime" ColumnName="createtime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_RssTask">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_RssTask)">
+              <MappingFragment StoreEntitySet="PT_RssTask">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RssName" ColumnName="RssName" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="ReadTime" ColumnName="ReadTime" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="CreatorIp" ColumnName="CreatorIp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_RssTaskCategory">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_RssTaskCategory)">
+              <MappingFragment StoreEntitySet="PT_RssTaskCategory">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_ShareFile">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_ShareFile)">
+              <MappingFragment StoreEntitySet="PT_ShareFile">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="img" ColumnName="img" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="categoryname" ColumnName="categoryname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_TwitterMessage">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_TwitterMessage)">
+              <MappingFragment StoreEntitySet="PT_TwitterMessage">
+                <ScalarProperty Name="TwitterMessageID" ColumnName="TwitterMessageID" />
+                <ScalarProperty Name="FromUserID" ColumnName="FromUserID" />
+                <ScalarProperty Name="FromUserName" ColumnName="FromUserName" />
+                <ScalarProperty Name="ToUserID" ColumnName="ToUserID" />
+                <ScalarProperty Name="ToUserName" ColumnName="ToUserName" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="Creator" ColumnName="Creator" />
+                <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+                <ScalarProperty Name="MessageSource" ColumnName="MessageSource" />
+                <ScalarProperty Name="ReplyID" ColumnName="ReplyID" />
+                <ScalarProperty Name="RootID" ColumnName="RootID" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="Tags" ColumnName="Tags" />
+                <ScalarProperty Name="TreePath" ColumnName="TreePath" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="Best" ColumnName="Best" />
+                <ScalarProperty Name="Score" ColumnName="Score" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="Pinned" ColumnName="Pinned" />
+                <ScalarProperty Name="LastUpdatedTime" ColumnName="LastUpdatedTime" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_TwitterMessageForDJ">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_TwitterMessageForDJ)">
+              <MappingFragment StoreEntitySet="PT_TwitterMessageForDJ">
+                <ScalarProperty Name="messageid" ColumnName="messageid" />
+                <ScalarProperty Name="tousers" ColumnName="tousers" />
+                <ScalarProperty Name="tolist" ColumnName="tolist" />
+                <ScalarProperty Name="djmessagetype" ColumnName="djmessagetype" />
+                <ScalarProperty Name="threadid" ColumnName="threadid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_TwitterMessageRank">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_TwitterMessageRank)">
+              <MappingFragment StoreEntitySet="PT_TwitterMessageRank">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="messageid" ColumnName="messageid" />
+                <ScalarProperty Name="rank" ColumnName="rank" />
+                <ScalarProperty Name="ranktime" ColumnName="ranktime" />
+                <ScalarProperty Name="ipaddress" ColumnName="ipaddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PT_UserSettings">
+            <EntityTypeMapping TypeName="IsTypeOf(Portal.Data.PT_UserSettings)">
+              <MappingFragment StoreEntitySet="PT_UserSettings">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="modulesettings" ColumnName="modulesettings" />
+                <ScalarProperty Name="firstlogin" ColumnName="firstlogin" />
+                <ScalarProperty Name="lastonline" ColumnName="lastonline" />
+                <ScalarProperty Name="lastoffline" ColumnName="lastoffline" />
+                <ScalarProperty Name="isonline" ColumnName="isonline" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FK_PT_RssTask_PT_RssTaskCategory" TypeName="Portal.Data.FK_PT_RssTask_PT_RssTaskCategory" StoreEntitySet="PT_RssTask">
+            <EndProperty Name="PT_RssTaskCategory">
+              <ScalarProperty Name="ID" ColumnName="RssCategory" />
+            </EndProperty>
+            <EndProperty Name="PT_RssTask">
+              <ScalarProperty Name="ID" ColumnName="ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="Portal">
+        <EntityTypeShape EntityType="Portal.Data.PT_Attention" Width="1.5" PointX="0.75" PointY="4.75" Height="1.4535937499999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_Bulletin" Width="1.5" PointX="2.75" PointY="4.75" Height="2.1280729166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_Claw" Width="1.5" PointX="4.75" PointY="4.75" Height="1.9594531249999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_Collection" Width="1.5" PointX="5.75" PointY="0.75" Height="1.4535937499999998" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_Messenger" Width="1.5" PointX="6.75" PointY="3.75" Height="2.1280729166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_Module" Width="1.5" PointX="6.75" PointY="6.75" Height="4.48875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_Poll" Width="1.5" PointX="7.75" PointY="0.75" Height="1.6222135416666672" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_RssTask" Width="1.5" PointX="3" PointY="1" Height="2.4653124999999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_RssTaskCategory" Width="1.5" PointX="0.75" PointY="1.5" Height="1.4535937499999998" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_ShareFile" Width="1.5" PointX="0.75" PointY="7.75" Height="2.1280729166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_TwitterMessage" Width="1.5" PointX="2.75" PointY="7.75" Height="4.8259895833333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_TwitterMessageForDJ" Width="1.5" PointX="8.75" PointY="3.75" Height="1.7908333333333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_TwitterMessageRank" Width="1.5" PointX="8.75" PointY="6.75" Height="1.7908333333333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="Portal.Data.PT_UserSettings" Width="1.5" PointX="9.75" PointY="0.75" Height="1.9594531249999998" IsExpanded="true" />
+        <AssociationConnector Association="Portal.Data.FK_PT_RssTask_PT_RssTaskCategory" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.226796875" />
+          <ConnectorPoint PointX="3" PointY="2.226796875" /></AssociationConnector></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

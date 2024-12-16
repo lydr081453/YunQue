@@ -1,0 +1,51 @@
+HTML {
+	BACKGROUND: url(../images/background-body.png) white repeat-x 50% top; MARGIN: 0px auto 1px; HEIGHT: 100%
+}
+BODY {
+	BACKGROUND: url(../images/background-body.png) white repeat-x 50% top; MARGIN: 0px auto 1px; HEIGHT: 100%
+}
+BODY {
+	FONT-SIZE: 70%; COLOR: white; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center
+}
+h1 { font-size:18px; margin:0 0 20px; }
+a { color:#FFF; }
+
+.clear { clear:both; font-size:1px; line-height:1px; }
+
+#overlay { background:#666; height:100%; left:0; position:absolute; top:0; width:100%; z-index:2000; }
+#overlay #preloader { background:url(../images/loader_bg.gif) no-repeat; height:50px; left:50%; line-height:50px; margin:-25px 0 0 -25px; position:absolute; text-align:center; top:50%; width:50px; }
+#overlay #preloader img { margin:11px 0 0 0; vertical-align:middle; }
+
+.ui-sortable { background-color:#FFF; border:1px solid #555; color:#222; margin:0 15px 15px 0; padding:0 10px 10px; }
+.ui-sortable h2 { background: url(../images/title-bg.gif) repeat-x; color:#FFF; font-size:11px; margin:0 -10px 10px; line-height:2; padding:0 10px; }
+
+dl.sort { color:#222; margin:10px 0; }
+#main { padding:0; MARGIN: 0px auto; width:960px; text-align:left; } 
+#uidemo dl.first { margin-top:0; }
+#uidemo dl.last { margin-bottom:0; }
+
+dl.sort dt { background: url(../images/block-bg.gif) repeat-x; color:gray; cursor:move; height:2em; line-height:2; padding:0; position:relative; }
+dl.sort dd { background-color:#FFF; margin:0; padding:3px 6px; }
+
+.placeholder { border:1px dashed #AAA; }
+
+span.options { cursor:default; font-size:1px; line-height:1px; position:absolute; }
+span.options a { background-color:#FFF; cursor:pointer; display:block; float:left; }
+
+.ui-sortable h2 span.options { right:10px; top:8px; width:30px; }
+.ui-sortable h2 span.options a { height:12px; width:30px; }
+
+dl.sort dt span.options { right:5px; top:5px; width:27px; }
+dl.sort dt span.options a { height:12px; width:12px; }
+dl.sort dt span.options a.down { background: url(../images/down.png) no-repeat; }
+dl.sort dt span.options a.up { margin-right:3px; background: url(../images/up.png) no-repeat; }
+dl.sort dt span.options a.disabled { cursor:default; }
+
+#container { float:left; }
+#header { width:800px; }
+#content { float:left; width:600px; }
+#sidebar { float:left; width:162px; }
+#footer { width:800px; }
+#trashcan { float:left; width:80px; }
+
+#trashcan p { margin:0; }

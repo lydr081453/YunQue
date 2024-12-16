@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="ESP" Class="WorkFlowDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.16.11.208;Initial Catalog=ESP;Persist Security Info=True;User ID=sa" SettingsObjectName="ESP.Properties.Settings" SettingsPropertyName="ESPConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.wf_WorkItemAssignees" Member="WorkItemAssignee">
+    <Type Name="WorkItemAssignee">
+      <Column Name="WorkItemAssigneeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WorkItemId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AssigneeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NotifyOnly" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wf_WorkItems" Member="WorkItem">
+    <Type Name="WorkItem">
+      <Column Name="WorkItemId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WorkflowInstanceId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="WorkItemName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="WorkflowName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ParticipantName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Token" Type="System.String" DbType="NVarChar(1024) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="EntityId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WebSiteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WebPage" Type="System.String" DbType="NVarChar(1024)" CanBeNull="true" />
+      <Column Name="OperatorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClosedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ClosedTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Timeout" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.wf_WorkflowInstances" Member="WorkflowInstance">
+    <Type Name="WorkflowInstance">
+      <Column Name="InstanceId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Definition" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DynamicAssembly" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="DynamicNamespace" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="NextThreadId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Threads" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" />
+      <Column Name="DataFeilds" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" />
+      <Column Name="Users" Type="System.String" DbType="NText" CanBeNull="true" />
+      <Column Name="EventQueues" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsLocked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="InitiatorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="InitiatedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="RowVersion" Type="System.Data.Linq.Binary" DbType="rowversion NOT NULL" CanBeNull="false" IsVersion="true" />
+    </Type>
+  </Table>
+</Database>

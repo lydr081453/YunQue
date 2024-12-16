@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ESP.Logging" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="LoggingEntities">
+    <EntitySet Name="LogEntries" EntityType="ESP.Logging.LogEntryInfo" />
+  </EntityContainer>
+  <EntityType Name="LogEntryInfo">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="ApplicationName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ApplicationVersion" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+    <Property Name="Category" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ClientAddress" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ClientHostName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ClientPort" Type="Int32" />
+    <Property Name="ExceptionInfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ExceptionType" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
+    <Property Name="ExtendedProperties" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="LogID" Type="Int64" Nullable="false" />
+    <Property Name="LogLevel" Type="Int32" Nullable="false" />
+    <Property Name="LogTime" Type="DateTime" />
+    <Property Name="Message" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
+    <Property Name="PagePath" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ProcessID" Type="Int32" Nullable="false" />
+    <Property Name="RequestMethod" Type="String" MaxLength="8" Unicode="true" FixedLength="false" />
+    <Property Name="ServerAddress" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="ServerHostName" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="ServerPort" Type="Int32" />
+    <Property Name="ThreadID" Type="Int32" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+    <Property Name="UserAgent" Type="String" MaxLength="256" Unicode="true" FixedLength="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

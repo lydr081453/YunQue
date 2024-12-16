@@ -1,0 +1,27 @@
+@charset "utf-8";
+body { background-image: url(images/mainbg.jpg); background-repeat: no-repeat; background-position: center top; background-color: #fb7706; margin:0; color: #FFF; font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+img{ border:none;}
+.input{ background-image: url(images/input-bg.jpg); background-position: left top; padding:0 5px; height: 24px; width: 120px; border: 1px solid #feca69; color:#FFF; }
+.select{ border:1px solid #b75400; height:24px; width:60px; font-size:12px; color:#b75400; background-color:#f3de66; }
+
+
+.colorA{ color:#632d00;}
+.colorB{ color:#ffc492;}
+.colorC{ color:#ffd14c;}
+
+
+.paddingA{ padding-left:8px; color:#632d00; font-weight:normal;}
+.paddingB{ padding-left:8px; color:#ffc492; font-weight:normal;}
+
+.menu{ height:22px; padding-left:30px;color:#632d00;}
+.menu-a1{ background-image: url(images/a1.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a2{ background-image: url(images/a2.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a3{ background-image: url(images/a3.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a4{ background-image: url(images/a4.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a5{ background-image: url(images/a5.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a6{ background-image: url(images/a6.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a7{ background-image: url(images/a7.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a8{ background-image: url(images/a8.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a9{ background-image: url(images/a9.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a10{ background-image: url(images/a10.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }
+.menu-a11{ background-image: url(images/a11.jpg); background-repeat: no-repeat; height: 22px; width: 220px; padding-left:20px; font-weight:bold; }

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="System/Default.aspx" title="宣亚"  description="">
+		<siteMapNode url=" Project/ProjectList.aspx" title="项目列表">
+
+				<siteMapNode url="Project/ProjectInfo.aspx" title="添加项目"/>
+				<siteMapNode url="Project/ProjectInfo.aspx?Operate=ADD" title="添加项目">
+					<siteMapNode url="Project/ProjectSelectProductLine.aspx?alert=1&amp;Operate=ProductLineSelect" title="选择产品线"/>
+					<siteMapNode url="Project/ProjectSelectClientList.aspx?alert=1" title="选择客户"/>
+				</siteMapNode>
+
+				<siteMapNode url="Project/UserList.aspx" title="添加项目成员"/>
+				<siteMapNode url="Project/ProjectSelectReporterList.aspx?alert=1" title="添加关联记者"/>
+				<siteMapNode url="Project/ProjectSelectMediaList.aspx?alert=1" title="添加关联媒体"/>
+				<siteMapNode url="Project/DailyAddAndEdit.aspx?Operate=ADD" title="添加日常传播"/>
+				<siteMapNode url="Project/EventAddAndEdit.aspx?Operate=ADD" title="添加事件"/>
+				<siteMapNode url="Client/ClientDetail.aspx?alert=1" title="查看详细信息"/>
+				<siteMapNode url="ShortMsg/SendMail.aspx?action=Reporter" title="发送邮件"/>
+				<siteMapNode url="ShortMsg/SendShortMsg.aspx?action=Reporter" title="发送短信"/>
+
+      <siteMapNode url="Project/ProjectBill.aspx" title="费用申请">
+				<siteMapNode url="Bill/PersonFeeBillEdit.aspx" title="个人报销">
+				</siteMapNode>
+
+				<siteMapNode url="Bill/CashPaymentBillEdit.aspx" title="现金报销">
+				</siteMapNode>
+
+				<siteMapNode url="Bill/CashloanbillEdit.aspx" title="借款单">
+				</siteMapNode>
+
+				<siteMapNode url="Bill/PurchasecontractList.aspx" title="采购合同签署列表">
+				</siteMapNode>
+
+				<siteMapNode url="Bill/CheckPaymentBillEdit.aspx" title="支票电汇申请付款">
+				</siteMapNode>
+
+
+				<siteMapNode url="Project/NewBriefingUpload.aspx" title="稿件费用报销">
+				</siteMapNode>
+      </siteMapNode>
+
+    </siteMapNode>
+
+    <siteMapNode url="Media/AuditedMediaList.aspx" title="媒体信息库">
+		  <siteMapNode url="Media/MediaDisplay.aspx" title="媒体详细信息"></siteMapNode>
+		  <siteMapNode url="Media/MediaAddAndEdit.aspx" title="编辑媒体"></siteMapNode>
+	    <siteMapNode url="Media/NewMedia.aspx" title="新增媒体信息"></siteMapNode>
+    </siteMapNode>
+
+		<siteMapNode url="Media/ReporterList.aspx" title="记者信息列表">
+			<siteMapNode url="Media/ReporterAddAndEdit.aspx?Operate=EDIT" title="编辑记者"/>
+			<siteMapNode url="Media/ReporterAddAndEdit.aspx?Operate=ADD" title="添加记者"/>
+			<siteMapNode url="Media/ReporterDisplay.aspx" title="记者详细信息">
+				<siteMapNode url="Media/ReporterSelectMediaList.aspx" title="变更所属媒体"/>
+			</siteMapNode>
+		</siteMapNode>
+    
+		<siteMapNode url="Media/ReporterFavorite.aspx" title="记者收藏"/>
+
+		<siteMapNode url="Media/AuditMediaList.aspx" title="媒体审核列表">
+			<siteMapNode url="Media/AuditMediaDisplay.aspx" title="审核媒体详细信息"/>
+		</siteMapNode>
+
+		<siteMapNode url="Media/IndustryList.aspx" title="媒体行业属性">
+			<siteMapNode url="Media/NewIndustry.aspx?Operate=ADD" title="新增媒体行业属性"/>
+			<siteMapNode url="Media/NewIndustry.aspx" title="编辑媒体行业属性"/>
+		</siteMapNode>
+
+		<siteMapNode url="Client/ClientList.aspx" title="客户信息列表">
+			<siteMapNode url="Client/ClientAddAndEdit.aspx?Operate=ADD&amp;CientOperate=" title="新增客户"/>
+			<siteMapNode url="Client/ClientAddAndEdit.aspx" title="编辑客户">
+				<siteMapNode url="Client/ClientLinkProductLineList.aspx" title="添加产品线"/>
+			</siteMapNode>
+		</siteMapNode>
+
+		<siteMapNode url="Client/ProductLineList.aspx" title="产品线信息列表">
+			<siteMapNode url="Client/ProductLineAddAndEdit.aspx?Operate=ADD" title="新增产品线信息"/>
+			<siteMapNode url="Client/ProductLineAddAndEdit.aspx" title="编辑产品线信息"/>
+		</siteMapNode>
+
+		<siteMapNode url="ShortMsg/MailList.aspx" title="邮件信息列表">
+			<siteMapNode url="ShortMsg/MailAddAndEdit.aspx?Operate=ADD" title="新增邮件信息"/>
+			<siteMapNode url="ShortMsg/MailAddAndEdit.aspx" title="编辑邮件信息"/>
+		</siteMapNode>
+
+		<siteMapNode url="ShortMsg/SendMail.aspx" title="发送邮件">
+			<siteMapNode url="ShortMsg/SendMailList.aspx" title="选择邮件"/>
+		</siteMapNode>
+
+
+		<siteMapNode url="ShortMsg/ShortMsgList.aspx" title="短信列表">
+			<siteMapNode url="ShortMsg/ShortMsgAddAndEdit.aspx?Operate=ADD" title="新增短信信息"/>
+			<siteMapNode url="ShortMsg/ShortMsgAddAndEdit.aspx" title="编辑邮件信息"/>
+		</siteMapNode>
+
+		<siteMapNode url="ShortMsg/SendShortMsg.aspx" title="发送短信">
+			<siteMapNode url="ShortMsg/SendShortMsgList.aspx" title="选择短信"/>
+		</siteMapNode>
+
+		<siteMapNode url="System/IntegralConfig.aspx" title="积分配置">
+			<siteMapNode url="System/IntegralRuleAdd.aspx" title="新增积分"/>
+		</siteMapNode>
+
+		<siteMapNode url="System/SystemUserList.aspx" title="用户管理"/>
+    
+		<!--<siteMapNode url="System/Default.aspx" title="个人首页"/>-->
+
+		<siteMapNode url="Message/MsgList.aspx" title="留言管理列表">
+			<siteMapNode url="Message/NewPost.aspx" title="新增留言"/>
+			<siteMapNode url="Message/PostDetail.aspx" title="留言详细信息"/>
+		</siteMapNode>
+
+		<siteMapNode url="Message/MsgReplyList.aspx" title="留言回复列表">
+			<!--<siteMapNode url="Message/PostDetail.aspx" title="留言详细信息"/>-->
+		</siteMapNode>
+
+		<siteMapNode url="Message/PostList.aspx" title="帖子列表">
+			<!--<siteMapNode url="Message/PostDetail.aspx" title="帖子详细信息"/>-->
+		</siteMapNode>
+
+		<siteMapNode url="logManage/OperateLogList.aspx" title="操作日志列表">
+			<siteMapNode url="logManage/LogUserList.aspx" title="选择用户"/>
+		</siteMapNode>
+
+		<siteMapNode url="Project/FinanceSearch.aspx" title="财务查询">
+		</siteMapNode>
+	</siteMapNode>
+</siteMap>

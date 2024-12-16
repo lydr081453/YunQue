@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <member name="ShowLogo" value="true">
+    <summary>是否显示LOGO图标</summary>
+  </member>
+  <member name="GoWorkingBuffTime" value="5">
+    <summary>上班迟到的缓冲时间5分钟</summary>
+  </member>
+  <member name="NumberOfHoursLate" value="1">
+    <summary>缺勤1小时内算迟到，大于1小时小于3小时算旷工半天</summary>
+  </member>
+  <member name="NumberOfHoursAbsent" value="3">
+    <summary>缺勤3小时内算旷工半天，大于3小时算旷工一天</summary>
+  </member>
+  <member name="WorkingDaysOverTime2" value="6">
+    <summary>如果工作日OT超过6小时，第二天可以换3小时的倒休</summary>
+  </member>
+  <member name="WorkingDaysOverTime1" value="3">
+    <summary>如果工作日OT超过3小时小于6小时，第二天可以换1小时的倒休</summary>
+  </member>
+  <member name="AdministratorID" value="13389">
+    <summary>考勤管理员的系统编号</summary>
+  </member>
+  <member name="DefaultGoWorkTime" value="09:00">
+    <summary>默认上班时间</summary>
+  </member>
+  <member name="DefaultOffWorkTime" value="18:00">
+    <summary>默认下班时间</summary>
+  </member>
+  <member name="HeadOffice" value="19">
+    <summary>总部</summary>
+  </member>
+  <member name="ShanghaiOffice" value="17">
+    <summary>上海</summary>
+  </member>
+  <member name="GuangzhouOffice" value="18">
+    <summary>广州</summary>
+  </member>
+  <member name="ChengduOffice" value="16">
+    <summary>成都</summary>
+  </member>
+</root>

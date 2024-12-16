@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="DownLoad_SendMail" Codebehind="SendMail.aspx.cs" %>

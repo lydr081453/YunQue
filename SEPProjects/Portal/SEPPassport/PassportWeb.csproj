@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ACAD75FB-74DB-43E7-AFB3-6FEF7DA692CB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PassportWeb</RootNamespace>
+    <AssemblyName>PassportWeb</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Themes\default\images\bar.JPG" />
+    <None Include="App_Themes\default\images\blackline.gif" />
+    <None Include="App_Themes\default\images\close.gif" />
+    <None Include="App_Themes\default\images\color_02.gif" />
+    <None Include="App_Themes\default\images\color_04.gif" />
+    <None Include="App_Themes\default\images\color_06.gif" />
+    <None Include="App_Themes\default\images\color_12.gif" />
+    <None Include="App_Themes\default\images\color_15.gif" />
+    <None Include="App_Themes\default\images\color_17.gif" />
+    <None Include="App_Themes\default\images\color_19.gif" />
+    <None Include="App_Themes\default\images\color_24.gif" />
+    <None Include="App_Themes\default\images\color_25.gif" />
+    <None Include="App_Themes\default\images\color_28.gif" />
+    <None Include="App_Themes\default\images\color_30.gif" />
+    <None Include="App_Themes\default\images\disable.gif" />
+    <None Include="App_Themes\default\images\ico_cor.gif" />
+    <None Include="App_Themes\default\images\ico_g.gif" />
+    <None Include="App_Themes\default\images\ico_refresh.gif" />
+    <None Include="App_Themes\default\images\ico_search.gif" />
+    <None Include="App_Themes\default\images\jr.gif" />
+    <None Include="App_Themes\default\images\jr2.gif" />
+    <None Include="App_Themes\default\images\loading.gif" />
+    <None Include="App_Themes\default\images\logo.jpg" />
+    <None Include="App_Themes\default\images\Logon.png" />
+    <None Include="App_Themes\default\images\Logon1.png" />
+    <None Include="App_Themes\default\images\Logon2.png" />
+    <None Include="App_Themes\default\images\Logon3.png" />
+    <None Include="App_Themes\default\images\Logon4.png" />
+    <None Include="App_Themes\default\images\shunyagroup.GIF" />
+    <None Include="App_Themes\default\images\warning.gif" />
+    <None Include="App_Themes\default\images\z_in.gif" />
+    <None Include="App_Themes\default\images\z_out.gif" />
+    <None Include="App_Themes\default\site.css" />
+    <None Include="App_Themes\default\StyleSheet.css" />
+    <None Include="App_Themes\Pink\Images\bar.jpg" />
+    <None Include="App_Themes\Pink\Images\logo.jpg" />
+    <None Include="App_Themes\Pink\StyleSheet.css" />
+    <None Include="css\login.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="ForgetPassword.aspx" />
+    <None Include="images\blackline.gif" />
+    <None Include="images\close.gif" />
+    <None Include="images\color_02.gif" />
+    <None Include="images\color_06.gif" />
+    <None Include="images\color_12.gif" />
+    <None Include="images\color_15.gif" />
+    <None Include="images\color_17.gif" />
+    <None Include="images\color_19.gif" />
+    <None Include="images\color_24.gif" />
+    <None Include="images\color_25.gif" />
+    <None Include="images\color_28.gif" />
+    <None Include="images\color_30.gif" />
+    <None Include="images\disable.gif" />
+    <None Include="images\ico_cor.gif" />
+    <None Include="images\ico_g.gif" />
+    <None Include="images\ico_search.gif" />
+    <None Include="images\jr.gif" />
+    <None Include="images\jr2.gif" />
+    <None Include="images\loading.gif" />
+    <None Include="images\Logon.jpg" />
+    <None Include="images\LogonBG_01.jpg" />
+    <None Include="images\LogonBG_02.jpg" />
+    <None Include="images\LogonBG_03.jpg" />
+    <None Include="images\LogonBG_04.jpg" />
+    <None Include="images\warning.gif" />
+    <None Include="images\xingyan.png" />
+    <None Include="images\z_in.gif" />
+    <None Include="images\z_out.gif" />
+    <None Include="images\z_ref.gif" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="ResetPassword.aspx" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Global.cs">
+      <Link>Global.cs</Link>
+    </Compile>
+    <Compile Include="ArticleRead.aspx.cs">
+      <DependentUpon>ArticleRead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArticleRead.aspx.designer.cs">
+      <DependentUpon>ArticleRead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAs.aspx.cs">
+      <DependentUpon>LoginAs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginAs.aspx.designer.cs">
+      <DependentUpon>LoginAs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Themes\default\SkinFile.skin" />
+    <None Include="App_Themes\Pink\SkinFile.skin" />
+    <None Include="images\anniu.jpg" />
+    <None Include="images\bg1.jpg" />
+    <None Include="images\bg2.jpg" />
+    <None Include="images\bg3.jpg" />
+    <None Include="images\bg4.jpg" />
+    <None Include="images\bg5.jpg" />
+    <None Include="images\bg6.jpg" />
+    <None Include="images\bg7.jpg" />
+    <None Include="images\bj.jpg" />
+    <None Include="images\bk.jpg" />
+    <None Include="images\bk2.jpg" />
+    <None Include="images\bk3.jpg" />
+    <None Include="images\icon.jpg" />
+    <None Include="images\img002.jpg" />
+    <None Include="images\img01.jpg" />
+    <None Include="images\img_01.jpg" />
+    <None Include="images\lo02.jpg" />
+    <None Include="images\Logon.png" />
+    <None Include="images\Logon1.png" />
+    <None Include="images\Logon2.png" />
+    <None Include="images\Logon3.png" />
+    <None Include="images\Logon4.png" />
+    <None Include="images\po_ %282%29.gif" />
+    <None Include="images\po_.gif" />
+    <None Include="images\rec.gif" />
+    <Content Include="LoginAs.aspx" />
+    <Content Include="MailTemplates\PasswordReset.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArticleRead.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="ClausePage.htm" />
+    <None Include="css\style.css" />
+    <Content Include="Global.asax" />
+    <None Include="images\btn.jpg" />
+    <None Include="images\button-bg.jpg" />
+    <None Include="images\form-bg.jpg" />
+    <None Include="images\form-bottom.jpg" />
+    <None Include="images\hip_reload.gif" />
+    <None Include="images\inside-login_06.jpg" />
+    <None Include="images\left.jpg" />
+    <None Include="images\securitycode.jpg" />
+    <None Include="images\top.jpg" />
+    <None Include="js\dialog1.js" />
+    <None Include="js\jquery.history_remote.pack.js" />
+    <None Include="js\jquery.js" />
+    <None Include="js\jquery.tabs.pack.js" />
+    <Content Include="MailTemplates\Mail.Master" />
+    <None Include="new_images\0110_03.jpg" />
+    <None Include="new_images\0110_05.jpg" />
+    <None Include="new_images\1230-1.jpg" />
+    <None Include="new_images\adm-tit.jpg" />
+    <None Include="new_images\bookbg.jpg" />
+    <None Include="new_images\btn-back.jpg" />
+    <None Include="new_images\btn_bg-ora.jpg" />
+    <None Include="new_images\flew-bg.jpg" />
+    <None Include="new_images\head-Arrow.jpg" />
+    <None Include="new_images\hr-ico.jpg" />
+    <None Include="new_images\hr-tit.jpg" />
+    <None Include="new_images\ico-close.jpg" />
+    <None Include="new_images\ico-download.jpg" />
+    <None Include="new_images\ico-star.jpg" />
+    <None Include="new_images\icon-change.gif" />
+    <None Include="new_images\icon-home.gif" />
+    <None Include="new_images\icon-key.gif" />
+    <None Include="new_images\icon-logout.gif" />
+    <None Include="new_images\icon_s-search.gif" />
+    <None Include="new_images\icon_title-timesheet.jpg" />
+    <None Include="new_images\input_bg.jpg" />
+    <None Include="new_images\lab_bg-grey.jpg" />
+    <None Include="new_images\lab_bg-ora.jpg" />
+    <None Include="new_images\menu-grey.jpg" />
+    <None Include="new_images\menu-orag.jpg" />
+    <None Include="new_images\menu-orag_2.jpg" />
+    <None Include="new_images\menu_l-l.jpg" />
+    <None Include="new_images\menu_l.jpg" />
+    <None Include="new_images\menu_r-l.jpg" />
+    <None Include="new_images\menu_r.jpg" />
+    <None Include="new_images\no-1.jpg" />
+    <None Include="new_images\page-next.gif" />
+    <None Include="new_images\page-nextSt.gif" />
+    <None Include="new_images\page-pre.gif" />
+    <None Include="new_images\page-preSt.gif" />
+    <None Include="new_images\page_bg-grey.jpg" />
+    <None Include="new_images\page_bg-ora.jpg" />
+    <None Include="new_images\sjbg.jpg" />
+    <None Include="new_images\sjleft.jpg" />
+    <None Include="new_images\sjright.jpg" />
+    <None Include="new_images\staff-center-03.jpg" />
+    <None Include="new_images\staff-center-04.jpg" />
+    <None Include="new_images\staff-center-04_01.jpg" />
+    <None Include="new_images\staff-center-04_02.jpg" />
+    <None Include="new_images\staff-center-04_03.jpg" />
+    <None Include="new_images\staff-center-05.jpg" />
+    <None Include="new_images\staff-center-06.jpg" />
+    <None Include="new_images\staff-center-07_01.jpg" />
+    <None Include="new_images\staff-center-07_02.jpg" />
+    <None Include="new_images\staff-center-08.jpg" />
+    <None Include="new_images\staff-center-09.jpg" />
+    <None Include="new_images\staff-center-10.jpg" />
+    <None Include="new_images\staff-center-11.jpg" />
+    <None Include="new_images\staff-center-12.jpg" />
+    <None Include="new_images\staff-center-13.jpg" />
+    <None Include="new_images\staff-center-14.jpg" />
+    <None Include="new_images\staff-center-15.jpg" />
+    <None Include="new_images\staff-center-16.jpg" />
+    <None Include="new_images\staff-center-17.jpg" />
+    <None Include="new_images\staff-center-18.jpg" />
+    <None Include="new_images\staff-center-19.jpg" />
+    <None Include="new_images\staff-center-22.jpg" />
+    <None Include="new_images\staff-center-23.jpg" />
+    <None Include="new_images\staff-center-24.jpg" />
+    <None Include="new_images\staff-center-25.jpg" />
+    <None Include="new_images\staff-center-26.jpg" />
+    <None Include="new_images\staff-center-27.jpg" />
+    <None Include="new_images\staff-center-28.jpg" />
+    <None Include="new_images\staff-center-29.jpg" />
+    <None Include="new_images\staff-center-30.jpg" />
+    <None Include="new_images\staff-center-31.jpg" />
+    <None Include="new_images\staff-center-32.jpg" />
+    <None Include="new_images\staff-center-33.jpg" />
+    <None Include="new_images\staff-center-34.jpg" />
+    <None Include="new_images\staff-center-35.jpg" />
+    <None Include="new_images\staff-center-36.jpg" />
+    <None Include="new_images\underline.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ESP.Core\ESP.Core\ESP.Core.csproj">
+      <Project>{5AF18840-638B-4AF2-90C2-C66625CC88E4}</Project>
+      <Name>ESP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ESP\ESP.csproj">
+      <Project>{BD68AA8D-B4B1-4957-81C2-152398AC68AF}</Project>
+      <Name>ESP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="appSettings.config" />
+    <Content Include="connectionStrings.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\passport.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="API\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>11005</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

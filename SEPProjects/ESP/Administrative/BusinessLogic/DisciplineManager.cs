@@ -1,0 +1,74 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ESP.Administrative.Entity;
+using ESP.Administrative.DataAccess;
+using System.Data;
+
+namespace ESP.Administrative.BusinessLogic
+{
+    public class DisciplineManager
+    {
+        private readonly DisciplineDataProvider dal = new DisciplineDataProvider();
+        public DisciplineManager()
+        { }
+        #region  成员方法
+        /// <summary>
+        /// 是否存在该记录
+        /// </summary>
+        public bool Exists(int ID)
+        {
+            return dal.Exists(ID);
+        }
+
+        /// <summary>
+        /// 增加一条数据
+        /// </summary>
+        public int Add(DisciplineInfo model)
+        {
+            return dal.Add(model);
+        }
+
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        public void Update(DisciplineInfo model)
+        {
+            dal.Update(model);
+        }
+
+        /// <summary>
+        /// 删除一条数据
+        /// </summary>
+        public void Delete(int ID)
+        {
+            dal.Delete(ID);
+        }
+
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public DisciplineInfo GetModel(int ID)
+        {
+            return dal.GetModel(ID);
+        }
+
+        /// <summary>
+        /// 获得数据列表
+        /// </summary>
+        public DataSet GetList(string strWhere)
+        {
+            return dal.GetList(strWhere);
+        }
+
+        /// <summary>
+        /// 获得数据列表
+        /// </summary>
+        public DataSet GetAllList()
+        {
+            return dal.GetList("");
+        }
+        #endregion  成员方法
+    }
+}

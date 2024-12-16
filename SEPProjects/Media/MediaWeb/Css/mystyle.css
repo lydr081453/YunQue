@@ -1,0 +1,558 @@
+BODY {
+	BORDER-RIGHT: #736f77 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #e2e0e4 1px solid; PADDING-LEFT: 10px; FONT-SIZE: 70%; PADDING-BOTTOM: 10px; MARGIN: 0px; BORDER-LEFT: #e2e0e4 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #736f77 1px solid; FONT-FAMILY: Arial, sans-serif, 宋体; BACKGROUND-COLOR: #95b2c3
+}
+TH {
+	COLOR: #000000; FONT-FAMILY: Arial, sans-serif, 宋体
+}
+TD {
+	COLOR: #000000; FONT-FAMILY: Arial, sans-serif, 宋体
+}
+BODY {
+	COLOR: #000000; FONT-FAMILY: Arial, sans-serif, 宋体
+}
+INPUT {
+	COLOR: #000000; FONT-FAMILY: Arial, sans-serif, 宋体
+}
+P {
+	COLOR: #000000; FONT-FAMILY: Arial, sans-serif, 宋体
+}
+TEXTAREA {
+	COLOR: #000000; FONT-FAMILY: Arial, sans-serif, 宋体
+}
+SELECT {
+	COLOR: #000000; FONT-FAMILY: Arial, sans-serif, 宋体
+}
+.padding {
+	PADDING-LEFT: 20px; PADDING-TOP: 20px; BACKGROUND-COLOR: #dedec8
+}
+.space {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.fixedwidth {
+	FONT-FAMILY: "Arial", "Courier", "Courier New", monospace
+}
+.info {
+	FONT-FAMILY: "Arial", "Courier", "Courier New", monospace
+}
+.message {
+	FONT-FAMILY: "Arial", "Courier", "Courier New", monospace
+}
+INPUT {
+	FONT-SIZE: 95%; FONT-FAMILY: Arial, sans-serif
+}
+OPTION {
+	FONT-SIZE: 95%; FONT-FAMILY: Arial, sans-serif
+}
+SELECT {
+	FONT-SIZE: 95%; FONT-FAMILY: Arial, sans-serif
+}
+TEXTAREA {
+	FONT-SIZE: 95%; FONT-FAMILY: Arial, sans-serif
+}
+TD {
+	PADDING-RIGHT: 2px; PADDING-LEFT: 2px; FONT-SIZE: 70%
+}
+P {
+	FONT-SIZE: 100%
+}
+UL {
+	MARGIN-TOP: 8px
+}
+LI {
+	MARGIN-TOP: 8px
+}
+TEXTAREA.oddrow-l {
+	BACKGROUND-COLOR: #ffffff
+}
+TABLE {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: #4f556a 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #dedec8; border-spacing: 0px; empty-cells: show
+}
+FORM {
+	MARGIN: 0px
+}
+TABLE TR TD TABLE {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.tableNormal  TD {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BACKGROUND-COLOR: transparent
+}
+.tableView {
+	BACKGROUND-COLOR: #cdcdbe
+}
+.tableInline {
+	BACKGROUND-COLOR: #cdcdbe
+}
+.grouping-positive {
+	BACKGROUND-COLOR: #cdcdbe
+}
+.grouping-negative {
+	BACKGROUND-COLOR: #cdcdbe
+}
+.grouping-neutral {
+	BACKGROUND-COLOR: #cdcdbe
+}
+.tableView  TD {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: #4f556a 1px solid
+}
+.tableView {
+	MARGIN-BOTTOM: 10px
+}
+.tableView .space {
+	BACKGROUND-COLOR: #dedec8
+}
+.tableForm {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; MARGIN-BOTTOM: 10px; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: #4f556a 1px solid; BACKGROUND-COLOR: #cdcdbe
+}
+.tableAction {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; MARGIN-BOTTOM: 10px; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: #4f556a 1px solid; BACKGROUND-COLOR: #cdcdbe
+}
+.tableForm {
+	BORDER-TOP: medium none
+}
+.tableInline TD {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+.tableInline {
+	border-spacing: 1px
+}
+.tableModiy {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BEHAVIOR: url(../htc/table.htc); BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: #4f556a 1px solid; BACKGROUND-COLOR: #cdcdbe
+}
+.grouping-positive {
+	COLOR: #187863
+}
+.grouping-negative {
+	COLOR: #c60829
+}
+.grouping-neutral {
+	COLOR: #717171
+}
+.info {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; COLOR: #4f556a; PADDING-TOP: 4px
+}
+.message {
+	PADDING-RIGHT: 10px; BORDER-TOP: #c60829 1px solid; PADDING-LEFT: 10px; FONT-WEIGHT: normal; FONT-SIZE: 95%; PADDING-BOTTOM: 10px; COLOR: #c60829; PADDING-TOP: 10px; BORDER-BOTTOM: #c60829 1px solid; LETTER-SPACING: 1px; TEXT-ALIGN: center
+}
+.widebuttons {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../../images/btnBack.gif); BORDER-LEFT: #4f556a 1px solid; CURSOR: hand; COLOR: #000000; BORDER-BOTTOM: #4f556a 1px solid; BACKGROUND-REPEAT: repeat-x; LETTER-SPACING: normal; HEIGHT: 19px; BACKGROUND-COLOR: #cdcdbe; border-spacing: 0px
+}
+.action INPUT {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; FONT-SIZE: 8pt; BACKGROUND-IMAGE: url(../../images/btnBack.gif); BORDER-LEFT: #4f556a 1px solid; CURSOR: hand; COLOR: #000000; BORDER-BOTTOM: #4f556a 1px solid; BACKGROUND-REPEAT: repeat-x; LETTER-SPACING: normal; HEIGHT: 19px; BACKGROUND-COLOR: #cdcdbe; border-spacing: 0px
+}
+.action INPUT {
+	WIDTH: 100px
+}
+.action INPUT.button2 {
+	WIDTH: 200px
+}
+BODY.topbar {
+	BORDER-RIGHT: #736f77 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #e2e0e4 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #e2e0e4 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #736f77 1px solid; BACKGROUND-COLOR: #bebebe
+}
+BODY.topbar {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px
+}
+BODY.topbar TABLE TR TD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px
+}
+BODY.topbar TABLE TR TD TABLE {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px; BACKGROUND-COLOR: transparent
+}
+.toptitle {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 100%; MARGIN-LEFT: 6px; COLOR: #5a9cce; FONT-STYLE: italic; WHITE-SPACE: nowrap; LETTER-SPACING: 2pt; BACKGROUND-COLOR: transparent; TEXT-ALIGN: left
+}
+.topimage {
+	BACKGROUND-IMAGE: url(../../images/Leftheader.gif); BACKGROUND-REPEAT: repeat-x
+}
+.topmenu {
+	COLOR: #172870; TEXT-ALIGN: left
+}
+.topmenu A {
+	PADDING-LEFT: 6px; COLOR: #97a1c9; TEXT-DECORATION: none
+}
+.topmenu A:hover {
+	COLOR: #ffffff
+}
+#idKeymessage {
+	Z-INDEX: 1; RIGHT: 162px; LEFT: auto; BOTTOM: auto; POSITION: absolute; TOP: 40px
+}
+.keymessage {
+	BORDER-RIGHT: #ff0000 1px solid; BORDER-TOP: #ff0000 1px solid; DISPLAY: block; FONT-WEIGHT: bold; BORDER-LEFT: #ff0000 1px solid; COLOR: #ff0000; BORDER-BOTTOM: #ff0000 1px solid; WHITE-SPACE: nowrap; LETTER-SPACING: 6px; BACKGROUND-COLOR: transparent; TEXT-DECORATION: blink
+}
+BODY.menu {
+	BORDER-RIGHT: #736f77 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: #e2e0e4 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #e2e0e4 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #736f77 1px solid
+}
+.menuitem {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BACKGROUND-COLOR: #dedec8
+}
+.menuitem-unclickable {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BACKGROUND-COLOR: #dedec8
+}
+.menuitem {
+	CURSOR: hand
+}
+.menuitemspan {
+	COLOR: #0063a4; TEXT-DECORATION: none
+}
+.menuitemspanie {
+	COLOR: #0063a4; TEXT-DECORATION: none
+}
+.menuitem A {
+	COLOR: #0063a4; TEXT-DECORATION: none
+}
+.menuseparator {
+	BORDER-TOP: #4f556a 1px solid
+}
+.menu {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BACKGROUND-COLOR: #bebebe
+}
+BODY.menu TABLE {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none; BACKGROUND-COLOR: #bebebe
+}
+.menusection {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND: url(../../images/Triangle.gif) #6780b8 fixed no-repeat right 50%; COLOR: #ffffff; BORDER-BOTTOM: medium none; LETTER-SPACING: normal; HEIGHT: 19px
+}
+.menusection-Action {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND: url(../../images/Triangle.gif) #6780b8 fixed no-repeat right 50%; COLOR: #ffffff; BORDER-BOTTOM: medium none; LETTER-SPACING: normal; HEIGHT: 19px
+}
+.menusection-Server {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND: url(../../images/Triangle.gif) #6780b8 fixed no-repeat right 50%; COLOR: #ffffff; BORDER-BOTTOM: medium none; LETTER-SPACING: normal; HEIGHT: 19px
+}
+.menusection-Logs {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND: url(../../images/Triangle.gif) #6780b8 fixed no-repeat right 50%; COLOR: #ffffff; BORDER-BOTTOM: medium none; LETTER-SPACING: normal; HEIGHT: 19px
+}
+.menusection-Packages {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND: url(../../images/Triangle.gif) #6780b8 fixed no-repeat right 50%; COLOR: #ffffff; BORDER-BOTTOM: medium none; LETTER-SPACING: normal; HEIGHT: 19px
+}
+.menusection-Adapters {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND: url(../../images/Triangle.gif) #6780b8 fixed no-repeat right 50%; COLOR: #ffffff; BORDER-BOTTOM: medium none; LETTER-SPACING: normal; HEIGHT: 19px
+}
+.menusection-Security {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND: url(../../images/Triangle.gif) #6780b8 fixed no-repeat right 50%; COLOR: #ffffff; BORDER-BOTTOM: medium none; LETTER-SPACING: normal; HEIGHT: 19px
+}
+.menusection-Settings {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND: url(../../images/Triangle.gif) #6780b8 fixed no-repeat right 50%; COLOR: #ffffff; BORDER-BOTTOM: medium none; LETTER-SPACING: normal; HEIGHT: 19px
+}
+.menusection-Solutions {
+	PADDING-RIGHT: 15px; PADDING-LEFT: 5px; FONT-WEIGHT: normal; BACKGROUND: url(../../images/Triangle.gif) #6780b8 fixed no-repeat right 50%; COLOR: #ffffff; BORDER-BOTTOM: medium none; LETTER-SPACING: normal; HEIGHT: 19px
+}
+.menu  TD.menusection {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: medium none
+}
+.menu  TD.menusection-Action {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: medium none
+}
+.menu  TD.menusection-Server {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: medium none
+}
+.menu  TD.menusection-Logs {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: medium none
+}
+.menu  TD.menusection-Packages {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: medium none
+}
+.menu  TD.menusection-Adapters {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: medium none
+}
+.menu  TD.menusection-Security {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: medium none
+}
+.menu  TD.menusection-Settings {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: medium none
+}
+.menu  TD.menusection-Solutions {
+	BORDER-RIGHT: #4f556a 1px solid; BORDER-TOP: #4f556a 1px solid; BORDER-LEFT: #4f556a 1px solid; BORDER-BOTTOM: medium none
+}
+.heading {
+	BORDER-TOP: #4f556a 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: normal; COLOR: #ffffff; LETTER-SPACING: normal; HEIGHT: 19px; BACKGROUND-COLOR: #6780b8; TEXT-ALIGN: left
+}
+.subHeading {
+	PADDING-LEFT: 5px; FONT-SIZE: 67%; COLOR: #352821; BACKGROUND-COLOR: #dccdc6
+}
+.subHeading-r {
+	PADDING-LEFT: 5px; FONT-SIZE: 67%; COLOR: #352821; BACKGROUND-COLOR: #dccdc6
+}
+.subHeading {
+	TEXT-ALIGN: left
+}
+.subHeading-r {
+	TEXT-ALIGN: right
+}
+.memgraph {
+	VERTICAL-ALIGN: bottom; BACKGROUND-COLOR: #f0f0e0; TEXT-ALIGN: center
+}
+LI A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.subHeading-r A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.subHeading A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.oddrow A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.oddrow-l A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.oddrowdata A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.oddrowdata-l A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.oddrowdata-r A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.oddcol A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.evenrow A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.evenrow-l A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.evenrowdata A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.evenrowdata-l A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.evenrowdata-r A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+.evencol A {
+	FONT-WEIGHT: normal; COLOR: #0063a4; TEXT-DECORATION: none
+}
+LI A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.subHeading-r A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.subHeading A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrow A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrow-l A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrowdata A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrowdata-l A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrowdata-r A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddcol A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrow A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrow-l A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrowdata A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrowdata-l A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrowdata-r A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evencol A:hover {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+LI A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.subHeading-r A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.subHeading A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrow A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrow-l A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrowdata A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrowdata-l A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrowdata-r A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddcol A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrow A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrow-l A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrowdata A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrowdata-l A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evenrowdata-r A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.evencol A:active {
+	FONT-WEIGHT: normal; COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.oddrow {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe; 
+}
+.evenrow {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe
+}
+.oddrow-l {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe;
+}
+.evenrow-l {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe
+}
+.oddcol {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe
+}
+.oddcol-l {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe
+}
+.oddcol-r {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe
+}
+.evencol {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe
+}
+.evencol-l {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe
+}
+.evencol-r {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe
+}
+.rowlabel {
+	COLOR: #000000; BACKGROUND-COLOR: #cdcdbe
+}
+.oddrowdata {
+	FONT-WEIGHT: normal
+}
+.oddrowdata-l {
+	FONT-WEIGHT: normal
+}
+.oddrowdata-r {
+	FONT-WEIGHT: normal
+}
+.evenrowdata {
+	FONT-WEIGHT: normal
+}
+.evenrowdata-l {
+	FONT-WEIGHT: normal
+}
+.evenrowdata-r {
+	FONT-WEIGHT: normal
+}
+.oddrowdata {
+	COLOR: #4f556a; BACKGROUND-COLOR: #f5f4e7
+}
+.oddrowdata-l {
+	COLOR: #4f556a; BACKGROUND-COLOR: #f5f4e7
+}
+.oddrowdata-r {
+	COLOR: #4f556a; BACKGROUND-COLOR: #f5f4e7
+}
+.evenrowdata {
+	COLOR: #4f556a; BACKGROUND-COLOR: #ebead8
+}
+.evenrowdata-l {
+	COLOR: #4f556a; BACKGROUND-COLOR: #ebead8
+}
+.evenrowdata-r {
+	COLOR: #4f556a; BACKGROUND-COLOR: #ebead8
+}
+.oddcol-l {
+	PADDING-LEFT: 2px; TEXT-ALIGN: left
+}
+.evencol-l {
+	PADDING-LEFT: 2px; TEXT-ALIGN: left
+}
+.oddcol-r {
+	PADDING-RIGHT: 2px; TEXT-ALIGN: right
+}
+.evencol-r {
+	PADDING-RIGHT: 2px; TEXT-ALIGN: right
+}
+.evencol {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: center
+}
+.oddcol {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: center
+}
+.oddrowdata {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: center
+}
+.evenrowdata {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: center
+}
+.oddrow {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: right
+}
+.oddrowdata-r {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: right
+}
+.evenrow {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: right
+}
+.evenrowdata-r {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: right
+}
+.rowlabel {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: right
+}
+.oddrow-l {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: left
+}
+.oddrowdata-l {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: left
+}
+.evenrow-l {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: left
+}
+.evenrowdata-l {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: left
+}
+.rowdata {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; TEXT-ALIGN: left
+}
+.action {
+	PADDING-BOTTOM: 2px; COLOR: #ffffff; PADDING-TOP: 2px; LETTER-SPACING: 2px; BACKGROUND-COLOR: #cdcdbe; TEXT-ALIGN: left
+}
+TABLE TR TD TABLE TR .action {
+	PADDING-BOTTOM: 2px; COLOR: #ffffff; PADDING-TOP: 2px; LETTER-SPACING: 2px; BACKGROUND-COLOR: #cdcdbe; TEXT-ALIGN: left
+}
+.imagelink {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px; BEHAVIOR: url(../htc/imagelink.htc); CURSOR: hand; PADDING-TOP: 2px
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+DIV.tree {
+	BEHAVIOR: url(../../public/htc/tree.htc)
+}
+.alpha30 {
+	DISPLAY: none; Z-INDEX: 100; FILTER: Alpha(opacity=30); LEFT: 0px; WIDTH: 500px; POSITION: absolute; TOP: 0px; HEIGHT: 500px
+}

@@ -1,0 +1,61 @@
+.TreeView 
+{ 
+    padding-top:2px;
+	padding-left: 0px; 
+}
+
+.TreeNode 
+{ 
+  font-family: tahoma; 
+  font-size: 12px; 
+  padding-top:10px;
+  padding-bottom:1px;
+  padding-left: 3px; 
+  padding-right: 3px; 
+  cursor: pointer;
+}
+
+.GrayedTreeNode 
+{ 
+  font-family: tahoma; 
+  font-size: 12px; 
+  padding-top:10px;
+  padding-bottom:1px;
+  padding-left: 3px; 
+  padding-right: 3px; 
+  color:gray; 
+  cursor:pointer;
+}
+
+.HoverTreeNode 
+{ 
+  font-family: tahoma; 
+  font-size: 12px; 
+  text-decoration:underline; 
+  padding-top:10px;
+  padding-bottom:1px;
+  padding-left: 3px; 
+  padding-right: 3px; 
+  cursor: pointer; 
+}
+
+.SelectedTreeNode 
+{ 
+  font-family: tahoma; 
+  /*background-image: url(../images/syshomepage/treebg2.gif);*/
+  font-size: 12px; 
+  background-color: #DBDBDB ; 
+  color: white;
+  padding-top:2px;
+  padding-bottom:2px;
+  padding-left: 3px; 
+  padding-right: 3px; 
+  cursor: pointer; 
+}
+
+.NodeEdit 
+{
+  border:1px gray solid;
+  font-family: tahoma; 
+  font-size: 12px;
+}

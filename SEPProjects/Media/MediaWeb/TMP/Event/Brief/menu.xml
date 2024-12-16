@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<node level="3" privilegeID="080301">
+  <nodename>项目列表</nodename>
+  <description>
+  </description>
+  <nodekey>
+  </nodekey>
+  <nodetype>1</nodetype>
+  <nodesort>
+  </nodesort>
+  <status>1</status>
+  <hasdefaulturi>1</hasdefaulturi>
+  <uri description="">Project/ProjectList.aspx</uri>
+  <uri description="">Project/BriefingUpload.aspx</uri>
+  <uri description="">Project/DailyAddAndEdit.aspx</uri>
+  <uri description="">Project/DailyDisplay.aspx</uri>
+  <uri description="">Project/DailySelectMediaList.aspx</uri>
+  <uri description="">Project/DailySelectReporterList.aspx</uri>
+  <uri description="">Project/EventAddAndEdit.aspx</uri>
+  <uri description="">Project/EventDisplay.aspx</uri>
+  <uri description="">Project/EventSelectMediaList.aspx</uri>
+  <uri description="">Project/EventSelectReporterList.aspx</uri>
+  <uri description="">Project/NewBriefingUpload.aspx</uri>
+  <uri description="">Project/PaymentDisplay.aspx</uri>
+  <uri description="">Project/PayWaySelectReporterList.aspx</uri>
+  <uri description="">Project/ProjectAddAndEdit.aspx</uri>
+  <uri description="">Project/ProjectClientAddAndEdit.aspx</uri>
+  <uri description="">Project/ProjectClientDetail.aspx</uri>
+  <uri description="">Project/ProjectClientLinkProductLineList.aspx</uri>
+  <uri description="">Project/ProjectDisplay.aspx</uri>
+  <uri description="">Project/ProjectManageList.aspx</uri>
+  <uri description="">Project/ProjectMediaAddAndEdit.aspx</uri>
+  <uri description="">Project/ProjectMediaDisplay.aspx</uri>
+  <uri description="">Project/ProjectnewMedia.aspx</uri>
+  <uri description="">Project/ProjectProductLineAddAndEdit.aspx</uri>
+  <uri description="">Project/ProjectReporterAddAndEdit.aspx</uri>
+  <uri description="">Project/ProjectReporterDisplay.aspx</uri>
+  <uri description="">Project/ProjectReporterSelectMediaList.aspx</uri>
+  <uri description="">Project/ProjectSelectClientList.aspx</uri>
+  <uri description="">Project/ProjectSelectMediaList.aspx</uri>
+  <uri description="">Project/ProjectSelectProductLine.aspx</uri>
+  <uri description="">Project/ProjectSelectReporterList.aspx</uri>
+  <uri description="">Project/ReporterPrivacy.aspx</uri>
+  <uri description="">Project/ReporterPrivacyDisplay.aspx</uri>
+  <uri description="">Project/UserList.aspx</uri>
+  <uri description="">Project/PaymentBillDisplay.aspx</uri>
+</node>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="05a8e357-fc29-403e-88be-14fef90943c9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8888/ESPServer" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ESPServer.xsd" MetadataType="Schema" ID="5eb5f6aa-8ce0-4771-9951-c63a154282ac" SourceId="1" SourceUrl="http://localhost:8888/ESPServer?xsd=xsd2" />
+    <MetadataFile FileName="ESPServer.disco" MetadataType="Disco" ID="2e9c4fe2-775c-4331-b61a-a8cbb0659999" SourceId="1" SourceUrl="http://localhost:8888/ESPServer?disco" />
+    <MetadataFile FileName="ESPServer1.xsd" MetadataType="Schema" ID="6ad110af-8785-4ace-a58f-471dd2a8f2d1" SourceId="1" SourceUrl="http://localhost:8888/ESPServer?xsd=xsd0" />
+    <MetadataFile FileName="ESPServer2.xsd" MetadataType="Schema" ID="a613147d-b97e-46d6-8433-1de8e2216c9a" SourceId="1" SourceUrl="http://localhost:8888/ESPServer?xsd=xsd3" />
+    <MetadataFile FileName="CachedWorkItems.wsdl" MetadataType="Wsdl" ID="1620dc1f-7268-473d-a280-9ff17c42086c" SourceId="1" SourceUrl="http://localhost:8888/ESPServer?wsdl" />
+    <MetadataFile FileName="ESPServer3.xsd" MetadataType="Schema" ID="3edf3a57-5587-4f27-8297-04669f41e179" SourceId="1" SourceUrl="http://localhost:8888/ESPServer?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,166 @@
+/* TabStrip wrapper */
+.ts
+{
+    width: 100%;
+    height: 30px;
+}
+.ts-l
+{
+    width: 10px;
+    background: transparent url("../images/tabStrip/static_02.png") no-repeat;
+}
+.ts-m
+{
+    background: transparent url("../images/tabStrip/horizontal.png") repeat-x;
+}
+.ts-r
+{
+    width: 10px;
+    background: transparent url("../images/tabStrip/static_03.png") no-repeat;
+}
+
+/* TabStrip */
+.tab, .tab-h, .tab-s
+{
+    font-family: Tahoma, "Lucida Grande" ,Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    cursor: default;
+}
+
+.t
+{
+    width: 66px;
+    height: 30px;
+    display: block;
+}
+.t .l
+{
+    float: left;
+    width: 8px;
+    height: 30px;
+    background: none;
+}
+.t .m
+{
+    float: left;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    background: none;
+    text-align: center;
+}
+.t .r
+{
+    float: left;
+    width: 8px;
+    height: 30px;
+    background: none;
+}
+
+.tab-h .t .l
+{
+    background: transparent url("../images/tabStrip/static.png") no-repeat;
+}
+.tab-h .t .m
+{
+    background: transparent url("../images/tabStrip/horizontal.png") repeat-x 0 -30px;
+}
+.tab-h .t .r
+{
+    background: transparent url("../images/tabStrip/static.png") no-repeat -8px 0;
+}
+
+.tab-s .t .l
+{
+    background: transparent url("../images/tabStrip/static.png") no-repeat 0 -30px;
+}
+.tab-s .t .m
+{
+    color: #000;
+    background: transparent url("../images/tabStrip/horizontal.png") repeat-x 0 -60px;
+    font-weight: bold;
+}
+.tab-s .t .r
+{
+    background: transparent url("../images/tabStrip/static.png") no-repeat -8px -30px;
+}
+
+/* MultiPage wrapper */
+.mp
+{
+    width: 450px;
+    height: 300px;
+    font-family: Tahoma, "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    color: #000;
+}
+/* Top left & right */
+.mpt
+{
+    width: 100%;
+    height: 2%;
+}
+.mpt-l
+{
+    float: left;
+    display: block;
+    width: 10px;
+    height: 5px;
+    background: #000 url("../images/tabStrip/static.png") no-repeat -16px -30px;
+}
+.mpt-m
+{
+    float: left;
+    display: block;
+    height: 5px;
+    background-color: #fff;
+}
+.mpt-r
+{
+    float: right;
+    display: block;
+    width: 10px;
+    height: 5px;
+    background: #000 url("../images/tabStrip/static.png") no-repeat -26px -30px;
+}
+/* MultiPage content */
+.mpc
+{
+    width: 100%;
+    height: auto;
+}
+.mpc p
+{
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+}
+.mpc-l
+{
+    width: 5px;
+    background-image: url("../images/tabStrip/vertical.gif");
+    background-repeat: repeat-y;
+    background-position: left;
+    
+}
+.mpc-r
+{
+    width: 5px;
+    background-image: url("../images/tabStrip/vertical.gif");
+    background-repeat: repeat-y;
+    background-position: right;
+}
+
+.mpb-l
+{
+    background: transparent url("../images/tabStrip/static_04.png") no-repeat;
+}
+.mpb-m
+{
+    background: #fff url("../images/tabStrip/horizontal.png") repeat-x 0 -90px;
+}
+.mpb-r
+{
+    background: transparent url("../images/tabStrip/static_05.png") no-repeat;
+}

@@ -1,0 +1,1865 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD68AA8D-B4B1-4957-81C2-152398AC68AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ESP</RootNamespace>
+    <AssemblyName>ESP</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2, Version=7.7.31.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLib.BLL, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\DataLib.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLib.DAL, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\DataLib.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLib.DBUtility, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\DataLib.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="ESP.Workflow, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\ESP.Workflow.dll</HintPath>
+    </Reference>
+    <Reference Include="IWorkFlowDAO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\IWorkFlowDAO.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="ModelTemplate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\ModelTemplate.dll</HintPath>
+    </Reference>
+    <Reference Include="ModelTemplate.DB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\ModelTemplate.DB.dll</HintPath>
+    </Reference>
+    <Reference Include="ModelTemplate.IDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\ModelTemplate.IDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WorkFlowDAO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\WorkFlowDAO.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkFlowImpl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\WorkFlowImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkFlowLibary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\WorkFlowLibary.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkFlowModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibs\WorkFlowModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrative\BusinessLogic\ALAndRLManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\ApproveLogManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\AttendanceManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\AttendanceStatisticManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\AttGracePeriodManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\CardNOManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\CardStoreManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\ClientUsersManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\ClockInManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\CommuterTimeManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\ComputerRefund.cs" />
+    <Compile Include="Administrative\BusinessLogic\DataCodeManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\DisciplineManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\HolidaysInfoManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\LeaveManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\LogManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\MattersManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\MonthStatManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\OperationAuditManageManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\OverTimeRestManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\RefundManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\SingleOvertimeManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\TalentManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Administrative\BusinessLogic\UserAttBasicInfoManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\WaitingTaskManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\WeekSettingManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\RequestForSealManager.cs" />
+    <Compile Include="Administrative\Common\CBO.cs" />
+    <Compile Include="Administrative\Common\ConfigReaderHelper.cs" />
+    <Compile Include="Administrative\Common\Constants.cs" />
+    <Compile Include="Administrative\Common\Cryptography.cs" />
+    <Compile Include="Administrative\Common\DbHelperSQL.cs" />
+    <Compile Include="Administrative\Common\FileHelper.cs" />
+    <Compile Include="Administrative\Common\SendMail.cs" />
+    <Compile Include="Administrative\Common\SendMailHelper.cs" />
+    <Compile Include="Administrative\Common\Status.cs" />
+    <Compile Include="Administrative\Common\Utility.cs" />
+    <Compile Include="Administrative\DataAccess\ALAndRLDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\ApproveLogDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\AttendanceDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\AttGracePeriodDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\AttendanceStatisticInfoDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\CardNODataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\CardStoreDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\ClientUsersDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\ClockInDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\CommuterTimeDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\DataCodeDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\DisciplineDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\HolidaysInfoDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\LeaveDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\LogDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\MattersDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\MonthStatDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\OperationAuditManageDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\OverDateTimeDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\OverTimeRestDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\OverWorkRecordsDataProvicer.cs" />
+    <Compile Include="Administrative\DataAccess\RefundDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\SingleOvertimeDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\TalentDataProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Administrative\DataAccess\UserAttBasicDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\WaitingTaskDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\WeekSettingDataProvider.cs" />
+    <Compile Include="Administrative\DataAccess\RequestForSealDataProvider.cs" />
+    <Compile Include="Administrative\Entity\ALAndRLInfo.cs" />
+    <Compile Include="Administrative\Entity\ApproveLogInfo.cs" />
+    <Compile Include="Administrative\Entity\AttendanceDataInfo.cs" />
+    <Compile Include="Administrative\Entity\AttGracePeriodInfo.cs" />
+    <Compile Include="Administrative\Entity\AttendanceInfo.cs" />
+    <Compile Include="Administrative\Entity\AttendanceStatisticInfo.cs" />
+    <Compile Include="Administrative\Entity\CardNOInfo.cs" />
+    <Compile Include="Administrative\Entity\CardStoreInfo.cs" />
+    <Compile Include="Administrative\Entity\ClientUsersInfo.cs" />
+    <Compile Include="Administrative\Entity\ClockInInfo.cs" />
+    <Compile Include="Administrative\Entity\CommuterTimeInfo.cs" />
+    <Compile Include="Administrative\Entity\DataCodeInfo.cs" />
+    <Compile Include="Administrative\Entity\DisciplineInfo.cs" />
+    <Compile Include="Administrative\Entity\HolidaysInfo.cs" />
+    <Compile Include="Administrative\Entity\LeaveInfo.cs" />
+    <Compile Include="Administrative\Entity\LogInfo.cs" />
+    <Compile Include="Administrative\Entity\MattersInfo.cs" />
+    <Compile Include="Administrative\Entity\MonthStatInfo.cs" />
+    <Compile Include="Administrative\Entity\OperationAuditManageInfo.cs" />
+    <Compile Include="Administrative\Entity\OperationAuditManagerExtendInfo.cs" />
+    <Compile Include="Administrative\Entity\OverDateTimeInfo.cs" />
+    <Compile Include="Administrative\Entity\OverTimeRestInfo.cs" />
+    <Compile Include="Administrative\Entity\OverWorkRecordsInfo.cs" />
+    <Compile Include="Administrative\Entity\RefundInfo.cs" />
+    <Compile Include="Administrative\Entity\RequestForSealInfo.cs" />
+    <Compile Include="Administrative\Entity\SingleOvertimeInfo.cs" />
+    <Compile Include="Administrative\Entity\TalentInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Administrative\Entity\TimeSheetCategoryInfo.cs" />
+    <Compile Include="Administrative\Entity\TimeSheetInfo.cs" />
+    <Compile Include="Administrative\Entity\TimeSheetLogInfo.cs" />
+    <Compile Include="Administrative\Entity\TSFeedBackInfo.cs" />
+    <Compile Include="Administrative\Entity\UserAttBasicInfo.cs" />
+    <Compile Include="Administrative\Entity\BaseEntityInfo.cs" />
+    <Compile Include="Administrative\Entity\MattersExtendInfo.cs" />
+    <Compile Include="Administrative\Entity\WaitingTaskInfo.cs" />
+    <Compile Include="Administrative\Entity\TimeSheetCommitInfo.cs" />
+    <Compile Include="Administrative\Entity\WeekSettingInfo.cs" />
+    <Compile Include="Administrative\Entity\TsLastUpdateInfo.cs" />
+    <Compile Include="ConfigCommon\Cryptography.cs" />
+    <Compile Include="ConfigCommon\Encrypthelper.cs" />
+    <Compile Include="ConfigCommon\ExcelHandle.cs" />
+    <Compile Include="ConfigCommon\ExcelHelper.cs" />
+    <Compile Include="ConfigCommon\EXIFextractor.cs" />
+    <Compile Include="ConfigCommon\ImageHelper.cs" />
+    <Compile Include="ConfigCommon\MessageBox.cs" />
+    <Compile Include="ConfigCommon\mySiteMapProvider.cs" />
+    <Compile Include="ConfigCommon\PhotoInfo.cs" />
+    <Compile Include="ConfigCommon\SendMail.cs" />
+    <Compile Include="ConfigCommon\StaticClass.cs" />
+    <Compile Include="ConfigCommon\translation.cs" />
+    <Compile Include="ConfigCommon\WorkFlowBase.cs" />
+    <Compile Include="ConfigCommon\ZipFileHelper.cs" />
+    <Compile Include="Finance\BusinessLogic\AdminExpenseDetailManager.cs" />
+    <Compile Include="Finance\BusinessLogic\AreaManager.cs" />
+    <Compile Include="Finance\BusinessLogic\AssetManager.cs" />
+    <Compile Include="Finance\BusinessLogic\AuditHistoryManager.cs" />
+    <Compile Include="Finance\BusinessLogic\AuditLogManager.cs" />
+    <Compile Include="Finance\BusinessLogic\BankCancelManager.cs" />
+    <Compile Include="Finance\BusinessLogic\BankManager.cs" />
+    <Compile Include="Finance\BusinessLogic\BizDescriptionManager.cs" />
+    <Compile Include="Finance\BusinessLogic\BizTypeManager.cs" />
+    <Compile Include="Finance\BusinessLogic\BranchDeptManager.cs" />
+    <Compile Include="Finance\BusinessLogic\BranchManager.cs" />
+    <Compile Include="Finance\BusinessLogic\BranchProjectManager.cs" />
+    <Compile Include="Finance\BusinessLogic\BranchVATManager.cs" />
+    <Compile Include="Finance\BusinessLogic\BusinessCardManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CashPNLinkManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CheckerManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CheckingCostManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CheckManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ConsumptionAuditManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ConsumptionManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ContractAuditLogManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ContractCostManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ContractCostTmpManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ContractManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ContractStatusManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CostDescriptionManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CostRecordManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CostReportSavingManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CostTypeViewManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CredenceManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CredenceTypeManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CreditManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CustomerAttachManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CustomerAudtiorManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CustomerIndustryManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CustomerManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CustomerPOManager.cs" />
+    <Compile Include="Finance\BusinessLogic\CustomerTmpManager.cs" />
+    <Compile Include="Finance\BusinessLogic\DeadLineManager.cs" />
+    <Compile Include="Finance\BusinessLogic\DepartmentViewManager.cs" />
+    <Compile Include="Finance\BusinessLogic\DeptTargetManager.cs" />
+    <Compile Include="Finance\BusinessLogic\DimissionManager.cs" />
+    <Compile Include="Finance\BusinessLogic\DonationManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpenseBoarderManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpenseManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpressCheckManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpressScanManager.cs" />
+    <Compile Include="Finance\BusinessLogic\FinanceObjectManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ForeGiftLinkManager.cs" />
+    <Compile Include="Finance\BusinessLogic\GetAllPayemtnViewManager.cs" />
+    <Compile Include="Finance\BusinessLogic\InvoiceDetailManager.cs" />
+    <Compile Include="Finance\BusinessLogic\InvoiceDetailReportManager.cs" />
+    <Compile Include="Finance\BusinessLogic\InvoiceManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ITAssetCategoryManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ITAssetReceivingManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ITAssetsManager.cs" />
+    <Compile Include="Finance\BusinessLogic\LogManager.cs" />
+    <Compile Include="Finance\BusinessLogic\MaterialFinanceRelationManager.cs" />
+    <Compile Include="Finance\BusinessLogic\MediumForProjectManager.cs" />
+    <Compile Include="Finance\BusinessLogic\MobileListManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PaymentAuditHistManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PaymentContentManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PaymentDetailManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PaymentManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PaymentNotifyReportManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PaymentReportLogManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PaymentScheduleManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PaymentTypeManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PNBatchManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PNBatchRelationManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PrjUserRelationManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectExpenseManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectExpenseTmpManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectHistLogManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectHistManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectMemberManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectReportFeeManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectScheduleManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectTypeManager.cs" />
+    <Compile Include="Finance\BusinessLogic\WorkFlowManager.cs" />
+    <Compile Include="Finance\BusinessLogic\RefundManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ReturnAuditHistManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ReturnGeneralInfoListViewManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ReturnInvoiceManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ReturnManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ReturnSettingManager.cs" />
+    <Compile Include="Finance\BusinessLogic\SalaryManager.cs" />
+    <Compile Include="Finance\BusinessLogic\SupplierFinanceRelationManager.cs" />
+    <Compile Include="Finance\BusinessLogic\SupporterAuditHistManager.cs" />
+    <Compile Include="Finance\BusinessLogic\SupporterCostManager.cs" />
+    <Compile Include="Finance\BusinessLogic\SupporterExpenseManager.cs" />
+    <Compile Include="Finance\BusinessLogic\SupporterManager.cs" />
+    <Compile Include="Finance\BusinessLogic\SupporterScheduleManager.cs" />
+    <Compile Include="Finance\BusinessLogic\SupportHistoryManager.cs" />
+    <Compile Include="Finance\BusinessLogic\SupportMemberManager.cs" />
+    <Compile Include="Finance\BusinessLogic\TaxDetailManager.cs" />
+    <Compile Include="Finance\BusinessLogic\TaxRateManager.cs" />
+    <Compile Include="Finance\BusinessLogic\TeamTaxManager.cs" />
+    <Compile Include="Finance\BusinessLogic\TicketCityManager.cs" />
+    <Compile Include="Finance\BusinessLogic\TicketSupplierManager.cs" />
+    <Compile Include="Finance\BusinessLogic\TimingLogManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpenseAccountDetailHisManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ToGroupManager.cs" />
+    <Compile Include="Finance\BusinessLogic\PaymentExtensionManager.cs" />
+    <Compile Include="Administrative\BusinessLogic\MatterReasonManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ApplyInvioceManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ProjectMediaManager.cs" />
+    <Compile Include="Finance\BusinessLogic\RebateRegistrationManager.cs" />
+    <Compile Include="Finance\DataAccess\IAdminExpenseDetailProvider.cs" />
+    <Compile Include="Finance\DataAccess\IApplyForInvioceDataProvider.cs" />
+    <Compile Include="Finance\DataAccess\IAssetProvider.cs" />
+    <Compile Include="Finance\DataAccess\IBranchDeptProvider.cs" />
+    <Compile Include="Finance\DataAccess\IBranchProjectProvider.cs" />
+    <Compile Include="Finance\DataAccess\IBranchVATProvider.cs" />
+    <Compile Include="Finance\DataAccess\IBusinessCardProvider.cs" />
+    <Compile Include="Finance\DataAccess\IConsumptionAuditProvider.cs" />
+    <Compile Include="Finance\DataAccess\IConsumptionProvider.cs" />
+    <Compile Include="Finance\DataAccess\IContractAuditLogProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICostRecordProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICostReportSavingProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICredenceTypeProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICredeneProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICustomerAuditorProvider.cs" />
+    <Compile Include="Finance\DataAccess\IDepartmentViewProvider.cs" />
+    <Compile Include="Finance\DataAccess\IDeptTargetProvider.cs" />
+    <Compile Include="Finance\DataAccess\IDonationProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpenseBoarderProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpressCheckProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpressScanProvider.cs" />
+    <Compile Include="Finance\DataAccess\IFinanceObjectProvider.cs" />
+    <Compile Include="Finance\DataAccess\IITAssetCategoryProvider.cs" />
+    <Compile Include="Finance\DataAccess\IITAssetsProvider.cs" />
+    <Compile Include="Finance\DataAccess\IMaterialFinanceRelationProvider.cs" />
+    <Compile Include="Finance\DataAccess\IMobileListProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPaymentReportLogProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPaymentScheduleProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectReportFeeProvider.cs" />
+    <Compile Include="Finance\DataAccess\IWorkFlowProvider.cs" />
+    <Compile Include="Finance\DataAccess\IRefundDataProvider.cs" />
+    <Compile Include="Finance\DataAccess\ISalaryDataProvider.cs" />
+    <Compile Include="Finance\DataAccess\ISupplierFinanceRelationProvider.cs" />
+    <Compile Include="Finance\DataAccess\ISupportHistoryProvider.cs" />
+    <Compile Include="Finance\DataAccess\IITAssetReceivingProvider.cs" />
+    <Compile Include="Finance\DataAccess\ITaxDetailProvider.cs" />
+    <Compile Include="Finance\DataAccess\ITeamTaxProvider.cs" />
+    <Compile Include="Finance\DataAccess\ITicketCityProvider.cs" />
+    <Compile Include="Finance\DataAccess\ITicketSupplierProvider.cs" />
+    <Compile Include="Finance\DataAccess\ITimingLogProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpenseAccountDetailHisProvider.cs" />
+    <Compile Include="Finance\DataAccess\IToGroupProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPaymentExtensionProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectMediaProvider.cs" />
+    <Compile Include="Finance\DataAccess\IRebateRegistrationProvider.cs" />
+    <Compile Include="Finance\Entity\AdminExpenseDetailInfo.cs" />
+    <Compile Include="Finance\Entity\ApplyForInvioceInfo.cs" />
+    <Compile Include="Finance\Entity\AssetInfo.cs" />
+    <Compile Include="Finance\Entity\BranchDeptInfo.cs" />
+    <Compile Include="Finance\Entity\BranchProjectInfo.cs" />
+    <Compile Include="Finance\Entity\BranchVATInfo.cs" />
+    <Compile Include="Finance\Entity\BusinessCardInfo.cs" />
+    <Compile Include="Finance\Entity\ConsumptionAuditInfo.cs" />
+    <Compile Include="Finance\Entity\ConsumptionInfo.cs" />
+    <Compile Include="Finance\Entity\ContractAuditLogInfo.cs" />
+    <Compile Include="Finance\Entity\CostRecordInfo.cs" />
+    <Compile Include="Finance\Entity\CostReportSavingInfo.cs" />
+    <Compile Include="Finance\Entity\CredenceInfo.cs" />
+    <Compile Include="Finance\Entity\CredenceTypeInfo.cs" />
+    <Compile Include="Finance\Entity\CustomerAuditorInfo.cs" />
+    <Compile Include="Finance\Entity\DepartmentViewInfo.cs" />
+    <Compile Include="Finance\Entity\DeptTargetInfo.cs" />
+    <Compile Include="Finance\Entity\DonationInfo.cs" />
+    <Compile Include="Finance\Entity\ExpenseAccountDetailHisInfo.cs" />
+    <Compile Include="Finance\Entity\ExpenseBoarderInfo.cs" />
+    <Compile Include="Finance\Entity\ExpressCheckInfo.cs" />
+    <Compile Include="Finance\Entity\ExpressScanInfo.cs" />
+    <Compile Include="Finance\Entity\FinanceObjectInfo.cs" />
+    <Compile Include="Finance\Entity\ITAssetCategoryInfo.cs" />
+    <Compile Include="Finance\Entity\ITAssetReceivingInfo.cs" />
+    <Compile Include="Finance\Entity\ITAssetsInfo.cs" />
+    <Compile Include="Finance\Entity\MaterialFinanceRelationInfo.cs" />
+    <Compile Include="Finance\Entity\MobileListInfo.cs" />
+    <Compile Include="Finance\Entity\PaymentReportLogInfo.cs" />
+    <Compile Include="Finance\Entity\PaymentScheduleInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectMediaInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectReportFeeInfo.cs" />
+    <Compile Include="Finance\Entity\RefundAuditHistInfo.cs" />
+    <Compile Include="Finance\Entity\RefundInfo.cs" />
+    <Compile Include="Finance\Entity\ReportDimissionInfo.cs" />
+    <Compile Include="Finance\Entity\ReportJoinInfo.cs" />
+    <Compile Include="Finance\Entity\SalaryInfo.cs" />
+    <Compile Include="Finance\Entity\SupplierFinanceRelationInfo.cs" />
+    <Compile Include="Finance\Entity\SupportHistoryInfo.cs" />
+    <Compile Include="Finance\Entity\TaxDetailInfo.cs" />
+    <Compile Include="Finance\Entity\TeamTaxInfo.cs" />
+    <Compile Include="Finance\Entity\TicketCityInfo.cs" />
+    <Compile Include="Finance\Entity\TicketSupplier.cs" />
+    <Compile Include="Finance\Entity\TimingLogInfo.cs" />
+    <Compile Include="Finance\BusinessLogic\WaitPaymentListViewManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpenseAccountDetailManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpenseAccountManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpenseTypeManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpenseAuditDetailManager.cs" />
+    <Compile Include="Finance\BusinessLogic\ExpenseAuditerListManager.cs" />
+    <Compile Include="Finance\Configuration\ConfigurationManager.cs" />
+    <Compile Include="Finance\DataAccess\IAreaProvider.cs" />
+    <Compile Include="Finance\DataAccess\IAuditHistoryProvider.cs" />
+    <Compile Include="Finance\DataAccess\IAuditLogProvider.cs" />
+    <Compile Include="Finance\DataAccess\IBankCancelProvider.cs" />
+    <Compile Include="Finance\DataAccess\IBankProvider.cs" />
+    <Compile Include="Finance\DataAccess\IBizDescriptionProvider.cs" />
+    <Compile Include="Finance\DataAccess\IBizTypeProvider.cs" />
+    <Compile Include="Finance\DataAccess\IBranchProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICashPNLinkProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICheckProvider.cs" />
+    <Compile Include="Finance\DataAccess\IContractCostProvider.cs" />
+    <Compile Include="Finance\DataAccess\IContractCostTmpDataProvider.cs" />
+    <Compile Include="Finance\DataAccess\IContractProvider.cs" />
+    <Compile Include="Finance\DataAccess\IContractStatusProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICostDescriptionProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICostTypeViewProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICreditProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICustomerAttachProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICustomerIndustryProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICustomerPOProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICustomerProvider.cs" />
+    <Compile Include="Finance\DataAccess\ICustomerTmpProvider.cs" />
+    <Compile Include="Finance\DataAccess\IDeadLineProvider.cs" />
+    <Compile Include="Finance\DataAccess\IDirectorViewProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpenseAuditerListDataProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpenseProvider.cs" />
+    <Compile Include="Finance\DataAccess\IForeGiftProvider.cs" />
+    <Compile Include="Finance\DataAccess\IGetAllPaymentViewProvider.cs" />
+    <Compile Include="Finance\DataAccess\IInvoiceDetailProvider.cs" />
+    <Compile Include="Finance\DataAccess\IInvoiceDetailReportProvider.cs" />
+    <Compile Include="Finance\DataAccess\IInvoiceProvider.cs" />
+    <Compile Include="Finance\DataAccess\ILogProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPaymentAuditHistProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPaymentContentProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPaymentDetailProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPaymentNotifyReportProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPaymentProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPaymentTypeProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPNBatchProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPNBatchRelationProvider.cs" />
+    <Compile Include="Finance\DataAccess\IPrjUserRelationProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectExpenseProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectExpenseTmpProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectHistLogProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectHistProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectMemberProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectScheduleProvider.cs" />
+    <Compile Include="Finance\DataAccess\IProjectTypeProvider.cs" />
+    <Compile Include="Finance\DataAccess\IReturnAuditHistProvider.cs" />
+    <Compile Include="Finance\DataAccess\IReturnGeneralInfoListViewProvider.cs" />
+    <Compile Include="Finance\DataAccess\IReturnInvoiceProvider.cs" />
+    <Compile Include="Finance\DataAccess\IReturnProvider.cs" />
+    <Compile Include="Finance\DataAccess\IReturnSettingProvider.cs" />
+    <Compile Include="Finance\DataAccess\ISupporterAuditHistProvider.cs" />
+    <Compile Include="Finance\DataAccess\ISupporterCostProvider.cs" />
+    <Compile Include="Finance\DataAccess\ISupporterExpenseProvider.cs" />
+    <Compile Include="Finance\DataAccess\ISupporterProvider.cs" />
+    <Compile Include="Finance\DataAccess\ISupporterScheduleProvider.cs" />
+    <Compile Include="Finance\DataAccess\ISupportMemberProvider.cs" />
+    <Compile Include="Finance\DataAccess\ITaxRateProvider.cs" />
+    <Compile Include="Finance\DataAccess\IWaitPaymentListViewProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpenseAccountDetailProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpenseAccountProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpenseTypeProvider.cs" />
+    <Compile Include="Finance\DataAccess\IExpenseAuditDetailProvider.cs" />
+    <Compile Include="Finance\DataAccess\IMediumForProjectDataProvider.cs" />
+    <Compile Include="Finance\Entity\CheckingCost.cs" />
+    <Compile Include="Finance\Entity\ContractCostTmpInfo.cs" />
+    <Compile Include="Finance\Entity\CustomerAttachInfo.cs" />
+    <Compile Include="Finance\Entity\BankCancelInfo.cs" />
+    <Compile Include="Finance\Entity\ExpenseAccountBatchAudit.cs" />
+    <Compile Include="Finance\Entity\ExpenseAccountDetailInfo.cs" />
+    <Compile Include="Finance\Entity\ExpenseAuditerListInfo.cs" />
+    <Compile Include="Finance\Entity\ForeGiftLinkInfo.cs" />
+    <Compile Include="Finance\Entity\GetAllPaymentViewInfo.cs" />
+    <Compile Include="Finance\Entity\MediumForProjectInfo.cs" />
+    <Compile Include="Finance\Entity\PNBatchInfo.cs" />
+    <Compile Include="Finance\Entity\PNBatchRelationInfo.cs" />
+    <Compile Include="Finance\Entity\PrjUserRelationInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectExpenseTmpInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectHistLogInfo.cs" />
+    <Compile Include="Finance\Entity\ExpenseAccountInfo.cs" />
+    <Compile Include="Finance\Entity\ExpenseTypeInfo.cs" />
+    <Compile Include="Finance\Entity\ExpenseAuditDetailInfo.cs" />
+    <Compile Include="Finance\Entity\ExpenseAccountExtendsInfo.cs" />
+    <Compile Include="Finance\Entity\ReturnInvoiceInfo.cs" />
+    <Compile Include="Finance\Entity\ToGroupInfo.cs" />
+    <Compile Include="Finance\Entity\PaymentExtensionInfo.cs" />
+    <Compile Include="Administrative\Entity\MatterReasonInfo.cs" />
+    <Compile Include="Finance\Entity\RebateRegistrationInfo.cs" />
+    <Compile Include="Finance\SqlDataAccess\AdminExpenseDetailProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\AreaDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\AssetDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\AuditHistoryDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\AuditLogDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\BankCancelProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\BankDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\BizDescriptionDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\BizTypeDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\BranchDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\BranchDeptProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\BranchProjectProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\BranchVATDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\BusinessCardProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CashPNLinkDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CheckDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ConsumptionAuditDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ConsumptionProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ContractAuditLogDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ContractCostDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ContractCostTmpDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ContractDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ContractStatusDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CostDescriptionDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CostRecordDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CostReportSavingDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CredenceDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CredenceTypeDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CreditDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CustomerAttachDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CustomerAuditorProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CustomerDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CustomerIndustryDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CustomerPODataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\CustomerTmpDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\DeadLineDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\DepartmentViewDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\DeptTargetDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\DonationDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpenseAccountDetailHisDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpenseBoarderProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpenseDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpressCheckProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpressScanProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\FinanceObjectProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ForeGiftLinkProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\GetAllPaymentViewDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\GetCostTypeDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\GetDirectorDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\GetReturnGeneralInfoListDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\GetWaitPaymentListDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\InvoiceDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\InvoiceDetailDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\InvoiceDetailReportDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ITAssetCategoryDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ITAssetReceivingDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ITAssetsDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\LogDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\MaterialFinanceRelationDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\MobileListDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PaymentAuditHistDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PaymentContentDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PaymentDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PaymentDetailDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PaymentNotifyReportDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PaymentReportLogProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PaymentScheduleProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PaymentTypeDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PNBatchDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PNBatchRelationDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PrjUserRelationDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectExpenseDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectExpenseTmpDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectHistDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectHistLogDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectMemberDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectReportFeeProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectScheduleDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectTypeDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\WorkFlowDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\RefundDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ReturnAuditHistDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ReturnDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ReturnInvoiceDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ReturnSettingDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\SalaryProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\SupplierFinanceRelationDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\SupporterAuditHistDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\SupporterCostDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\SupporterDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\SupporterExpenseDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\SupporterScheduleDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\SupportHistoryDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\SupportMemberDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\TaxDetailDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\TaxRateDataProvider.cs" />
+    <Compile Include="Finance\Entity\AreaInfo.cs" />
+    <Compile Include="Finance\Entity\AuditHistoryInfo.cs" />
+    <Compile Include="Finance\Entity\AuditLogInfo.cs" />
+    <Compile Include="Finance\Entity\BankInfo.cs" />
+    <Compile Include="Finance\Entity\BizDescriptionInfo.cs" />
+    <Compile Include="Finance\Entity\BizTypeInfo.cs" />
+    <Compile Include="Finance\Entity\BranchInfo.cs" />
+    <Compile Include="Finance\Entity\CheckInfo.cs" />
+    <Compile Include="Finance\Entity\ContactCostInfo.cs" />
+    <Compile Include="Finance\Entity\ContractInfo.cs" />
+    <Compile Include="Finance\Entity\ContractStatusInfo.cs" />
+    <Compile Include="Finance\Entity\CostDescriptionInfo.cs" />
+    <Compile Include="Finance\Entity\CostTypeViewInfo.cs" />
+    <Compile Include="Finance\Entity\CreditInfo.cs" />
+    <Compile Include="Finance\Entity\CustomerIndustryInfo.cs" />
+    <Compile Include="Finance\Entity\CustomerInfo.cs" />
+    <Compile Include="Finance\Entity\CustomerPOInfo.cs" />
+    <Compile Include="Finance\Entity\CustomerTmpInfo.cs" />
+    <Compile Include="Finance\Entity\DeadLineInfo.cs" />
+    <Compile Include="Finance\Entity\DirectorViewInfo.cs" />
+    <Compile Include="Finance\Entity\ExpenseInfo.cs" />
+    <Compile Include="Finance\Entity\InvoiceDetailInfo.cs" />
+    <Compile Include="Finance\Entity\InvoiceDetailReporterInfo.cs" />
+    <Compile Include="Finance\Entity\InvoiceInfo.cs" />
+    <Compile Include="Finance\Entity\LogInfo.cs" />
+    <Compile Include="Finance\Entity\PaymentAuditHistInfo.cs" />
+    <Compile Include="Finance\Entity\PaymentContentInfo.cs" />
+    <Compile Include="Finance\Entity\PaymentDetailInfo.cs" />
+    <Compile Include="Finance\Entity\PaymentInfo.cs" />
+    <Compile Include="Finance\Entity\PaymentNotifyReporterInfo.cs" />
+    <Compile Include="Finance\Entity\PaymentTypeInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectExpenseInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectHistInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectMemberInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectScheduleInfo.cs" />
+    <Compile Include="Finance\Entity\ProjectTypeInfo.cs" />
+    <Compile Include="Finance\Entity\ReturnAuditHistInfo.cs" />
+    <Compile Include="Finance\Entity\ReturnGeneralInfoListViewInfo.cs" />
+    <Compile Include="Finance\Entity\ReturnInfo.cs" />
+    <Compile Include="Finance\Entity\ReturnSettingInfo.cs" />
+    <Compile Include="Finance\Entity\SupporterAuditHistInfo.cs" />
+    <Compile Include="Finance\Entity\SupporterCostInfo.cs" />
+    <Compile Include="Finance\Entity\SupporterExpenseInfo.cs" />
+    <Compile Include="Finance\Entity\SupporterInfo.cs" />
+    <Compile Include="Finance\Entity\SupporterScheduleInfo.cs" />
+    <Compile Include="Finance\Entity\SupportMemberInfo.cs" />
+    <Compile Include="Finance\Entity\TaxRateInfo.cs" />
+    <Compile Include="Finance\Entity\WaitPaymentListViewInfo.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpenseAccountDetailDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpenseAccountDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpenseTypeDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpenseAuditDetailDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ExpenseAuditerListDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\TeamTaxProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\TicketCityProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\TicketSupplierDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\TimingLogDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ToGroupDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\WorkFlow.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkFlow.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\SqlDataAccess\MediumForProjectDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\PaymentExtensionProvider.cs" />
+    <Compile Include="Administrative\DataAccess\MatterReasonDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ApplyForInvioceProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\ProjectMediaDataProvider.cs" />
+    <Compile Include="Finance\SqlDataAccess\RebateRegistrationDataProvider.cs" />
+    <Compile Include="Finance\Utilities\AddWorkDays.cs" />
+    <Compile Include="Finance\Utilities\CBO.cs" />
+    <Compile Include="Finance\Utilities\Common.cs" />
+    <Compile Include="Finance\Utilities\DbHelperSQL.cs" />
+    <Compile Include="Finance\Utilities\ExcelHandle.cs" />
+    <Compile Include="Finance\Utilities\JSONHelper.cs" />
+    <Compile Include="Finance\Utilities\MonthCol.cs" />
+    <Compile Include="Finance\Utilities\NullValue.cs" />
+    <Compile Include="Finance\Utilities\PagingClass.cs" />
+    <Compile Include="Finance\Utilities\RequestName.cs" />
+    <Compile Include="Finance\Utilities\SendMail.cs" />
+    <Compile Include="Finance\Utilities\SendMailForSalaryUserValidate.cs" />
+    <Compile Include="Finance\Utilities\SendMailHelper.cs" />
+    <Compile Include="Finance\Utilities\StringHelper.cs" />
+    <Compile Include="Finance\Utilities\UpdateResult.cs" />
+    <Compile Include="Finance\Utilities\UtilSerializeFactory.cs" />
+    <Compile Include="Finance\Utilities\ZipFileHelper.cs" />
+    <Compile Include="Finance\WebPage\EditPageForPayment.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\WebPage\EditPageForProject.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\WebPage\EditPageForReturn.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\WebPage\EditPageForSupporter.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\WebPage\ViewPageForPayment.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\WebPage\ViewPageForProject.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\WebPage\ViewPageForReturn.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finance\WebPage\ViewPageForSupporter.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Framework\BusinessLogic\OperationAuditManageManager.cs" />
+    <Compile Include="Framework\BusinessLogic\UserManagerEx.cs" />
+    <Compile Include="Framework\Common\DbHelperSQL.cs" />
+    <Compile Include="Framework\DataAccess\OperationAuditManageDataHelper.cs" />
+    <Compile Include="Framework\Entity\OperationAuditManageInfo.cs" />
+    <Compile Include="HumanResource\BusinessLogic\ActityManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\AddressBookManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\AnswerManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\AuxiliaryManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DeptSalaryManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DimissionADDetailsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DimissionDetailsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DimissionFinanceDetailsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DimissionFormManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DimissionGrougHRDetailsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DimissionHRDetailsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DimissionIndemnityManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DimissionITDetailsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DimissionManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmailClosingManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmpContractManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmpEducationManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmpEstimateManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmpFamilyManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmpLogManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmployeeBaseManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmployeeJobManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmployeesInAuxiliariesManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmployeesInPositionsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmployeeWelfareManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\EmpWorkExpManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\HeadAccountLogManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\HeadAccountManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\HRAuditLogManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\InsuranceBaseInfoManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\ITFlowManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\ITItemsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\ItLogManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\JobManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\LogManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\PassedManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\PayInsuranceManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\PositionBaseManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\PositionLevelsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\PositionLogManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\PositionViewManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\PromotionManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\ProtectionLineManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\QuestionManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\RecommendManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\RejectLogManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\SalaryConfirmManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\SalaryDetailManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\SalaryManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\SalaryPermissionsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\ScoreStandardManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\SnapshotsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\SocialSecurityManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\SocialSecurityModelManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\StatisticsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\StatisticsTypeManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\StockFileReaderManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\TalentLogManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\TalentManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\TelManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\TemporaryMeritPayManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\TransferDetailsManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\TransferManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HumanResource\BusinessLogic\UsersManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\UserValidateManager.cs" />
+    <Compile Include="HumanResource\BusinessLogic\DeptFeeManager.cs" />
+    <Compile Include="HumanResource\Common\Cryptography.cs" />
+    <Compile Include="HumanResource\Common\CutPhotoHelp.cs" />
+    <Compile Include="HumanResource\Common\DbHelperSQL.cs" />
+    <Compile Include="HumanResource\Common\FileHelper.cs" />
+    <Compile Include="HumanResource\Common\PermissionsHelper.cs" />
+    <Compile Include="HumanResource\Common\SalaryPermissionsHelper.cs" />
+    <Compile Include="HumanResource\Common\SendMailHelper.cs" />
+    <Compile Include="HumanResource\Common\Status.cs" />
+    <Compile Include="HumanResource\DataAccess\ActityDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\AddressBookDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\AnswerDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DeptSalaryProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DimissionADDetailsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DimissionFinanceDetailsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DimissionGrougHRDetailsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DimissionHRDetailsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DimissionIndemnityDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DimissionITDetailsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmailClosingProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmpContractProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmpEducationProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmpEstimateProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmpFamilyProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmpLogProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmpWorkExpProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\HeadAccountDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\HeadAccountLogProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\HRAuditLogProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\AuxiliaryDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DimissionDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DimissionDetailsProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DimissionFormProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmployeeBaseDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmployeeJobDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmployeesInAuxiliariesDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmployeesInPositionsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\EmployeeWelfareDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\InsuranceBaseInfoDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\ITFlowProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\ITItemsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\ITLogProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\JobDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\LogDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\PassedDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\PayInsuranceDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\PositionBaseDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\PositionLevelsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\PositionLogDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\PositionViewProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\PromotionDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\ProtectionLineDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\QuestionDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\RecommendDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\RejectLogDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\SalaryConfirmDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\SalaryDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\SalaryDetailDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\SalaryPermissionsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\ScoreStandardDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\SnapshotsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\SocialSecurityDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\StatisticsDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\StatisticsTypeDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\StockFileReaderDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\TalentDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\TalentLogProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\TelDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\TemporaryMeritPayDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\TransferDataProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HumanResource\DataAccess\TransferDetailsProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\UsersDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\UserValidateDataProvider.cs" />
+    <Compile Include="HumanResource\DataAccess\DeptFeeProvider.cs" />
+    <Compile Include="HumanResource\Entity\EmailClosingInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmpContractInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmpEducationInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmpEstimateInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmpFamilyInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmpLogInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmpWorkExpInfo.cs" />
+    <Compile Include="HumanResource\Entity\HeadAccountInfo.cs" />
+    <Compile Include="HumanResource\Entity\HeadAccountLogInfo.cs" />
+    <Compile Include="HumanResource\Entity\InsuranceBaseInfo.cs" />
+    <Compile Include="HumanResource\Entity\ActityInfo.cs" />
+    <Compile Include="HumanResource\Entity\AddressBookInfo.cs" />
+    <Compile Include="HumanResource\Entity\AddressItemInfo.cs" />
+    <Compile Include="HumanResource\Entity\AnswerInfo.cs" />
+    <Compile Include="HumanResource\Entity\DeptSalaryInfo.cs" />
+    <Compile Include="HumanResource\Entity\DimissionADDetailsInfo.cs" />
+    <Compile Include="HumanResource\Entity\DimissionFinanceDetailsInfo.cs" />
+    <Compile Include="HumanResource\Entity\DimissionGrougHRDetailsInfo.cs" />
+    <Compile Include="HumanResource\Entity\DimissionHRDetailsInfo.cs" />
+    <Compile Include="HumanResource\Entity\DimissionIndemnityInfo.cs" />
+    <Compile Include="HumanResource\Entity\DimissionITDetailsInfo.cs" />
+    <Compile Include="HumanResource\Entity\HRAuditLogInfo.cs" />
+    <Compile Include="HumanResource\Entity\AuxiliaryInfo.cs" />
+    <Compile Include="HumanResource\Entity\DimissionDetailsInfo.cs" />
+    <Compile Include="HumanResource\Entity\DimissionFormInfo.cs" />
+    <Compile Include="HumanResource\Entity\DimissionInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmployeeBaseInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmployeeJobInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmployeesInAuxiliariesInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmployeesInPositionsInfo.cs" />
+    <Compile Include="HumanResource\Entity\EmployeeWelfareInfo.cs" />
+    <Compile Include="HumanResource\Entity\ITFlowInfo.cs" />
+    <Compile Include="HumanResource\Entity\ITItemsInfo.cs" />
+    <Compile Include="HumanResource\Entity\JobInfo.cs" />
+    <Compile Include="HumanResource\Entity\LogInfo.cs" />
+    <Compile Include="HumanResource\Entity\ITLogInfo.cs" />
+    <Compile Include="HumanResource\Entity\PassedInfo.cs" />
+    <Compile Include="HumanResource\Entity\PayInsuranceInfo.cs" />
+    <Compile Include="HumanResource\Entity\PositionView.cs" />
+    <Compile Include="HumanResource\Entity\PromotionInfo.cs" />
+    <Compile Include="HumanResource\Entity\ProtectionLineInfo.cs" />
+    <Compile Include="HumanResource\Entity\QuestionInfo.cs" />
+    <Compile Include="HumanResource\Entity\RecommendInfo.cs" />
+    <Compile Include="HumanResource\Entity\RejectLogInfo.cs" />
+    <Compile Include="HumanResource\Entity\SalaryConfirmInfo.cs" />
+    <Compile Include="HumanResource\Entity\SalaryDetailInfo.cs" />
+    <Compile Include="HumanResource\Entity\SalaryInfo.cs" />
+    <Compile Include="HumanResource\Entity\SalaryPermissionsInfo.cs" />
+    <Compile Include="HumanResource\Entity\ScoreStandardInfo.cs" />
+    <Compile Include="HumanResource\Entity\SnapshotsInfo.cs" />
+    <Compile Include="HumanResource\Entity\SocialSecurityInfo.cs" />
+    <Compile Include="HumanResource\Entity\SocialSecurityModelInfo.cs" />
+    <Compile Include="HumanResource\Entity\StatisticsInfo.cs" />
+    <Compile Include="HumanResource\Entity\StatisticsTypeInfo.cs" />
+    <Compile Include="HumanResource\Entity\StockFileReaderInfo.cs" />
+    <Compile Include="HumanResource\Entity\TalentInfo.cs" />
+    <Compile Include="HumanResource\Entity\TalentLogInfo.cs" />
+    <Compile Include="HumanResource\Entity\TELInfo.cs" />
+    <Compile Include="HumanResource\Entity\TemporaryMeritPayInfo.cs" />
+    <Compile Include="HumanResource\Entity\TransferDetailsInfo.cs" />
+    <Compile Include="HumanResource\Entity\TransferInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HumanResource\Entity\UsersInfo.cs" />
+    <Compile Include="HumanResource\Entity\UserValidateInfo.cs" />
+    <Compile Include="HumanResource\Entity\DeptFeeInfo.cs" />
+    <Compile Include="HumanResource\Utilities\CBO.cs" />
+    <Compile Include="HumanResource\Utilities\ExcelHelper.cs" />
+    <Compile Include="HumanResource\Utilities\StringHelper.cs" />
+    <Compile Include="HumanResource\WebPages\DefaultPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResource\WebPages\EditPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanResource\WebPages\ViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ITIL\BusinessLogic\BPM\Core.cs" />
+    <Compile Include="ITIL\BusinessLogic\BPM\WorkFlowCheck\主申请方项目组成员变更.cs" />
+    <Compile Include="ITIL\BusinessLogic\BPM\WorkFlowCheck\员工级别变动.cs" />
+    <Compile Include="ITIL\BusinessLogic\BPM\WorkFlowCheck\员工职务变动.cs" />
+    <Compile Include="ITIL\BusinessLogic\BPM\WorkFlowCheck\员工部门变动.cs" />
+    <Compile Include="ITIL\BusinessLogic\BPM\WorkFlowCheck\支持方项目组成员变更.cs" />
+    <Compile Include="ITIL\BusinessLogic\BPM\WorkFlowCheck\项目主申请方组别变更.cs" />
+    <Compile Include="ITIL\BusinessLogic\BPM\WorkFlowCheck\项目成本变更——物料变更.cs" />
+    <Compile Include="ITIL\BusinessLogic\BPM\WorkFlowCheck\项目成本变更——费用变更.cs" />
+    <Compile Include="ITIL\BusinessLogic\BPM\WorkFlowCheck\项目支持方组别变更.cs" />
+    <Compile Include="ITIL\BusinessLogic\Finance\Pa.cs" />
+    <Compile Include="ITIL\BusinessLogic\Finance\Pn.cs" />
+    <Compile Include="ITIL\BusinessLogic\Maintenance\Operation\PR单暂停.cs" />
+    <Compile Include="ITIL\BusinessLogic\Maintenance\Operation\修改项目号.cs" />
+    <Compile Include="ITIL\BusinessLogic\Maintenance\Operation\单PR单综合查询.cs" />
+    <Compile Include="ITIL\BusinessLogic\Maintenance\Operation\单项目综合查询.cs" />
+    <Compile Include="ITIL\BusinessLogic\Maintenance\Operation\对公业务转对私业务.cs" />
+    <Compile Include="ITIL\BusinessLogic\Maintenance\Operation\对私业务转对公业务.cs" />
+    <Compile Include="ITIL\BusinessLogic\Maintenance\Operation\查找某员工所有业务.cs" />
+    <Compile Include="ITIL\BusinessLogic\Maintenance\Operation\项目暂停.cs" />
+    <Compile Include="ITIL\BusinessLogic\Project\Project.cs" />
+    <Compile Include="ITIL\BusinessLogic\Purchase\PurchaseContract.cs" />
+    <Compile Include="ITIL\BusinessLogic\Purchase\PurchaseOrder.cs" />
+    <Compile Include="ITIL\BusinessLogic\Purchase\PurchaseRequest.cs" />
+    <Compile Include="ITIL\BusinessLogic\Rules\Purchase.cs" />
+    <Compile Include="ITIL\Common\DbHelperSQL.cs" />
+    <Compile Include="ITIL\Common\Enum.cs" />
+    <Compile Include="ITIL\Common\ErrorMessage.cs" />
+    <Compile Include="ITIL\Common\ITILException.cs" />
+    <Compile Include="ITIL\Common\Rule.cs" />
+    <Compile Include="ITIL\DataAccess\Project\Project.cs" />
+    <Compile Include="ITIL\Entity\ProjectBaseInfoSnapshot.cs" />
+    <Compile Include="ITIL\Entity\ProjectSnapshot.cs" />
+    <Compile Include="ITIL\Entity\PrSnapshot.cs" />
+    <Compile Include="ITIL\Entity\SupportInfoSnapshot.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\AgencyManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\BaseEntityInfo.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\BranchManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\CapitalManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\CityManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\CountryManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\IntegralManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\IndustriesManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\MediaAttachmentsManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\MediaIndustryRelationManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\MediaItemManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\MediaItemsHistManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\MediaReporterRelationManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\MediaTypeManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\OperateLogManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\PrivateManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\ProvinceManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\ReportersHistManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\ReporterManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\CounterManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\TableManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\OperateTypeManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\FaceToFaceManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\MettingManager.cs" />
+    <Compile Include="MediaLinq\BusinessLogic\UsersManager.cs" />
+    <Compile Include="MediaLinq\Entity\CityInfo.cs" />
+    <Compile Include="MediaLinq\Entity\HeaderInfo.cs" />
+    <Compile Include="MediaLinq\SqlDataAccess\MediaLinqDataContext.cs">
+      <DependentUpon>MediaLinqDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MediaLinq\SqlDataAccess\MediaLinqDataContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediaLinqDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="MediaLinq\Utilities\Config.cs" />
+    <Compile Include="MediaLinq\Utilities\ConfigManager.cs" />
+    <Compile Include="MediaLinq\Utilities\Global.cs" />
+    <Compile Include="MediaLinq\Utilities\ImageHelper.cs" />
+    <Compile Include="MediaLinq\Utilities\ListToDataSet.cs" />
+    <Compile Include="MediaLinq\Utilities\MessageBox.cs" />
+    <Compile Include="MediaLinq\Utilities\PhotoInfo.cs" />
+    <Compile Include="MediaLinq\Utilities\SaveFIleHelper.cs" />
+    <Compile Include="Media\BusinessLogic\AgencyManager.cs" />
+    <Compile Include="Media\BusinessLogic\ReporterEvaluationManager.cs" />
+    <Compile Include="Media\Common\DbHelperSQL.cs" />
+    <Compile Include="Media\DataAccess\AgencyDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ReporterEvaluationDataProvider.cs" />
+    <Compile Include="Media\Entity\AgencyInfo.cs" />
+    <Compile Include="Media\Entity\DepartmentsInfo.cs" />
+    <Compile Include="Media\Entity\HeaderInfo.cs" />
+    <Compile Include="MediaLinq\Entity\MediaInfos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediaInfos.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Media\Entity\QueryMediaItemInfo.cs" />
+    <Compile Include="Media\Entity\QueryReporterInfo.cs" />
+    <Compile Include="Media\Entity\ReporterEvaluation.cs" />
+    <Compile Include="Media\Utilities\clsConfigOperate.cs" />
+    <Compile Include="Media\Utilities\clsDelete.cs" />
+    <Compile Include="Media\Utilities\clsInsert.cs" />
+    <Compile Include="Media\Utilities\clsSelect.cs" />
+    <Compile Include="Media\Utilities\clsUpdate.cs" />
+    <Compile Include="Media\Utilities\Common.cs" />
+    <Compile Include="Media\Utilities\ConfigManager.cs" />
+    <Compile Include="Media\Utilities\ConnectionProvider.cs" />
+    <Compile Include="Media\Utilities\DataGridOperate\DataGridHelper.cs" />
+    <Compile Include="Media\Utilities\Global.cs" />
+    <Compile Include="Media\Utilities\SQLHelper.cs" />
+    <Compile Include="Media\Utilities\SqlHelperExtension.cs" />
+    <Compile Include="Media\BusinessLogic\CacheService.cs" />
+    <Compile Include="Media\BusinessLogic\Clients.cs" />
+    <Compile Include="Media\BusinessLogic\Common.cs" />
+    <Compile Include="Media\BusinessLogic\ExcelExportManager.cs" />
+    <Compile Include="Media\BusinessLogic\ExcelHandle.cs" />
+    <Compile Include="Media\BusinessLogic\BranchManager.cs" />
+    <Compile Include="Media\BusinessLogic\CapitalManager.cs" />
+    <Compile Include="Media\BusinessLogic\CashloanManager.cs" />
+    <Compile Include="Media\BusinessLogic\CashloanitemManager.cs" />
+    <Compile Include="Media\BusinessLogic\CashpaymentbillManager.cs" />
+    <Compile Include="Media\BusinessLogic\CashpaymentitemManager.cs" />
+    <Compile Include="Media\BusinessLogic\CheckpaymentbillManager.cs" />
+    <Compile Include="Media\BusinessLogic\CheckpaymentitemManager.cs" />
+    <Compile Include="Media\BusinessLogic\CityManager.cs" />
+    <Compile Include="Media\BusinessLogic\ClientCategoryManager.cs" />
+    <Compile Include="Media\BusinessLogic\ClientsManager.cs" />
+    <Compile Include="Media\BusinessLogic\CounterManager.cs" />
+    <Compile Include="Media\BusinessLogic\CountryManager.cs" />
+    <Compile Include="Media\BusinessLogic\DailysManager.cs" />
+    <Compile Include="Media\BusinessLogic\EmailsendManager.cs" />
+    <Compile Include="Media\BusinessLogic\EventsManager.cs" />
+    <Compile Include="Media\BusinessLogic\FacetofaceManager.cs" />
+    <Compile Include="Media\BusinessLogic\IndustriesManager.cs" />
+    <Compile Include="Media\BusinessLogic\IntegralruleManager.cs" />
+    <Compile Include="Media\BusinessLogic\MailmsgManager.cs" />
+    <Compile Include="Media\BusinessLogic\MediaattachmentsManager.cs" />
+    <Compile Include="Media\BusinessLogic\MediaindustryrelationManager.cs" />
+    <Compile Include="Media\BusinessLogic\ReportersManager.cs" />
+    <Compile Include="Media\BusinessLogic\ProductlinesManager.cs" />
+    <Compile Include="Media\BusinessLogic\MediaitemsManager.cs" />
+    <Compile Include="Media\BusinessLogic\MediatypeManager.cs" />
+    <Compile Include="Media\BusinessLogic\MeetingsManager.cs" />
+    <Compile Include="Media\BusinessLogic\OperatelogManager.cs" />
+    <Compile Include="Media\BusinessLogic\PaymentManager.cs" />
+    <Compile Include="Media\BusinessLogic\PaymentbillManager.cs" />
+    <Compile Include="Media\BusinessLogic\PersonfeebillManager.cs" />
+    <Compile Include="Media\BusinessLogic\PersonfeeitemManager.cs" />
+    <Compile Include="Media\BusinessLogic\Postsmanager.cs" />
+    <Compile Include="Media\BusinessLogic\PrivateinfoManager.cs" />
+    <Compile Include="Media\Entity\QueryProductLineInfo.cs" />
+    <Compile Include="Media\BusinessLogic\ProjectbriefManager.cs" />
+    <Compile Include="Media\BusinessLogic\ProjectcashpaymentbillrelationManager.cs" />
+    <Compile Include="Media\BusinessLogic\ProjectcheckpaymentbillrelationManager.cs" />
+    <Compile Include="Media\BusinessLogic\ProjectmembersManager.cs" />
+    <Compile Include="Media\BusinessLogic\ProjectpersonfeebillrelationManager.cs" />
+    <Compile Include="Media\BusinessLogic\ProjectsManager.cs" />
+    <Compile Include="Media\BusinessLogic\ProjectwritingfeebillrelationManager.cs" />
+    <Compile Include="Media\BusinessLogic\ProvinceManager.cs" />
+    <Compile Include="Media\BusinessLogic\PurchasecontractsignedrecManager.cs" />
+    <Compile Include="Media\BusinessLogic\ReporterfavoriteManager.cs" />
+    <Compile Include="Media\BusinessLogic\ShortmsgManager.cs" />
+    <Compile Include="Media\BusinessLogic\ShortmsgsendManager.cs" />
+    <Compile Include="Media\BusinessLogic\WritingfeebillManager.cs" />
+    <Compile Include="Media\BusinessLogic\WritingfeeitemManager.cs" />
+    <Compile Include="Media\BusinessLogic\OperateTypeManager.cs" />
+    <Compile Include="Media\BusinessLogic\PRInterface.cs" />
+    <Compile Include="Media\BusinessLogic\TablesManager.cs" />
+    <Compile Include="Media\BusinessLogic\UsersManager.cs" />
+    <Compile Include="Media\BusinessLogic\WordClassManager.cs" />
+    <Compile Include="Media\Common\Config.cs" />
+    <Compile Include="Media\Common\EXIFextractor.cs" />
+    <Compile Include="Media\Common\ImageHelper.cs" />
+    <Compile Include="Media\Common\MessageBox.cs" />
+    <Compile Include="Media\Common\mySiteMapProvider.cs" />
+    <Compile Include="Media\Common\PhotoInfo.cs" />
+    <Compile Include="Media\Common\translation.cs" />
+    <Compile Include="Media\DataAccess\AttachmentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\BranchDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CapitalDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CashloanbillDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CashloanitemDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CashpaymentbillDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CashpaymentitemDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CheckpaymentbillDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CheckpaymentitemDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CityDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ClientCategoryDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ClientcontentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ClientsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ClientshistDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CounterDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CountryDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CustomercontentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\CustomersDataProvider.cs" />
+    <Compile Include="Media\DataAccess\DailyattachmentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\DailybriefDataProvider.cs" />
+    <Compile Include="Media\DataAccess\DailymediarelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\DailyreporterrelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\DailysDataProvider.cs" />
+    <Compile Include="Media\DataAccess\EmailsendDataProvider.cs" />
+    <Compile Include="Media\DataAccess\EventattachmentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\EventbriefDataProvider.cs" />
+    <Compile Include="Media\DataAccess\EventmediarelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\EventreporterrelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\EventsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\EventsownreportersDataProvider.cs" />
+    <Compile Include="Media\DataAccess\FacetofaceDataProvider.cs" />
+    <Compile Include="Media\DataAccess\IndustriesDataProvider.cs" />
+    <Compile Include="Media\DataAccess\IntegralruleDataProvider.cs" />
+    <Compile Include="Media\DataAccess\MailmsgDataProvider.cs" />
+    <Compile Include="Media\DataAccess\MediaattachmentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\MediaindustryrelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\MediaitemcontentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\MediaitemsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\MediaitemshistDataProvider.cs" />
+    <Compile Include="Media\DataAccess\MediareporterrelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\MediatypeDataProvider.cs" />
+    <Compile Include="Media\DataAccess\MeetingsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\Modeation_checkrecordsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\OperatelogDataProvider.cs" />
+    <Compile Include="Media\DataAccess\OperatetypeDataProvider.cs" />
+    <Compile Include="Media\DataAccess\PaymentDataProvider.cs" />
+    <Compile Include="Media\DataAccess\PaymentbillDataProvider.cs" />
+    <Compile Include="Media\DataAccess\PersonfeebillDataProvider.cs" />
+    <Compile Include="Media\DataAccess\PersonfeeitemDataProvider.cs" />
+    <Compile Include="Media\DataAccess\PostsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\PrivateinfoDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProductlinecontentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProductlinesDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProductlineshistDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProjectbriefDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProjectcashpaymentbillrelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProjectcheckpaymentbillrelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProjectmediarelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProjectmembersDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProjectpersonfeebillrelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProjectreporterrelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProjectsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProjectwritingfeebillrelationDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ProvinceDataProvider.cs" />
+    <Compile Include="Media\DataAccess\PurchasecontractsignedrecDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ReporterattachmentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ReportercontentsDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ReporterfavoriteDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ReportersDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ReportershistDataProvider.cs" />
+    <Compile Include="Media\DataAccess\Search_clickcountDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ShortmsgDataProvider.cs" />
+    <Compile Include="Media\DataAccess\ShortmsgsendDataProvider.cs" />
+    <Compile Include="Media\DataAccess\TablesDataProvider.cs" />
+    <Compile Include="Media\DataAccess\TrustedusersDataProvider.cs" />
+    <Compile Include="Media\DataAccess\WritingfeebillDataProvider.cs" />
+    <Compile Include="Media\DataAccess\WritingfeeitemDataProvider.cs" />
+    <Compile Include="Media\Entity\AttachmentsInfo.cs" />
+    <Compile Include="Media\Entity\BranchInfo.cs" />
+    <Compile Include="Media\Entity\CapitalInfo.cs" />
+    <Compile Include="Media\Entity\CashloanbillInfo.cs" />
+    <Compile Include="Media\Entity\CashloanitemInfo.cs" />
+    <Compile Include="Media\Entity\CashpaymentbillInfo.cs" />
+    <Compile Include="Media\Entity\CashpaymentitemInfo.cs" />
+    <Compile Include="Media\Entity\CheckpaymentbillInfo.cs" />
+    <Compile Include="Media\Entity\CheckpaymentitemInfo.cs" />
+    <Compile Include="Media\Entity\CityInfo.cs" />
+    <Compile Include="Media\Entity\ClientCategoryInfo.cs" />
+    <Compile Include="Media\Entity\ClientcontentsInfo.cs" />
+    <Compile Include="Media\Entity\ClientsInfo.cs" />
+    <Compile Include="Media\Entity\ClientshistInfo.cs" />
+    <Compile Include="Media\Entity\CounterInfo.cs" />
+    <Compile Include="Media\Entity\CountryInfo.cs" />
+    <Compile Include="Media\Entity\CustomercontentsInfo.cs" />
+    <Compile Include="Media\Entity\CustomersInfo.cs" />
+    <Compile Include="Media\Entity\DailyattachmentsInfo.cs" />
+    <Compile Include="Media\Entity\DailybriefInfo.cs" />
+    <Compile Include="Media\Entity\DailymediarelationInfo.cs" />
+    <Compile Include="Media\Entity\DailyreporterrelationInfo.cs" />
+    <Compile Include="Media\Entity\DailysInfo.cs" />
+    <Compile Include="Media\Entity\EmailsendInfo.cs" />
+    <Compile Include="Media\Entity\EventattachmentsInfo.cs" />
+    <Compile Include="Media\Entity\EventbriefInfo.cs" />
+    <Compile Include="Media\Entity\EventmediarelationInfo.cs" />
+    <Compile Include="Media\Entity\EventreporterrelationInfo.cs" />
+    <Compile Include="Media\Entity\EventsInfo.cs" />
+    <Compile Include="Media\Entity\EventsownreportersInfo.cs" />
+    <Compile Include="Media\Entity\FacetofaceInfo.cs" />
+    <Compile Include="Media\Entity\IndustriesInfo.cs" />
+    <Compile Include="Media\Entity\IntegralruleInfo.cs" />
+    <Compile Include="Media\Entity\MailmsgInfo.cs" />
+    <Compile Include="Media\Entity\MediaattachmentsInfo.cs" />
+    <Compile Include="Media\Entity\MediaindustryrelationInfo.cs" />
+    <Compile Include="Media\Entity\MediaitemcontentsInfo.cs" />
+    <Compile Include="Media\Entity\MediaitemsInfo.cs" />
+    <Compile Include="Media\Entity\MediaitemshistInfo.cs" />
+    <Compile Include="Media\Entity\MediareporterrelationInfo.cs" />
+    <Compile Include="Media\Entity\MediatypeInfo.cs" />
+    <Compile Include="Media\Entity\MeetingsInfo.cs" />
+    <Compile Include="Media\Entity\Modeation_checkrecordsInfo.cs" />
+    <Compile Include="Media\Entity\OperatelogInfo.cs" />
+    <Compile Include="Media\Entity\OperatetypeInfo.cs" />
+    <Compile Include="Media\Entity\PaymentInfo.cs" />
+    <Compile Include="Media\Entity\PaymentbillInfo.cs" />
+    <Compile Include="Media\Entity\PersonfeebillInfo.cs" />
+    <Compile Include="Media\Entity\PersonfeeitemInfo.cs" />
+    <Compile Include="Media\Entity\PostsInfo.cs" />
+    <Compile Include="Media\Entity\Privateinfo.cs" />
+    <Compile Include="Media\Entity\ProductlinecontentsInfo.cs" />
+    <Compile Include="Media\Entity\ProductlinesInfo.cs" />
+    <Compile Include="Media\Entity\ProductlineshistInfo.cs" />
+    <Compile Include="Media\Entity\ProjectbriefInfo.cs" />
+    <Compile Include="Media\Entity\ProjectcashpaymentbillrelationInfo.cs" />
+    <Compile Include="Media\Entity\ProjectcheckpaymentbillrelationInfo.cs" />
+    <Compile Include="Media\Entity\ProjectmediarelationInfo.cs" />
+    <Compile Include="Media\Entity\ProjectmembersInfo.cs" />
+    <Compile Include="Media\Entity\ProjectpersonfeebillrelationInfo.cs" />
+    <Compile Include="Media\Entity\ProjectreporterrelationInfo.cs" />
+    <Compile Include="Media\Entity\ProjectsInfo.cs" />
+    <Compile Include="Media\Entity\ProjectwritingfeebillrelationInfo.cs" />
+    <Compile Include="Media\Entity\ProvinceInfo.cs" />
+    <Compile Include="Media\Entity\PurchasecontractsignedrecInfo.cs" />
+    <Compile Include="Media\Entity\ReporterattachmentsInfo.cs" />
+    <Compile Include="Media\Entity\ReportercontentsInfo.cs" />
+    <Compile Include="Media\Entity\ReporterfavoriteInfo.cs" />
+    <Compile Include="Media\Entity\ReportersInfo.cs" />
+    <Compile Include="Media\Entity\ReportershistInfo.cs" />
+    <Compile Include="Media\Entity\Search_clickcountInfo.cs" />
+    <Compile Include="Media\Entity\ShortmsgInfo.cs" />
+    <Compile Include="Media\Entity\ShortmsgsendInfo.cs" />
+    <Compile Include="Media\Entity\TablesInfo.cs" />
+    <Compile Include="Media\Entity\TrustedusersInfo.cs" />
+    <Compile Include="Media\Entity\WritingfeebillInfo.cs" />
+    <Compile Include="Media\Entity\WritingfeeitemInfo.cs" />
+    <Compile Include="Media\Utilities\WordClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Public\Entity\AuditLogsInfo.cs" />
+    <Compile Include="Public\Entity\AuditRulesInfo.cs" />
+    <Compile Include="Public\Entity\AuditHistoryInfo.cs" />
+    <Compile Include="Public\Utilities\CBO.cs" />
+    <Compile Include="Purchase\BusinessLogic\BaiduManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\BlackDetailManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\BlackListManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\CostRecordsManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\ESPAndSupplySuppliersRelationManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\FeedBackManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\GeneralPageManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\MediaPREditHisManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\OrderMsgManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\OtherMediumForOrderManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\OtherMediumInProductsDetailsManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\OtherMediumInProductsManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\PRAuthorizationManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\PrintLogManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\ProductManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\RiskConsultationManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\ScoreContentManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\ScoreManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\ScoreRecordManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\SendMailHelper.cs" />
+    <Compile Include="Purchase\BusinessLogic\SerializeFactory.cs" />
+    <Compile Include="Purchase\BusinessLogic\WebServiceCaller.cs" />
+    <Compile Include="Purchase\BusinessLogic\SharedDataHelper.cs" />
+    <Compile Include="Purchase\BusinessLogic\AuditBackUpManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\AuditLogManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\FilialeAuditBackUpManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\GeneralInfoManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\ImageManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\LogManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\MediaOrderManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\MessageManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\OperationAuditManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\OperationAuditLogManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\OperationAuditManageManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\OrderInfoManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\PaymentPeriodManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\PeriodRecipientManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\PolicyFlowManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\ProposedSupplierManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\RecipientManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\RecipientLogManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\SupplierLogManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\SupplierRecommendManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\SupplierSendManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\SupplierManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\SupplierShareManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\TypeManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\DataPermissionManager.cs" />
+    <Compile Include="ITIL\BusinessLogic\Purchase\申请单业务设置.cs" />
+    <Compile Include="ConfigCommon\CBO.cs" />
+    <Compile Include="Purchase\BusinessLogic\ProjectRelationReporterPrivateManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\ManuscriptTypeManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\AdvertisementForOrderManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\AdvertisementDetailsManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\AdvertisementManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\AdvertisementTypeManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\ESPAndSupplyTypeRelationManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\sepArticleManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\TypeRecommendManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\UserPointManager.cs" />
+    <Compile Include="Purchase\BusinessLogic\VoteManager.cs" />
+    <Compile Include="Purchase\Common\Common.cs" />
+    <Compile Include="Purchase\Common\Config.cs" />
+    <Compile Include="Purchase\Common\DbHelperSQL.cs" />
+    <Compile Include="Purchase\Common\FileHelper.cs" />
+    <Compile Include="Purchase\Common\State.cs" />
+    <Compile Include="Purchase\Controls\PRButtons.cs" />
+    <Compile Include="Purchase\DataAccess\BaiduDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\BlackDetailDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\BlackListDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\CostRecordsProvider.cs" />
+    <Compile Include="Purchase\DataAccess\ESPAndSupplySuppliersRelationProvider.cs" />
+    <Compile Include="Purchase\DataAccess\ESPAndSupplyTypeRelationProvider.cs" />
+    <Compile Include="Purchase\DataAccess\FeedBackProvider.cs" />
+    <Compile Include="Purchase\DataAccess\OrderMsgDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\PRAuthorizationProvider.cs" />
+    <Compile Include="Purchase\DataAccess\RiskConsultationDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\sepArticleDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\SupplierLogDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\SupplierRecommendProvider.cs" />
+    <Compile Include="Purchase\DataAccess\SupplierShareProvider.cs" />
+    <Compile Include="Purchase\DataAccess\TypeRecommendProvider.cs" />
+    <Compile Include="Purchase\Entity\BaiduInfo.cs" />
+    <Compile Include="Purchase\Entity\CostRecordsInfo.cs" />
+    <Compile Include="Purchase\Entity\ESPAndSupplySuppliersRelation.cs" />
+    <Compile Include="Purchase\Entity\ESPAndSupplyTypeRelationInfo.cs" />
+    <Compile Include="Purchase\Entity\FeedBackInfo.cs" />
+    <Compile Include="Purchase\Entity\OrderMsg.cs" />
+    <Compile Include="HumanResource\Entity\PositionBaseInfo.cs" />
+    <Compile Include="HumanResource\Entity\PositionLevelsInfo.cs" />
+    <Compile Include="HumanResource\Entity\PositionLogInfo.cs" />
+    <Compile Include="Purchase\Entity\PRAuthorizationInfo.cs" />
+    <Compile Include="Purchase\Entity\RiskConsultationInfo.cs" />
+    <Compile Include="Purchase\Entity\SupplierLogInfo.cs" />
+    <Compile Include="Purchase\Entity\SupplierRecommendInfo.cs" />
+    <Compile Include="Purchase\Entity\SupplierShareInfo.cs" />
+    <Compile Include="Purchase\Entity\TypeRecommendInfo.cs" />
+    <Compile Include="Supplier\BusinessLogic\News_AricleVideoesManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\News_ArticlesSupplierUsersManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierMessageCanViewDetailsManager.cs" />
+    <Compile Include="Supplier\Common\VideoTest.cs" />
+    <Compile Include="Supplier\DataAccess\News_AricleVideoesProvider.cs" />
+    <Compile Include="Supplier\DataAccess\News_AriclesSupplierUsersProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierMessageCanViewDetailsDataProvider.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierProtocolTypeInfo.cs" />
+    <Compile Include="Purchase\Entity\sepArticleInfo.cs" />
+    <Compile Include="Supplier\BusinessLogic\News_AnswerManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\News_ArticlesCommentManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\News_ArticlesManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\News_ArticleTypesManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\News_LogsManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\News_QuestionManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\News_ResolutionManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_EnquiryListManage.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_EnquiryTemplateManage.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_FieldBallRoomManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_FieldImgManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierFieldManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierMessageCanViewManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierprotocolTypeManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierSubsidiaryUsersManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_VendeeDepartmentTypeRelationManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_VendeeMessageCanViewManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_VendeeTypeRelationManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_VendeeManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\V_VendeeGetMessagesManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_AdviceReturnManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierActiveEmailSendLogManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_ChangDiSupplierRemarkManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_GroupsManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_GroupAndSupplierRelationManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierFieldShunyaUserAddedManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_FieldImgShunyaUserAddedManager.cs" />
+    <Compile Include="Supplier\Common\news_common.cs" />
+    <Compile Include="Supplier\Common\news_Status.cs" />
+    <Compile Include="Supplier\DataAccess\News_AnswerProvider.cs" />
+    <Compile Include="Supplier\DataAccess\News_ArticlesCommentProvider.cs" />
+    <Compile Include="Supplier\DataAccess\News_ArticlesProvider.cs" />
+    <Compile Include="Supplier\DataAccess\News_ArticleTypesProvider.cs" />
+    <Compile Include="Supplier\DataAccess\News_LogsProvider.cs" />
+    <Compile Include="Supplier\DataAccess\News_QuestionProvider.cs" />
+    <Compile Include="Supplier\DataAccess\News_ResolutionProvider.cs" />
+    <Compile Include="Supplier\Entity\News_Answer.cs" />
+    <Compile Include="Supplier\Entity\News_Articles.cs" />
+    <Compile Include="Supplier\Entity\News_ArticlesComment.cs" />
+    <Compile Include="Supplier\Entity\News_ArticleTypes.cs" />
+    <Compile Include="Supplier\Entity\News_Logs.cs" />
+    <Compile Include="Supplier\Entity\News_Question.cs" />
+    <Compile Include="Supplier\Entity\News_Resolution.cs" />
+    <Compile Include="Supplier\DataAccess\SC_AgencySupplierRegProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_EnquiryListDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_EnquiryTemplateDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_FieldBallRoomDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_FieldImgDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_ReturnMessageWillReadDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierFieldDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierMessageAuditedLogDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierMessageCanViewDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierprotocolTypeProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierSubsidiaryUsersProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_VendeeDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_VendeeDepartmentTypeRelationDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_VendeeMessageCanViewDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_VendeeTypeRelationDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\V_VendeeGetMessagesDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_AdviceReturnDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierActiveEmailSendLogDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_ChangDiSupplierRemarkDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_GroupsDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_GroupAndSupplierRelationDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierFieldShunyaUserAddedDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_FieldImgShunyaUserAddedDataProvider.cs" />
+    <Compile Include="Supplier\Entity\SC_EnquiryList.cs" />
+    <Compile Include="Supplier\Entity\SC_EnquiryTemplate.cs" />
+    <Compile Include="Supplier\Entity\SC_AgencySupplierReg.cs" />
+    <Compile Include="Supplier\Entity\SC_FieldBallRoom.cs" />
+    <Compile Include="Supplier\Entity\SC_FieldImg.cs" />
+    <Compile Include="Supplier\Entity\SC_ReturnMessageWillRead.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierField.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierMessageAuditedLog.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierMessageCanView.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierSubsidiaryUsers.cs" />
+    <Compile Include="Supplier\Entity\SC_VendeeDepartmentTypeRelation.cs" />
+    <Compile Include="Supplier\BusinessLogic\FeedBackManager.cs" />
+    <Compile Include="Supplier\DataAccess\FeedBackDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\MediaPREditHisDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\OtherMediumForOrderDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\OtherMediumInProductsDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\OtherMediumInProductsDetailsDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\PrintLogDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\ProductDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\ProjectCodeChangedLogProvider.cs" />
+    <Compile Include="Purchase\DataAccess\ScoreContentDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\ScoreRecordDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\SendMailHelper.cs" />
+    <Compile Include="Purchase\DataAccess\SharedDataHelper.cs" />
+    <Compile Include="Purchase\DataAccess\AuditBackUpDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\AuditLogDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\FilialeAuditBackUpDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\GeneralInfoDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\ImageDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\LogDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\MediaOrderDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\MessageDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\OperationAuditDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\OperationAuditLogDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\OperationAuditManageDataHelper.cs" />
+    <Compile Include="Purchase\DataAccess\OrderInfoDataHelper.cs" />
+    <Compile Include="Purchase\DataAccess\PaymentPeriodDataHelper.cs" />
+    <Compile Include="Purchase\DataAccess\PeriodRecipientDataHelper.cs" />
+    <Compile Include="Purchase\DataAccess\PolicyFlowDataHelper.cs" />
+    <Compile Include="Purchase\DataAccess\ProposedSupplierDataHelper.cs" />
+    <Compile Include="Purchase\DataAccess\RecipientDataHelper.cs" />
+    <Compile Include="Purchase\DataAccess\RecipientLogDataHelper.cs" />
+    <Compile Include="Purchase\DataAccess\SocreProvider.cs" />
+    <Compile Include="Purchase\DataAccess\SupplierSendDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\SupplierDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\TypeDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\DataPermissionProvider.cs" />
+    <Compile Include="Purchase\DataAccess\ProjectRelationReporterPrivateDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\ManuscriptTypeDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\AdvertisementForOrderDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\AdvertisementDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\AdvertisementDetailsDataProvider.cs" />
+    <Compile Include="Purchase\DataAccess\AdvertisementTypeDataProvider.cs" />
+    <Compile Include="Purchase\Entity\AuditBackUpInfo.cs" />
+    <Compile Include="Purchase\Entity\AuditLogInfo.cs" />
+    <Compile Include="Finance\Entity\CashPNLinkInfo.cs" />
+    <Compile Include="Purchase\Entity\BlackDetailInfo.cs" />
+    <Compile Include="Purchase\Entity\BlackListInfo.cs" />
+    <Compile Include="Supplier\Entity\FeedBackInfo.cs" />
+    <Compile Include="Purchase\Entity\FilialeAuditBackUpInfo.cs" />
+    <Compile Include="Purchase\Entity\GeneralInfo.cs" />
+    <Compile Include="Purchase\Entity\ImageInfo.cs" />
+    <Compile Include="Purchase\Entity\LogInfo.cs" />
+    <Compile Include="Purchase\Entity\MediaOrderInfo.cs" />
+    <Compile Include="Purchase\Entity\MediaOrderOperationInfo.cs" />
+    <Compile Include="Purchase\Entity\MediaPREditHisInfo.cs" />
+    <Compile Include="Purchase\Entity\MessageInfo.cs" />
+    <Compile Include="Purchase\Entity\OperationAuditInfo.cs" />
+    <Compile Include="Purchase\Entity\OperationAuditLogInfo.cs" />
+    <Compile Include="Purchase\Entity\OrderInfo.cs" />
+    <Compile Include="Purchase\Entity\OtherMediumForOrderInfo.cs" />
+    <Compile Include="Purchase\Entity\OtherMediumInProductInfo.cs" />
+    <Compile Include="Purchase\Entity\OtherMediumInProductDetailsInfo.cs" />
+    <Compile Include="Purchase\Entity\PaymentPeriodInfo.cs" />
+    <Compile Include="Purchase\Entity\PeriodRecipientInfo.cs" />
+    <Compile Include="Purchase\Entity\PolicyFlowInfo.cs" />
+    <Compile Include="Purchase\Entity\PrintLogInfo.cs" />
+    <Compile Include="Purchase\Entity\ProductInfo.cs" />
+    <Compile Include="Purchase\Entity\ProjectCodeChangedInfo.cs" />
+    <Compile Include="Purchase\Entity\ProposedSupplierInfo.cs" />
+    <Compile Include="Purchase\Entity\RecipientInfo.cs" />
+    <Compile Include="Purchase\Entity\RecipientLogInfo.cs" />
+    <Compile Include="Purchase\Entity\ScoreContentInfo.cs" />
+    <Compile Include="Purchase\Entity\ScoreInfo.cs" />
+    <Compile Include="Purchase\Entity\ScoreRecordInfo.cs" />
+    <Compile Include="Purchase\Entity\SharedDataHelper.cs" />
+    <Compile Include="Purchase\Entity\SupplierSendInfo.cs" />
+    <Compile Include="Purchase\Entity\SupplierInfo.cs" />
+    <Compile Include="Purchase\Entity\TypeInfo.cs" />
+    <Compile Include="Purchase\Entity\DataPermissionInfo.cs" />
+    <Compile Include="Purchase\Entity\WorkItemsExtend.cs" />
+    <Compile Include="Purchase\Entity\ProjectRelationReporterPrivateInfo.cs" />
+    <Compile Include="Purchase\Entity\ManuscriptTypeInfo.cs" />
+    <Compile Include="Purchase\Entity\AdvertisementInfo.cs" />
+    <Compile Include="Purchase\Entity\AdvertisementDetailsInfo.cs" />
+    <Compile Include="Purchase\Entity\AdvertisementForOrder.cs" />
+    <Compile Include="Purchase\Entity\AdvertisementTypeInfo.cs" />
+    <Compile Include="Purchase\WebPage\EditPageForPR.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\WebPage\ViewPageForPR.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Salary\Entity\SalaryInfo.cs" />
+    <Compile Include="Salary\SqlDataAccess\SalaryDataContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalaryDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Salary\Utilities\CBO.cs" />
+    <Compile Include="Salary\Utilities\Common.cs" />
+    <Compile Include="Salary\Utilities\DbHelperSQL.cs" />
+    <Compile Include="Salary\Utilities\DESEncrypt.cs" />
+    <Compile Include="Salary\Utilities\Dynamic.cs" />
+    <Compile Include="Salary\Utilities\ExcelHandle.cs" />
+    <Compile Include="Salary\Utilities\JSONHelper.cs" />
+    <Compile Include="Salary\Utilities\MonthCol.cs" />
+    <Compile Include="Salary\Utilities\NullValue.cs" />
+    <Compile Include="Salary\Utilities\PagingClass.cs" />
+    <Compile Include="Salary\Utilities\RequestName.cs" />
+    <Compile Include="Salary\Utilities\SendMail.cs" />
+    <Compile Include="Salary\Utilities\SendMailHelper.cs" />
+    <Compile Include="Salary\Utilities\StringHelper.cs" />
+    <Compile Include="Salary\Utilities\UpdateResult.cs" />
+    <Compile Include="Salary\Utilities\ZipFileHelper.cs" />
+    <Compile Include="ShunYaMyPhoto\BusinessLogic\AdminBLL.cs" />
+    <Compile Include="ShunYaMyPhoto\BusinessLogic\SupportLogBLL.cs" />
+    <Compile Include="ShunYaMyPhoto\BusinessLogic\PhotoBLL.cs" />
+    <Compile Include="ShunYaMyPhoto\BusinessLogic\LotteryBLL.cs" />
+    <Compile Include="ShunYaMyPhoto\BusinessLogic\LotteryUserBLL.cs" />
+    <Compile Include="ShunYaMyPhoto\BusinessLogic\SupporterForSelectedLogBLL.cs" />
+    <Compile Include="ShunYaMyPhoto\DataAccess\AdminSQLProvider.cs" />
+    <Compile Include="ShunYaMyPhoto\DataAccess\SQLHelper.cs" />
+    <Compile Include="ShunYaMyPhoto\DataAccess\SupporterSQLProvider.cs" />
+    <Compile Include="ShunYaMyPhoto\DataAccess\PhotoSQLProvider.cs" />
+    <Compile Include="ShunYaMyPhoto\DataAccess\LotterySQLProvider.cs" />
+    <Compile Include="ShunYaMyPhoto\DataAccess\LotteryUserSQLProvider.cs" />
+    <Compile Include="ShunYaMyPhoto\DataAccess\SupporterForSelectedSQLProvider.cs" />
+    <Compile Include="ShunYaMyPhoto\Entity\AdminInfo.cs" />
+    <Compile Include="ShunYaMyPhoto\Entity\SupporterInfo.cs" />
+    <Compile Include="ShunYaMyPhoto\Entity\PhotoInfo.cs" />
+    <Compile Include="ShunYaMyPhoto\Entity\LotteryInfo.cs" />
+    <Compile Include="ShunYaMyPhoto\Entity\LotteryUserInfo.cs" />
+    <Compile Include="ShunYaMyPhoto\Entity\SupporterForSelectedInfo.cs" />
+    <Compile Include="ShunYaMyPhoto\Utility\CBO.cs" />
+    <Compile Include="ShunYaMyPhoto\Utility\SendMailHelper.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_AdviceManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_AreaManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_CityManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_CountryManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_dbTableManage.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_IndustriesManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_LinkManManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_LogManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_NoCheckSupplierScoreManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_OperationAreaManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_PrincipalManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_ProductBatchManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_ProvinceManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_ScaleManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierEvaluationManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierHistoryManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierProductManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierProductPhotoManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_TypeManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\XML_LinkTableManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\XML_VersionClassManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\XML_VersionListManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\XML_VersionLogManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierMessagesManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_DangerWordManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_SupplierMessageReturnManager.cs" />
+    <Compile Include="Supplier\BusinessLogic\SC_PrivateMessagesManager.cs" />
+    <Compile Include="Supplier\Common\Common.cs" />
+    <Compile Include="ConfigCommon\Config.cs" />
+    <Compile Include="Supplier\Common\Config.cs" />
+    <Compile Include="Supplier\Common\DbHelperSQL.cs" />
+    <Compile Include="Supplier\Common\ImageHelper.cs" />
+    <Compile Include="Supplier\Common\PhotoInfo.cs" />
+    <Compile Include="Supplier\Common\State.cs" />
+    <Compile Include="Supplier\DataAccess\SC_AdviceDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_AreaDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_CityDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_CountryDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_IndustriesDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_LinkManDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_LogDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_NoCheckSupplierScoreDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_OperationAreaDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_PrincipalDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_ProductBatchDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_PropertyDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_ProvinceDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_QuestionAnswerDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_ScaleDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierEvaluationDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierFileDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierHistoryDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierInfomationDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierPhotoDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierProductDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierProductPhotoDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierScoreDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierTypeDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_TypeDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\XML_LinkTableDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\XML_VersionClassDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\XML_VersionListDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\XML_VersionLogDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierMessagesDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_DangerWordDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_SupplierMessageReturnDataProvider.cs" />
+    <Compile Include="Supplier\DataAccess\SC_PrivateMessagesDataProvider.cs" />
+    <Compile Include="Supplier\Entity\Filiale.cs" />
+    <Compile Include="Supplier\Entity\Map.cs" />
+    <Compile Include="Supplier\Entity\SC_Advice.cs" />
+    <Compile Include="Supplier\Entity\SC_Area.cs" />
+    <Compile Include="Supplier\Entity\SC_City.cs" />
+    <Compile Include="Supplier\Entity\SC_Country.cs" />
+    <Compile Include="Supplier\Entity\SC_Industries.cs" />
+    <Compile Include="Supplier\Entity\SC_LinkMan.cs" />
+    <Compile Include="Supplier\Entity\SC_Log.cs" />
+    <Compile Include="Supplier\Entity\SC_NoCheckSupplierScore.cs" />
+    <Compile Include="Supplier\Entity\SC_OperationArea.cs" />
+    <Compile Include="Supplier\Entity\SC_Principal.cs" />
+    <Compile Include="Supplier\Entity\SC_ProductBatch.cs" />
+    <Compile Include="Supplier\Entity\SC_Property.cs" />
+    <Compile Include="Supplier\Entity\SC_Province.cs" />
+    <Compile Include="Supplier\Entity\SC_QuestionAnswer.cs" />
+    <Compile Include="Supplier\Entity\SC_Scale.cs" />
+    <Compile Include="Supplier\Entity\SC_Supplier.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierAnnex.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierEvaluation.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierFile.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierHistory.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierInfomation.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierPhoto.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierProduct.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierProductPhoto.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierScore.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierType.cs" />
+    <Compile Include="Supplier\Entity\SC_Type.cs" />
+    <Compile Include="Supplier\Entity\SC_VendeeMessageCanView.cs" />
+    <Compile Include="Supplier\Entity\SC_VendeeTypeRelation.cs" />
+    <Compile Include="Supplier\Entity\V_VendeeGetMessages.cs" />
+    <Compile Include="Supplier\Entity\XML_LinkTable.cs" />
+    <Compile Include="Supplier\Entity\XML_VersionClass.cs" />
+    <Compile Include="Supplier\Entity\XML_VersionList.cs" />
+    <Compile Include="Supplier\Entity\XML_VersionLog.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierMessages.cs" />
+    <Compile Include="Supplier\Entity\SC_DangerWord.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierMessageReturn.cs" />
+    <Compile Include="Supplier\Entity\SC_PrivateMessages.cs" />
+    <Compile Include="Supplier\Entity\SC_Vendee.cs" />
+    <Compile Include="Supplier\Entity\SC_AdviceReturn.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierActiveEmailSendLog.cs" />
+    <Compile Include="Supplier\Entity\SC_ChangDiSupplierRemark.cs" />
+    <Compile Include="Supplier\Entity\SC_Groups.cs" />
+    <Compile Include="Supplier\Entity\SC_GroupAndSupplierRelation.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierFieldShunyaUserAdded.cs" />
+    <Compile Include="Supplier\Entity\SC_FieldImgShunyaUserAdded.cs" />
+    <Compile Include="Supplier\Entity\News_AricleVideoes.cs" />
+    <Compile Include="Supplier\Entity\News_ArticlesSupplierUsers.cs" />
+    <Compile Include="Supplier\Entity\SC_SupplierMessageCanViewDetails.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Salary\SqlDataAccess\SalaryDataContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SalaryDataContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supplier\app.config" />
+    <None Include="MediaLinq\SqlDataAccess\MediaLinqDataContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MediaLinqDataContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Salary\SqlDataAccess\SalaryDataContext.dbml.layout">
+      <DependentUpon>SalaryDataContext.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Finance\SqlDataAccess\WorkFlow.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>WorkFlow.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MediaLinq\SqlDataAccess\MediaLinqDataContext.dbml.layout">
+      <DependentUpon>MediaLinqDataContext.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Finance\SqlDataAccess\WorkFlow.dbml.layout">
+      <DependentUpon>WorkFlow.dbml</DependentUpon>
+    </None>
+    <EntityDeploy Include="MediaLinq\Entity\MediaInfos.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MediaInfos.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Public\BusinessLogic\" />
+    <Folder Include="Public\Common\" />
+    <Folder Include="Public\SqlDataAccess\" />
+    <Folder Include="Salary\DataAccess\" />
+    <Folder Include="SupplierChain\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ESP.Core\ESP.Core\ESP.Core.csproj">
+      <Project>{5af18840-638b-4af2-90c2-c66625cc88e4}</Project>
+      <Name>ESP.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

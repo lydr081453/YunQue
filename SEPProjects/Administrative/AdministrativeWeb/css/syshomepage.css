@@ -1,0 +1,151 @@
+body {
+	margin:0px auto;
+	font-size:12px;
+	color:#000;
+}
+img {
+	border:none;
+}
+select {
+	font-size:12px;
+}
+.header_left {
+	background-image:url(../../images/syshomepage/headerbg_left.jpg);
+	background-repeat:repeat-y;
+	height:65px;
+	background-position: left;
+}
+.header_right {
+	background-image:url(../../images/syshomepage/headerbg_right.jpg);
+	background-repeat:repeat-y;
+	height:65px;
+	background-position: right;
+	font-size:12px;
+}
+.header_right a {
+	font-size:12px;
+    color:#000;
+    text-decoration:none;
+}
+.header_right a:hover {
+	font-size:12px;
+    color:#000;
+    text-decoration:underline;
+}
+.header_menuLeft {
+	height: 35px;
+	background-image: url(../../images/syshomepage/bg2.jpg);
+	background-repeat: no-repeat;
+	color:#fff;
+	padding-left:20px;
+	font-size:12px;
+}
+.header_menuRight {
+	height: 35px;
+	background-image:url(../../images/syshomepage/090407_08.jpg);
+	background-repeat:repeat-x;
+	color:#fff;
+	padding-right:20px;
+	font-size:12px;
+}
+.header_menuRight a{
+	color:#fff;
+	text-decoration:none;
+}
+.header_menuRight a:hover{
+	color:#fff;
+	text-decoration:underline;
+}
+.tree {
+	background-image: url(../../images/syshomepage/treebg.jpg);
+	width: 195px;
+	padding: 20px 0 0 20px;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.tree .selected {
+	background-image: url(../../images/syshomepage/treebg2.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+.main {
+	padding:15px 20px 0 10px;
+	background-image: url(../../images/syshomepage/mainbg.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.table_help {
+	border: 1px solid #c1c1c1;
+	height: 30px;
+	background-image: url(../../images/syshomepage/090407_12-19.jpg);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	background-color:#FFFFFF;
+}
+.table_help td {
+	padding:0 0px 0 10px;
+}
+.border {
+	border-top: 1px solid #d6d6d6;
+	background-image: url(../../images/syshomepage/border_1.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.border .td {
+	background-image: url(../../images/syshomepage/border_1.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-right: 1px;
+	padding-left: 1px;
+}
+.table_list {
+	border: 1px solid #c1c1c1;
+	background-image: url(../../images/syshomepage/090407_12-33.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	
+	background-color:#FFFFFF;
+	padding:5px;
+}
+.table_list .nav {
+	background-image: url(../../images/syshomepage/listbg.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color:#FFFFFF;
+}
+.table_list .nav .midline_1 {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d6d6d6;
+}
+.table_list .nav .midline {
+	background-image:url(../../images/syshomepage/090407_43.jpg);
+	background-repeat:no-repeat;
+	background-position:left;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d6d6d6;
+}
+.table_list .nav td {
+	height:28px;
+	text-align:center;
+}
+.table_list_2 {
+	border: 1px solid #c1c1c1;
+	background-image: url(../../images/syshomepage/090407_12-33.jpg);
+	background-repeat: repeat-x;
+	background-position: top;
+	margin-top:10px;
+	background-color:#FFFFFF;
+}
+
+.input_name {
+	width:100px;
+	height:15px;
+	font-size:12px;
+}
+.input_Remarks {
+	width:400px;
+	height:15px;
+	font-size:12px;
+}

@@ -1,0 +1,218 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="MasterPage" Codebehind="MasterPage.master.cs" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>无标题页</title>
+    <meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+    <meta content="C#" name="CODE_LANGUAGE">
+    <meta content="JavaScript" name="vs_defaultClientScript">
+    <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+<link rel="stylesheet" href="/public/css/dialog.css" type="text/css" />
+    <script type="text/javascript" src="/public/js/syscomm.js"></script>
+    
+    <script type="text/javascript" src="/public/highslide/highslide-with-html.js"></script>
+<link rel="stylesheet" href="/public/css/jquery.tabs.css" type="text/css" media="print, projection, screen" />
+
+    <script type="text/javascript">
+        hs.graphicsDir = 'public/highslide/graphics/';
+        hs.outlineType = 'rounded-white';
+        hs.outlineWhileAnimating = true;
+    </script>
+
+    <style type="text/css">
+        .highslide-html
+        {
+            background-color: white;
+        }
+        .highslide-html-blur
+        {
+        }
+        .highslide-html-content
+        {
+            position: absolute;
+            display: none;
+        }
+        .highslide-loading
+        {
+            display: block;
+            color: black;
+            font-size: 8pt;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 2px;
+            border: 1px solid black;
+            background-color: white;
+            padding-left: 22px;
+            background-image: url(/public/highslide/graphics/loader.white.gif);
+            background-repeat: no-repeat;
+            background-position: 3px 1px;
+        }
+        a.highslide-credits, a.highslide-credits i
+        {
+            padding: 2px;
+            color: silver;
+            text-decoration: none;
+            font-size: 10px;
+        }
+        a.highslide-credits:hover, a.highslide-credits:hover i
+        {
+            color: white;
+            background-color: gray;
+        }
+        /* Styles for the popup */.highslide-wrapper
+        {
+            background-color: white;
+        }
+        .highslide-wrapper .highslide-html-content
+        {
+            width: 400px;
+            padding: 5px;
+        }
+        .highslide-wrapper .highslide-header div
+        {
+        }
+        .highslide-wrapper .highslide-header ul
+        {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+        }
+        .highslide-wrapper .highslide-header ul li
+        {
+            display: inline;
+            padding-left: 1em;
+        }
+        .highslide-wrapper .highslide-header ul li.highslide-previous, .highslide-wrapper .highslide-header ul li.highslide-next
+        {
+            display: none;
+        }
+        .highslide-wrapper .highslide-header a
+        {
+            font-weight: bold;
+            color: gray;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .highslide-wrapper .highslide-header a:hover
+        {
+            color: black;
+        }
+        .highslide-wrapper .highslide-header .highslide-move a
+        {
+            cursor: move;
+        }
+        .highslide-wrapper .highslide-footer
+        {
+            height: 11px;
+        }
+        .highslide-wrapper .highslide-footer .highslide-resize
+        {
+            float: right;
+            height: 11px;
+            width: 11px;
+            background: url(/public/highslide/graphics/resize.gif);
+        }
+        .highslide-wrapper .highslide-body
+        {
+        }
+        .highslide-move
+        {
+            cursor: move;
+        }
+        .highslide-resize
+        {
+            cursor: nw-resize;
+        }
+        /* These must be the last of the Highslide rules */.highslide-display-block
+        {
+            display: block;
+        }
+        .highslide-display-none
+        {
+            display: none;
+        }
+    </style>
+
+     <style>
+        #pageloading
+        {
+             position: fixed !important;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background: white url('/images/loading.gif') no-repeat center;
+            width: 100%;
+            height: 100%;
+            z-index: 99999;
+            opacity:0.4;
+        }
+    </style>
+    <script type="text/javascript">
+        function showLoading() {
+            $('#pageloading').show();
+        }
+        function hideLoading() {
+            $('#pageloading').hide();
+        }
+    </script>
+</head>
+<body  onload="javascript:window.location.href='#top_A';">
+     <div id="pageloading" style="display:none;"></div>
+    <form id="frmMain" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+    <table style="width: 98%">
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="padding: 0px">
+                        <tr>
+                            <td align="left" class="tableunderline">
+                                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Bold="True">
+                                </asp:SiteMapPath>
+                            </td>
+                            <td width="82" align="right" valign="bottom" class="tableunderline">
+                                <div>
+                                    <a href="#" onclick="return hs.htmlExpand(this, { contentId: 'highslide-html' } )"
+                                        class="highslide">
+                                        <img src="../../images/sys_theme12_46.gif" width="14" height="14" hspace="3" />帮助</a>
+                                    <div class="highslide-html-content" id="highslide-html">
+                                        <div class="highslide-header">
+                                            <ul>
+                                                <li class="highslide-move"><a href="#" onclick="return false">移动</a> </li>
+                                                <li class="highslide-close"><a href="#" onclick="return hs.close(this)">关闭</a> </li>
+                                            </ul>
+                                        </div>
+                                        <div class="highslide-body">
+                                            <asp:Label ID="labHelp" runat="server" />
+                                        </div>
+                                        <div class="highslide-footer">
+                                            <div>
+                                                <span class="highslide-resize" title="Resize"><span></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        <tr>
+            <td colspan="2" style="padding: 1px;">
+                <asp:Label ID="pageHelper" runat="server" />
+            </td>
+        </tr>
+        <tr>
+            <td style="height:5px"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding: 1px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

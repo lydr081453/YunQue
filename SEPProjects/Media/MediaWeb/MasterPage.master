@@ -1,0 +1,255 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="MasterPage" Codebehind="MasterPage.master.cs" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="contentHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Css/style.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/public/js/jquery-1.2.6.js"></script>
+    <script language="javascript" src="/public/js/syscomm.js"></script>
+    <script type="text/javascript" src="/public/highslide/highslide-with-html.js"></script>
+    <script type="text/javascript" src="/public/js/jquery.js"></script>
+    <script type="text/javascript" src="/public/js/jquery.blockUI.js"></script>
+  
+    <script type="text/javascript">    
+    hs.graphicsDir = '/public/highslide/graphics/';
+    hs.outlineType = 'rounded-white';
+    hs.outlineWhileAnimating = true;
+    </script>
+
+    <style type="text/css">
+        .highslide-html
+        {
+            background-color: white;
+        }
+        .highslide-html-blur
+        {
+        }
+        .highslide-html-content
+        {
+            position: absolute;
+            display: none;
+        }
+        .highslide-loading
+        {
+            display: block;
+            color: black;
+            font-size: 8pt;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 2px;
+            border: 1px solid black;
+            background-color: white;
+            padding-left: 22px;
+            background-image: url(/public/highslide/graphics/loader.white.gif);
+            background-repeat: no-repeat;
+            background-position: 3px 1px;
+        }
+        a.highslide-credits, a.highslide-credits i
+        {
+            padding: 2px;
+            color: silver;
+            text-decoration: none;
+            font-size: 10px;
+        }
+        a.highslide-credits:hover, a.highslide-credits:hover i
+        {
+            color: white;
+            background-color: gray;
+        }
+        /* Styles for the popup */.highslide-wrapper
+        {
+            background-color: white;
+        }
+        .highslide-wrapper .highslide-html-content
+        {
+            width: 400px;
+            padding: 5px;
+        }
+        .highslide-wrapper .highslide-header div
+        {
+        }
+        .highslide-wrapper .highslide-header ul
+        {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+        }
+        .highslide-wrapper .highslide-header ul li
+        {
+            display: inline;
+            padding-left: 1em;
+        }
+        .highslide-wrapper .highslide-header ul li.highslide-previous, .highslide-wrapper .highslide-header ul li.highslide-next
+        {
+            display: none;
+        }
+        .highslide-wrapper .highslide-header a
+        {
+            font-weight: bold;
+            color: gray;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .highslide-wrapper .highslide-header a:hover
+        {
+            color: black;
+        }
+        .highslide-wrapper .highslide-header .highslide-move a
+        {
+            cursor: move;
+        }
+        .highslide-wrapper .highslide-footer
+        {
+            height: 11px;
+        }
+        .highslide-wrapper .highslide-footer .highslide-resize
+        {
+            float: right;
+            height: 11px;
+            width: 11px;
+            background: url(/public/highslide/graphics/resize.gif);
+        }
+        .highslide-wrapper .highslide-body
+        {
+        }
+        .highslide-move
+        {
+            cursor: move;
+        }
+        .highslide-resize
+        {
+            cursor: nw-resize;
+        }
+        /* These must be the last of the Highslide rules */.highslide-display-block
+        {
+            display: block;
+        }
+        .highslide-display-none
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; padding-top: 0px;
+    border: 0px
+    margen: 0px">
+    <form id="form1" runat="server">
+    <cc1:ToolkitScriptManager ID="ToolkitScriptManagerMain" runat="server">
+    </cc1:ToolkitScriptManager>
+    <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" style="border-top: 5px solid #F0931A;
+        border-bottom: 5px solid #ffb424;">
+        <tr>
+            <td style="width: 5px; filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F0931A,endcolorstr=#ffb424,gradientType=0)">
+            </td>
+            <td valign="top">
+                <table width="100%" style="height: 100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="left">
+                                        <img src="/images/tableleft.gif" border="0" style="vertical-align: top" />
+                                    </td>
+                                    <td align="right">
+                                        <img src="/images/tableright.gif" border="0" style="vertical-align: top" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 100%;">
+                            <div id="divWindow" style="overflow: auto; padding: 20px; width: 100%; height: 100%;">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td colspan="2">
+                                            <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;<img src="/images/work.gif" border="0" style="vertical-align: bottom"
+                                                            alt="" />
+                                                    </td>
+                                                    <td align="right" valign="bottom">
+                                                        <asp:Label ID="lbDate" runat="server"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label
+                                                            ID="lblCaption" runat="server" Width="60%" Style="font-weight: bold; font-size: 12px;
+                                                            vertical-align: bottom"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border-top: #f8efe7 1px solid; width: 100%;" colspan="2">
+                                                    &nbsp;
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="menusection-Packages" align="left">
+                                            <asp:SiteMapPath ID="masterSiteMapPath" runat="server" Font-Bold="True">
+                                            </asp:SiteMapPath>
+                                        </td>
+                                        <td align="right" valign="bottom">
+                                            <div>
+                                                <a href="#" onclick="return hs.htmlExpand(this, { contentId: 'highslide-html' } )"
+                                                    class="highslide">
+                                                    <img src="/images/help.jpg" style="vertical-align: middle" border="0" /><font color="Background"
+                                                        style="text-decoration: none;">帮助</font></a>
+                                                <div class="highslide-html-content" id="highslide-html">
+                                                    <div class="highslide-header">
+                                                        <ul>
+                                                            <li class="highslide-move"><a href="#" onclick="return false">移动</a> </li>
+                                                            <li class="highslide-close"><a href="#" onclick="return hs.close(this)">关闭</a> </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="highslide-body">
+                                                        <asp:Label ID="labHelp" runat="server" />
+                                                    </div>
+                                                    <div class="highslide-footer">
+                                                        <div>
+                                                            <span class="highslide-resize" title="Resize"><span></span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="height:20px"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="width: 100%">
+                                            <asp:ContentPlaceHolder ID="contentMain" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="left">
+                                        <img src="/images/tablebleft.gif" border="0" style="vertical-align: bottom" />
+                                    </td>
+                                    <td align="right">
+                                        <img src="/images/tablebright.gif" border="0" style="vertical-align: bottom" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td style="width: 5px; filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#F0931A,endcolorstr=#ffb424,gradientType=0)">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿.Grid 
+{ 
+  background-image: url(images/grid_bg.gif); 
+  background-color: #FFFFFF; 
+  border: 1px solid #C0C0C0; 
+  border-top-width: 0px;
+  border-left-width: 0px;
+  cursor: pointer; 
+  
+}
+
+.GridHeader
+{
+  background-image: url(images/header_rowBg.gif); 
+  background-color: #8988A5; 
+  border: 1px solid #57566F; 
+  height: 28px;
+  padding-left: 3px;
+  cursor: default; 
+  text-align:center;
+  font-size:14px;
+  font-style:inherit;
+  font-weight:bolder;
+}
+.ItemStyle 
+{ 
+	border-bottom-style:solid;
+	border-left-style:none;
+	border-right-style:solid;
+	border-top-style:none;
+	border-color:#E6E6EE;
+	text-align:center;
+	border-width:1px;
+
+}
+.FirstCell
+{ 
+  background-color: #D6D7E1; 
+  background-image: url(images/headingSelectorCell_bg.gif); 
+  border-width: 0px; 
+  border-right: 1px solid #FFFFFF; 
+}
+.AlternatingRow
+{
+	
+  background-color: #fcfcfc; 
+  border-color: white; 
+}
+ 

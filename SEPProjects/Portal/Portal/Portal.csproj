@@ -1,0 +1,1009 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73EDDF9F-4E81-468A-A0A9-8BC9D827BEF5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Portal.WebSite</RootNamespace>
+    <AssemblyName>Portal</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0618</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxPro.2, Version=7.7.31.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Web.UI, Version=2008.2.1267.35, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\ComponentArt.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MSNPSharp, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adaaf016a67b1373, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\MSNPSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\IM.aspx" />
+    <None Include="css\demo.css" />
+    <None Include="images\a1_asset.gif" />
+    <None Include="images\add.png" />
+    <None Include="images\background-body.png" />
+    <None Include="images\block-bg.gif" />
+    <None Include="images\block-left.gif" />
+    <None Include="images\block-right.gif" />
+    <None Include="images\insurance.jpg" />
+    <None Include="images\rec.gif" />
+    <None Include="images\salary.gif" />
+    <None Include="images\title-bg.gif" />
+    <None Include="images\down.png" />
+    <None Include="images\page-bg.gif" />
+    <None Include="images\up.png" />
+    <None Include="images\upload\blank.jpg" />
+    <None Include="images\upload\丁雨婷.jpg" />
+    <None Include="images\upload\万小波.jpg" />
+    <None Include="images\upload\乌东亮.jpg" />
+    <None Include="images\upload\于一耕.jpg" />
+    <None Include="images\upload\付银珂.jpg" />
+    <None Include="images\upload\任丽颖.jpg" />
+    <None Include="images\upload\任美雪.jpg" />
+    <None Include="images\upload\任逸颖.jpg" />
+    <None Include="images\upload\何召侠.jpg" />
+    <None Include="images\upload\何毓柳.jpg" />
+    <None Include="images\upload\何艾岭.jpg" />
+    <None Include="images\upload\余晓珊.jpg" />
+    <None Include="images\upload\余美玲.jpg" />
+    <None Include="images\upload\兰荣荣.jpg" />
+    <None Include="images\upload\关贞颖.jpg" />
+    <None Include="images\upload\冯嘉铭.jpg" />
+    <None Include="images\upload\冯敏.jpg" />
+    <None Include="images\upload\冯述.jpg" />
+    <None Include="images\upload\刘业.jpg" />
+    <None Include="images\upload\刘也涵.jpg" />
+    <None Include="images\upload\刘也涵A.jpg" />
+    <None Include="images\upload\刘亚洁.jpg" />
+    <None Include="images\upload\刘伟乐.jpg" />
+    <None Include="images\upload\刘佳宇.jpg" />
+    <None Include="images\upload\刘冉.jpg" />
+    <None Include="images\upload\刘嘉琪.jpg" />
+    <None Include="images\upload\刘国刚.jpg" />
+    <None Include="images\upload\刘国雯.jpg" />
+    <None Include="images\upload\刘家兴.jpg" />
+    <None Include="images\upload\刘常清.jpg" />
+    <None Include="images\upload\刘志强.jpg" />
+    <None Include="images\upload\刘思睿.jpg" />
+    <None Include="images\upload\刘旭凯.jpg" />
+    <None Include="images\upload\刘春阳.jpg" />
+    <None Include="images\upload\刘晓妍.jpg" />
+    <None Include="images\upload\刘桉福.jpg" />
+    <None Include="images\upload\刘永凯.jpg" />
+    <None Include="images\upload\刘浩冉.jpg" />
+    <None Include="images\upload\刘瑞杰.jpg" />
+    <None Include="images\upload\刘硕-女.jpg" />
+    <None Include="images\upload\刘硕-男.jpg" />
+    <None Include="images\upload\刘硕.jpg" />
+    <None Include="images\upload\刘菲飞.jpg" />
+    <None Include="images\upload\刘蕊.jpg" />
+    <None Include="images\upload\刘青梅.jpg" />
+    <None Include="images\upload\刘馨月.jpg" />
+    <None Include="images\upload\华英.jpg" />
+    <None Include="images\upload\卢伊娜.jpg" />
+    <None Include="images\upload\卢梦琪.jpg" />
+    <None Include="images\upload\史玉洁.jpg" />
+    <None Include="images\upload\史玉洁A.jpg" />
+    <None Include="images\upload\吴佳.jpg" />
+    <None Include="images\upload\吴思宇.jpg" />
+    <None Include="images\upload\吴怡.jpg" />
+    <None Include="images\upload\周克迪.jpg" />
+    <None Include="images\upload\周子云.jpg" />
+    <None Include="images\upload\周宁.jpg" />
+    <None Include="images\upload\周怡.jpg" />
+    <None Include="images\upload\周明轩.jpg" />
+    <None Include="images\upload\周金亮.jpg" />
+    <None Include="images\upload\唐默迪.jpg" />
+    <None Include="images\upload\夏雨桐.jpg" />
+    <None Include="images\upload\姚硕.jpg" />
+    <None Include="images\upload\孔燕宁.jpg" />
+    <None Include="images\upload\孙兰茜.jpg" />
+    <None Include="images\upload\孙姗姗.jpg" />
+    <None Include="images\upload\孙媛媛.jpg" />
+    <None Include="images\upload\孙慧阁.jpg" />
+    <None Include="images\upload\孙涵杰.jpg" />
+    <None Include="images\upload\孙珊珊.jpg" />
+    <None Include="images\upload\孙诗杰.jpg" />
+    <None Include="images\upload\宋子磊.jpg" />
+    <None Include="images\upload\宋宇辰.jpg" />
+    <None Include="images\upload\宋雨航.jpg" />
+    <None Include="images\upload\尚润泽.jpg" />
+    <None Include="images\upload\尹一涵.jpg" />
+    <None Include="images\upload\岳帅磊.jpg" />
+    <None Include="images\upload\崔志豪.jpg" />
+    <None Include="images\upload\崔菊.jpg" />
+    <None Include="images\upload\崔颛.jpg" />
+    <None Include="images\upload\张华楠.jpg" />
+    <None Include="images\upload\张卿.jpg" />
+    <None Include="images\upload\张婉彤.jpg" />
+    <None Include="images\upload\张安冬.jpg" />
+    <None Include="images\upload\张宝玉.jpg" />
+    <None Include="images\upload\张小燕.jpg" />
+    <None Include="images\upload\张帅.jpg" />
+    <None Include="images\upload\张庚辰.jpg" />
+    <None Include="images\upload\张新卓.jpg" />
+    <None Include="images\upload\张昊妍.jpg" />
+    <None Include="images\upload\张明亮.jpg" />
+    <None Include="images\upload\张权.jpg" />
+    <None Include="images\upload\张欢欢.jpg" />
+    <None Include="images\upload\张歆扬.jpg" />
+    <None Include="images\upload\张琳琳.jpg" />
+    <None Include="images\upload\张瑞田.jpg" />
+    <None Include="images\upload\张璐.jpg" />
+    <None Include="images\upload\张磊磊.jpg" />
+    <None Include="images\upload\张秀林.jpg" />
+    <None Include="images\upload\张箫.jpg" />
+    <None Include="images\upload\张绍璇.jpg" />
+    <None Include="images\upload\张赛.jpg" />
+    <None Include="images\upload\张迪.jpg" />
+    <None Include="images\upload\张雪莹.jpg" />
+    <None Include="images\upload\张霞.jpg" />
+    <None Include="images\upload\张鹏.jpg" />
+    <None Include="images\upload\徐先勇.jpg" />
+    <None Include="images\upload\徐重阳.jpg" />
+    <None Include="images\upload\徐鹏.jpg" />
+    <None Include="images\upload\戴旭辉.jpg" />
+    <None Include="images\upload\时军华.jpg" />
+    <None Include="images\upload\曹宇航.jpg" />
+    <None Include="images\upload\朱浩.jpg" />
+    <None Include="images\upload\权伟民.jpg" />
+    <None Include="images\upload\李佳欢.jpg" />
+    <None Include="images\upload\李佳豪.jpg" />
+    <None Include="images\upload\李兴丽.jpg" />
+    <None Include="images\upload\李冬冬.jpg" />
+    <None Include="images\upload\李哲文.jpg" />
+    <None Include="images\upload\李婧楠.jpg" />
+    <None Include="images\upload\李宗志.jpg" />
+    <None Include="images\upload\李宗衡.jpg" />
+    <None Include="images\upload\李帅.jpg" />
+    <None Include="images\upload\李敏.jpg" />
+    <None Include="images\upload\李旭彤.jpg" />
+    <None Include="images\upload\李曼曼.jpg" />
+    <None Include="images\upload\李江海.jpg" />
+    <None Include="images\upload\李海玉.jpg" />
+    <None Include="images\upload\李猛.jpg" />
+    <None Include="images\upload\李玄冰.jpg" />
+    <None Include="images\upload\李礼.jpg" />
+    <None Include="images\upload\李秋莉.jpg" />
+    <None Include="images\upload\李若帆.jpg" />
+    <None Include="images\upload\李雅倩.jpg" />
+    <None Include="images\upload\李雪涛.jpg" />
+    <None Include="images\upload\李鸿燕.jpg" />
+    <None Include="images\upload\杜欣宇.jpg" />
+    <None Include="images\upload\杜萌萌.jpg" />
+    <None Include="images\upload\杨博伟.jpg" />
+    <None Include="images\upload\杨启盟.jpg" />
+    <None Include="images\upload\杨嘉惠.jpg" />
+    <None Include="images\upload\杨文庆.jpg" />
+    <None Include="images\upload\杨根.jpg" />
+    <None Include="images\upload\杨锐锋.jpg" />
+    <None Include="images\upload\杨雨涛.jpg" />
+    <None Include="images\upload\柯立源.jpg" />
+    <None Include="images\upload\段昱辰.jpg" />
+    <None Include="images\upload\江妍.jpg" />
+    <None Include="images\upload\汤斯.jpg" />
+    <None Include="images\upload\温晴.jpg" />
+    <None Include="images\upload\温石晶.jpg" />
+    <None Include="images\upload\温纪.jpg" />
+    <None Include="images\upload\潘淑芳.jpg" />
+    <None Include="images\upload\潘璐.jpg" />
+    <None Include="images\upload\熊洪彬.jpg" />
+    <None Include="images\upload\牧帅.jpg" />
+    <None Include="images\upload\王丹.jpg" />
+    <None Include="images\upload\王亚宁.jpg" />
+    <None Include="images\upload\王倩.jpg" />
+    <None Include="images\upload\王博雅.jpg" />
+    <None Include="images\upload\王培成.jpg" />
+    <None Include="images\upload\王姗.jpg" />
+    <None Include="images\upload\王婷婷.jpg" />
+    <None Include="images\upload\王子豪.jpg" />
+    <None Include="images\upload\王宇.jpg" />
+    <None Include="images\upload\王少佳.jpg" />
+    <None Include="images\upload\王新宇.jpg" />
+    <None Include="images\upload\王昭杰.jpg" />
+    <None Include="images\upload\王晨.jpg" />
+    <None Include="images\upload\王楠楠.jpg" />
+    <None Include="images\upload\王璐.jpg" />
+    <None Include="images\upload\王雅秀.jpg" />
+    <None Include="images\upload\王颖.jpg" />
+    <None Include="images\upload\瓮雨垒.jpg" />
+    <None Include="images\upload\田萌萌.jpg" />
+    <None Include="images\upload\白盈.jpg" />
+    <None Include="images\upload\祖红旭.jpg" />
+    <None Include="images\upload\秦瑞阳.jpg" />
+    <None Include="images\upload\程舜.jpg" />
+    <None Include="images\upload\窦豆.jpg" />
+    <None Include="images\upload\罗峻峰.jpg" />
+    <None Include="images\upload\罗祎楠.jpg" />
+    <None Include="images\upload\翁嘉熠.jpg" />
+    <None Include="images\upload\翟文雅.jpg" />
+    <None Include="images\upload\翟晋朝.jpg" />
+    <None Include="images\upload\耿菲菲.jpg" />
+    <None Include="images\upload\肖婕.jpg" />
+    <None Include="images\upload\胡明阳.jpg" />
+    <None Include="images\upload\苗松岩.jpg" />
+    <None Include="images\upload\范书美.jpg" />
+    <None Include="images\upload\莫靖璇.jpg" />
+    <None Include="images\upload\萨初拉.jpg" />
+    <None Include="images\upload\蒲志伟.jpg" />
+    <None Include="images\upload\薛萍.jpg" />
+    <None Include="images\upload\裴慧敏.jpg" />
+    <None Include="images\upload\计福旭.jpg" />
+    <None Include="images\upload\许亚楠.jpg" />
+    <None Include="images\upload\诸祺鸿.jpg" />
+    <None Include="images\upload\谢显强.jpg" />
+    <None Include="images\upload\贾姗姗.jpg" />
+    <None Include="images\upload\贾晓静.jpg" />
+    <None Include="images\upload\赵俊璋.jpg" />
+    <None Include="images\upload\赵凯.jpg" />
+    <None Include="images\upload\赵宝霜.jpg" />
+    <None Include="images\upload\赵彩彦.jpg" />
+    <None Include="images\upload\赵文芳.jpg" />
+    <None Include="images\upload\赵晓婉.jpg" />
+    <None Include="images\upload\赵月.jpg" />
+    <None Include="images\upload\赵梓莹.jpg" />
+    <None Include="images\upload\赵爽.jpg" />
+    <None Include="images\upload\辛杰.jpg" />
+    <None Include="images\upload\邰俊霄.jpg" />
+    <None Include="images\upload\邰杭黎.jpg" />
+    <None Include="images\upload\邵帅.jpg" />
+    <None Include="images\upload\邸思源.jpg" />
+    <None Include="images\upload\邹家辉.jpg" />
+    <None Include="images\upload\邹梓弘.jpg" />
+    <None Include="images\upload\郑汉章.jpg" />
+    <None Include="images\upload\郝晓娜.jpg" />
+    <None Include="images\upload\郭大政.jpg" />
+    <None Include="images\upload\郭子琳.jpg" />
+    <None Include="images\upload\郭玥.jpg" />
+    <None Include="images\upload\金莉雅.jpg" />
+    <None Include="images\upload\闫彩园.jpg" />
+    <None Include="images\upload\闻爽.jpg" />
+    <None Include="images\upload\阮梦茹.jpg" />
+    <None Include="images\upload\陈昌源.jpg" />
+    <None Include="images\upload\陈晨.jpg" />
+    <None Include="images\upload\陈洋.jpg" />
+    <None Include="images\upload\陈金龙.jpg" />
+    <None Include="images\upload\雷豪杰.jpg" />
+    <None Include="images\upload\霍佳彤.jpg" />
+    <None Include="images\upload\靳升.jpg" />
+    <None Include="images\upload\靳艺嘉.jpg" />
+    <None Include="images\upload\韩水.jpg" />
+    <None Include="images\upload\韩雪晴.jpg" />
+    <None Include="images\upload\颜瑞萍.jpg" />
+    <None Include="images\upload\马俊翱.jpg" />
+    <None Include="images\upload\马昊.jpg" />
+    <None Include="images\upload\马睿心A.jpg" />
+    <None Include="images\upload\马遥.jpg" />
+    <None Include="images\upload\高子彭.jpg" />
+    <None Include="images\upload\高汝楠.jpg" />
+    <None Include="images\upload\高淑丽.jpg" />
+    <None Include="images\upload\高瑞泽.jpg" />
+    <None Include="images\upload\高超.jpg" />
+    <None Include="images\upload\魏玮.jpg" />
+    <None Include="images\upload\魏瑾良.jpg" />
+    <None Include="images\upload\魏鸿哲.jpg" />
+    <None Include="images\upload\黄胜超.jpg" />
+    <None Include="images\upload\齐倩倩.jpg" />
+    <None Include="images\upload\齐文雪.jpg" />
+    <None Include="images\upload\齐梦薇.jpg" />
+    <None Include="images\upload\龚如心.jpg" />
+    <None Include="images\upload\龚瑶.jpg" />
+    <None Include="images\xingyan.png" />
+    <None Include="js\demo.js" />
+    <None Include="js\jquery.js" />
+    <None Include="js\ui\effects.blind.js" />
+    <None Include="js\ui\effects.bounce.js" />
+    <None Include="js\ui\effects.clip.js" />
+    <None Include="js\ui\effects.core.js" />
+    <None Include="js\ui\effects.drop.js" />
+    <None Include="js\ui\effects.explode.js" />
+    <None Include="js\ui\effects.fold.js" />
+    <None Include="js\ui\effects.highlight.js" />
+    <None Include="js\ui\effects.pulsate.js" />
+    <None Include="js\ui\effects.scale.js" />
+    <None Include="js\ui\effects.shake.js" />
+    <None Include="js\ui\effects.slide.js" />
+    <None Include="js\ui\effects.transfer.js" />
+    <None Include="js\ui\i18n\ui.datepicker-ar.js" />
+    <None Include="js\ui\i18n\ui.datepicker-bg.js" />
+    <None Include="js\ui\i18n\ui.datepicker-ca.js" />
+    <None Include="js\ui\i18n\ui.datepicker-cs.js" />
+    <None Include="js\ui\i18n\ui.datepicker-da.js" />
+    <None Include="js\ui\i18n\ui.datepicker-de.js" />
+    <None Include="js\ui\i18n\ui.datepicker-es.js" />
+    <None Include="js\ui\i18n\ui.datepicker-fi.js" />
+    <None Include="js\ui\i18n\ui.datepicker-fr.js" />
+    <None Include="js\ui\i18n\ui.datepicker-he.js" />
+    <None Include="js\ui\i18n\ui.datepicker-hu.js" />
+    <None Include="js\ui\i18n\ui.datepicker-hy.js" />
+    <None Include="js\ui\i18n\ui.datepicker-id.js" />
+    <None Include="js\ui\i18n\ui.datepicker-is.js" />
+    <None Include="js\ui\i18n\ui.datepicker-it.js" />
+    <None Include="js\ui\i18n\ui.datepicker-ja.js" />
+    <None Include="js\ui\i18n\ui.datepicker-ko.js" />
+    <None Include="js\ui\i18n\ui.datepicker-lt.js" />
+    <None Include="js\ui\i18n\ui.datepicker-lv.js" />
+    <None Include="js\ui\i18n\ui.datepicker-nl.js" />
+    <None Include="js\ui\i18n\ui.datepicker-no.js" />
+    <None Include="js\ui\i18n\ui.datepicker-pl.js" />
+    <None Include="js\ui\i18n\ui.datepicker-pt-BR.js" />
+    <None Include="js\ui\i18n\ui.datepicker-ro.js" />
+    <None Include="js\ui\i18n\ui.datepicker-ru.js" />
+    <None Include="js\ui\i18n\ui.datepicker-sk.js" />
+    <None Include="js\ui\i18n\ui.datepicker-sv.js" />
+    <None Include="js\ui\i18n\ui.datepicker-th.js" />
+    <None Include="js\ui\i18n\ui.datepicker-tr.js" />
+    <None Include="js\ui\i18n\ui.datepicker-uk.js" />
+    <None Include="js\ui\i18n\ui.datepicker-zh-CN.js" />
+    <None Include="js\ui\i18n\ui.datepicker-zh-TW.js" />
+    <None Include="js\ui\jquery.ui.all.js" />
+    <None Include="js\ui\minified\effects.blind.min.js" />
+    <None Include="js\ui\minified\effects.bounce.min.js" />
+    <None Include="js\ui\minified\effects.clip.min.js" />
+    <None Include="js\ui\minified\effects.core.min.js" />
+    <None Include="js\ui\minified\effects.drop.min.js" />
+    <None Include="js\ui\minified\effects.explode.min.js" />
+    <None Include="js\ui\minified\effects.fold.min.js" />
+    <None Include="js\ui\minified\effects.highlight.min.js" />
+    <None Include="js\ui\minified\effects.pulsate.min.js" />
+    <None Include="js\ui\minified\effects.scale.min.js" />
+    <None Include="js\ui\minified\effects.shake.min.js" />
+    <None Include="js\ui\minified\effects.slide.min.js" />
+    <None Include="js\ui\minified\effects.transfer.min.js" />
+    <None Include="js\ui\minified\jquery.ui.all.min.js" />
+    <None Include="js\ui\minified\ui.accordion.min.js" />
+    <None Include="js\ui\minified\ui.core.min.js" />
+    <None Include="js\ui\minified\ui.datepicker.min.js" />
+    <None Include="js\ui\minified\ui.dialog.min.js" />
+    <None Include="js\ui\minified\ui.draggable.min.js" />
+    <None Include="js\ui\minified\ui.droppable.min.js" />
+    <None Include="js\ui\minified\ui.resizable.min.js" />
+    <None Include="js\ui\minified\ui.selectable.min.js" />
+    <None Include="js\ui\minified\ui.slider.min.js" />
+    <None Include="js\ui\minified\ui.sortable.min.js" />
+    <None Include="js\ui\minified\ui.tabs.min.js" />
+    <None Include="js\ui\packed\effects.blind.packed.js" />
+    <None Include="js\ui\packed\effects.bounce.packed.js" />
+    <None Include="js\ui\packed\effects.clip.packed.js" />
+    <None Include="js\ui\packed\effects.core.packed.js" />
+    <None Include="js\ui\packed\effects.drop.packed.js" />
+    <None Include="js\ui\packed\effects.explode.packed.js" />
+    <None Include="js\ui\packed\effects.fold.packed.js" />
+    <None Include="js\ui\packed\effects.highlight.packed.js" />
+    <None Include="js\ui\packed\effects.pulsate.packed.js" />
+    <None Include="js\ui\packed\effects.scale.packed.js" />
+    <None Include="js\ui\packed\effects.shake.packed.js" />
+    <None Include="js\ui\packed\effects.slide.packed.js" />
+    <None Include="js\ui\packed\effects.transfer.packed.js" />
+    <None Include="js\ui\packed\jquery.ui.all.packed.js" />
+    <None Include="js\ui\packed\ui.accordion.packed.js" />
+    <None Include="js\ui\packed\ui.core.packed.js" />
+    <None Include="js\ui\packed\ui.datepicker.packed.js" />
+    <None Include="js\ui\packed\ui.dialog.packed.js" />
+    <None Include="js\ui\packed\ui.draggable.packed.js" />
+    <None Include="js\ui\packed\ui.droppable.packed.js" />
+    <None Include="js\ui\packed\ui.resizable.packed.js" />
+    <None Include="js\ui\packed\ui.selectable.packed.js" />
+    <None Include="js\ui\packed\ui.slider.packed.js" />
+    <None Include="js\ui\packed\ui.sortable.packed.js" />
+    <None Include="js\ui\packed\ui.tabs.packed.js" />
+    <None Include="js\ui\ui.accordion.js" />
+    <None Include="js\ui\ui.core.js" />
+    <None Include="js\ui\ui.datepicker.js" />
+    <None Include="js\ui\ui.dialog.js" />
+    <None Include="js\ui\ui.draggable.js" />
+    <None Include="js\ui\ui.droppable.js" />
+    <None Include="js\ui\ui.resizable.js" />
+    <None Include="js\ui\ui.selectable.js" />
+    <None Include="js\ui\ui.slider.js" />
+    <None Include="js\ui\ui.sortable.js" />
+    <None Include="js\ui\ui.tabs.js" />
+    <None Include="images\loader.gif" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Global.cs">
+      <Link>Global.cs</Link>
+    </Compile>
+    <Compile Include="Account\IM.aspx.cs">
+      <DependentUpon>IM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\IM.aspx.designer.cs">
+      <DependentUpon>IM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\UpLoadUserPhoto.aspx.cs">
+      <DependentUpon>UpLoadUserPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\UpLoadUserPhoto.aspx.designer.cs">
+      <DependentUpon>UpLoadUserPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllJob.aspx.cs">
+      <DependentUpon>AllJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllJob.aspx.designer.cs">
+      <DependentUpon>AllJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="API\GetWorkItemList.aspx.cs">
+      <DependentUpon>GetWorkItemList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="API\GetWorkItemList.aspx.designer.cs">
+      <DependentUpon>GetWorkItemList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="API\TaskItemMessages.aspx.cs">
+      <DependentUpon>TaskItemMessages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="API\TaskItemMessages.aspx.designer.cs">
+      <DependentUpon>TaskItemMessages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceSelect.aspx.cs">
+      <DependentUpon>AttendanceSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendanceSelect.aspx.designer.cs">
+      <DependentUpon>AttendanceSelect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HumanMap.aspx.cs">
+      <DependentUpon>HumanMap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HumanMap.aspx.designer.cs">
+      <DependentUpon>HumanMap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RefreshWorkItem.aspx.cs">
+      <DependentUpon>RefreshWorkItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RefreshWorkItem.aspx.designer.cs">
+      <DependentUpon>RefreshWorkItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CachedWorkItemsRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="css\screen.css" />
+    <Content Include="Global.asax" />
+    <None Include="images\arr.gif" />
+    <None Include="images\arr2.gif" />
+    <None Include="images\extlink.gif" />
+    <None Include="images\flag.gif" />
+    <None Include="images\org-button-bg.gif" />
+    <None Include="images\org-button-bg2.gif" />
+    <None Include="images\org-button-jwyx.gif" />
+    <None Include="images\org-con-bg-big.gif" />
+    <None Include="images\org-con-bg.gif" />
+    <None Include="images\org-doing-bg.gif" />
+    <None Include="images\org-drop-bg.gif" />
+    <None Include="images\org-drop-icon.gif" />
+    <None Include="images\org-icon-dot.gif" />
+    <None Include="images\org-icon-ji.gif" />
+    <None Include="images\org-icon-man.gif" />
+    <None Include="images\org-logo.png" />
+    <None Include="images\org-note1.gif" />
+    <None Include="images\org-note2.gif" />
+    <None Include="images\org-note3.gif" />
+    <None Include="images\org-pop-bg.gif" />
+    <None Include="images\org-pop-bottom.gif" />
+    <None Include="images\org-pop-top.gif" />
+    <None Include="images\org-rss-bg.gif" />
+    <None Include="images\org-tab-off.gif" />
+    <None Include="images\org-tab-on.gif" />
+    <None Include="images\org-tip.gif" />
+    <None Include="images\org-tipimg-bg.gif" />
+    <None Include="images\org-tit-bg.gif" />
+    <None Include="images\org-tit-l.gif" />
+    <None Include="images\org-tit-r.gif" />
+    <None Include="images\rss.gif" />
+    <None Include="js\formatter.js" />
+    <None Include="Task.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Password.aspx" />
+    <Content Include="Account\Settings.aspx" />
+    <None Include="css\a.css" />
+    <None Include="css\help.css" />
+    <None Include="css\screen1.css" />
+    <Content Include="Default.aspx" />
+    <None Include="images\a1_03.gif" />
+    <None Include="images\a1_06.gif" />
+    <None Include="images\a1_10.gif" />
+    <None Include="images\a1_113.gif" />
+    <None Include="images\a1_13.gif" />
+    <None Include="images\a1_19.gif" />
+    <None Include="images\a1_21-46.gif" />
+    <None Include="images\a1_21.gif" />
+    <None Include="images\a1_25.gif" />
+    <None Include="images\a1_27.gif" />
+    <None Include="images\a1_30.gif" />
+    <None Include="images\a1_43.gif" />
+    <None Include="images\a1_48.gif" />
+    <None Include="images\a1_51.gif" />
+    <None Include="images\a1_54.gif" />
+    <None Include="images\a1_58.gif" />
+    <None Include="images\a1_61.gif" />
+    <None Include="images\a1_63.gif" />
+    <None Include="images\ico %281%29.gif" />
+    <None Include="images\ico-%285%29.gif" />
+    <None Include="images\ico-%288%29.gif" />
+    <None Include="images\icon.ico" />
+    <None Include="images\icon_star_empty.gif" />
+    <None Include="images\icon_star_full.gif" />
+    <None Include="images\icon_trash.gif" />
+    <None Include="images\menu_bg.jpg" />
+    <None Include="images\support.png" />
+    <None Include="images\logo.jpg" />
+    <None Include="images\msn.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="API\TaskItemMessages.aspx" />
+    <Content Include="AttendanceSelect.aspx" />
+    <None Include="css\a2.css" />
+    <None Include="css\calendarStyle.css" />
+    <Content Include="Default.Master" />
+    <Content Include="HumanMap.aspx" />
+    <None Include="images\kaoqin_OffTune.jpg" />
+    <None Include="images\kaoqin_submit.jpg" />
+    <None Include="images\calendar\btn_calendar.gif" />
+    <None Include="images\calendar\cal_nextMonth.gif" />
+    <None Include="images\calendar\cal_prevMonth.gif" />
+    <None Include="images\calendar\chidao.jpg" />
+    <None Include="images\calendar\chucha.jpg" />
+    <None Include="images\calendar\footergb.jpg" />
+    <None Include="images\calendar\header_bg.gif" />
+    <None Include="images\calendar\jiaban.jpg" />
+    <None Include="images\calendar\kuanggong.jpg" />
+    <None Include="images\calendar\next_wht.gif" />
+    <None Include="images\calendar\nianxiujia.jpg" />
+    <None Include="images\calendar\prev_wht.gif" />
+    <None Include="images\calendar\qingjia.jpg" />
+    <None Include="images\calendar\qita.jpg" />
+    <None Include="images\calendar\title_bg.gif" />
+    <None Include="images\calendar\waichu.jpg" />
+    <None Include="images\calendar\zaotui.jpg" />
+    <None Include="images\insideshunya_video_03.gif" />
+    <None Include="images\insideshunya_video_06.gif" />
+    <None Include="images\insideshunya_video_08.gif" />
+    <None Include="images\insideshunya_video_09.gif" />
+    <None Include="images\insideshunya_video_11.gif" />
+    <None Include="images\insideshunya_video_12.gif" />
+    <None Include="images\insideshunya_video_15.gif" />
+    <None Include="images\insideshunya_video_18.gif" />
+    <None Include="images\insideshunya_video_24.gif" />
+    <None Include="images\insideshunya_video_25.gif" />
+    <None Include="images\insideshunya_video_26.gif" />
+    <None Include="images\insideshunya_video_30.gif" />
+    <None Include="images\kaoqin_03.jpg" />
+    <None Include="images\kaoqin_06.jpg" />
+    <None Include="images\kaoqin_08.jpg" />
+    <None Include="images\kaoqin_10.jpg" />
+    <None Include="images\kaoqin_12.jpg" />
+    <None Include="images\kaoqin_15.jpg" />
+    <None Include="images\kaoqin_16.jpg" />
+    <None Include="images\kaoqin_18.jpg" />
+    <None Include="images\kaoqin_23.jpg" />
+    <None Include="images\kaoqin_24.jpg" />
+    <None Include="images\kaoqin_27.jpg" />
+    <None Include="images\kaoqin_36.jpg" />
+    <None Include="images\kaoqin_37.jpg" />
+    <None Include="images\kaoqin_39.jpg" />
+    <None Include="images\kaoqin_42.jpg" />
+    <None Include="images\kaoqin_save.jpg" />
+    <None Include="images\k_51.jpg" />
+    <None Include="images\k_54.jpg" />
+    <None Include="images\k_57.jpg" />
+    <None Include="images\k_62.jpg" />
+    <None Include="images\k_64.jpg" />
+    <None Include="images\k_67.jpg" />
+    <None Include="images\k_73.jpg" />
+    <None Include="images\k_75.jpg" />
+    <None Include="images\k_77.jpg" />
+    <None Include="images\k_79.jpg" />
+    <None Include="images\k_87.jpg" />
+    <None Include="images\po_ %282%29.gif" />
+    <None Include="images\po_.gif" />
+    <None Include="images\renlibtn.gif" />
+    <None Include="images\renlibtn_03.jpg" />
+    <None Include="images\renlibtn_05.jpg" />
+    <None Include="images\renlibtn_07.jpg" />
+    <None Include="images\renlibtn_09.jpg" />
+    <None Include="images\renlibtn_11.jpg" />
+    <None Include="images\renlibtn_13.jpg" />
+    <None Include="images\attendance1.jpg" />
+    <None Include="images\attendance2.jpg" />
+    <None Include="images\renli_03.jpg" />
+    <None Include="images\renli_06.jpg" />
+    <None Include="images\renli_08.jpg" />
+    <None Include="images\renli_10.jpg" />
+    <None Include="images\renli_17.jpg" />
+    <None Include="images\renli_19.jpg" />
+    <None Include="images\renli_20.jpg" />
+    <None Include="images\renli_24.gif" />
+    <None Include="images\t_03.gif" />
+    <None Include="images\t_04.gif" />
+    <None Include="images\t_06.gif" />
+    <None Include="images\t_09.gif" />
+    <None Include="images\t_12.gif" />
+    <None Include="js\jquery.blockUI.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Account\CutImage\css\main.css" />
+    <None Include="Account\CutImage\image\bg_120.gif" />
+    <None Include="Account\CutImage\image\blank.jpg" />
+    <None Include="Account\CutImage\image\c.gif" />
+    <None Include="Account\CutImage\image\grip.gif" />
+    <None Include="Account\CutImage\image\h.gif" />
+    <None Include="Account\CutImage\image\man.GIF" />
+    <None Include="Account\CutImage\image\track.gif" />
+    <None Include="Account\CutImage\image\_c.gif" />
+    <None Include="Account\CutImage\image\_h.gif" />
+    <None Include="Account\CutImage\js\CutPic.js" />
+    <None Include="Account\CutImage\js\jquery1.2.6.pack.js" />
+    <None Include="Account\CutImage\js\JSintellisense\jquery-1.2.6-intellisense.js" />
+    <None Include="Account\CutImage\js\ui.core.packed.js" />
+    <None Include="Account\CutImage\js\ui.draggable.packed.js" />
+    <Content Include="Account\UpLoadUserPhoto.aspx" />
+    <Content Include="AllJob.aspx" />
+    <Content Include="API\GetWorkItemList.aspx" />
+    <None Include="css\dialog.css" />
+    <None Include="css\NewStyle.css" />
+    <None Include="images\a1_12.gif" />
+    <None Include="images\addmatters.jpg" />
+    <None Include="images\big_chidao.jpg" />
+    <None Include="images\big_chuchai.jpg" />
+    <None Include="images\big_jiaban.jpg" />
+    <None Include="images\big_kuanggong.jpg" />
+    <None Include="images\big_nianjia.jpg" />
+    <None Include="images\big_qingjia.jpg" />
+    <None Include="images\big_qita.jpg" />
+    <None Include="images\big_waichu.jpg" />
+    <None Include="images\big_xiaoxiu.jpg" />
+    <None Include="images\big_zaotui.jpg" />
+    <None Include="images\bole.jpg" />
+    <None Include="images\btn-close.jpg" />
+    <None Include="images\btn-grey.gif" />
+    <None Include="images\btn-org.gif" />
+    <None Include="images\btn-s1-1.jpg" />
+    <None Include="images\btn-s1-2.jpg" />
+    <None Include="images\btn-s2-1.jpg" />
+    <None Include="images\btn-s2-2.jpg" />
+    <None Include="images\btnbg.jpg" />
+    <None Include="images\calendar\1chidao.jpg" />
+    <None Include="images\calendar\1chuchai.jpg" />
+    <None Include="images\calendar\1jiaban.jpg" />
+    <None Include="images\calendar\1kuanggong.jpg" />
+    <None Include="images\calendar\1nianjia.jpg" />
+    <None Include="images\calendar\1qingjia.jpg" />
+    <None Include="images\calendar\1qita.jpg" />
+    <None Include="images\calendar\1tiaoxiu.jpg" />
+    <None Include="images\calendar\1waichu.jpg" />
+    <None Include="images\calendar\1zaotui.jpg" />
+    <None Include="images\calendar\2chidao.jpg" />
+    <None Include="images\calendar\2chuchai.jpg" />
+    <None Include="images\calendar\2jiaban.jpg" />
+    <None Include="images\calendar\2kuanggong.jpg" />
+    <None Include="images\calendar\2nianjia.jpg" />
+    <None Include="images\calendar\2qingjia.jpg" />
+    <None Include="images\calendar\2qita.jpg" />
+    <None Include="images\calendar\2tiaoxiu.jpg" />
+    <None Include="images\calendar\2waichu.jpg" />
+    <None Include="images\calendar\2zaotui.jpg" />
+    <None Include="images\calendar\3chidao.jpg" />
+    <None Include="images\calendar\3chuchai.jpg" />
+    <None Include="images\calendar\3jiaban.jpg" />
+    <None Include="images\calendar\3kuanggong.jpg" />
+    <None Include="images\calendar\3nianjia.jpg" />
+    <None Include="images\calendar\3qingjia.jpg" />
+    <None Include="images\calendar\3qita.jpg" />
+    <None Include="images\calendar\3tiaoxiu.jpg" />
+    <None Include="images\calendar\3waichu.jpg" />
+    <None Include="images\calendar\3zaotui.jpg" />
+    <None Include="images\cancel.gif" />
+    <None Include="images\dc.gif" />
+    <None Include="images\down.gif" />
+    <None Include="images\dynCalendar.gif" />
+    <None Include="images\export.jpg" />
+    <None Include="images\foodmapicon.gif" />
+    <None Include="images\ico-close.jpg" />
+    <None Include="images\icon-add.gif" />
+    <None Include="images\icon-add.jpg" />
+    <None Include="images\icon-att-2.gif" />
+    <None Include="images\icon-att.jpg" />
+    <None Include="images\icon-close.gif" />
+    <None Include="images\icon-cor.jpg" />
+    <None Include="images\icon-cor2.gif" />
+    <None Include="images\icon-del.jpg" />
+    <None Include="images\icon-edit.gif" />
+    <None Include="images\icon-month.jpg" />
+    <None Include="images\inside_typebg-01.jpg" />
+    <None Include="images\inside_typebg-02.jpg" />
+    <None Include="images\inside_typebg-03.jpg" />
+    <None Include="images\inside_typebg-04.jpg" />
+    <None Include="images\inside_typebg-05.jpg" />
+    <None Include="images\left.gif" />
+    <None Include="images\insurance2.jpg" />
+    <None Include="images\m1_03.jpg" />
+    <None Include="images\m1_05.jpg" />
+    <None Include="images\n1_03.jpg" />
+    <None Include="images\n1_06.jpg" />
+    <None Include="images\portal-bg.jpg" />
+    <None Include="images\right.gif" />
+    <None Include="images\se-bg.jpg" />
+    <None Include="images\t-left.jpg" />
+    <None Include="images\t-repeat.jpg" />
+    <None Include="images\t-right.jpg" />
+    <None Include="images\TimeSheet_01.jpg" />
+    <None Include="images\TimeSheet_02.jpg" />
+    <None Include="images\tips-bg.jpg" />
+    <None Include="images\tit-bg.jpg" />
+    <None Include="images\ts-mouth-t-bg-today.jpg" />
+    <None Include="images\ts-mouth-t-bg.jpg" />
+    <None Include="images\ts-notthis-w.jpg" />
+    <None Include="images\ts-other.jpg" />
+    <None Include="images\ts-t.jpg" />
+    <None Include="images\ts-wknd.jpg" />
+    <None Include="images\ts_01.jpg" />
+    <None Include="images\ts_02.jpg" />
+    <None Include="images\ts_03.jpg" />
+    <None Include="images\ts_04.jpg" />
+    <None Include="images\ts_05.jpg" />
+    <None Include="images\ts_06.jpg" />
+    <None Include="images\ts_07.jpg" />
+    <None Include="images\ts_08.jpg" />
+    <None Include="images\ts_09.jpg" />
+    <None Include="images\ts_10.jpg" />
+    <None Include="images\ts_11.jpg" />
+    <None Include="images\ts_12.jpg" />
+    <None Include="images\ts_13-2.jpg" />
+    <None Include="images\ts_13.jpg" />
+    <None Include="images\ts_15-2.jpg" />
+    <None Include="images\ts_15.jpg" />
+    <None Include="images\ts_16.jpg" />
+    <None Include="images\ts_17.jpg" />
+    <None Include="images\ts_18.jpg" />
+    <None Include="images\ts_19.jpg" />
+    <None Include="images\ts_20.jpg" />
+    <None Include="images\ts_21.jpg" />
+    <None Include="images\ts_35-2.jpg" />
+    <None Include="images\ts_35.jpg" />
+    <None Include="js\DatePicker.js" />
+    <None Include="js\dialog.js" />
+    <None Include="js\dialog1.js" />
+    <None Include="js\jquery-1.2.6.js" />
+    <None Include="js\jquery.history_remote.pack.js" />
+    <None Include="js\jquery.tabs.pack.js" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\shunya.gif" />
+    <Content Include="RefreshWorkItem.aspx" />
+    <None Include="appSettings.config" />
+    <None Include="connectionStrings.config" />
+    <None Include="Properties\PublishProfiles\portal.pubxml" />
+    <None Include="Service References\CachedWorkItemsRef\Portal.WebSite.CachedWorkItemsRef.TaskItemInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CachedWorkItemsRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CachedWorkItemsRef\configuration.svcinfo" />
+    <None Include="Service References\CachedWorkItemsRef\configuration91.svcinfo" />
+    <None Include="Service References\CachedWorkItemsRef\CachedWorkItems.wsdl" />
+    <None Include="Service References\CachedWorkItemsRef\ESPServer.disco" />
+    <None Include="Document\内网考勤系统填报须.doc" />
+    <None Include="ExcelTemplate\UserMonthStat.xls" />
+    <None Include="helpfile\宣亚考勤系统使用手册.doc" />
+    <None Include="Service References\CachedWorkItemsRef\ESPServer.xsd" />
+    <None Include="Service References\CachedWorkItemsRef\ESPServer1.xsd" />
+    <None Include="Service References\CachedWorkItemsRef\ESPServer2.xsd" />
+    <None Include="Service References\CachedWorkItemsRef\ESPServer3.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CachedWorkItemsRef\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ESP.Core\ESP.Core\ESP.Core.csproj">
+      <Project>{5af18840-638b-4af2-90c2-c66625cc88e4}</Project>
+      <Name>ESP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ESP\ESP.csproj">
+      <Project>{bd68aa8d-b4b1-4957-81c2-152398ac68af}</Project>
+      <Name>ESP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ProjectMenagement\SEP.WorkItems\ESP.TaskItems.csproj">
+      <Project>{3c8c4a1e-e863-4cc7-8e86-f42e7f6ef5be}</Project>
+      <Name>ESP.TaskItems</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portal.Common\Portal.Common.csproj">
+      <Project>{1a77afb6-f3af-47f4-8059-ceef577f1242}</Project>
+      <Name>Portal.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portal.Core\Portal.Core.csproj">
+      <Project>{7666a12f-ed46-46c4-a18f-4f2e70019f19}</Project>
+      <Name>Portal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portal.Data\Portal.Data.csproj">
+      <Project>{ad95e26a-be26-42b7-8546-e5c32a069dd0}</Project>
+      <Name>Portal.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portal.Model\Portal.Model.csproj">
+      <Project>{2243f308-0d44-44c9-a939-93071aa42784}</Project>
+      <Name>Portal.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portal.Task\Portal.Task.csproj">
+      <Project>{46d3d2ab-49ea-41ce-b53c-ef181b150de1}</Project>
+      <Name>Portal.Task</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>11080</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

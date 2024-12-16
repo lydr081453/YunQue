@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SiteMap>
+  <node Text="行政管理" NavigateUrl="/include/page/defaultworkspace.aspx">
+    <node Text="考勤管理" NavigateUrl="/Attendance/AttendanceSelect.aspx">
+      <node Text="考勤事由" NavigateUrl="/Attendance/MattersEdit.aspx">
+        <node Text="OT项目号选择" NavigateUrl="/Attendance/OverTimeSelectProjectList.aspx"/>
+        <node Text="出差项目号选择" NavigateUrl="/Attendance/TravelSelectProjectList.aspx"/>
+      </node>
+    </node>
+    <node Text="审批中心">
+      <node Text="事由审批查询" NavigateUrl="/Attendance/AuditList.aspx"/>
+      <node Text="事由审批" NavigateUrl="/Attendance/AuditEdit.aspx"/>
+      <node Text="外出/其他审批" NavigateUrl="/Audit/OutAuditList.aspx"/>
+      <node Text="总监审批" NavigateUrl="/Audit/MonthStatAuditList.aspx?type=2"/>
+      <node Text="团队HRAdmin审批" NavigateUrl="/Audit/MonthStatAuditList.aspx?type=4"/>
+      <node Text="团队总经理审批" NavigateUrl="/Audit/MonthStatAuditList.aspx?type=5"/>
+      <node Text="人力Admin审批" NavigateUrl="/Audit/MonthStatAuditList.aspx?type=6"/>
+      <node Text="考勤审批" NavigateUrl="/Audit/MonthStatAuditEdit.aspx"/>
+    </node>
+    <node Text="查询中心">
+      <node Text="事由查询" NavigateUrl="/Attendance/MattersList.aspx"/>
+      <node Text="综合查询" NavigateUrl="/Attendance/IntegratedQueryList.aspx">
+        <node Text="考勤详细信息" NavigateUrl="/Attendance/IntegratedQueryView.aspx"/>
+      </node>
+      <node Text="已审批列表" NavigateUrl="/Attendance/ApprovedInfoList.aspx"/>
+      <node Text="事由查看" NavigateUrl="/Attendance/MattersView.aspx"/>
+    </node>
+    <node Text="系统管理">
+      <node Text="基础信息管理" NavigateUrl="/Attendance/CardNoVindicate.aspx"/>
+      <node Text="节假日管理" NavigateUrl="/Attendance/HolidayMaintain.aspx"/>
+      <node Text="补上下班时间" NavigateUrl="/Attendance/AddedClockInList.aspx"/>
+      <node Text="补上下班时间" NavigateUrl="/Attendance/AddedClockInEdit.aspx"/>
+      <node Text="门卡管理" NavigateUrl="/Attendance/CardNoList.aspx">
+        <node Text="添加门卡信息" NavigateUrl="/Attendance/CardNoEdit.aspx"/>
+      </node>
+      <node Text="提交权限管理" NavigateUrl="/Attendance/AttGracePeriodList.aspx">
+        <node Text="开通提交权限" NavigateUrl="/Attendance/AttGracePeriodEdit.aspx"/>
+      </node>
+    </node>
+    <node Text="统计中心" >
+      <node Text="迟到统计" NavigateUrl="/Statistic/LateInfoSearch.aspx"/>
+      <node Text="OT统计" NavigateUrl="/Statistic/OverTimeSearch.aspx"/>
+    </node>
+    <node Text="年假管理" >
+      <node Text="年假查询" NavigateUrl="/Attendance/AnnualLeaveList.aspx"/>
+      <node Text="导入年假" NavigateUrl="/Attendance/ImportLeaveInfo.aspx"/>
+    </node>
+  </node>
+</SiteMap>

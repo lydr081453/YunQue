@@ -1,0 +1,15 @@
+.ac_results {
+	BORDER-RIGHT: windowframe 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: windowframe 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; OVERFLOW: hidden; BORDER-LEFT: windowframe 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: windowframe 1px solid; BACKGROUND-COLOR: window
+}
+.ac_results UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-POSITION: outside; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.ac_results LI {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 5px; FONT-SIZE: 12px; PADDING-BOTTOM: 2px; MARGIN: 0px; FONT: menu; OVERFLOW: hidden; WIDTH: 100%; CURSOR: default; PADDING-TOP: 2px
+}
+.ac_loading {
+	BACKGROUND: url(indicator.gif) window no-repeat right center
+}
+.ac_over {
+	COLOR: highlighttext; BACKGROUND-COLOR: highlight
+}

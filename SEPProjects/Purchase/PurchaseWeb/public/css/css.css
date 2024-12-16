@@ -1,0 +1,128 @@
+
+body {
+	background-image: url(images/body_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	margin: 0px;
+	padding: 0px;
+}
+/* -----------top--------- */
+.toplink {
+	font-size: 13px;
+	color: #000;
+}
+.toplink a:link {
+	color: #000;
+	text-decoration: none;
+}
+.toplink a:visited {
+	color: #000;
+	text-decoration: none;
+}
+.toplink a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+.time {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#000000;
+}
+.font_12px_blue {
+	font-size:12px;
+	color:#7282a9;
+	line-height:150%;
+}
+.font {
+	font-size:12px;
+	color:#333;
+	font-weight:bold;
+}
+/* -----------left_menu--------- */
+.left_menu {
+	font-size: 12px;
+	color: #666;
+	text-decoration: underline;
+}
+.left_menu a:link {
+	color: #666;
+	text-decoration: underline;
+}
+.left_menu a:visited {
+	color: #666;
+	text-decoration: underline;
+}
+.left_menu a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+/* -----------内容--------- */
+.list_title {
+	background-image:url(images/blue_inside.gif);
+	background-repeat:no-repeat;
+	font-size:12px;
+	color:#7282a9;
+	font-weight:bold;
+}
+.list_title2 {
+	font-size:12px;
+	color:#7282a9;
+	font-weight:bold;
+}
+.list_nav {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333;
+	padding:10px 0 10px 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #eaedf1;
+}
+.f_16px {
+	font-size:16px;
+	color:#333;
+	font-weight:bold;
+}
+.f_12px {
+	font-size:12px;
+	color:#333;
+}
+.f_blue {
+	font-size: 12px;
+	color:#4d568c;
+	text-decoration: none;
+}
+.f_blue a:link {
+	color: #4d568c;
+	text-decoration: none;
+}
+.f_blue a:visited {
+	color: #4d568c;
+	text-decoration: none;
+}
+.f_blue a:hover {
+	color: #4d568c;
+	text-decoration: underline;
+}
+/* -----------btn--------- */
+.white_bold_font {
+	font-size: 12px;
+	color:#FFF;
+	font-weight:bold;
+	text-decoration: none;
+	vertical-align:text-top;
+	padding-top:7px;
+}
+.white_bold_font a:link {
+	color: #FFF;
+	text-decoration: none;
+}
+.white_bold_font a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+.white_bold_font a:hover {
+	color: #FFF;
+	text-decoration: underline;
+}
+

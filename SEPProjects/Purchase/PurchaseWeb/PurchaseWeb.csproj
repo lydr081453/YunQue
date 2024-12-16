@@ -1,0 +1,3231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C67ED671-B514-4424-AA98-EEEF626C1E69}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PurchaseWeb</RootNamespace>
+    <AssemblyName>PurchaseWeb</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0618</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;SkipPostSharp</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\Global.cs">
+      <Link>Global.cs</Link>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.master.designer.cs">
+      <DependentUpon>Default.master</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gift\view\AddGift.aspx.cs">
+      <DependentUpon>AddGift.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gift\view\AddGift.aspx.designer.cs">
+      <DependentUpon>AddGift.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gift\view\ExchangeManager.aspx.cs">
+      <DependentUpon>ExchangeManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gift\view\ExchangeManager.aspx.designer.cs">
+      <DependentUpon>ExchangeManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gift\view\ListGift.aspx.cs">
+      <DependentUpon>ListGift.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gift\view\ListGift.aspx.designer.cs">
+      <DependentUpon>ListGift.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="include\page\DefaultWorkSpace.aspx.designer.cs">
+      <DependentUpon>defaultworkspace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="include\page\Header.aspx.designer.cs">
+      <DependentUpon>header.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="include\page\ModelTree.aspx.designer.cs">
+      <DependentUpon>ModelTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="include\page\ToHome.aspx.designer.cs">
+      <DependentUpon>ToHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.master.cs">
+      <DependentUpon>Default.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\page\DefaultWorkSpace.aspx.cs">
+      <DependentUpon>defaultworkspace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\page\Header.aspx.cs">
+      <DependentUpon>header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\page\ModelTree.aspx.cs">
+      <DependentUpon>ModelTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="include\page\ToHome.aspx.cs">
+      <DependentUpon>ToHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PRMedia\PRMediaList.aspx.cs">
+      <DependentUpon>PRMediaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PRMedia\PRMediaList.aspx.designer.cs">
+      <DependentUpon>PRMediaList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PRMedia\PRMediaOrderList.aspx.cs">
+      <DependentUpon>PRMediaOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PRMedia\PRMediaOrderList.aspx.designer.cs">
+      <DependentUpon>PRMediaOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PRMedia\PRPriList.aspx.cs">
+      <DependentUpon>PRPriList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PRMedia\PRPriList.aspx.designer.cs">
+      <DependentUpon>PRPriList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PRMedia\PRPriOrderList.aspx.cs">
+      <DependentUpon>PRPriOrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PRMedia\PRPriOrderList.aspx.designer.cs">
+      <DependentUpon>PRPriOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSWChange\PSWChange.aspx.cs">
+      <DependentUpon>PSWChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PSWChange\PSWChange.aspx.designer.cs">
+      <DependentUpon>PSWChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="public\control\ModuleBrow.ascx.cs">
+      <DependentUpon>modulebrow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="public\control\ModuleBrow.ascx.designer.cs">
+      <DependentUpon>modulebrow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="public\page\CalendarSel.aspx.cs">
+      <DependentUpon>calendarsel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="public\page\CalendarSel.aspx.designer.cs">
+      <DependentUpon>calendarsel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="public\page\DownloadFile.aspx.cs">
+      <DependentUpon>downloadfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="public\page\DownloadFile.aspx.designer.cs">
+      <DependentUpon>downloadfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="public\page\ErrorMsg.aspx.cs">
+      <DependentUpon>errormsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="public\page\ErrorMsg.aspx.designer.cs">
+      <DependentUpon>errormsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="public\page\UserChoice.aspx.cs">
+      <DependentUpon>userchoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="public\page\UserChoice.aspx.designer.cs">
+      <DependentUpon>userchoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\allMessage.aspx.cs">
+      <DependentUpon>allMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\allMessage.aspx.designer.cs">
+      <DependentUpon>allMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PRAuthorization\PRAuthorizationEdit.aspx.cs">
+      <DependentUpon>PRAuthorizationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\PRAuthorization\PRAuthorizationEdit.aspx.designer.cs">
+      <DependentUpon>PRAuthorizationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PRAuthorization\PRAuthorizationList.aspx.cs">
+      <DependentUpon>PRAuthorizationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\PRAuthorization\PRAuthorizationList.aspx.designer.cs">
+      <DependentUpon>PRAuthorizationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PRAuthorization\selectType.aspx.cs">
+      <DependentUpon>selectType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\PRAuthorization\selectType.aspx.designer.cs">
+      <DependentUpon>selectType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BijiaDlg2.aspx.cs">
+      <DependentUpon>BijiaDlg2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BijiaDlg2.aspx.designer.cs">
+      <DependentUpon>BijiaDlg2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Default2.aspx.designer.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BijiaDlg.aspx.cs">
+      <DependentUpon>BijiaDlg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BijiaDlg.aspx.designer.cs">
+      <DependentUpon>BijiaDlg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ContrSupplement.aspx.cs">
+      <DependentUpon>ContrSupplement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ContrSupplement.aspx.designer.cs">
+      <DependentUpon>ContrSupplement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\newEditProducts.aspx.cs">
+      <DependentUpon>newEditProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\newEditProducts.aspx.designer.cs">
+      <DependentUpon>newEditProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddPriceAtt.aspx.cs">
+      <DependentUpon>AddPriceAtt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddPriceAtt.aspx.designer.cs">
+      <DependentUpon>AddPriceAtt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementDetailAddOrEdit.aspx.cs">
+      <DependentUpon>AdvertisementDetailAddOrEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementDetailAddOrEdit.aspx.designer.cs">
+      <DependentUpon>AdvertisementDetailAddOrEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementEdit.aspx.cs">
+      <DependentUpon>AdvertisementEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementEdit.aspx.designer.cs">
+      <DependentUpon>AdvertisementEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementList.aspx.cs">
+      <DependentUpon>AdvertisementList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementList.aspx.designer.cs">
+      <DependentUpon>AdvertisementList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementOrder.aspx.cs">
+      <DependentUpon>AdvertisementOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementOrder.aspx.designer.cs">
+      <DependentUpon>AdvertisementOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementProductsReference.aspx.cs">
+      <DependentUpon>AdvertisementProductsReference.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\AdvertisementProductsReference.aspx.designer.cs">
+      <DependentUpon>AdvertisementProductsReference.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\EditProducts.aspx.cs">
+      <DependentUpon>EditProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Advertisement\EditProducts.aspx.designer.cs">
+      <DependentUpon>EditProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BlackList.aspx.cs">
+      <DependentUpon>BlackList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BlackList.aspx.designer.cs">
+      <DependentUpon>BlackList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ChangeUser.aspx.cs">
+      <DependentUpon>ChangeUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ChangeUser.aspx.designer.cs">
+      <DependentUpon>ChangeUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\CompletePaymentList.aspx.cs">
+      <DependentUpon>CompletePaymentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\CompletePaymentList.aspx.designer.cs">
+      <DependentUpon>CompletePaymentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\FeedBack.aspx.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\FeedBack.aspx.designer.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\MediaSearchList.aspx.cs">
+      <DependentUpon>MediaSearchList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\MediaSearchList.aspx.designer.cs">
+      <DependentUpon>MediaSearchList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\NewReportCenter.aspx.cs">
+      <DependentUpon>NewReportCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\NewReportCenter.aspx.designer.cs">
+      <DependentUpon>NewReportCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderMsgDetail.aspx.cs">
+      <DependentUpon>OrderMsgDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderMsgDetail.aspx.designer.cs">
+      <DependentUpon>OrderMsgDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentNotify.aspx.cs">
+      <DependentUpon>PaymentNotify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentNotify.aspx.designer.cs">
+      <DependentUpon>PaymentNotify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PNSelectAuditor.aspx.cs">
+      <DependentUpon>PNSelectAuditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PNSelectAuditor.aspx.designer.cs">
+      <DependentUpon>PNSelectAuditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PrFileDownload.aspx.cs">
+      <DependentUpon>PrFileDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PrFileDownload.aspx.designer.cs">
+      <DependentUpon>PrFileDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\ADOrder.aspx.cs">
+      <DependentUpon>ADOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\ADOrder.aspx.designer.cs">
+      <DependentUpon>ADOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\AdvertisementPrint.aspx.cs">
+      <DependentUpon>AdvertisementPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\AdvertisementPrint.aspx.designer.cs">
+      <DependentUpon>AdvertisementPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\AdvertisementPrint2.aspx.cs">
+      <DependentUpon>AdvertisementPrint2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\AdvertisementPrint2.aspx.designer.cs">
+      <DependentUpon>AdvertisementPrint2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\FactoringOrderPrint.aspx.cs">
+      <DependentUpon>FactoringOrderPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\FactoringOrderPrint.aspx.designer.cs">
+      <DependentUpon>FactoringOrderPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\RecipientFactoringPrint.aspx.cs">
+      <DependentUpon>RecipientFactoringPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\RecipientFactoringPrint.aspx.designer.cs">
+      <DependentUpon>RecipientFactoringPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\RequisitionFactoringPrint.aspx.cs">
+      <DependentUpon>RequisitionFactoringPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\RequisitionFactoringPrint.aspx.designer.cs">
+      <DependentUpon>RequisitionFactoringPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\SupplierMessageReturn.aspx.cs">
+      <DependentUpon>SupplierMessageReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\SupplierMessageReturn.aspx.designer.cs">
+      <DependentUpon>SupplierMessageReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PrLinkManEditList.aspx.cs">
+      <DependentUpon>PrLinkManEditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PrLinkManEditList.aspx.designer.cs">
+      <DependentUpon>PrLinkManEditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientConfirm.aspx.cs">
+      <DependentUpon>RecipientConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientConfirm.aspx.designer.cs">
+      <DependentUpon>RecipientConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RemindAudit.aspx.cs">
+      <DependentUpon>RemindAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RemindAudit.aspx.designer.cs">
+      <DependentUpon>RemindAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RemindPNList.aspx.cs">
+      <DependentUpon>RemindPNList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RemindPNList.aspx.designer.cs">
+      <DependentUpon>RemindPNList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Message\MessageList.aspx.cs">
+      <DependentUpon>MessageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Message\MessageList.aspx.designer.cs">
+      <DependentUpon>MessageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Message\MessageView.aspx.cs">
+      <DependentUpon>MessageView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Message\MessageView.aspx.designer.cs">
+      <DependentUpon>MessageView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Message\NewPost.aspx.cs">
+      <DependentUpon>NewPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Message\NewPost.aspx.designer.cs">
+      <DependentUpon>NewPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PolicyFlow\PolicyFlowDisplay.aspx.cs">
+      <DependentUpon>PolicyFlowDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\PolicyFlow\PolicyFlowDisplay.aspx.designer.cs">
+      <DependentUpon>PolicyFlowDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PolicyFlow\PolicyFlowEdit.aspx.cs">
+      <DependentUpon>PolicyFlowEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\PolicyFlow\PolicyFlowEdit.aspx.designer.cs">
+      <DependentUpon>PolicyFlowEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PolicyFlow\PolicyFlowEditList.aspx.cs">
+      <DependentUpon>PolicyFlowEditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\PolicyFlow\PolicyFlowEditList.aspx.designer.cs">
+      <DependentUpon>PolicyFlowEditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddNewRequest.aspx.cs">
+      <DependentUpon>AddNewRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddNewRequest.aspx.designer.cs">
+      <DependentUpon>AddNewRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep2.aspx.cs">
+      <DependentUpon>AddRequisitionStep2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep2.aspx.designer.cs">
+      <DependentUpon>AddRequisitionStep2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep3.aspx.cs">
+      <DependentUpon>AddRequisitionStep3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep3.aspx.designer.cs">
+      <DependentUpon>AddRequisitionStep3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep4.aspx.cs">
+      <DependentUpon>AddRequisitionStep4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep4.aspx.designer.cs">
+      <DependentUpon>AddRequisitionStep4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep5.aspx.cs">
+      <DependentUpon>AddRequisitionStep5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep5.aspx.designer.cs">
+      <DependentUpon>AddRequisitionStep5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep6.aspx.cs">
+      <DependentUpon>AddRequisitionStep6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep6.aspx.designer.cs">
+      <DependentUpon>AddRequisitionStep6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep7.aspx.cs">
+      <DependentUpon>AddRequisitionStep7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AddRequisitionStep7.aspx.designer.cs">
+      <DependentUpon>AddRequisitionStep7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditADPassList.aspx.cs">
+      <DependentUpon>AuditADPassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditADPassList.aspx.designer.cs">
+      <DependentUpon>AuditADPassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditMediaPassList.aspx.cs">
+      <DependentUpon>AuditMediaPassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditMediaPassList.aspx.designer.cs">
+      <DependentUpon>AuditMediaPassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditOrderPassList.aspx.cs">
+      <DependentUpon>AuditOrderPassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditOrderPassList.aspx.designer.cs">
+      <DependentUpon>AuditOrderPassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditOrderPassViewList.aspx.cs">
+      <DependentUpon>AuditOrderPassViewList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditOrderPassViewList.aspx.designer.cs">
+      <DependentUpon>AuditOrderPassViewList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditRequistion.aspx.cs">
+      <DependentUpon>AuditRequistion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\AuditRequistion.aspx.designer.cs">
+      <DependentUpon>AuditRequistion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BackUpUser.aspx.cs">
+      <DependentUpon>BackUpUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BackUpUser.aspx.designer.cs">
+      <DependentUpon>BackUpUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BreakupDetail.aspx.cs">
+      <DependentUpon>BreakupDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BreakupDetail.aspx.designer.cs">
+      <DependentUpon>BreakupDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BreakupList.aspx.cs">
+      <DependentUpon>BreakupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\BreakupList.aspx.designer.cs">
+      <DependentUpon>BreakupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ChangeAuditUser.aspx.cs">
+      <DependentUpon>ChangeAuditUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ChangeAuditUser.aspx.designer.cs">
+      <DependentUpon>ChangeAuditUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ChangedSupplier.aspx.cs">
+      <DependentUpon>ChangedSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ChangedSupplier.aspx.designer.cs">
+      <DependentUpon>ChangedSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ChangeFSupplier.aspx.cs">
+      <DependentUpon>ChangeFSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ChangeFSupplier.aspx.designer.cs">
+      <DependentUpon>ChangeFSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\CollateDetail.aspx.cs">
+      <DependentUpon>CollateDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\CollateDetail.aspx.designer.cs">
+      <DependentUpon>CollateDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\CollateList.aspx.cs">
+      <DependentUpon>CollateList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\CollateList.aspx.designer.cs">
+      <DependentUpon>CollateList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\CompletePayment.aspx.cs">
+      <DependentUpon>CompletePayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\CompletePayment.aspx.designer.cs">
+      <DependentUpon>CompletePayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ConfirmOrder.aspx.cs">
+      <DependentUpon>ConfirmOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ConfirmOrder.aspx.designer.cs">
+      <DependentUpon>ConfirmOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ConfirmRecipient.aspx.cs">
+      <DependentUpon>ConfirmRecipient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ConfirmRecipient.aspx.designer.cs">
+      <DependentUpon>ConfirmRecipient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\DisabledPRList.aspx.cs">
+      <DependentUpon>DisabledPRList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\DisabledPRList.aspx.designer.cs">
+      <DependentUpon>DisabledPRList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EditOrder.aspx.cs">
+      <DependentUpon>EditOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EditOrder.aspx.designer.cs">
+      <DependentUpon>EditOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EditPayment.aspx.cs">
+      <DependentUpon>EditPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EditPayment.aspx.designer.cs">
+      <DependentUpon>EditPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EditProducts.aspx.cs">
+      <DependentUpon>EditProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EditProducts.aspx.designer.cs">
+      <DependentUpon>EditProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EditRequisition.aspx.cs">
+      <DependentUpon>EditRequisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EditRequisition.aspx.designer.cs">
+      <DependentUpon>EditRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\FilialeAuditBackUp.aspx.cs">
+      <DependentUpon>FilialeAuditBackUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\FilialeAuditBackUp.aspx.designer.cs">
+      <DependentUpon>FilialeAuditBackUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\FilialeAuditList.aspx.cs">
+      <DependentUpon>FilialeAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\FilialeAuditList.aspx.designer.cs">
+      <DependentUpon>FilialeAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\FilialeCommitList.aspx.cs">
+      <DependentUpon>FilialeCommitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\FilialeCommitList.aspx.designer.cs">
+      <DependentUpon>FilialeCommitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Filiale_RequisitionEdit.aspx.cs">
+      <DependentUpon>Filiale_RequisitionEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Filiale_RequisitionEdit.aspx.designer.cs">
+      <DependentUpon>Filiale_RequisitionEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\GroupReportCenter.aspx.cs">
+      <DependentUpon>GroupReportCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\GroupReportCenter.aspx.designer.cs">
+      <DependentUpon>GroupReportCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\GZReportCenter.aspx.cs">
+      <DependentUpon>GZReportCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\GZReportCenter.aspx.designer.cs">
+      <DependentUpon>GZReportCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\HandConfirmRecipient.aspx.cs">
+      <DependentUpon>HandConfirmRecipient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\HandConfirmRecipient.aspx.designer.cs">
+      <DependentUpon>HandConfirmRecipient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ItemList.aspx.cs">
+      <DependentUpon>ItemList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ItemList.aspx.designer.cs">
+      <DependentUpon>ItemList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\LogList.aspx.cs">
+      <DependentUpon>LogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\LogList.aspx.designer.cs">
+      <DependentUpon>LogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\MajordomoAudit.aspx.cs">
+      <DependentUpon>MajordomoAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\MajordomoAudit.aspx.designer.cs">
+      <DependentUpon>MajordomoAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\MediaDlg.aspx.cs">
+      <DependentUpon>MediaDlg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\MediaDlg.aspx.designer.cs">
+      <DependentUpon>MediaDlg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ModifyProducts.aspx.cs">
+      <DependentUpon>ModifyProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ModifyProducts.aspx.designer.cs">
+      <DependentUpon>ModifyProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ModifyProductType.aspx.cs">
+      <DependentUpon>ModifyProductType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ModifyProductType.aspx.designer.cs">
+      <DependentUpon>ModifyProductType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\NotCommitPRList.aspx.cs">
+      <DependentUpon>NotCommitPRList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\NotCommitPRList.aspx.designer.cs">
+      <DependentUpon>NotCommitPRList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\NotInceptList.aspx.cs">
+      <DependentUpon>NotInceptList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\NotInceptList.aspx.designer.cs">
+      <DependentUpon>NotInceptList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OperationAnalyse.aspx.cs">
+      <DependentUpon>OperationAnalyse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OperationAnalyse.aspx.designer.cs">
+      <DependentUpon>OperationAnalyse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OperationAudit.aspx.cs">
+      <DependentUpon>OperationAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OperationAudit.aspx.designer.cs">
+      <DependentUpon>OperationAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OperationAuditList.aspx.cs">
+      <DependentUpon>OperationAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OperationAuditList.aspx.designer.cs">
+      <DependentUpon>OperationAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\operationAuditView.aspx.cs">
+      <DependentUpon>operationAuditView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\operationAuditView.aspx.designer.cs">
+      <DependentUpon>operationAuditView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderCommitList.aspx.cs">
+      <DependentUpon>OrderCommitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderCommitList.aspx.designer.cs">
+      <DependentUpon>OrderCommitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderDetail.aspx.designer.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderDetailTab.aspx.cs">
+      <DependentUpon>OrderDetailTab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderDetailTab.aspx.designer.cs">
+      <DependentUpon>OrderDetailTab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderList.aspx.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\OrderList.aspx.designer.cs">
+      <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymantApply.aspx.cs">
+      <DependentUpon>PaymantApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymantApply.aspx.designer.cs">
+      <DependentUpon>PaymantApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentGeneralList.aspx.cs">
+      <DependentUpon>PaymentGeneralList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentGeneralList.aspx.designer.cs">
+      <DependentUpon>PaymentGeneralList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentPeriodEdit.aspx.cs">
+      <DependentUpon>PaymentPeriodEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentPeriodEdit.aspx.designer.cs">
+      <DependentUpon>PaymentPeriodEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentPeriodList.aspx.cs">
+      <DependentUpon>PaymentPeriodList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentPeriodList.aspx.designer.cs">
+      <DependentUpon>PaymentPeriodList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentRecipientList.aspx.cs">
+      <DependentUpon>PaymentRecipientList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentRecipientList.aspx.designer.cs">
+      <DependentUpon>PaymentRecipientList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentSearchSupplier.aspx.cs">
+      <DependentUpon>PaymentSearchSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PaymentSearchSupplier.aspx.designer.cs">
+      <DependentUpon>PaymentSearchSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prADAudit.aspx.cs">
+      <DependentUpon>prADAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prADAudit.aspx.designer.cs">
+      <DependentUpon>prADAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prADAuditList.aspx.cs">
+      <DependentUpon>prADAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prADAuditList.aspx.designer.cs">
+      <DependentUpon>prADAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PrFileList.aspx.cs">
+      <DependentUpon>PrFileList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\PrFileList.aspx.designer.cs">
+      <DependentUpon>PrFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\CollatePrint.aspx.cs">
+      <DependentUpon>CollatePrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\CollatePrint.aspx.designer.cs">
+      <DependentUpon>CollatePrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\MediaPrint.aspx.cs">
+      <DependentUpon>MediaPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\MediaPrint.aspx.designer.cs">
+      <DependentUpon>MediaPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\MultiRecipientPrint.aspx.cs">
+      <DependentUpon>MultiRecipientPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\MultiRecipientPrint.aspx.designer.cs">
+      <DependentUpon>MultiRecipientPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\OrderPrint.aspx.cs">
+      <DependentUpon>OrderPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\OrderPrint.aspx.designer.cs">
+      <DependentUpon>OrderPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\PaymantPrint.aspx.cs">
+      <DependentUpon>PaymantPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\PaymantPrint.aspx.designer.cs">
+      <DependentUpon>PaymantPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\PaymentPreview.aspx.cs">
+      <DependentUpon>PaymentPreview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\PaymentPreview.aspx.designer.cs">
+      <DependentUpon>PaymentPreview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\RecipientPrint.aspx.cs">
+      <DependentUpon>RecipientPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\RecipientPrint.aspx.designer.cs">
+      <DependentUpon>RecipientPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\RequisitionPrint.aspx.cs">
+      <DependentUpon>RequisitionPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\RequisitionPrint.aspx.designer.cs">
+      <DependentUpon>RequisitionPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\supplierPrint.aspx.cs">
+      <DependentUpon>supplierPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\Print\supplierPrint.aspx.designer.cs">
+      <DependentUpon>supplierPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prMediaAudit.aspx.cs">
+      <DependentUpon>prMediaAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prMediaAudit.aspx.designer.cs">
+      <DependentUpon>prMediaAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prMediaAuditList.aspx.cs">
+      <DependentUpon>prMediaAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prMediaAuditList.aspx.designer.cs">
+      <DependentUpon>prMediaAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prMediaAuditYesList.aspx.cs">
+      <DependentUpon>prMediaAuditYesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\prMediaAuditYesList.aspx.designer.cs">
+      <DependentUpon>prMediaAuditYesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductEdit.aspx.cs">
+      <DependentUpon>ProductEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductEdit.aspx.designer.cs">
+      <DependentUpon>ProductEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductListForSearch.aspx.cs">
+      <DependentUpon>ProductListForSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductListForSearch.aspx.designer.cs">
+      <DependentUpon>ProductListForSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductTypeItems.aspx.cs">
+      <DependentUpon>ProductTypeItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductTypeItems.aspx.designer.cs">
+      <DependentUpon>ProductTypeItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProposedSupplierEdit.aspx.cs">
+      <DependentUpon>ProposedSupplierEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProposedSupplierEdit.aspx.designer.cs">
+      <DependentUpon>ProposedSupplierEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProposedSupplierList.aspx.cs">
+      <DependentUpon>ProposedSupplierList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProposedSupplierList.aspx.designer.cs">
+      <DependentUpon>ProposedSupplierList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProposedSupplierView.aspx.cs">
+      <DependentUpon>ProposedSupplierView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ProposedSupplierView.aspx.designer.cs">
+      <DependentUpon>ProposedSupplierView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientCompleteList.aspx.cs">
+      <DependentUpon>RecipientCompleteList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientCompleteList.aspx.designer.cs">
+      <DependentUpon>RecipientCompleteList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientDetail.aspx.cs">
+      <DependentUpon>RecipientDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientDetail.aspx.designer.cs">
+      <DependentUpon>RecipientDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientList.aspx.cs">
+      <DependentUpon>RecipientList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientList.aspx.designer.cs">
+      <DependentUpon>RecipientList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientOkList.aspx.cs">
+      <DependentUpon>RecipientOkList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RecipientOkList.aspx.designer.cs">
+      <DependentUpon>RecipientOkList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RemindRecipientList.aspx.cs">
+      <DependentUpon>RemindRecipientList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RemindRecipientList.aspx.designer.cs">
+      <DependentUpon>RemindRecipientList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ReportCenter.aspx.cs">
+      <DependentUpon>ReportCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ReportCenter.aspx.designer.cs">
+      <DependentUpon>ReportCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ReporterDlg.aspx.cs">
+      <DependentUpon>ReporterDlg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ReporterDlg.aspx.designer.cs">
+      <DependentUpon>ReporterDlg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionAuditList.aspx.cs">
+      <DependentUpon>RequisitionAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionAuditList.aspx.designer.cs">
+      <DependentUpon>RequisitionAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionFAList.aspx.cs">
+      <DependentUpon>RequisitionFAList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionFAList.aspx.designer.cs">
+      <DependentUpon>RequisitionFAList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionNotAuditList.aspx.cs">
+      <DependentUpon>RequisitionNotAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionNotAuditList.aspx.designer.cs">
+      <DependentUpon>RequisitionNotAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionSaveList.aspx.cs">
+      <DependentUpon>RequisitionSaveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionSaveList.aspx.designer.cs">
+      <DependentUpon>RequisitionSaveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionSubmitList.aspx.cs">
+      <DependentUpon>RequisitionSubmitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequisitionSubmitList.aspx.designer.cs">
+      <DependentUpon>RequisitionSubmitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequistionCommitList.aspx.cs">
+      <DependentUpon>RequistionCommitList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\RequistionCommitList.aspx.designer.cs">
+      <DependentUpon>RequistionCommitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ReturnEdit.aspx.cs">
+      <DependentUpon>ReturnEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ReturnEdit.aspx.designer.cs">
+      <DependentUpon>ReturnEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SearchPaymentApply.aspx.cs">
+      <DependentUpon>SearchPaymentApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SearchPaymentApply.aspx.designer.cs">
+      <DependentUpon>SearchPaymentApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\selectOperationAuditor.aspx.cs">
+      <DependentUpon>selectOperationAuditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\selectOperationAuditor.aspx.designer.cs">
+      <DependentUpon>selectOperationAuditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\selectProductTypes.aspx.cs">
+      <DependentUpon>selectProductTypes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\selectProductTypes.aspx.designer.cs">
+      <DependentUpon>selectProductTypes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\selectProjectList.aspx.cs">
+      <DependentUpon>selectProjectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\selectProjectList.aspx.designer.cs">
+      <DependentUpon>selectProjectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SetAuditor.aspx.cs">
+      <DependentUpon>SetAuditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SetAuditor.aspx.designer.cs">
+      <DependentUpon>SetAuditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SetOperationAudit.aspx.cs">
+      <DependentUpon>SetOperationAudit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SetOperationAudit.aspx.designer.cs">
+      <DependentUpon>SetOperationAudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ShowRequisitionDetail.aspx.cs">
+      <DependentUpon>ShowRequisitionDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ShowRequisitionDetail.aspx.designer.cs">
+      <DependentUpon>ShowRequisitionDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SHReportCenter.aspx.cs">
+      <DependentUpon>SHReportCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SHReportCenter.aspx.designer.cs">
+      <DependentUpon>SHReportCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SuperviseList.aspx.cs">
+      <DependentUpon>SuperviseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SuperviseList.aspx.designer.cs">
+      <DependentUpon>SuperviseList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\EditProducts.aspx.cs">
+      <DependentUpon>EditProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\EditProducts.aspx.designer.cs">
+      <DependentUpon>EditProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaDetailAddOrEdit.aspx.cs">
+      <DependentUpon>OtherMediaDetailAddOrEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaDetailAddOrEdit.aspx.designer.cs">
+      <DependentUpon>OtherMediaDetailAddOrEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaEdit.aspx.cs">
+      <DependentUpon>OtherMediaEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaEdit.aspx.designer.cs">
+      <DependentUpon>OtherMediaEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaList.aspx.cs">
+      <DependentUpon>OtherMediaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaList.aspx.designer.cs">
+      <DependentUpon>OtherMediaList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaOrder.aspx.cs">
+      <DependentUpon>OtherMediaOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaOrder.aspx.designer.cs">
+      <DependentUpon>OtherMediaOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaProductsReference.aspx.cs">
+      <DependentUpon>OtherMediaProductsReference.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierCollaboration\OtherMediaProductsReference.aspx.designer.cs">
+      <DependentUpon>OtherMediaProductsReference.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoEdit.aspx.cs">
+      <DependentUpon>SupplierInfoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoEdit.aspx.designer.cs">
+      <DependentUpon>SupplierInfoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoForProduct.aspx.cs">
+      <DependentUpon>SupplierInfoForProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoForProduct.aspx.designer.cs">
+      <DependentUpon>SupplierInfoForProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoList.aspx.cs">
+      <DependentUpon>SupplierInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoList.aspx.designer.cs">
+      <DependentUpon>SupplierInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoListD.aspx.cs">
+      <DependentUpon>SupplierInfoListD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoListD.aspx.designer.cs">
+      <DependentUpon>SupplierInfoListD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoView.aspx.cs">
+      <DependentUpon>SupplierInfoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoView.aspx.designer.cs">
+      <DependentUpon>SupplierInfoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoViewD.aspx.cs">
+      <DependentUpon>SupplierInfoViewD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierInfoViewD.aspx.designer.cs">
+      <DependentUpon>SupplierInfoViewD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierList.aspx.cs">
+      <DependentUpon>SupplierList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierList.aspx.designer.cs">
+      <DependentUpon>SupplierList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierListForSearch.aspx.cs">
+      <DependentUpon>SupplierListForSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierListForSearch.aspx.designer.cs">
+      <DependentUpon>SupplierListForSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierPOList.aspx.cs">
+      <DependentUpon>SupplierPOList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierPOList.aspx.designer.cs">
+      <DependentUpon>SupplierPOList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierPriceFils.aspx.cs">
+      <DependentUpon>SupplierPriceFils.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierPriceFils.aspx.designer.cs">
+      <DependentUpon>SupplierPriceFils.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierUsers.aspx.cs">
+      <DependentUpon>SupplierUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\SupplierUsers.aspx.designer.cs">
+      <DependentUpon>SupplierUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\TempSupplierEdit.aspx.cs">
+      <DependentUpon>TempSupplierEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\TempSupplierEdit.aspx.designer.cs">
+      <DependentUpon>TempSupplierEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\TempSupplierList.aspx.cs">
+      <DependentUpon>TempSupplierList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\TempSupplierList.aspx.designer.cs">
+      <DependentUpon>TempSupplierList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\TempSupplierView.aspx.cs">
+      <DependentUpon>TempSupplierView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\TempSupplierView.aspx.designer.cs">
+      <DependentUpon>TempSupplierView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\UpfileDownload.aspx.cs">
+      <DependentUpon>UpfileDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\UpfileDownload.aspx.designer.cs">
+      <DependentUpon>UpfileDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\UpLoadRequisition.aspx.cs">
+      <DependentUpon>UpLoadRequisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\UpLoadRequisition.aspx.designer.cs">
+      <DependentUpon>UpLoadRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\WorkflowQA.aspx.cs">
+      <DependentUpon>WorkflowQA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\WorkflowQA.aspx.designer.cs">
+      <DependentUpon>WorkflowQA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\WrittingFeeApplicant.aspx.cs">
+      <DependentUpon>WrittingFeeApplicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\WrittingFeeApplicant.aspx.designer.cs">
+      <DependentUpon>WrittingFeeApplicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\WrittingFeeExport.aspx.cs">
+      <DependentUpon>WrittingFeeExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\WrittingFeeExport.aspx.designer.cs">
+      <DependentUpon>WrittingFeeExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\MediaForReporterExportDlg.aspx.cs">
+      <DependentUpon>MediaForReporterExportDlg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\MediaForReporterExportDlg.aspx.designer.cs">
+      <DependentUpon>MediaForReporterExportDlg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ReporterForExportDlg.aspx.cs">
+      <DependentUpon>ReporterForExportDlg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\ReporterForExportDlg.aspx.designer.cs">
+      <DependentUpon>ReporterForExportDlg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\supplier\searchSupplier.aspx.cs">
+      <DependentUpon>searchSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\supplier\searchSupplier.aspx.designer.cs">
+      <DependentUpon>searchSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\supplier\syncSupplierInfo.aspx.cs">
+      <DependentUpon>syncSupplierInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\supplier\syncSupplierInfo.aspx.designer.cs">
+      <DependentUpon>syncSupplierInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\supplier\syncSupplierList.aspx.cs">
+      <DependentUpon>syncSupplierList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\supplier\syncSupplierList.aspx.designer.cs">
+      <DependentUpon>syncSupplierList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\Body.aspx.cs">
+      <DependentUpon>Body.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\Body.aspx.designer.cs">
+      <DependentUpon>Body.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\BodyItem.aspx.cs">
+      <DependentUpon>BodyItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\BodyItem.aspx.designer.cs">
+      <DependentUpon>BodyItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\Header.aspx.cs">
+      <DependentUpon>Header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\Header.aspx.designer.cs">
+      <DependentUpon>Header.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\HeaderItem.aspx.cs">
+      <DependentUpon>HeaderItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\HeaderItem.aspx.designer.cs">
+      <DependentUpon>HeaderItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TemplateManage\View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\ESPAndSupplyTypeInfo.aspx.cs">
+      <DependentUpon>ESPAndSupplyTypeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\ESPAndSupplyTypeInfo.aspx.designer.cs">
+      <DependentUpon>ESPAndSupplyTypeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\SelectTypeESP.aspx.cs">
+      <DependentUpon>SelectTypeESP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\SelectTypeESP.aspx.designer.cs">
+      <DependentUpon>SelectTypeESP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\SelectTypeSupply.aspx.cs">
+      <DependentUpon>SelectTypeSupply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\SelectTypeSupply.aspx.designer.cs">
+      <DependentUpon>SelectTypeSupply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\SupplyAndESPTypeInfo.aspx.cs">
+      <DependentUpon>SupplyAndESPTypeInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\SupplyAndESPTypeInfo.aspx.designer.cs">
+      <DependentUpon>SupplyAndESPTypeInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\TypeInfoEdit.aspx.cs">
+      <DependentUpon>TypeInfoEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\TypeInfoEdit.aspx.designer.cs">
+      <DependentUpon>TypeInfoEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\TypeInfoList.aspx.cs">
+      <DependentUpon>TypeInfoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\TypeInfoList.aspx.designer.cs">
+      <DependentUpon>TypeInfoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Requisition\UsedPRList.aspx.cs">
+      <DependentUpon>UsedPRList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Requisition\UsedPRList.aspx.designer.cs">
+      <DependentUpon>UsedPRList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\VendeeDepartmentTypeRelation.aspx.cs">
+      <DependentUpon>VendeeDepartmentTypeRelation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\VendeeDepartmentTypeRelation.aspx.designer.cs">
+      <DependentUpon>VendeeDepartmentTypeRelation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\VendeeDepartmentTypeRelationEdit.aspx.cs">
+      <DependentUpon>VendeeDepartmentTypeRelationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\VendeeDepartmentTypeRelationEdit.aspx.designer.cs">
+      <DependentUpon>VendeeDepartmentTypeRelationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\VendeeTypeRelationEdit.aspx.cs">
+      <DependentUpon>VendeeTypeRelationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\TypeInfo\VendeeTypeRelationEdit.aspx.designer.cs">
+      <DependentUpon>VendeeTypeRelationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Version\ItemEdit.aspx.cs">
+      <DependentUpon>ItemEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Version\ItemEdit.aspx.designer.cs">
+      <DependentUpon>ItemEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Version\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Version\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\Version\View.aspx.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Purchase\Version\View.aspx.designer.cs">
+      <DependentUpon>View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOut.aspx.designer.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Edit\genericInfo.ascx.cs">
+      <DependentUpon>genericInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Edit\genericInfo.ascx.designer.cs">
+      <DependentUpon>genericInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Edit\newSetAuditor.ascx.cs">
+      <DependentUpon>newSetAuditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Edit\newSetAuditor.ascx.designer.cs">
+      <DependentUpon>newSetAuditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Edit\paymentInfo.ascx.cs">
+      <DependentUpon>paymentInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Edit\paymentInfo.ascx.designer.cs">
+      <DependentUpon>paymentInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Edit\productInfo.ascx.cs">
+      <DependentUpon>productInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Edit\productInfo.ascx.designer.cs">
+      <DependentUpon>productInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Edit\projectInfo.ascx.cs">
+      <DependentUpon>projectInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Edit\projectInfo.ascx.designer.cs">
+      <DependentUpon>projectInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Edit\RequirementDescInfo.ascx.cs">
+      <DependentUpon>RequirementDescInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Edit\RequirementDescInfo.ascx.designer.cs">
+      <DependentUpon>RequirementDescInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Edit\Score.ascx.cs">
+      <DependentUpon>Score.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Edit\Score.ascx.designer.cs">
+      <DependentUpon>Score.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Edit\setAuditor.ascx.cs">
+      <DependentUpon>setAuditor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Edit\setAuditor.ascx.designer.cs">
+      <DependentUpon>setAuditor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Edit\supplierInfo.ascx.cs">
+      <DependentUpon>supplierInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Edit\supplierInfo.ascx.designer.cs">
+      <DependentUpon>supplierInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\auditLog.ascx.cs">
+      <DependentUpon>auditLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\auditLog.ascx.designer.cs">
+      <DependentUpon>auditLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\genericInfo.ascx.cs">
+      <DependentUpon>genericInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\genericInfo.ascx.designer.cs">
+      <DependentUpon>genericInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\operationAuditLog.ascx.cs">
+      <DependentUpon>operationAuditLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\operationAuditLog.ascx.designer.cs">
+      <DependentUpon>operationAuditLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\paymentInfo.ascx.cs">
+      <DependentUpon>paymentInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\paymentInfo.ascx.designer.cs">
+      <DependentUpon>paymentInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\prLogs.ascx.cs">
+      <DependentUpon>prLogs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\prLogs.ascx.designer.cs">
+      <DependentUpon>prLogs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\productInfo.ascx.cs">
+      <DependentUpon>productInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\productInfo.ascx.designer.cs">
+      <DependentUpon>productInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\projectInfo.ascx.cs">
+      <DependentUpon>projectInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\projectInfo.ascx.designer.cs">
+      <DependentUpon>projectInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\PRTopMessage.ascx.cs">
+      <DependentUpon>PRTopMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\PRTopMessage.ascx.designer.cs">
+      <DependentUpon>PRTopMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\RequirementDescInfo.ascx.cs">
+      <DependentUpon>RequirementDescInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\RequirementDescInfo.ascx.designer.cs">
+      <DependentUpon>RequirementDescInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\supplierInfo.ascx.cs">
+      <DependentUpon>supplierInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\supplierInfo.ascx.designer.cs">
+      <DependentUpon>supplierInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\View\SupplierView.ascx.cs">
+      <DependentUpon>SupplierView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\View\SupplierView.ascx.designer.cs">
+      <DependentUpon>SupplierView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveFlow\ApproveFlow.aspx.cs">
+      <DependentUpon>ApproveFlow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApproveFlow\ApproveFlow.aspx.designer.cs">
+      <DependentUpon>ApproveFlow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPointRule\view\AddUserPointRule.aspx.cs">
+      <DependentUpon>AddUserPointRule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPointRule\view\AddUserPointRule.aspx.designer.cs">
+      <DependentUpon>AddUserPointRule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPointRule\view\ListUserPointRule.aspx.cs">
+      <DependentUpon>ListUserPointRule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPointRule\view\ListUserPointRule.aspx.designer.cs">
+      <DependentUpon>ListUserPointRule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPointRule\view\UserPointEdit.aspx.cs">
+      <DependentUpon>UserPointEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPointRule\view\UserPointEdit.aspx.designer.cs">
+      <DependentUpon>UserPointEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPointRule\view\UserPointList.aspx.cs">
+      <DependentUpon>UserPointList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPointRule\view\UserPointList.aspx.designer.cs">
+      <DependentUpon>UserPointList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPointRule\view\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPointRule\view\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ABCpdf, Version=7.0.2.9, Culture=neutral, PublicKeyToken=a7a0b3f5184f2169, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\ABCpdf.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=3.0.20229.20843, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxPro.2, Version=7.7.31.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Web.UI, Version=2008.2.1267.35, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\ComponentArt.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLib.BLL, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\DataLib.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLib.DAL, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\DataLib.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLib.DBUtility, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\DataLib.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtExtenders, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\ExtExtenders.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.5.2912.21008, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="IWorkFlowDAO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\IWorkFlowDAO.dll</HintPath>
+    </Reference>
+    <Reference Include="LTP.Common, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\ExternalLibs\LTP.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\Model.dll</HintPath>
+    </Reference>
+    <Reference Include="ModelTemplate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\ModelTemplate.dll</HintPath>
+    </Reference>
+    <Reference Include="ModelTemplate.BLL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\ModelTemplate.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="ModelTemplate.DB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\ModelTemplate.DB.dll</HintPath>
+    </Reference>
+    <Reference Include="ModelTemplate.IDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\ModelTemplate.IDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="MyControls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7dae0a50981e930f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\MyControls.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WorkFlowDAO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\WorkFlowDAO.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkFlowImpl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\WorkFlowImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkFlowLibary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\WorkFlowLibary.dll</HintPath>
+    </Reference>
+    <Reference Include="WorkFlowModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\WorkFlowModel.dll</HintPath>
+    </Reference>
+    <Reference Include="YYControls, Version=4.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExternalLibs\YYControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Themes\Default\SkinFile.skin" />
+    <None Include="App_Themes\Green\SkinFile.skin" />
+    <Content Include="Default.master" />
+    <Content Include="ExcelTemplate\宣亚供应商行为规范.pdf" />
+    <Content Include="ExcelTemplate\宣亚订单标准条款.pdf" />
+    <None Include="images\img_tu1.jpg" />
+    <None Include="images\img_tu2.jpg" />
+    <None Include="images\input_bg.jpg" />
+    <None Include="images\loading.gif" />
+    <None Include="images\xingyan.png" />
+    <Content Include="images\shunya.gif" />
+    <Content Include="MasterPage.master" />
+    <None Include="ApproveFlow\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="appSettings.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="connectionStrings.config" />
+    <None Include="ExcelTemplate\Afterwards.xls" />
+    <None Include="ExcelTemplate\Collate.xls" />
+    <None Include="ExcelTemplate\CostReport.xls" />
+    <None Include="ExcelTemplate\CusAsk.xls" />
+    <None Include="ExcelTemplate\DailyPurchase.xls" />
+    <None Include="ExcelTemplate\EmBuy.xls" />
+    <None Include="ExcelTemplate\Order.xls" />
+    <None Include="ExcelTemplate\paymentapply.xls" />
+    <None Include="ExcelTemplate\paymentapplytwo.xls" />
+    <None Include="ExcelTemplate\PO.xls" />
+    <None Include="ExcelTemplate\PR.xls" />
+    <None Include="ExcelTemplate\Requisition.xls" />
+    <None Include="ExcelTemplate\SupplierInfo.xls" />
+    <None Include="ExcelTemplate\UploadRequisition.xls" />
+    <None Include="ExcelTemplate\星言订单标准条款.doc" />
+    <None Include="ExcelTemplate\星言订单标准条款.pdf" />
+    <None Include="ExcelTemplate\星言供应商行为规范.doc" />
+    <None Include="ExcelTemplate\星言供应商行为规范.pdf" />
+    <None Include="Gift\view\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="PRMedia\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="Properties\PublishProfiles\purchase.pubxml" />
+    <None Include="Purchase\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="Purchase\Message\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="Purchase\Requisition\highslide\graphics\outlines\Outlines.psd" />
+    <Content Include="Purchase\Requisition\ContrSupplement.aspx" />
+    <Content Include="Purchase\Requisition\Print\FactoringOrderPrint.aspx" />
+    <None Include="Purchase\Requisition\Print\images\xiaomi.png" />
+    <None Include="Purchase\Requisition\Print\images\xingyan.png" />
+    <Content Include="Purchase\Requisition\Print\RecipientFactoringPrint.aspx" />
+    <Content Include="Purchase\Requisition\Print\RequisitionFactoringPrint.aspx" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="Purchase\supplier\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\outlines\Outlines.psd" />
+    <None Include="TEMP\Start.doc" />
+    <None Include="TMP\ReporterExport\ReporterExportTemplate.xls" />
+    <None Include="upFile\稿费报销明细单.xls" />
+    <None Include="UserPointRule\view\highslide\graphics\outlines\Outlines.psd" />
+    <Content Include="Purchase\Requisition\RecipientConfirm.aspx" />
+    <None Include="Web.Config" />
+    <None Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ApproveFlow\highslide\graphics\close.png" />
+    <None Include="ApproveFlow\highslide\graphics\controlbar2.gif" />
+    <None Include="ApproveFlow\highslide\graphics\controlbar3.gif" />
+    <None Include="ApproveFlow\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="ApproveFlow\highslide\graphics\controlbar4.gif" />
+    <None Include="ApproveFlow\highslide\graphics\fullexpand.gif" />
+    <None Include="ApproveFlow\highslide\graphics\geckodimmer.png" />
+    <None Include="ApproveFlow\highslide\graphics\loader.gif" />
+    <None Include="ApproveFlow\highslide\graphics\loader.white.gif" />
+    <None Include="ApproveFlow\highslide\graphics\outlines\beveled.png" />
+    <None Include="ApproveFlow\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="ApproveFlow\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="ApproveFlow\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="ApproveFlow\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="ApproveFlow\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="ApproveFlow\highslide\graphics\resize.gif" />
+    <None Include="ApproveFlow\highslide\graphics\zoomin.cur" />
+    <None Include="ApproveFlow\highslide\graphics\zoomout.cur" />
+    <None Include="ApproveFlow\highslide\highslide-full.js" />
+    <None Include="ApproveFlow\highslide\highslide-full.packed.js" />
+    <None Include="ApproveFlow\highslide\highslide-with-html.js" />
+    <None Include="ApproveFlow\highslide\highslide-with-html.packed.js" />
+    <None Include="ApproveFlow\highslide\highslide.js" />
+    <None Include="ApproveFlow\highslide\highslide.packed.js" />
+    <None Include="ApproveFlow\highslide\swfobject.js" />
+    <None Include="App_Themes\Default\style.css" />
+    <None Include="App_Themes\Green\style.css" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\CSs\default.css" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\html\calendar.html" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\html\calendarbottom.html" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\html\calendartop.html" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\html\crystalexportdialog.htm" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\html\crystalprinthost.html" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\calendar.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\crlogo.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\export.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\exportd.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\export_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\First.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\Firstd.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\first_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\gotopage.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\gotopaged.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\gotopage_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\grouptree.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\grouptreed.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\grouptreepressed.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\grouptree_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\Last.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\Lastd.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\last_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\Next.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\Nextd.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\next_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\Prev.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\Prevd.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\prev_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\print.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\printd.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\print_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\Refresh.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\refreshd.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\refresh_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\Search.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\searchd.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\search_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\up.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\upd.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\ToolBar\up_over.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\begindots.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\beginminus.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\beginplus.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\blank.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\blankdots.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\dots.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\lastdots.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\lastminus.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\lastplus.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\Magnify.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\minus.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\Minusbox.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\plus.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\Plusbox.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\singleminus.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\Images\Tree\singleplus.gif" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\calendar_param.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\dt_param.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\export.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\KeyDownEvent.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\print.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\prompts_param.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_chs.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_cht.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_de.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_en.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_es.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_fr.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_it.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_ja.js" />
+    <None Include="aspnet_client\system_web\2_0_50727\CrystalReportWebFormViewer3\JS\strings_ko.js" />
+    <None Include="Css\billcss.css" />
+    <Content Include="default.aspx" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="Gift\uploadImages\jifen-03.jpg" />
+    <Content Include="Gift\view\AddGift.aspx" />
+    <Content Include="Gift\view\ExchangeManager.aspx" />
+    <None Include="Gift\view\highslide\graphics\close.png" />
+    <None Include="Gift\view\highslide\graphics\controlbar2.gif" />
+    <None Include="Gift\view\highslide\graphics\controlbar3.gif" />
+    <None Include="Gift\view\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Gift\view\highslide\graphics\controlbar4.gif" />
+    <None Include="Gift\view\highslide\graphics\fullexpand.gif" />
+    <None Include="Gift\view\highslide\graphics\geckodimmer.png" />
+    <None Include="Gift\view\highslide\graphics\loader.gif" />
+    <None Include="Gift\view\highslide\graphics\loader.white.gif" />
+    <None Include="Gift\view\highslide\graphics\outlines\beveled.png" />
+    <None Include="Gift\view\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Gift\view\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Gift\view\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Gift\view\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Gift\view\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Gift\view\highslide\graphics\resize.gif" />
+    <None Include="Gift\view\highslide\graphics\zoomin.cur" />
+    <None Include="Gift\view\highslide\graphics\zoomout.cur" />
+    <None Include="Gift\view\highslide\highslide-full.js" />
+    <None Include="Gift\view\highslide\highslide-full.packed.js" />
+    <None Include="Gift\view\highslide\highslide-with-html.js" />
+    <None Include="Gift\view\highslide\highslide-with-html.packed.js" />
+    <None Include="Gift\view\highslide\highslide.js" />
+    <None Include="Gift\view\highslide\highslide.packed.js" />
+    <None Include="Gift\view\highslide\swfobject.js" />
+    <None Include="Gift\view\images\jifen-01.jpg" />
+    <None Include="Gift\view\images\jifen-02.jpg" />
+    <None Include="Gift\view\images\jifen-03.jpg" />
+    <None Include="Gift\view\images\jifen-04.jpg" />
+    <None Include="Gift\view\images\jifen-05.jpg" />
+    <None Include="Gift\view\images\jifen-06.jpg" />
+    <Content Include="Gift\view\ListGift.aspx" />
+    <Content Include="Gift\view\style.css" />
+    <Content Include="Global.asax" />
+    <None Include="HelpFile\AddRequisitionStep2.htm" />
+    <None Include="HelpFile\AddRequisitionStep3.htm" />
+    <None Include="HelpFile\AddRequisitionStep4.htm" />
+    <None Include="HelpFile\AddRequisitionStep5.htm" />
+    <None Include="HelpFile\AddRequisitionStep6.htm" />
+    <None Include="HelpFile\AddRequisitionStep7.htm" />
+    <None Include="HelpFile\AuditOrderPassList.htm" />
+    <None Include="HelpFile\AuditRequistion.htm" />
+    <None Include="HelpFile\EditOrder.htm" />
+    <None Include="HelpFile\EditProducts.htm" />
+    <None Include="HelpFile\EditRequisition.htm" />
+    <None Include="HelpFile\EmployeeList.htm" />
+    <None Include="HelpFile\FilialeAuditList.htm" />
+    <None Include="HelpFile\Filiale_RequisitionEdit.htm" />
+    <None Include="HelpFile\ItemList.htm" />
+    <None Include="HelpFile\Mail.htm" />
+    <None Include="HelpFile\OrderCommitList.htm" />
+    <None Include="HelpFile\OrderDetail.htm" />
+    <None Include="HelpFile\OrderDetail2.htm" />
+    <None Include="HelpFile\OrderDetail4.htm" />
+    <None Include="HelpFile\OrderList.htm" />
+    <None Include="HelpFile\ProductEdit.htm" />
+    <None Include="HelpFile\ProductList.htm" />
+    <None Include="HelpFile\ProductView.htm" />
+    <None Include="HelpFile\RecipientDetail.htm" />
+    <None Include="HelpFile\RequisitionSaveList.htm" />
+    <None Include="HelpFile\RequisitionSubmitList.htm" />
+    <None Include="HelpFile\RequistionCommitList.htm" />
+    <None Include="HelpFile\ShowRequisitionDetail.htm" />
+    <None Include="HelpFile\SupplierInfoEdit.htm" />
+    <None Include="HelpFile\SupplierInfoList.htm" />
+    <None Include="HelpFile\SupplierInfoView.htm" />
+    <None Include="HelpFile\SupplierList.htm" />
+    <None Include="HelpFile\UpLoadRequisition.htm" />
+    <None Include="images\01.jpg" />
+    <None Include="images\02.jpg" />
+    <None Include="images\03.jpg" />
+    <None Include="images\04b_12.jpg" />
+    <None Include="images\04b_13.jpg" />
+    <None Include="images\04b_14.jpg" />
+    <None Include="images\04b_16.jpg" />
+    <None Include="images\04b_17.jpg" />
+    <None Include="images\100204_07.jpg" />
+    <None Include="images\100222_01.jpg" />
+    <None Include="images\100222_02.jpg" />
+    <None Include="images\100222_03.jpg" />
+    <None Include="images\100222_04.jpg" />
+    <None Include="images\100222_05.jpg" />
+    <None Include="images\100222_06.jpg" />
+    <None Include="images\100222_07.jpg" />
+    <None Include="images\100222_08.jpg" />
+    <None Include="images\address.gif" />
+    <None Include="images\allinfo_bg.gif" />
+    <None Include="images\arrow.gif" />
+    <None Include="images\audit_icon.gif" />
+    <None Include="images\ballRoom_1.png" />
+    <None Include="images\ballRoom_2.png" />
+    <None Include="images\ballRoom_3.png" />
+    <None Include="images\ballRoom_4.png" />
+    <None Include="images\ballRoom_5.png" />
+    <None Include="images\ballRoom_6.png" />
+    <None Include="images\bbg.gif" />
+    <None Include="images\bbottom.gif" />
+    <None Include="images\bg.gif" />
+    <None Include="images\bg1.gif" />
+    <None Include="images\bijia.gif" />
+    <None Include="images\blank.gif" />
+    <None Include="images\block.gif" />
+    <None Include="images\blue_inside %281%29.gif" />
+    <None Include="images\blue_inside %2841%29.gif" />
+    <None Include="images\blue_inside %285%29.gif" />
+    <None Include="images\blue_inside %2855%29.gif" />
+    <None Include="images\blue_inside %2857%29.gif" />
+    <None Include="images\blue_inside.gif" />
+    <None Include="images\bottom.gif" />
+    <None Include="images\btnBack.gif" />
+    <None Include="images\btnBg.gif" />
+    <None Include="images\btnbgimg.gif" />
+    <None Include="images\btn_a2.jpg" />
+    <None Include="images\btn_j.jpg" />
+    <None Include="images\btn_tj.jpg" />
+    <None Include="images\btn_w.jpg" />
+    <None Include="images\btop.gif" />
+    <None Include="images\btopbg1.gif" />
+    <None Include="images\cancel.gif" />
+    <None Include="images\cbg.gif" />
+    <None Include="images\cbottom.gif" />
+    <None Include="images\changed.gif" />
+    <None Include="images\ctop.gif" />
+    <None Include="images\ctopbg1.gif" />
+    <None Include="images\dbg1.gif" />
+    <None Include="images\dbg2.gif" />
+    <None Include="images\dc.gif" />
+    <None Include="images\disable.gif" />
+    <None Include="images\down.gif" />
+    <None Include="images\dynCalendar.gif" />
+    <None Include="images\edit.gif" />
+    <None Include="images\empty.gif" />
+    <None Include="images\Expand.gif" />
+    <None Include="images\f.gif" />
+    <None Include="images\fc.gif" />
+    <None Include="images\fminus.gif" />
+    <None Include="images\fo.gif" />
+    <None Include="images\folder.gif" />
+    <None Include="images\folderopen.gif" />
+    <None Include="images\fplus.gif" />
+    <None Include="images\gridview\asc.gif" />
+    <None Include="images\gridview\attachment.gif" />
+    <None Include="images\gridview\desc.gif" />
+    <None Include="images\gridview\flag_blue.gif" />
+    <None Include="images\gridview\flag_green.gif" />
+    <None Include="images\gridview\flag_none.gif" />
+    <None Include="images\gridview\flag_red.gif" />
+    <None Include="images\gridview\grid_footer_bg.gif" />
+    <None Include="images\gridview\grid_headerBg.gif" />
+    <None Include="images\gridview\grid_header_bg.gif" />
+    <None Include="images\gridview\grid_popup_bg.gif" />
+    <None Include="images\gridview\grid_popup_footer_bg.gif" />
+    <None Include="images\gridview\grid_postfooter.gif" />
+    <None Include="images\gridview\grid_postfooter_01.jpg" />
+    <None Include="images\gridview\grid_postfooter_02.jpg" />
+    <None Include="images\gridview\grid_postfooter_03.jpg" />
+    <None Include="images\gridview\grid_preheader.gif" />
+    <None Include="images\gridview\grid_preheader_01.jpg" />
+    <None Include="images\gridview\grid_preheader_02.jpg" />
+    <None Include="images\gridview\grid_preheader_03.jpg" />
+    <None Include="images\gridview\grid_selected_item_bg.gif" />
+    <None Include="images\gridview\group_asc.gif" />
+    <None Include="images\gridview\group_desc.gif" />
+    <None Include="images\gridview\header1stCell_bg.gif" />
+    <None Include="images\gridview\header_activeBg.gif" />
+    <None Include="images\gridview\header_bg.gif" />
+    <None Include="images\gridview\header_hoverBg.gif" />
+    <None Include="images\gridview\header_rowBg.gif" />
+    <None Include="images\gridview\icon_attachment.gif" />
+    <None Include="images\gridview\icon_flag.gif" />
+    <None Include="images\gridview\icon_icon.gif" />
+    <None Include="images\gridview\icon_priority.gif" />
+    <None Include="images\gridview\lines\i.gif" />
+    <None Include="images\gridview\lines\lminus.gif" />
+    <None Include="images\gridview\lines\lplus.gif" />
+    <None Include="images\gridview\lines\rminus.gif" />
+    <None Include="images\gridview\lines\rplus.gif" />
+    <None Include="images\gridview\lines\tminus.gif" />
+    <None Include="images\gridview\lines\tplus.gif" />
+    <None Include="images\gridview\msg_forwarded.gif" />
+    <None Include="images\gridview\msg_read.gif" />
+    <None Include="images\gridview\msg_replied.gif" />
+    <None Include="images\gridview\msg_unread.gif" />
+    <None Include="images\gridview\pager\first.gif" />
+    <None Include="images\gridview\pager\first_hover.gif" />
+    <None Include="images\gridview\pager\last.gif" />
+    <None Include="images\gridview\pager\last_hover.gif" />
+    <None Include="images\gridview\pager\next.gif" />
+    <None Include="images\gridview\pager\next_hover.gif" />
+    <None Include="images\gridview\pager\prev.gif" />
+    <None Include="images\gridview\pager\prev_hover.gif" />
+    <None Include="images\gridview\pager\slider_bg.gif" />
+    <None Include="images\gridview\pager\slider_grip.gif" />
+    <None Include="images\gridview\pager\slider_grip_hover.gif" />
+    <None Include="images\gridview\pager\slider_loaded_bg.gif" />
+    <None Include="images\gridview\priority_high.gif" />
+    <None Include="images\gridview\priority_low.gif" />
+    <None Include="images\gridview\reorder.gif" />
+    <None Include="images\gridview\spacer.gif" />
+    <None Include="images\gridview\spinner.gif" />
+    <None Include="images\gridview\topItem_col.gif" />
+    <None Include="images\gridview\topItem_exp.gif" />
+    <None Include="images\help_ico.gif" />
+    <None Include="images\home.gif" />
+    <None Include="images\html.gif" />
+    <None Include="images\i.gif" />
+    <None Include="images\i.p.cancel.gif" />
+    <None Include="images\Icon_Cancel.gif" />
+    <None Include="images\Icon_Copy.gif" />
+    <None Include="images\Icon_handconfrim.gif" />
+    <None Include="images\Icon_Output.gif" />
+    <None Include="images\Icon_PrintPo.gif" />
+    <None Include="images\Icon_PrintPr.gif" />
+    <None Include="images\Icon_Sendmail.gif" />
+    <None Include="images\ico_001.gif" />
+    <None Include="images\ico_04.gif" />
+    <None Include="images\ico_05.gif" />
+    <None Include="images\jiantou.jpg" />
+    <None Include="images\L.gif" />
+    <None Include="images\left.gif" />
+    <None Include="images\Leftheader.gif" />
+    <None Include="images\Lminus.gif" />
+    <None Include="images\log-04.jpg" />
+    <None Include="images\logo_03.jpg" />
+    <None Include="images\logo_13.jpg" />
+    <None Include="images\Lplus.gif" />
+    <None Include="images\l_ico.gif" />
+    <None Include="images\minus.gif" />
+    <None Include="images\more.gif" />
+    <None Include="images\ok.gif" />
+    <None Include="images\output.gif" />
+    <None Include="images\permission.gif" />
+    <None Include="images\plus.gif" />
+    <None Include="images\po_1.gif" />
+    <None Include="images\printed.gif" />
+    <None Include="images\printno.gif" />
+    <None Include="images\pri_gr.gif" />
+    <None Include="images\pri_pn.gif" />
+    <None Include="images\r.gif" />
+    <None Include="images\re-01.jpg" />
+    <None Include="images\re-02.jpg" />
+    <None Include="images\re-03.jpg" />
+    <None Include="images\re-04.jpg" />
+    <None Include="images\re-05.jpg" />
+    <None Include="images\re-06.jpg" />
+    <None Include="images\re-07.jpg" />
+    <None Include="images\re-08.jpg" />
+    <None Include="images\re-09.jpg" />
+    <None Include="images\re-10.jpg" />
+    <None Include="images\re-11.jpg" />
+    <None Include="images\re-12.jpg" />
+    <None Include="images\re-bg.jpg" />
+    <None Include="images\re-ico-01.gif" />
+    <None Include="images\rec.gif" />
+    <None Include="images\recipent_icon.gif" />
+    <None Include="images\rep_11 %281%29.gif" />
+    <None Include="images\rep_11 %282%29.gif" />
+    <None Include="images\rep_11 %283%29.gif" />
+    <None Include="images\rep_11.gif" />
+    <None Include="images\right.gif" />
+    <None Include="images\Rminus.gif" />
+    <None Include="images\role.gif" />
+    <None Include="images\role.jpg" />
+    <None Include="images\root.gif" />
+    <None Include="images\Rplus.gif" />
+    <None Include="images\r_pp.gif" />
+    <None Include="images\sapWater.gif" />
+    <None Include="images\sent.gif" />
+    <None Include="images\Shrink.gif" />
+    <None Include="images\space.gif" />
+    <None Include="images\s_01_03.jpg" />
+    <None Include="images\s_01_06.jpg" />
+    <None Include="images\s_01_10.jpg" />
+    <None Include="images\T.gif" />
+    <None Include="images\title.jpg" />
+    <None Include="images\titleS.jpg" />
+    <None Include="images\titleX.jpg" />
+    <None Include="images\Tminus.gif" />
+    <None Include="images\top.gif" />
+    <None Include="images\topbg1.gif" />
+    <None Include="images\topbg2.gif" />
+    <None Include="images\top_03-06.jpg" />
+    <None Include="images\top_bg.gif" />
+    <None Include="images\Tplus.gif" />
+    <None Include="images\tp_3.jpg" />
+    <None Include="images\tp_4.jpg" />
+    <None Include="images\tp_5.jpg" />
+    <None Include="images\Triangle.gif" />
+    <None Include="images\used.gif" />
+    <None Include="images\user.gif" />
+    <None Include="images\v1_03.gif" />
+    <None Include="images\v1_05.gif" />
+    <None Include="images\WF_Pass.gif" />
+    <None Include="images\WF_Reject.gif" />
+    <None Include="images\WF_Waiting.gif" />
+    <None Include="images\white.gif" />
+    <Content Include="include\page\defaultworkspace.aspx" />
+    <Content Include="include\page\header.aspx" />
+    <Content Include="include\page\ModelTree.aspx" />
+    <Content Include="include\page\ToHome.aspx" />
+    <None Include="PageHelp\AddRequisitionStep2.htm" />
+    <None Include="PageHelp\AddRequisitionStep3.htm" />
+    <None Include="PageHelp\AddRequisitionStep4.htm" />
+    <None Include="PageHelp\AddRequisitionStep5.htm" />
+    <None Include="PageHelp\AddRequisitionStep6.htm" />
+    <None Include="PageHelp\AddRequisitionStep7.htm" />
+    <None Include="PageHelp\AuditOrderPassList.htm" />
+    <None Include="PageHelp\AuditRequistion.htm" />
+    <None Include="PageHelp\EditOrder.htm" />
+    <None Include="PageHelp\EditProducts.htm" />
+    <None Include="PageHelp\EditRequisition.htm" />
+    <None Include="PageHelp\EmployeeList.htm" />
+    <None Include="PageHelp\FilialeAuditList.htm" />
+    <None Include="PageHelp\Filiale_RequisitionEdit.htm" />
+    <None Include="PageHelp\images\allinfo_bg.gif" />
+    <None Include="PageHelp\images\allinfo_bg2.gif" />
+    <None Include="PageHelp\images\blue_inside %281%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2815%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2815%292.gif" />
+    <None Include="PageHelp\images\blue_inside %2826%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2829%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2831%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2841%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2845%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2847%29.gif" />
+    <None Include="PageHelp\images\blue_inside %285%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2852%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2855%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2856%29.gif" />
+    <None Include="PageHelp\images\blue_inside %2856%292.gif" />
+    <None Include="PageHelp\images\blue_inside %2857%29.gif" />
+    <None Include="PageHelp\images\blue_inside %288%29.gif" />
+    <None Include="PageHelp\images\blue_inside.gif" />
+    <None Include="PageHelp\images\btnbg.gif" />
+    <None Include="PageHelp\images\help_ico.gif" />
+    <None Include="PageHelp\images\h_line.gif" />
+    <None Include="PageHelp\images\ico_001.gif" />
+    <None Include="PageHelp\images\ico_002.gif" />
+    <None Include="PageHelp\images\l_ico.gif" />
+    <None Include="PageHelp\images\space.gif" />
+    <None Include="PageHelp\images\step.01_1.gif" />
+    <None Include="PageHelp\images\step.01_2.gif" />
+    <None Include="PageHelp\images\step.01_3.gif" />
+    <None Include="PageHelp\images\step.02_3.gif" />
+    <None Include="PageHelp\images\step_01.gif" />
+    <None Include="PageHelp\images\step_01.jpg" />
+    <None Include="PageHelp\images\step_02.gif" />
+    <None Include="PageHelp\images\step_02.jpg" />
+    <None Include="PageHelp\images\step_03.gif" />
+    <None Include="PageHelp\images\step_03.jpg" />
+    <None Include="PageHelp\images\step_04.gif" />
+    <None Include="PageHelp\images\step_04.jpg" />
+    <None Include="PageHelp\images\step_05.gif" />
+    <None Include="PageHelp\images\step_05.jpg" />
+    <None Include="PageHelp\images\step_06.gif" />
+    <None Include="PageHelp\images\step_06.jpg" />
+    <None Include="PageHelp\images\top_bg.gif" />
+    <None Include="PageHelp\ItemList.htm" />
+    <None Include="PageHelp\Mail.htm" />
+    <None Include="PageHelp\OrderCommitList.htm" />
+    <None Include="PageHelp\OrderDetail.htm" />
+    <None Include="PageHelp\OrderDetail2.htm" />
+    <None Include="PageHelp\OrderDetail4.htm" />
+    <None Include="PageHelp\OrderList.htm" />
+    <None Include="PageHelp\ProductEdit.htm" />
+    <None Include="PageHelp\ProductList.htm" />
+    <None Include="PageHelp\ProductView.htm" />
+    <None Include="PageHelp\RequisitionSaveList.htm" />
+    <None Include="PageHelp\RequisitionSubmitList.htm" />
+    <None Include="PageHelp\RequistionCommitList.htm" />
+    <None Include="PageHelp\SetOperationAudit.htm" />
+    <None Include="PageHelp\ShowRequisitionDetail.htm" />
+    <None Include="PageHelp\SupplierInfoEdit.htm" />
+    <None Include="PageHelp\SupplierInfoList.htm" />
+    <None Include="PageHelp\SupplierInfoView.htm" />
+    <None Include="PageHelp\SupplierList.htm" />
+    <None Include="PageHelp\UpLoadRequisition.htm" />
+    <None Include="PRMedia\highslide\graphics\close.png" />
+    <None Include="PRMedia\highslide\graphics\controlbar2.gif" />
+    <None Include="PRMedia\highslide\graphics\controlbar3.gif" />
+    <None Include="PRMedia\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="PRMedia\highslide\graphics\controlbar4.gif" />
+    <None Include="PRMedia\highslide\graphics\fullexpand.gif" />
+    <None Include="PRMedia\highslide\graphics\geckodimmer.png" />
+    <None Include="PRMedia\highslide\graphics\loader.gif" />
+    <None Include="PRMedia\highslide\graphics\loader.white.gif" />
+    <None Include="PRMedia\highslide\graphics\outlines\beveled.png" />
+    <None Include="PRMedia\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="PRMedia\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="PRMedia\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="PRMedia\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="PRMedia\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="PRMedia\highslide\graphics\resize.gif" />
+    <None Include="PRMedia\highslide\graphics\zoomin.cur" />
+    <None Include="PRMedia\highslide\graphics\zoomout.cur" />
+    <None Include="PRMedia\highslide\highslide-full.js" />
+    <None Include="PRMedia\highslide\highslide-full.packed.js" />
+    <None Include="PRMedia\highslide\highslide-with-html.js" />
+    <None Include="PRMedia\highslide\highslide-with-html.packed.js" />
+    <None Include="PRMedia\highslide\highslide.js" />
+    <None Include="PRMedia\highslide\highslide.packed.js" />
+    <None Include="PRMedia\highslide\swfobject.js" />
+    <Content Include="PRMedia\PRMediaList.aspx" />
+    <Content Include="PRMedia\PRMediaOrderList.aspx" />
+    <Content Include="PRMedia\PRPriList.aspx" />
+    <Content Include="PRMedia\PRPriOrderList.aspx" />
+    <Content Include="PSWChange\PSWChange.aspx" />
+    <None Include="public\control\modulebrow.ascx" />
+    <None Include="public\css\cs.css" />
+    <None Include="public\css\css.css" />
+    <None Include="public\css\dialog.css" />
+    <None Include="public\css\gridViewStyle.css" />
+    <None Include="public\css\newcss.css" />
+    <None Include="public\css\treelist.css" />
+    <None Include="public\htc\button.htc" />
+    <None Include="public\htc\calendar.htc" />
+    <None Include="public\htc\Combobox.htc" />
+    <None Include="public\htc\imagelink.htc" />
+    <None Include="public\htc\inputtext.htc" />
+    <None Include="public\htc\listbox.htc" />
+    <None Include="public\htc\mask.htc" />
+    <None Include="public\htc\menu.htc" />
+    <None Include="public\htc\mpc.htc" />
+    <None Include="public\htc\MultiPage.htc" />
+    <None Include="public\htc\popup.htc" />
+    <None Include="public\htc\rzbox.htc" />
+    <None Include="public\htc\rzgrid.htc" />
+    <None Include="public\htc\split.htc" />
+    <None Include="public\htc\table.htc" />
+    <None Include="public\htc\table_grid.htc" />
+    <None Include="public\htc\table_multiColor.htc" />
+    <None Include="public\htc\TabStrip.htc" />
+    <None Include="public\htc\toolbar.htc" />
+    <None Include="public\htc\tree.htc" />
+    <None Include="public\htc\treeview.htc" />
+    <None Include="public\htc\webparts.htc" />
+    <None Include="public\htc\webservice.htc" />
+    <None Include="public\htc\webserviced.htc" />
+    <None Include="public\images\icon\accept.png" />
+    <None Include="public\images\icon\add.png" />
+    <None Include="public\images\icon\application.png" />
+    <None Include="public\images\icon\application_double.png" />
+    <None Include="public\images\icon\application_form.png" />
+    <None Include="public\images\icon\application_form_add.png" />
+    <None Include="public\images\icon\application_form_delete.png" />
+    <None Include="public\images\icon\application_form_edit.png" />
+    <None Include="public\images\icon\arrow_down.png" />
+    <None Include="public\images\icon\arrow_up.png" />
+    <None Include="public\images\icon\bullet_blue.png" />
+    <None Include="public\images\icon\bullet_green.png" />
+    <None Include="public\images\icon\bullet_orange.png" />
+    <None Include="public\images\icon\bullet_red.png" />
+    <None Include="public\images\icon\bullet_star.png" />
+    <None Include="public\images\icon\close.png" />
+    <None Include="public\images\icon\cross.png" />
+    <None Include="public\images\icon\error.png" />
+    <None Include="public\images\icon\exclamation.png" />
+    <None Include="public\images\icon\information.png" />
+    <None Include="public\images\icon\lock.png" />
+    <None Include="public\images\icon\lock_edit.png" />
+    <None Include="public\images\icon\lock_open.png" />
+    <None Include="public\images\icon\magnifier.png" />
+    <None Include="public\images\icon\open.png" />
+    <None Include="public\images\icon\page_white_star.png" />
+    <None Include="public\images\icon\page_white_text.png" />
+    <None Include="public\images\icon\tag_blue.png" />
+    <None Include="public\images\icon\tag_green.png" />
+    <None Include="public\images\icon\tag_orange.png" />
+    <None Include="public\images\icon\tag_pink.png" />
+    <None Include="public\images\icon\tag_purple.png" />
+    <None Include="public\images\icon\tag_red.png" />
+    <None Include="public\images\icon\tag_yellow.png" />
+    <None Include="public\js\bbcode.js" />
+    <None Include="public\js\common.js" />
+    <None Include="public\js\common\bb_bold.gif" />
+    <None Include="public\js\common\bb_center.gif" />
+    <None Include="public\js\common\bb_clear.gif" />
+    <None Include="public\js\common\bb_code.gif" />
+    <None Include="public\js\common\bb_color.gif" />
+    <None Include="public\js\common\bb_contract.gif" />
+    <None Include="public\js\common\bb_email.gif" />
+    <None Include="public\js\common\bb_expand.gif" />
+    <None Include="public\js\common\bb_flash.gif" />
+    <None Include="public\js\common\bb_floatleft.gif" />
+    <None Include="public\js\common\bb_floatright.gif" />
+    <None Include="public\js\common\bb_fly.gif" />
+    <None Include="public\js\common\bb_free.gif" />
+    <None Include="public\js\common\bb_hide.gif" />
+    <None Include="public\js\common\bb_image.gif" />
+    <None Include="public\js\common\bb_indent.gif" />
+    <None Include="public\js\common\bb_italic.gif" />
+    <None Include="public\js\common\bb_left.gif" />
+    <None Include="public\js\common\bb_media.gif" />
+    <None Include="public\js\common\bb_menupop.gif" />
+    <None Include="public\js\common\bb_orderedlist.gif" />
+    <None Include="public\js\common\bb_outdent.gif" />
+    <None Include="public\js\common\bb_qq.gif" />
+    <None Include="public\js\common\bb_quote.gif" />
+    <None Include="public\js\common\bb_ra.gif" />
+    <None Include="public\js\common\bb_redo.gif" />
+    <None Include="public\js\common\bb_removeformat.gif" />
+    <None Include="public\js\common\bb_right.gif" />
+    <None Include="public\js\common\bb_rm.gif" />
+    <None Include="public\js\common\bb_separator.gif" />
+    <None Include="public\js\common\bb_sub.gif" />
+    <None Include="public\js\common\bb_sup.gif" />
+    <None Include="public\js\common\bb_table.gif" />
+    <None Include="public\js\common\bb_underline.gif" />
+    <None Include="public\js\common\bb_undo.gif" />
+    <None Include="public\js\common\bb_unlink.gif" />
+    <None Include="public\js\common\bb_unorderedlist.gif" />
+    <None Include="public\js\common\bb_url.gif" />
+    <None Include="public\js\common\bb_vupload.gif" />
+    <None Include="public\js\common\bb_wma.gif" />
+    <None Include="public\js\common\bb_wmv.gif" />
+    <None Include="public\js\common\circle.gif" />
+    <None Include="public\js\common\circle_logo.gif" />
+    <None Include="public\js\common\editor.gif" />
+    <None Include="public\js\common\index.htm" />
+    <None Include="public\js\common\lang\zh-cn.js" />
+    <None Include="public\js\common\none.gif" />
+    <None Include="public\js\common\theme\default\css\editor.css" />
+    <None Include="public\js\common\theme\default\css\iframe.css" />
+    <None Include="public\js\common\theme\default\images\close.gif" />
+    <None Include="public\js\common\theme\default\images\icon\BGColor.gif" />
+    <None Include="public\js\common\theme\default\images\icon\Bold.gif" />
+    <None Include="public\js\common\theme\default\images\icon\Image.gif" />
+    <None Include="public\js\common\theme\default\images\icon\Italic.gif" />
+    <None Include="public\js\common\theme\default\images\icon\JustifyCenter.gif" />
+    <None Include="public\js\common\theme\default\images\icon\JustifyFull.gif" />
+    <None Include="public\js\common\theme\default\images\icon\JustifyLeft.gif" />
+    <None Include="public\js\common\theme\default\images\icon\JustifyRight.gif" />
+    <None Include="public\js\common\theme\default\images\icon\Link.gif" />
+    <None Include="public\js\common\theme\default\images\icon\OrderedList.gif" />
+    <None Include="public\js\common\theme\default\images\icon\RemoveFormat.gif" />
+    <None Include="public\js\common\theme\default\images\icon\Smiley.gif" />
+    <None Include="public\js\common\theme\default\images\icon\Source.gif" />
+    <None Include="public\js\common\theme\default\images\icon\TextColor.gif" />
+    <None Include="public\js\common\theme\default\images\icon\toolbar.-.gif" />
+    <None Include="public\js\common\theme\default\images\icon\toolbar.separator.gif" />
+    <None Include="public\js\common\theme\default\images\icon\Underline.gif" />
+    <None Include="public\js\common\theme\default\images\icon\Unlink.gif" />
+    <None Include="public\js\common\theme\default\images\icon\UnorderedList.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\1.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\10.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\11.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\12.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\13.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\14.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\15.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\16.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\17.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\18.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\19.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\2.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\20.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\21.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\22.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\23.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\24.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\3.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\4.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\5.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\6.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\7.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\8.gif" />
+    <None Include="public\js\common\theme\default\images\smiley\9.gif" />
+    <None Include="public\js\common\theme\default\images\space.gif" />
+    <None Include="public\js\DatePicker.js" />
+    <None Include="public\js\dialog.js" />
+    <None Include="public\js\dialog1.js" />
+    <None Include="public\js\dialog2.js" />
+    <None Include="public\js\editor.js" />
+    <None Include="public\js\jcarousellite_1.0.1.js" />
+    <None Include="public\js\jquery-1.2.2.min.js" />
+    <None Include="public\js\jquery-1.2.3.pack.js" />
+    <None Include="public\js\jquery-1.2.6.js" />
+    <None Include="public\js\jquery.accordion.js" />
+    <None Include="public\js\jquery.autocomplete.css" />
+    <None Include="public\js\jquery.autocomplete.js" />
+    <None Include="public\js\jquery.bgiframe.min.js" />
+    <None Include="public\js\jquery.blockUI.js" />
+    <None Include="public\js\jquery.dimensions.js" />
+    <None Include="public\js\jquery.easing.js" />
+    <None Include="public\js\jquery.jcarousellite.min.js" />
+    <None Include="public\js\jquery.js" />
+    <None Include="public\js\jquery_last.js" />
+    <None Include="public\js\jtbcEditor.js" />
+    <None Include="public\js\post.js" />
+    <None Include="public\js\post_attach.js" />
+    <None Include="public\js\post_editor.js" />
+    <None Include="public\js\syscomm.js" />
+    <None Include="public\js\table.js" />
+    <None Include="public\js\tree.js" />
+    <None Include="public\js\valid.js" />
+    <None Include="public\page\calendarsel.aspx" />
+    <None Include="public\page\downloadfile.aspx" />
+    <None Include="public\page\errormsg.aspx" />
+    <None Include="public\page\Template.htm" />
+    <None Include="public\page\userchoice.aspx" />
+    <Content Include="Purchase\allMessage.aspx" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\close.png" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\controlbar2.gif" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\controlbar3.gif" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\controlbar4.gif" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\fullexpand.gif" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\geckodimmer.png" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\loader.gif" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\loader.white.gif" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\outlines\beveled.png" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\resize.gif" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\zoomin.cur" />
+    <None Include="Purchase\PRAuthorization\highslide\graphics\zoomout.cur" />
+    <None Include="Purchase\PRAuthorization\highslide\highslide-full.js" />
+    <None Include="Purchase\PRAuthorization\highslide\highslide-full.packed.js" />
+    <None Include="Purchase\PRAuthorization\highslide\highslide-with-html.js" />
+    <None Include="Purchase\PRAuthorization\highslide\highslide-with-html.packed.js" />
+    <None Include="Purchase\PRAuthorization\highslide\highslide.js" />
+    <None Include="Purchase\PRAuthorization\highslide\highslide.packed.js" />
+    <None Include="Purchase\PRAuthorization\highslide\swfobject.js" />
+    <Content Include="Purchase\PRAuthorization\PRAuthorizationEdit.aspx" />
+    <Content Include="Purchase\PRAuthorization\PRAuthorizationList.aspx" />
+    <Content Include="Purchase\PRAuthorization\selectType.aspx" />
+    <Content Include="Purchase\Requisition\BijiaDlg2.aspx" />
+    <Content Include="Purchase\Default2.aspx" />
+    <Content Include="Purchase\Requisition\BijiaDlg.aspx" />
+    <Content Include="Purchase\Requisition\newEditProducts.aspx" />
+    <Content Include="Purchase\Requisition\AddPriceAtt.aspx" />
+    <Content Include="Purchase\Requisition\Advertisement\EditProducts.aspx" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\close.png" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\controlbar2.gif" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\controlbar3.gif" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\controlbar4.gif" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\fullexpand.gif" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\geckodimmer.png" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\loader.gif" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\loader.white.gif" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\outlines\beveled.png" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\resize.gif" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\zoomin.cur" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\graphics\zoomout.cur" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\highslide-full.js" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\highslide-full.packed.js" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\highslide-with-html.js" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\highslide-with-html.packed.js" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\highslide.js" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\highslide.packed.js" />
+    <None Include="Purchase\Requisition\Advertisement\highslide\swfobject.js" />
+    <Content Include="Purchase\Requisition\Advertisement\AdvertisementDetailAddOrEdit.aspx" />
+    <Content Include="Purchase\Requisition\Advertisement\AdvertisementEdit.aspx" />
+    <Content Include="Purchase\Requisition\Advertisement\AdvertisementList.aspx" />
+    <Content Include="Purchase\Requisition\Advertisement\AdvertisementOrder.aspx" />
+    <Content Include="Purchase\Requisition\Advertisement\AdvertisementProductsReference.aspx" />
+    <Content Include="Purchase\Requisition\BlackList.aspx" />
+    <Content Include="Purchase\Requisition\ChangeUser.aspx" />
+    <Content Include="Purchase\Requisition\CompletePaymentList.aspx" />
+    <Content Include="Purchase\Requisition\FeedBack.aspx" />
+    <Content Include="Purchase\Requisition\MediaSearchList.aspx" />
+    <Content Include="Purchase\Requisition\NewReportCenter.aspx" />
+    <Content Include="Purchase\Requisition\OrderMsgDetail.aspx" />
+    <Content Include="Purchase\Requisition\PaymentNotify.aspx" />
+    <Content Include="Purchase\Requisition\PNSelectAuditor.aspx" />
+    <Content Include="Purchase\Requisition\PrFileDownload.aspx" />
+    <Content Include="Purchase\Requisition\Print\ADOrder.aspx" />
+    <Content Include="Purchase\Requisition\Print\AdvertisementPrint.aspx" />
+    <Content Include="Purchase\Requisition\Print\AdvertisementPrint2.aspx" />
+    <Content Include="Purchase\Requisition\Print\SupplierMessageReturn.aspx" />
+    <Content Include="Purchase\Requisition\PrLinkManEditList.aspx" />
+    <Content Include="Purchase\Requisition\RemindAudit.aspx" />
+    <Content Include="Purchase\Requisition\RemindPNList.aspx" />
+    <None Include="Purchase\highslide\graphics\close.png" />
+    <None Include="Purchase\highslide\graphics\controlbar2.gif" />
+    <None Include="Purchase\highslide\graphics\controlbar3.gif" />
+    <None Include="Purchase\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Purchase\highslide\graphics\controlbar4.gif" />
+    <None Include="Purchase\highslide\graphics\fullexpand.gif" />
+    <None Include="Purchase\highslide\graphics\geckodimmer.png" />
+    <None Include="Purchase\highslide\graphics\loader.gif" />
+    <None Include="Purchase\highslide\graphics\loader.white.gif" />
+    <None Include="Purchase\highslide\graphics\outlines\beveled.png" />
+    <None Include="Purchase\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Purchase\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Purchase\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Purchase\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Purchase\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Purchase\highslide\graphics\resize.gif" />
+    <None Include="Purchase\highslide\graphics\zoomin.cur" />
+    <None Include="Purchase\highslide\graphics\zoomout.cur" />
+    <None Include="Purchase\highslide\highslide-full.js" />
+    <None Include="Purchase\highslide\highslide-full.packed.js" />
+    <None Include="Purchase\highslide\highslide-with-html.js" />
+    <None Include="Purchase\highslide\highslide-with-html.packed.js" />
+    <None Include="Purchase\highslide\highslide.js" />
+    <None Include="Purchase\highslide\highslide.packed.js" />
+    <None Include="Purchase\highslide\swfobject.js" />
+    <None Include="Purchase\Message\highslide\graphics\close.png" />
+    <None Include="Purchase\Message\highslide\graphics\controlbar2.gif" />
+    <None Include="Purchase\Message\highslide\graphics\controlbar3.gif" />
+    <None Include="Purchase\Message\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Purchase\Message\highslide\graphics\controlbar4.gif" />
+    <None Include="Purchase\Message\highslide\graphics\fullexpand.gif" />
+    <None Include="Purchase\Message\highslide\graphics\geckodimmer.png" />
+    <None Include="Purchase\Message\highslide\graphics\loader.gif" />
+    <None Include="Purchase\Message\highslide\graphics\loader.white.gif" />
+    <None Include="Purchase\Message\highslide\graphics\outlines\beveled.png" />
+    <None Include="Purchase\Message\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Purchase\Message\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Purchase\Message\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Purchase\Message\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Purchase\Message\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Purchase\Message\highslide\graphics\resize.gif" />
+    <None Include="Purchase\Message\highslide\graphics\zoomin.cur" />
+    <None Include="Purchase\Message\highslide\graphics\zoomout.cur" />
+    <None Include="Purchase\Message\highslide\highslide-full.js" />
+    <None Include="Purchase\Message\highslide\highslide-full.packed.js" />
+    <None Include="Purchase\Message\highslide\highslide-with-html.js" />
+    <None Include="Purchase\Message\highslide\highslide-with-html.packed.js" />
+    <None Include="Purchase\Message\highslide\highslide.js" />
+    <None Include="Purchase\Message\highslide\highslide.packed.js" />
+    <None Include="Purchase\Message\highslide\swfobject.js" />
+    <Content Include="Purchase\Message\MessageList.aspx" />
+    <Content Include="Purchase\Message\MessageView.aspx" />
+    <Content Include="Purchase\Message\NewPost.aspx" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\close.png" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\controlbar2.gif" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\controlbar3.gif" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\controlbar4.gif" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\fullexpand.gif" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\geckodimmer.png" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\loader.gif" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\loader.white.gif" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\outlines\beveled.png" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\resize.gif" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\zoomin.cur" />
+    <None Include="Purchase\PolicyFlow\highslide\graphics\zoomout.cur" />
+    <None Include="Purchase\PolicyFlow\highslide\highslide-full.js" />
+    <None Include="Purchase\PolicyFlow\highslide\highslide-full.packed.js" />
+    <None Include="Purchase\PolicyFlow\highslide\highslide-with-html.js" />
+    <None Include="Purchase\PolicyFlow\highslide\highslide-with-html.packed.js" />
+    <None Include="Purchase\PolicyFlow\highslide\highslide.js" />
+    <None Include="Purchase\PolicyFlow\highslide\highslide.packed.js" />
+    <None Include="Purchase\PolicyFlow\highslide\swfobject.js" />
+    <Content Include="Purchase\PolicyFlow\PolicyFlowDisplay.aspx" />
+    <Content Include="Purchase\PolicyFlow\PolicyFlowEdit.aspx" />
+    <Content Include="Purchase\PolicyFlow\PolicyFlowEditList.aspx" />
+    <Content Include="Purchase\Requisition\AddNewRequest.aspx" />
+    <Content Include="Purchase\Requisition\AddRequisitionStep2.aspx" />
+    <Content Include="Purchase\Requisition\AddRequisitionStep3.aspx" />
+    <Content Include="Purchase\Requisition\AddRequisitionStep4.aspx" />
+    <Content Include="Purchase\Requisition\AddRequisitionStep5.aspx" />
+    <Content Include="Purchase\Requisition\AddRequisitionStep6.aspx" />
+    <Content Include="Purchase\Requisition\AddRequisitionStep7.aspx" />
+    <Content Include="Purchase\Requisition\AuditADPassList.aspx" />
+    <Content Include="Purchase\Requisition\AuditMediaPassList.aspx" />
+    <Content Include="Purchase\Requisition\AuditOrderPassList.aspx" />
+    <Content Include="Purchase\Requisition\AuditOrderPassViewList.aspx" />
+    <Content Include="Purchase\Requisition\AuditRequistion.aspx" />
+    <Content Include="Purchase\Requisition\BackUpUser.aspx" />
+    <Content Include="Purchase\Requisition\BreakupDetail.aspx" />
+    <Content Include="Purchase\Requisition\BreakupList.aspx" />
+    <Content Include="Purchase\Requisition\ChangeAuditUser.aspx" />
+    <Content Include="Purchase\Requisition\ChangedSupplier.aspx" />
+    <Content Include="Purchase\Requisition\ChangeFSupplier.aspx" />
+    <Content Include="Purchase\Requisition\CollateDetail.aspx" />
+    <Content Include="Purchase\Requisition\CollateList.aspx" />
+    <Content Include="Purchase\Requisition\CompletePayment.aspx" />
+    <Content Include="Purchase\Requisition\ConfirmOrder.aspx" />
+    <Content Include="Purchase\Requisition\ConfirmRecipient.aspx" />
+    <Content Include="Purchase\Requisition\DepartmentModify.xslt" />
+    <Content Include="Purchase\Requisition\DisabledPRList.aspx" />
+    <Content Include="Purchase\Requisition\EditOrder.aspx" />
+    <Content Include="Purchase\Requisition\EditPayment.aspx" />
+    <Content Include="Purchase\Requisition\EditProducts.aspx" />
+    <Content Include="Purchase\Requisition\EditRequisition.aspx" />
+    <Content Include="Purchase\Requisition\EmployeeList.aspx" />
+    <Content Include="Purchase\Requisition\FilialeAuditBackUp.aspx" />
+    <Content Include="Purchase\Requisition\FilialeAuditList.aspx" />
+    <Content Include="Purchase\Requisition\FilialeCommitList.aspx" />
+    <Content Include="Purchase\Requisition\Filiale_RequisitionEdit.aspx" />
+    <Content Include="Purchase\Requisition\GroupReportCenter.aspx" />
+    <Content Include="Purchase\Requisition\GZReportCenter.aspx" />
+    <Content Include="Purchase\Requisition\HandConfirmRecipient.aspx" />
+    <None Include="Purchase\Requisition\highslide\graphics\close.png" />
+    <None Include="Purchase\Requisition\highslide\graphics\controlbar2.gif" />
+    <None Include="Purchase\Requisition\highslide\graphics\controlbar3.gif" />
+    <None Include="Purchase\Requisition\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Purchase\Requisition\highslide\graphics\controlbar4.gif" />
+    <None Include="Purchase\Requisition\highslide\graphics\fullexpand.gif" />
+    <None Include="Purchase\Requisition\highslide\graphics\geckodimmer.png" />
+    <None Include="Purchase\Requisition\highslide\graphics\loader.gif" />
+    <None Include="Purchase\Requisition\highslide\graphics\loader.white.gif" />
+    <None Include="Purchase\Requisition\highslide\graphics\outlines\beveled.png" />
+    <None Include="Purchase\Requisition\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Purchase\Requisition\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Purchase\Requisition\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Purchase\Requisition\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Purchase\Requisition\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Purchase\Requisition\highslide\graphics\resize.gif" />
+    <None Include="Purchase\Requisition\highslide\graphics\zoomin.cur" />
+    <None Include="Purchase\Requisition\highslide\graphics\zoomout.cur" />
+    <None Include="Purchase\Requisition\highslide\highslide-full.js" />
+    <None Include="Purchase\Requisition\highslide\highslide-full.packed.js" />
+    <None Include="Purchase\Requisition\highslide\highslide-with-html.js" />
+    <None Include="Purchase\Requisition\highslide\highslide-with-html.packed.js" />
+    <None Include="Purchase\Requisition\highslide\highslide.js" />
+    <None Include="Purchase\Requisition\highslide\highslide.packed.js" />
+    <None Include="Purchase\Requisition\highslide\swfobject.js" />
+    <Content Include="Purchase\Requisition\ItemList.aspx" />
+    <Content Include="Purchase\Requisition\LogList.aspx" />
+    <Content Include="Purchase\Requisition\MajordomoAudit.aspx" />
+    <Content Include="Purchase\Requisition\MediaDlg.aspx" />
+    <Content Include="Purchase\Requisition\ModifyProducts.aspx" />
+    <Content Include="Purchase\Requisition\ModifyProductType.aspx" />
+    <Content Include="Purchase\Requisition\NotCommitPRList.aspx" />
+    <Content Include="Purchase\Requisition\NotInceptList.aspx" />
+    <Content Include="Purchase\Requisition\OperationAnalyse.aspx" />
+    <Content Include="Purchase\Requisition\OperationAudit.aspx" />
+    <Content Include="Purchase\Requisition\OperationAuditList.aspx" />
+    <Content Include="Purchase\Requisition\operationAuditView.aspx" />
+    <Content Include="Purchase\Requisition\OrderCommitList.aspx" />
+    <Content Include="Purchase\Requisition\OrderDetail.aspx" />
+    <Content Include="Purchase\Requisition\OrderDetailTab.aspx" />
+    <Content Include="Purchase\Requisition\OrderList.aspx" />
+    <Content Include="Purchase\Requisition\PaymantApply.aspx" />
+    <Content Include="Purchase\Requisition\PaymentGeneralList.aspx" />
+    <Content Include="Purchase\Requisition\PaymentPeriodEdit.aspx" />
+    <Content Include="Purchase\Requisition\PaymentPeriodList.aspx" />
+    <Content Include="Purchase\Requisition\PaymentRecipientList.aspx" />
+    <Content Include="Purchase\Requisition\PaymentSearchSupplier.aspx" />
+    <Content Include="Purchase\Requisition\prADAudit.aspx" />
+    <Content Include="Purchase\Requisition\prADAuditList.aspx" />
+    <Content Include="Purchase\Requisition\PrFileList.aspx" />
+    <Content Include="Purchase\Requisition\Print\CollatePrint.aspx" />
+    <Content Include="Purchase\Requisition\Print\css\css.css" />
+    <None Include="Purchase\Requisition\Print\images\btnbgimg %281%29.gif" />
+    <None Include="Purchase\Requisition\Print\images\btnbgimg.gif" />
+    <None Include="Purchase\Requisition\Print\images\po_ %282%29.gif" />
+    <None Include="Purchase\Requisition\Print\images\po_.gif" />
+    <None Include="Purchase\Requisition\Print\images\pr_.gif" />
+    <None Include="Purchase\Requisition\Print\images\rec.gif" />
+    <None Include="Purchase\Requisition\Print\images\space.gif" />
+    <Content Include="Purchase\Requisition\Print\MediaPrint.aspx" />
+    <Content Include="Purchase\Requisition\Print\MultiRecipientPrint.aspx" />
+    <Content Include="Purchase\Requisition\Print\OrderPrint.aspx" />
+    <Content Include="Purchase\Requisition\Print\PaymantPrint.aspx" />
+    <Content Include="Purchase\Requisition\Print\PaymentPreview.aspx" />
+    <Content Include="Purchase\Requisition\Print\RecipientPrint.aspx" />
+    <Content Include="Purchase\Requisition\Print\RequisitionPrint.aspx" />
+    <Content Include="Purchase\Requisition\Print\supplierPrint.aspx" />
+    <Content Include="Purchase\Requisition\prMediaAudit.aspx" />
+    <Content Include="Purchase\Requisition\prMediaAuditList.aspx" />
+    <Content Include="Purchase\Requisition\prMediaAuditYesList.aspx" />
+    <Content Include="Purchase\Requisition\ProductEdit.aspx" />
+    <Content Include="Purchase\Requisition\ProductList.aspx" />
+    <Content Include="Purchase\Requisition\ProductListForSearch.aspx" />
+    <Content Include="Purchase\Requisition\ProductTypeItems.aspx" />
+    <Content Include="Purchase\Requisition\ProductTypeTree.xslt" />
+    <Content Include="Purchase\Requisition\ProductView.aspx" />
+    <Content Include="Purchase\Requisition\ProposedSupplierEdit.aspx" />
+    <Content Include="Purchase\Requisition\ProposedSupplierList.aspx" />
+    <Content Include="Purchase\Requisition\ProposedSupplierView.aspx" />
+    <Content Include="Purchase\Requisition\RecipientCompleteList.aspx" />
+    <Content Include="Purchase\Requisition\RecipientDetail.aspx" />
+    <Content Include="Purchase\Requisition\RecipientList.aspx" />
+    <Content Include="Purchase\Requisition\RecipientOkList.aspx" />
+    <Content Include="Purchase\Requisition\RemindRecipientList.aspx" />
+    <Content Include="Purchase\Requisition\ReportCenter.aspx" />
+    <Content Include="Purchase\Requisition\ReporterDlg.aspx" />
+    <Content Include="Purchase\Requisition\RequisitionAuditList.aspx" />
+    <Content Include="Purchase\Requisition\RequisitionFAList.aspx" />
+    <Content Include="Purchase\Requisition\RequisitionNotAuditList.aspx" />
+    <Content Include="Purchase\Requisition\RequisitionSaveList.aspx" />
+    <Content Include="Purchase\Requisition\RequisitionSubmitList.aspx" />
+    <Content Include="Purchase\Requisition\RequistionCommitList.aspx" />
+    <Content Include="Purchase\Requisition\ReturnEdit.aspx" />
+    <Content Include="Purchase\Requisition\SearchPaymentApply.aspx" />
+    <Content Include="Purchase\Requisition\selectOperationAuditor.aspx" />
+    <Content Include="Purchase\Requisition\selectProductTypes.aspx" />
+    <Content Include="Purchase\Requisition\selectProjectList.aspx" />
+    <Content Include="Purchase\Requisition\SetAuditor.aspx" />
+    <Content Include="Purchase\Requisition\SetOperationAudit.aspx" />
+    <Content Include="Purchase\Requisition\ShowRequisitionDetail.aspx" />
+    <Content Include="Purchase\Requisition\SHReportCenter.aspx" />
+    <Content Include="Purchase\Requisition\SuperviseList.aspx" />
+    <Content Include="Purchase\Requisition\SupplierCollaboration\EditProducts.aspx" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\close.png" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\controlbar2.gif" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\controlbar3.gif" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\controlbar4.gif" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\fullexpand.gif" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\geckodimmer.png" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\loader.gif" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\loader.white.gif" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\outlines\beveled.png" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\resize.gif" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\zoomin.cur" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\graphics\zoomout.cur" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\highslide-full.js" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\highslide-full.packed.js" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\highslide-with-html.js" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\highslide-with-html.packed.js" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\highslide.js" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\highslide.packed.js" />
+    <None Include="Purchase\Requisition\SupplierCollaboration\highslide\swfobject.js" />
+    <Content Include="Purchase\Requisition\SupplierCollaboration\OtherMediaDetailAddOrEdit.aspx" />
+    <Content Include="Purchase\Requisition\SupplierCollaboration\OtherMediaEdit.aspx" />
+    <Content Include="Purchase\Requisition\SupplierCollaboration\OtherMediaList.aspx" />
+    <Content Include="Purchase\Requisition\SupplierCollaboration\OtherMediaOrder.aspx" />
+    <Content Include="Purchase\Requisition\SupplierCollaboration\OtherMediaProductsReference.aspx" />
+    <Content Include="Purchase\Requisition\SupplierInfoEdit.aspx" />
+    <Content Include="Purchase\Requisition\SupplierInfoForProduct.aspx" />
+    <Content Include="Purchase\Requisition\SupplierInfoList.aspx" />
+    <Content Include="Purchase\Requisition\SupplierInfoListD.aspx" />
+    <Content Include="Purchase\Requisition\SupplierInfoView.aspx" />
+    <Content Include="Purchase\Requisition\SupplierInfoViewD.aspx" />
+    <Content Include="Purchase\Requisition\SupplierList.aspx" />
+    <Content Include="Purchase\Requisition\SupplierListForSearch.aspx" />
+    <Content Include="Purchase\Requisition\SupplierPOList.aspx" />
+    <Content Include="Purchase\Requisition\SupplierPriceFils.aspx" />
+    <Content Include="Purchase\Requisition\SupplierUsers.aspx" />
+    <Content Include="Purchase\Requisition\TempSupplierEdit.aspx" />
+    <Content Include="Purchase\Requisition\TempSupplierList.aspx" />
+    <Content Include="Purchase\Requisition\TempSupplierView.aspx" />
+    <Content Include="Purchase\Requisition\UpfileDownload.aspx" />
+    <Content Include="Purchase\Requisition\UpLoadRequisition.aspx" />
+    <Content Include="Purchase\Requisition\WorkflowQA.aspx" />
+    <Content Include="Purchase\Requisition\WrittingFeeApplicant.aspx" />
+    <Content Include="Purchase\Requisition\WrittingFeeExport.aspx" />
+    <Content Include="Purchase\Requisition\MediaForReporterExportDlg.aspx" />
+    <Content Include="Purchase\Requisition\ReporterForExportDlg.aspx" />
+    <None Include="Purchase\supplier\highslide\graphics\close.png" />
+    <None Include="Purchase\supplier\highslide\graphics\controlbar2.gif" />
+    <None Include="Purchase\supplier\highslide\graphics\controlbar3.gif" />
+    <None Include="Purchase\supplier\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Purchase\supplier\highslide\graphics\controlbar4.gif" />
+    <None Include="Purchase\supplier\highslide\graphics\fullexpand.gif" />
+    <None Include="Purchase\supplier\highslide\graphics\geckodimmer.png" />
+    <None Include="Purchase\supplier\highslide\graphics\loader.gif" />
+    <None Include="Purchase\supplier\highslide\graphics\loader.white.gif" />
+    <None Include="Purchase\supplier\highslide\graphics\outlines\beveled.png" />
+    <None Include="Purchase\supplier\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Purchase\supplier\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Purchase\supplier\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Purchase\supplier\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Purchase\supplier\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Purchase\supplier\highslide\graphics\resize.gif" />
+    <None Include="Purchase\supplier\highslide\graphics\zoomin.cur" />
+    <None Include="Purchase\supplier\highslide\graphics\zoomout.cur" />
+    <None Include="Purchase\supplier\highslide\highslide-full.js" />
+    <None Include="Purchase\supplier\highslide\highslide-full.packed.js" />
+    <None Include="Purchase\supplier\highslide\highslide-with-html.js" />
+    <None Include="Purchase\supplier\highslide\highslide-with-html.packed.js" />
+    <None Include="Purchase\supplier\highslide\highslide.js" />
+    <None Include="Purchase\supplier\highslide\highslide.packed.js" />
+    <None Include="Purchase\supplier\highslide\swfobject.js" />
+    <Content Include="Purchase\supplier\searchSupplier.aspx" />
+    <Content Include="Purchase\supplier\syncSupplierInfo.aspx" />
+    <Content Include="Purchase\supplier\syncSupplierList.aspx" />
+    <Content Include="Purchase\TemplateManage\Add.aspx" />
+    <Content Include="Purchase\TemplateManage\Body.aspx" />
+    <Content Include="Purchase\TemplateManage\BodyItem.aspx" />
+    <Content Include="Purchase\TemplateManage\Header.aspx" />
+    <Content Include="Purchase\TemplateManage\HeaderItem.aspx" />
+    <Content Include="Purchase\TemplateManage\List.aspx" />
+    <Content Include="Purchase\TemplateManage\View.aspx" />
+    <Content Include="Purchase\TypeInfo\ESPAndSupplyTypeInfo.aspx" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\close.png" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\controlbar2.gif" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\controlbar3.gif" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\controlbar4.gif" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\fullexpand.gif" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\geckodimmer.png" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\loader.gif" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\loader.white.gif" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\outlines\beveled.png" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\resize.gif" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\zoomin.cur" />
+    <None Include="Purchase\TypeInfo\highslide\graphics\zoomout.cur" />
+    <None Include="Purchase\TypeInfo\highslide\highslide-full.js" />
+    <None Include="Purchase\TypeInfo\highslide\highslide-full.packed.js" />
+    <None Include="Purchase\TypeInfo\highslide\highslide-with-html.js" />
+    <None Include="Purchase\TypeInfo\highslide\highslide-with-html.packed.js" />
+    <None Include="Purchase\TypeInfo\highslide\highslide.js" />
+    <None Include="Purchase\TypeInfo\highslide\highslide.packed.js" />
+    <None Include="Purchase\TypeInfo\highslide\swfobject.js" />
+    <Content Include="Purchase\TypeInfo\SelectTypeESP.aspx" />
+    <Content Include="Purchase\TypeInfo\SelectTypeSupply.aspx" />
+    <Content Include="Purchase\TypeInfo\SupplyAndESPTypeInfo.aspx" />
+    <Content Include="Purchase\TypeInfo\TypeInfoEdit.aspx" />
+    <Content Include="Purchase\TypeInfo\TypeInfoList.aspx" />
+    <Content Include="Purchase\Requisition\UsedPRList.aspx" />
+    <Content Include="Purchase\TypeInfo\VendeeDepartmentTypeRelation.aspx" />
+    <Content Include="Purchase\TypeInfo\VendeeDepartmentTypeRelationEdit.aspx" />
+    <Content Include="Purchase\TypeInfo\VendeeTypeRelationEdit.aspx" />
+    <Content Include="Purchase\Version\ItemEdit.aspx" />
+    <Content Include="Purchase\Version\List.aspx" />
+    <Content Include="Purchase\Version\View.aspx" />
+    <Content Include="SignOut.aspx" />
+    <None Include="TMP\ProductImage\Image\13233_633590750710937500809.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590750710937500809_110.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590750710937500809_225.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590750710937500809_full.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590800689218750583.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590800689218750583_110.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590800689218750583_225.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590800689218750583_full.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590810760000000537.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590810760000000537_110.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590810760000000537_225.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590810760000000537_full.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590823247343750399.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590823247343750399_110.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590823247343750399_225.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590823247343750399_full.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824269687500222.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824269687500222_110.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824269687500222_225.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824269687500222_full.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824388281250316.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824388281250316_110.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824388281250316_225.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824388281250316_full.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824521875000152.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824521875000152_110.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824521875000152_225.jpg" />
+    <None Include="TMP\ProductImage\Image\13233_633590824521875000152_full.jpg" />
+    <Content Include="UserControls\Edit\genericInfo.ascx" />
+    <Content Include="UserControls\Edit\newSetAuditor.ascx" />
+    <Content Include="UserControls\Edit\paymentInfo.ascx" />
+    <Content Include="UserControls\Edit\productInfo.ascx" />
+    <Content Include="UserControls\Edit\projectInfo.ascx" />
+    <Content Include="UserControls\Edit\RequirementDescInfo.ascx" />
+    <Content Include="UserControls\Edit\Score.ascx" />
+    <Content Include="UserControls\Edit\setAuditor.ascx" />
+    <Content Include="UserControls\Edit\supplierInfo.ascx" />
+    <Content Include="UserControls\View\auditLog.ascx" />
+    <Content Include="UserControls\View\genericInfo.ascx" />
+    <Content Include="UserControls\View\operationAuditLog.ascx" />
+    <Content Include="UserControls\View\paymentInfo.ascx" />
+    <Content Include="UserControls\View\prLogs.ascx" />
+    <Content Include="UserControls\View\productInfo.ascx" />
+    <Content Include="UserControls\View\projectInfo.ascx" />
+    <Content Include="UserControls\View\PRTopMessage.ascx" />
+    <Content Include="UserControls\View\RequirementDescInfo.ascx" />
+    <Content Include="UserControls\View\supplierInfo.ascx" />
+    <Content Include="UserControls\View\SupplierView.ascx" />
+    <Content Include="ApproveFlow\ApproveFlow.aspx" />
+    <Content Include="UserPointRule\view\AddUserPointRule.aspx" />
+    <None Include="UserPointRule\view\highslide\graphics\close.png" />
+    <None Include="UserPointRule\view\highslide\graphics\controlbar2.gif" />
+    <None Include="UserPointRule\view\highslide\graphics\controlbar3.gif" />
+    <None Include="UserPointRule\view\highslide\graphics\controlbar4-hover.gif" />
+    <None Include="UserPointRule\view\highslide\graphics\controlbar4.gif" />
+    <None Include="UserPointRule\view\highslide\graphics\fullexpand.gif" />
+    <None Include="UserPointRule\view\highslide\graphics\geckodimmer.png" />
+    <None Include="UserPointRule\view\highslide\graphics\loader.gif" />
+    <None Include="UserPointRule\view\highslide\graphics\loader.white.gif" />
+    <None Include="UserPointRule\view\highslide\graphics\outlines\beveled.png" />
+    <None Include="UserPointRule\view\highslide\graphics\outlines\drop-shadow.png" />
+    <None Include="UserPointRule\view\highslide\graphics\outlines\glossy-dark.png" />
+    <None Include="UserPointRule\view\highslide\graphics\outlines\outer-glow.png" />
+    <None Include="UserPointRule\view\highslide\graphics\outlines\rounded-black.png" />
+    <None Include="UserPointRule\view\highslide\graphics\outlines\rounded-white.png" />
+    <None Include="UserPointRule\view\highslide\graphics\resize.gif" />
+    <None Include="UserPointRule\view\highslide\graphics\zoomin.cur" />
+    <None Include="UserPointRule\view\highslide\graphics\zoomout.cur" />
+    <None Include="UserPointRule\view\highslide\highslide-full.js" />
+    <None Include="UserPointRule\view\highslide\highslide-full.packed.js" />
+    <None Include="UserPointRule\view\highslide\highslide-with-html.js" />
+    <None Include="UserPointRule\view\highslide\highslide-with-html.packed.js" />
+    <None Include="UserPointRule\view\highslide\highslide.js" />
+    <None Include="UserPointRule\view\highslide\highslide.packed.js" />
+    <None Include="UserPointRule\view\highslide\swfobject.js" />
+    <Content Include="UserPointRule\view\ListUserPointRule.aspx" />
+    <Content Include="UserPointRule\view\UserPointEdit.aspx" />
+    <Content Include="UserPointRule\view\UserPointList.aspx" />
+    <Content Include="UserPointRule\view\WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppCode\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ESP.Core\ESP.Core\ESP.Core.csproj">
+      <Project>{5af18840-638b-4af2-90c2-c66625cc88e4}</Project>
+      <Name>ESP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ESP\ESP.csproj">
+      <Project>{bd68aa8d-b4b1-4957-81c2-152398ac68af}</Project>
+      <Name>ESP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>11001</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

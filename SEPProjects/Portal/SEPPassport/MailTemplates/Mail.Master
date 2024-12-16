@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title><%= this.Page.Title %></title>
+</head>
+<body style="font-size:80%">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    <br />
+    <div>感谢您使用 <b>星言云汇企业服务系统</b>，如果你有任务疑问，请及时与我们联系。</div>
+    <br />
+    <br />
+    <div>版权所有 &copy; 2024 星言云汇</div>
+</body>
+</html>

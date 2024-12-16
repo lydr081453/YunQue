@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="MasterDefault" Codebehind="Default.master.cs" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>无标题页</title>
+    <meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+    <meta content="C#" name="CODE_LANGUAGE">
+    <meta content="JavaScript" name="vs_defaultClientScript">
+    <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+
+    <script language="javascript" src="/public/js/syscomm.js"></script>
+</head>
+<body>
+    <form id="frmMain" method="post" runat="server">
+        <table style="width: 100%">
+            <tr>
+                <td class="menusection-Packages" colspan="2">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Bold="True">
+                    </asp:SiteMapPath>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding: 4px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

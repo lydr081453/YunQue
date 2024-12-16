@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Media2" Class="MediaLinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.16.11.208;Initial Catalog=Media2;Persist Security Info=True;User ID=sa" SettingsObjectName="ESP.Properties.Settings" SettingsPropertyName="Media2ConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.media_City" Member="CityInfo">
+    <Type Name="CityInfo">
+      <Column Name="City_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City_Level" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Province_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_Reporters" Member="ReporterInfo">
+    <Type Name="ReporterInfo">
+      <Column Name="ReporterID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentVersion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SN" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedIP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReporterName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PenName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Media_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Attention" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReporterLevel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReporterPosition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tel_O" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Tel_H" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address_H" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Postcode_H" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Character" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Hobby" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Marriage" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Writing" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UsualMobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BackupMobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QQ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmailOne" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmailTwo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmailThree" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UnitType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UnitName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Experience" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Education" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bankname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ResponsibleDomain" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PayType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bankcardcode" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="bankcardname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bankacountname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="writingfee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="referral" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="haveInvoice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paystatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="uploadstarttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="uploadendtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="paymentmode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrivateRemark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="cooperatecircs" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hometown" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OtherMessageSoftware" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="OfficeAddress" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="OfficePostID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_MediaItems" Member="MediaItemInfo">
+    <Type Name="MediaItemInfo">
+      <Column Name="MediaitemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MediaCName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MediaEName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="CShortName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EShortName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="MediaItemType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentVersion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MediumSort" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReaderSort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GoverningBody" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FrontFor" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Proprieter" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SubProprieter" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChiefEditor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AdminEditor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subeditor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Zhuren" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Producer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartPublication" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PublishDate" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TelephoneExchange" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddressOne" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AddressTwo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ISSN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cooperate" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Circulation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublishChannels" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PhoneOne" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneTwo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EndPublication" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AdsPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AdsPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MediaLogo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Briefing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MediaIntro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EngIntro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ChannelName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DABFM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TopicName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TopicProperty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OverrideRange" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TopicTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChannelWebAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MediaType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="addr1_provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr1_cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr1_countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr2_provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr2_cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr2_countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegionAttribute" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Override_Countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Override_Provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Override_Cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Override_describe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IndustryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IssueRegion" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PublishPeriods" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_MediaReporterRelation" Member="MediaReporterRelationInfo">
+    <Type Name="MediaReporterRelationInfo">
+      <Column Name="RelationID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MediaItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReporterID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RelationType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_mediaType" Member="MediaTypeInfo">
+    <Type Name="MediaTypeInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="des" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_Province" Member="ProvinceInfo">
+    <Type Name="ProvinceInfo">
+      <Column Name="Province_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Province_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Country_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_Country" Member="CountryInfo">
+    <Type Name="CountryInfo">
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CountryNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegionAttributeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Media_Agency" Member="AgencyInfo">
+    <Type Name="AgencyInfo">
+      <Column Name="AgencyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AgencyCName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="AgencyEName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="CShortName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EShortName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="AgencyType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MediumSort" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReaderSort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GoverningBody" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FrontFor" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="ResponsiblePerson" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Contacter" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TelephoneExchange" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddressOne" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AddressTwo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Cooperate" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhoneOne" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneTwo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AgencyLogo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AgencyIntro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EngIntro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TopicName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TopicProperty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OverrideRange" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChannelWebAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MediaType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="addr1_provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Agency" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr1_countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr2_provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr2_cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr2_countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MediaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RegionAttribute" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_MediaAttachments" Member="MediaAttachmentsInfo">
+    <Type Name="MediaAttachmentsInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MediaItemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Version" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AttachmentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Createdip" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AttachmentPath" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Media_Branch" Member="BranchInfo">
+    <Type Name="BranchInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mediaitemid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_Industries" Member="IndustriesInfo">
+    <Type Name="IndustriesInfo">
+      <Column Name="IndustryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IndustryName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Media_mediaIndustryRelation" Member="MediaIndustryRelationInfo">
+    <Type Name="MediaIndustryRelationInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mediaitemid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="industryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_Capital" Member="CapitalInfo">
+    <Type Name="CapitalInfo">
+      <Column Name="cityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityname" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Province" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_MediaItemsHist" Member="MediaItemsHistInfo">
+    <Type Name="MediaItemsHistInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MediaitemID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MediaCName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MediaEName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="CShortName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EShortName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="MediaItemType" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentVersion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MediumSort" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReaderSort" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="GoverningBody" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FrontFor" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Proprieter" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SubProprieter" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChiefEditor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AdminEditor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Subeditor" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Manager" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Zhuren" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Producer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartPublication" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PublishDate" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TelephoneExchange" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddressOne" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="AddressTwo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="WebAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="ISSN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Cooperate" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Circulation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublishChannels" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PhoneOne" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneTwo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EndPublication" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AdsPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AdsPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MediaLogo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Briefing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MediaIntro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EngIntro" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ChannelName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DABFM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TopicName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TopicProperty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OverrideRange" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Rating" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TopicTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChannelWebAddress" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="MediaType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="addr1_provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr1_cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr1_countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr2_provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr2_cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="addr2_countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegionAttribute" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Override_Countryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Override_Provinceid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Override_Cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Override_describe" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="IndustryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IssueRegion" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="branchs" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PublishPeriods" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_OperateLog" Member="OperateLogInfo">
+    <Type Name="OperateLogInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OperateTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OperateTableID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OperateTime" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OperateDes" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="IntegralID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Integral" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.media_reportersHist" Member="ReportersHistInfo">
+    <Type Name="ReportersHistInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReporterID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentVersion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SN" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedByUserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedIP" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifiedByUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastModifiedIP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ReporterName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PenName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Media_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Attention" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReporterLevel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReporterPosition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tel_O" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Tel_H" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address_H" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Postcode_H" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Character" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Hobby" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Marriage" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Writing" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Family" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UsualMobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BackupMobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QQ" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MSN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmailOne" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmailTwo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmailThree" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UnitType" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="UnitName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Experience" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Education" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="cityid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cityname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bankname" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ResponsibleDomain" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PayType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bankcardcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bankcardname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bankacountname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="writingfee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="referral" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="haveInvoice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paystatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="uploadstarttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="uploadendtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="paymentmode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrivateRemark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="cooperatecircs" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hometown" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OtherMessageSoftware" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Media_PrivateInfo" Member="PrivateInfo">
+    <Type Name="PrivateInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReporterID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Del" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PayType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bankname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bankcardcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bankcardname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="bankacountname" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="writingfee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="referral" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="haveInvoice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paystatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="uploadstarttime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="uploadendtime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="paymentmode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PrivateRemark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="cooperatecircs" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

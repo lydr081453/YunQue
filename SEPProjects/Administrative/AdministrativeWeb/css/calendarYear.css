@@ -1,0 +1,286 @@
+﻿.cal
+{
+    color: #000;
+    font-weight: bold;
+    font-family: Tahoma, "Lucida Grande" ,Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+}
+
+.hdr
+{
+    width: 100%;
+    height: 67px;
+    color: #fff;
+    cursor: default;
+    color: #333;
+}
+.hdr-l
+{
+    width: 1%;
+    height: 67px;
+    background: url(../images/calendar/static_01.jpg) no-repeat;
+}
+.hdr-r
+{
+    width: 1%;
+    height: 67px;
+    background: url(../images/calendar/static_03.jpg) no-repeat;
+}
+.hdr-m
+{
+    width: 98%;
+    height: 67px;
+    background: url(../images/calendar/static_02.jpg) repeat-x;
+}
+.hdr-m-prev
+{
+    display: block;
+    height: 50px;
+    width: 14px;
+    cursor: default;
+    background: transparent url("../images/calendar/static.png") no-repeat;
+    margin: 0 auto;
+    background-position: -112px -250px;
+}
+.hdr-m-prev a.prev:active
+{
+    background-position: -140px -250px !important;
+    text-decoration:underline;
+}
+.hdr-m-prev a.prev:hover
+{
+    background-position: -126px -250px;
+    text-decoration:underline;
+}
+.hdr-m-next
+{
+    display: block;
+    height: 50px;
+    width: 14px;
+    cursor: default;
+    background: transparent url("../images/calendar/static.png") no-repeat;
+    margin: 0 auto;
+    float: left;
+    background-position: -154px -250px;
+}
+.hdr-m-next a.next:active
+{
+    background-position: -182px -250px !important;
+    text-decoration:underline;
+}
+.hdr-m-next a.next:hover
+{
+    background-position: -168px -250px;
+    text-decoration:underline;
+}
+.hdr-m .month
+{
+    display: block;
+    height: 50px;
+    width: 100px;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    background: transparent url("../images/calendar/horizontal.png") repeat-x;
+}
+
+.hdr-d
+{
+    width: 56px;
+    height: 100%;
+    float: left;
+    margin: 0 8px 0 0;
+}
+.hdr-d .day
+{
+    width: 100%;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    font-size: 11px;
+    padding-top: 6px;
+}
+.hdr-d .date
+{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+
+
+.hdr-y
+{
+    width: 70px;
+    height: 100%;
+    float: left;
+    margin: 0;
+}
+.hdr-y .year
+{
+    width: 56px;
+    height: 100%;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    background: transparent url("../images/calendar/static.png") no-repeat -56px -250px;
+}
+.hdr-y .btns
+{
+    float: right;
+    width: 14px;
+    height: 100%;
+}
+.hdr-y .btns a
+{
+    display: block;
+    width: 100%;
+    height: 50%;
+    cursor: default;
+    background: transparent url("../images/calendar/static.png") no-repeat 600px -300px;
+}
+.hdr-y a.next
+{
+    background-position: -196px -250px;
+}
+.hdr-y a.next:active
+{
+    background-position: -224px -250px !important;
+    outline: none;
+}
+.hdr-y a.next:hover
+{
+    background-position: -210px -250px;
+}
+.hdr-y a.prev
+{
+    background-position: -196px -275px;
+}
+.hdr-y a.prev:active
+{
+    background-position: -224px -275px !important;
+    outline: none;
+}
+.hdr-y a.prev:hover
+{
+    background-position: -210px -275px;
+}
+
+.con
+{
+    width: 260px;
+    height: 160px;
+    margin: 0 15px;
+}
+
+.ftr
+{
+    width: 100%;
+    height: 15px;
+}
+
+.select-month
+{
+    cursor: default;
+    color: #333;
+    text-align: center;
+    width: 22px;
+    height: 26px;
+}
+.select-week
+{
+    cursor: default;
+    color: #333;
+    text-align: center;
+    width: 22px;
+}
+.day-hdr
+{
+    cursor: default;
+    color: #333;
+    text-align: center;
+}
+
+a:active, a:focus
+{
+    outline: none;
+}
+
+.day
+{
+    cursor: default;
+    text-align: center;
+    width: 33px;
+    height: 24px;
+    color: #333;
+}
+.day-h
+{
+    cursor: default;
+    text-align: center;
+    background: #fff url("../images/calendar/static.png") no-repeat -238px -250px;
+    width: 33px;
+    height: 24px;
+    color: #c00;
+}
+.day-s
+{
+    cursor: default;
+    text-align: center;
+    background: #fff url("../images/calendar/static.png") no-repeat -238px -273px;
+    width: 33px;
+    height: 24px;
+    color: #000;
+    text-decoration: underline;
+}
+.day-s-h
+{
+    cursor: default;
+    text-align: center;
+    background: #fff url("../images/calendar/static.png") no-repeat -238px -273px;
+    width: 33px;
+    height: 24px;
+    color: #c00;
+    text-decoration: underline;
+}
+.other
+{
+    cursor: default;
+    color: #ccc;
+}
+
+.picker
+{
+    font-size: 120%;
+    font-weight: bold;
+    font-family: "Courier New" ,monospace;
+}
+.hdf
+{
+    width: 100%;
+    height: 10px;
+    color: #fff;
+    cursor: default;
+    color: #333;   
+}
+.hdf-l
+{
+    width: 1%;
+    height: 10px;
+    background: url(../images/calendar/static_06.jpg);
+}
+.hdf-m
+{
+    width: 97%;
+    height: 10px;
+    background: url(../images/calendar/static_08.jpg) repeat-x;
+    background-position: bottom;
+}
+.hdf-r
+{
+    width: 1%;
+    height: 10px;
+    background: url(../images/calendar/static_07.jpg);
+}

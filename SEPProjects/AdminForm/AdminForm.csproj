@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CA0B8E2-6219-4720-B41E-B9842613BB5B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdminForm</RootNamespace>
+    <AssemblyName>AdminForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ProviderHelper.cs" />
+    <Compile Include="Configuration\ConfigurationManager.cs" />
+    <Compile Include="Configuration\ESPConfigurationSection.cs" />
+    <Compile Include="Configuration\ProviderSettings.cs" />
+    <Compile Include="Configuration\ProviderSettingsCollection.cs" />
+    <Compile Include="Configuration\SecuritySettings.cs" />
+    <Compile Include="Data\CBO.cs" />
+    <Compile Include="Data\CommandBuilder.cs" />
+    <Compile Include="Data\DatabaseHelper.cs" />
+    <Compile Include="Data\TransactionScopeConnections.cs" />
+    <Compile Include="Dialog\UserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\UserDlg.Designer.cs">
+      <DependentUpon>UserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\FormHandOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\FormHandOver.Designer.cs">
+      <DependentUpon>FormHandOver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\BranchDeptManager.cs" />
+    <Compile Include="Manager\BranchManager.cs" />
+    <Compile Include="Manager\DepartmentManager.cs" />
+    <Compile Include="Manager\EmployeeManager.cs" />
+    <Compile Include="Manager\EmployeesInpositionManager.cs" />
+    <Compile Include="Manager\ExpenseAuditerListManager.cs" />
+    <Compile Include="Manager\GeneralManager.cs" />
+    <Compile Include="Manager\HandOverManager.cs" />
+    <Compile Include="Manager\OrderManager.cs" />
+    <Compile Include="Manager\PaymentPeriodManager.cs" />
+    <Compile Include="Manager\ProjectManager.cs" />
+    <Compile Include="Manager\RecipientManager.cs" />
+    <Compile Include="Manager\ReturnAuditHistManager.cs" />
+    <Compile Include="Manager\ReturnManager.cs" />
+    <Compile Include="Manager\UserManager.cs" />
+    <Compile Include="Manager\WorkflowInstancesManager.cs" />
+    <Compile Include="Manager\WorkItemAssigneesManager.cs" />
+    <Compile Include="Manager\WorkItemManager.cs" />
+    <Compile Include="Model\BranchDeptInfo.cs" />
+    <Compile Include="Model\BranchInfo.cs" />
+    <Compile Include="Model\DepartmentInfo.cs" />
+    <Compile Include="Model\EmployeeInfo.cs" />
+    <Compile Include="Model\EmployeesInpositionInfo.cs" />
+    <Compile Include="Model\ExpenseAuditerListInfo.cs" />
+    <Compile Include="Model\GeneralInfo.cs" />
+    <Compile Include="Model\OrderInfo.cs" />
+    <Compile Include="Model\PaymentPeriodInfo.cs" />
+    <Compile Include="Model\ProjectInfo.cs" />
+    <Compile Include="Model\RecipientInfo.cs" />
+    <Compile Include="Model\ReturnAuditHistInfo.cs" />
+    <Compile Include="Model\ReturnInfo.cs" />
+    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Model\wf_WorkflowInstances.cs" />
+    <Compile Include="Model\wf_WorkItemAssignees.cs" />
+    <Compile Include="Model\wf_WorkItems.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dialog\UserDlg.resx">
+      <DependentUpon>UserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\FormHandOver.resx">
+      <DependentUpon>FormHandOver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESP\ESP.csproj">
+      <Project>{bd68aa8d-b4b1-4957-81c2-152398ac68af}</Project>
+      <Name>ESP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

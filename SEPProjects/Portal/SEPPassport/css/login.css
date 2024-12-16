@@ -1,0 +1,108 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+/*
+body{
+	background:#ff6f00;
+}
+*/
+a{
+	font:normal 14px/24px "宋体";
+	color:#FFFFFF;
+	text-decoration:none;
+}
+span{
+	font:normal 14px/24px "宋体";
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.clear{
+	clear:both;
+}
+#wrap{
+	width:1006px;
+	margin:0 auto;
+}
+.inp{
+	width:390px;
+	height:30px;
+	line-height:24px;
+	padding-top:114px;
+	padding-left:380px;
+	float:left;
+}
+.inparea{
+/*
+	margin:0 10px 0 0px;
+	height:14px;
+	width:131px;
+	*/
+	
+			height: 14px;
+}
+.logging_btn img{
+	margin:0;
+	border:0;
+}
+.logging_btn{
+	display:inline;
+	width:44px;
+	float:left;
+	margin-top:117px;
+}
+.for_code{
+	margin-left:700px;
+}
+
+
+/*弹出层*/
+#floatBoxBg
+{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.floatBox
+{
+	border: #666 5px solid;
+	width: 500px;
+	position: absolute;
+	top: 50px;
+	left: 40%;
+}
+.floatBox .title
+{
+	height: 23px;
+	padding: 7px 10px 0;
+	background: #333;
+	color: #fff;
+}
+.floatBox .title h4
+{
+	float: left;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	line-height: 16px;
+}
+.floatBox .title span
+{
+	float: right;
+	cursor: pointer;
+}
+.floatBox .content
+{
+	padding-top: 20px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	background: #fff;
+}

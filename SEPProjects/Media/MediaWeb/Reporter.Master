@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Reporter.master.cs" Inherits="MediaWeb.Reporter" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="/Css/reporter.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="height: 65px;
+        background-color: #FFF;">
+        <tr>
+            <td>
+                <img src="/images/01-01.jpg" width="353" height="37" hspace="30" />
+            </td>
+            <td align="right" class="fontsize-12" style="padding-right: 30px;">
+                当前账号：<asp:Literal ID="litUser" runat="server" /> <a href="<%= PortalUrl%>">返回内部系统</a>
+            </td>
+        </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td style="padding: 0 30px;">
+                <br />
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    <br /><br /><br />
+    </form>
+</body>
+</html>

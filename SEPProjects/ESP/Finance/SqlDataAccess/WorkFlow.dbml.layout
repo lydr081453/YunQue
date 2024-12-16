@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="WorkFlow">
+  <DataContextMoniker Name="/WorkFlowDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d0a0246f-2771-4176-bccf-85c69ce1d800" absoluteBounds="5.75, 1.375, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/WorkFlowDataContext/WorkItemAssignee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3bab223e-273a-4fff-8341-321c509847cb" absoluteBounds="5.765, 1.835, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2bcf6a11-9644-40d8-84f9-c11c401798e4" absoluteBounds="8, 1.375, 2, 4.0548018391927076">
+      <DataClassMoniker Name="/WorkFlowDataContext/WorkItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d177816-082d-435c-9a0a-6a124da03b76" absoluteBounds="8.015, 1.835, 1.9700000000000002, 3.494801839192708" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="da65f342-6649-44fa-9427-28f988fe2ae3" absoluteBounds="3.5, 1.375, 2, 3.6727624511718746">
+      <DataClassMoniker Name="/WorkFlowDataContext/WorkflowInstance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a564bc6-7c17-4d30-abd6-27ae8063dd11" absoluteBounds="3.515, 1.835, 1.9700000000000002, 3.112762451171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="CG5" Class="SalaryDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=172.16.11.208;Initial Catalog=CG5;Persist Security Info=True;User ID=sa" SettingsObjectName="ESP.Properties.Settings" SettingsPropertyName="CG5ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.S_BankCardsInfomation" Member="BankCardsInfomationInfo">
+    <Type Name="BankCardsInfomationInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserSysID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="BankCardCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BankName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="BankCardsInfomationInfo_BankCardsInfomationHistoryInfo" Member="BankCardsInfomationHistoryInfo" ThisKey="ID" OtherKey="BankCardsInfomationID" Type="BankCardsInfomationHistoryInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_BankCardsInfomationHistory" Member="BankCardsInfomationHistoryInfo">
+    <Type Name="BankCardsInfomationHistoryInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BankCardsInfomationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserSysID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="EmployeeName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RoleName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DepartmentPositions" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="BankName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BankCardCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BankCardsInfomationInfo_BankCardsInfomationHistoryInfo" Member="BankCardsInfomationInfo" ThisKey="BankCardsInfomationID" OtherKey="ID" Type="BankCardsInfomationInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_TaxRate" Member="TaxRateInfo">
+    <Type Name="TaxRateInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaxableIncomeAverageBegin" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TaxableIncomeAverageEnd" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TaxRate" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TaxRateType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_AuditerList" Member="AuditerListInfo">
+    <Type Name="AuditerListInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Auditer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AuditerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AuditType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_AuditLog" Member="AuditLogInfo">
+    <Type Name="AuditLogInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MainID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Memo" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="StatusName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AuditType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Auditer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AuditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_SalaryMain" Member="SalaryMainInfo">
+    <Type Name="SalaryMainInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SalaryDesc" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="SalaryYear" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="SalaryMonth" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="StartYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartDay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EndYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EndMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EndDay" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CreatedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AuditerNow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AuditType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalaryCompany" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="SalaryMainInfo_SalaryInfo" Member="SalaryInfo" ThisKey="ID" OtherKey="SalaryMainID" Type="SalaryInfo" />
+      <Association Name="SalaryMainInfo_SalaryHistoryInfo" Member="SalaryHistoryInfo" ThisKey="ID" OtherKey="SalaryMainID" Type="SalaryHistoryInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_SecondPassword" Member="SecondPasswordInfo">
+    <Type Name="SecondPasswordInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordSalt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastModifyDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastModifyer" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RetryCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsLock" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_SalaryUserValidate" Member="SalaryUserValidateInfo">
+    <Type Name="SalaryUserValidateInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pwd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedUserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LogonDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_Bonuses" Member="BonusesInfo">
+    <Type Name="BonusesInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserCompany" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserDepartment" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserGroup" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserCompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserDepartmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="IDCardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BankCardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PreviousYear13Month" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Total" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AnnualBonus" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Subsidies" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DeductionAmount" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TaxableIncome" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="PersonalIncomeTax" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="AfterTaxChargeBack" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Decription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="SalaryReal" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="OtherBonus" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BonusesMainID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsAllot" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelayedAllot" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="BonusesInfo_BonusesHistoryInfo" Member="BonusesHistoryInfo" ThisKey="ID" OtherKey="BonusesID" Type="BonusesHistoryInfo" />
+      <Association Name="BonusesMainInfo_BonusesInfo" Member="BonusesMainInfo" ThisKey="BonusesMainID" OtherKey="ID" Type="BonusesMainInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_BonusesHistory" Member="BonusesHistoryInfo">
+    <Type Name="BonusesHistoryInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BonusesID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserCompany" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserDepartment" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserGroup" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserCompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserDepartmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="IDCardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BankCardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Total" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AnnualBonus" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Subsidies" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DeductionAmount" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TaxableIncome" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="PersonalIncomeTax" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AfterTaxChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="Decription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="SalaryReal" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BonusesMainID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsAllot" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelayedAllot" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="BonusesInfo_BonusesHistoryInfo" Member="BonusesInfo" ThisKey="BonusesID" OtherKey="ID" Type="BonusesInfo" IsForeignKey="true" />
+      <Association Name="BonusesMainInfo_BonusesHistoryInfo" Member="BonusesMainInfo" ThisKey="BonusesMainID" OtherKey="ID" Type="BonusesMainInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_BonusesMain" Member="BonusesMainInfo">
+    <Type Name="BonusesMainInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BonusesDesc" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="StartBonusesYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartBonusesMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EndBonusesYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EndBonusesMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AuditerNow" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AuditType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BonusesChildCompany" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="BonusesMainInfo_BonusesInfo" Member="BonusesInfo" ThisKey="ID" OtherKey="BonusesMainID" Type="BonusesInfo" />
+      <Association Name="BonusesMainInfo_BonusesHistoryInfo" Member="BonusesHistoryInfo" ThisKey="ID" OtherKey="BonusesMainID" Type="BonusesHistoryInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_Salary" Member="SalaryInfo">
+    <Type Name="SalaryInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserCompany" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserCompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserDepartment" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserDepartmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserGroup" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="userGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BankCardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReleaseYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReleaseMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SalaryBase" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PerformanceBase" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SalaryChanged" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PerformanceChanged" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PerformanceChangedDecription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="LateDaysCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LateDaysChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="LateDaysChargeBackByManager" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="LeaveEarlyDaysCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LeaveEarlyDaysChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="SickLeaveDaysCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="SickLeaveChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="LeaveDaysCount" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="LeaveChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="MealSupplement" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="ReissueMealSupplement" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="Contributions" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="Pension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedicalInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HousingFund" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UnemploymentInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DeductionAmount" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="TaxableIncome" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="Taxes" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="AfterTaxChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="SalaryReal" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Decription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Reissue" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ReissueDescription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="ReissueBonuses" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ReissueBonusesDecription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="OtherChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="OtherChargeBackDecription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="BonusesAverageMonth13th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AllotMonthAmount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BonuesesState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SalaryMainID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PreTaxWages" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TheMonthWorkingDays" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SickLeaveDaysTotalForYear" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ReissueSocialInsurance" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ReissueSocialInsuranceDescription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="AbsenceChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="IsBonusesChargeBackByAbsenceForNewUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsMoveToNextMonth" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TheMonthLeaveCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheMonthLeaveChargeBack" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheMonthSickLeaveCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheMonthSickLeaveChargeBack" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheMonthEarlyCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TheMonthLateCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TheMonthLateAndEarlyChargeBack" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheAbsenceChargeBack" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ReissueDayCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ReissuePreSalaryBase" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalaryChangedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PerformanceChangedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PerformanceReissueDayCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="PerformancePreChanged" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalaryCompany" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SocialSecurityCompany" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AnnualLeave" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AnnualLeaveReissue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DeductionAmountAdjustment" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ReissuePension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReissueMedicalInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReissueHousingFund" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReissueUnemploymentInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Compensation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReissueSocialSecurity" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Association Name="SalaryInfo_SalaryHistoryInfo" Member="SalaryHistoryInfo" ThisKey="ID" OtherKey="SalaryID" Type="SalaryHistoryInfo" />
+      <Association Name="SalaryMainInfo_SalaryInfo" Member="SalaryMainInfo" ThisKey="SalaryMainID" OtherKey="ID" Type="SalaryMainInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.S_SalaryHistory" Member="SalaryHistoryInfo">
+    <Type Name="SalaryHistoryInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SalaryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserCompany" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserDepartment" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UserGroup" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserCompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserDepartmentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="userGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IDCardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BankCardNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReleaseYear" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReleaseMonth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SalaryBase" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PerformanceBase" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SalaryChanged" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PerformanceChanged" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PerformanceChangedDecription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="LateDaysCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LateDaysChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="LateDaysChargeBackByManager" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="LeaveEarlyDaysCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LeaveEarlyDaysChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="SickLeaveDaysCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="SickLeaveChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="LeaveChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="LeaveDaysCount" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="MealSupplement" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="ReissueMealSupplement" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="Contributions" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="Pension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MedicalInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HousingFund" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UnemploymentInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DeductionAmount" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="TaxableIncome" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="Taxes" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="AfterTaxChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="SalaryReal" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Decription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="Reissue" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ReissueDescription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="ReissueBonuses" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ReissueBonusesDecription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="OtherChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="OtherChargeBackDecription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="BonusesAverageMonth13th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="AllotMonthAmount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BonuesesState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SalaryMainID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PreTaxWages" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TheMonthWorkingDays" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SickLeaveDaysTotalForYear" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ReissueSocialInsurance" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ReissueSocialInsuranceDescription" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
+      <Column Name="AbsenceChargeBack" Type="System.Decimal" DbType="Decimal(20,4)" CanBeNull="true" />
+      <Column Name="IsBonusesChargeBackByAbsenceForNewUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsMoveToNextMonth" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TheMonthLeaveCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheMonthLeaveChargeBack" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheMonthSickLeaveCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheMonthSickLeaveChargeBack" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheMonthEarlyCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TheMonthLateCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TheMonthLateAndEarlyChargeBack" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="TheAbsenceChargeBack" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ReissueDayCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="ReissuePreSalaryBase" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalaryChangedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PerformanceChangedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PerformanceReissueDayCount" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="PerformancePreChanged" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SalaryCompany" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SocialSecurityCompany" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AnnualLeave" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AnnualLeaveReissue" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DeductionAmountAdjustment" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ReissuePension" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReissueMedicalInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReissueHousingFund" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReissueUnemploymentInsurance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Compensation" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ReissueSocialSecurity" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Association Name="SalaryInfo_SalaryHistoryInfo" Member="SalaryInfo" ThisKey="SalaryID" OtherKey="ID" Type="SalaryInfo" IsForeignKey="true" />
+      <Association Name="SalaryMainInfo_SalaryHistoryInfo" Member="SalaryMainInfo" ThisKey="SalaryMainID" OtherKey="ID" Type="SalaryMainInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
